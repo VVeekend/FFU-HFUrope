@@ -1,0 +1,23 @@
+state={
+	id=15
+	name="Northern Plovdiv"
+	manpower = 1305551
+
+	state_category = large_city
+
+	history={
+		owner = BUL
+
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex =1
+			air_base = 1
+		}
+		add_core_of = BUL
+	}
+
+	provinces={
+		9505 9513 9542 9548 9536 3193 1255 9601 5013 9581 4724 5329 9625 9632 3251 9574 6400
+	}
+}

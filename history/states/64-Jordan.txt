@@ -1,0 +1,21 @@
+state={
+	id=64
+	name="Jordan"
+	provinces={
+		1517 1879 1927 2804 2910 3318 3547 3552 3851 3991 4151 4333 4447 4576 4786 5034 5128 5225 5885 6100 10494 10553 10584 10614 10627 10662 10669 10670 10675 10701 10707 10713 10726 10727 10746 10759 10760 10779 10780 10782 10787 10800 10803 10809 10815 11583
+	}
+	manpower = 932000
+	state_category = rural
+	history={
+		owner = TUR
+		add_core_of=TUR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			1879 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

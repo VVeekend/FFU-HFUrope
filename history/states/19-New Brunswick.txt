@@ -1,0 +1,23 @@
+state={
+	id=19
+	name="New Brunswick"
+	provinces={
+		460 588 1419 2392 2464 6909 7036
+	}
+	manpower = 475020
+
+	state_category = city
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			1419 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = CAN
+	}
+	buildings_max_level_factor=1.000
+}

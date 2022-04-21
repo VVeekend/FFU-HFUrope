@@ -1,0 +1,26 @@
+state={
+	id=76
+	name="Abu Dhabi"
+	provinces={
+		472 2105 2116 3210 4184 10984 11008 11020 11022 11027
+	}
+	manpower = 170200
+	resources={
+		oil=0
+	}
+	state_category = pastoral
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			11020 1
+		}
+		buildings = {
+			infrastructure = 2
+			11020 = {
+				naval_base = 3
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

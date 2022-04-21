@@ -1,0 +1,35 @@
+
+state={
+	id=405
+	name="STATE_234"
+	manpower = 1903371
+
+	state_category = city
+	resources={
+		tungsten=17 # was: 26
+		oil=12 # was: 18
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			1458 1
+		}
+		victory_points = {
+			4518 3
+		}
+		victory_points = {
+			9274 5
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		753 828 1387 1458 1665 2483 3343 3504 3587 3805 4285 4348 4424 4518 4704 5376 6319 9096 9106 9107 9149 9150 9193 9222 9244 9274 9275 9288 9306 9318 9319 9330 9331 9337 9341 9349 9360 9367 9368 9380 9389 9395 9403 9411 9412
+	}
+}

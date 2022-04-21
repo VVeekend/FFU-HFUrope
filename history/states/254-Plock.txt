@@ -1,0 +1,20 @@
+state={
+	id=254
+	name="STATE_98"
+	manpower = 1412100
+
+	state_category = rural
+	history={
+		victory_points = {
+			7711 5
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		2021 3780 4156 4411 4601 5153 5162 5425 5897 6176 7549 7583 7598 7623 7629 7652 7662 7704 7711 7721 7722 7742 7749 7750 	}
+}

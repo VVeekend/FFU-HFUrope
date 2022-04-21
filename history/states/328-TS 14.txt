@@ -1,0 +1,25 @@
+
+state={
+	id=328
+	name="STATE_572" # Chelyabinsk
+	manpower = 2074932
+
+	state_category = city
+
+	history={
+		owner = SOV
+		victory_points = {
+			1730 5
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		977 983 1354 1730 1988 2510 3717 6164
+	}
+}

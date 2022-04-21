@@ -1,0 +1,31 @@
+
+state={
+	id=443
+	name="Virginia"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			air_base = 10
+			fuel_silo = 1
+			1980 = {
+				naval_base = 10
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			1980 10 
+		}
+		victory_points = {
+			1980 15 
+		}
+	}
+	provinces={
+		1053 1852 1980 5223 6051 8668 10663 
+	}
+	manpower=2677773
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

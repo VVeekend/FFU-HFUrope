@@ -1,0 +1,19 @@
+state={
+	id=150
+	name="STATE_556"
+	manpower = 3324782
+	state_category = rural
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			1447 1
+		}
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	provinces={
+		50 59 155 343 570 1447 1773 4937
+	}
+}

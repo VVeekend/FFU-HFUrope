@@ -1,0 +1,23 @@
+state={
+	id=54
+	name="Bermuda"
+	provinces={
+		9307 9342 9266
+	}
+	manpower=37516
+	state_category = small_island
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			9342 1
+		}
+		buildings = {
+			infrastructure = 4
+			9342 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

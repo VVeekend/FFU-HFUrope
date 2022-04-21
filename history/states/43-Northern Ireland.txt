@@ -1,0 +1,34 @@
+
+state={
+	id=43
+	name="STATE_119"
+
+	history={
+		owner = ENG
+		victory_points = {
+			143 5
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 1
+			dockyard = 2
+			143 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		143 2378 3582 3710 4209 5992 6309 7163 7192 7199 7220 7245 7257
+	}
+	manpower=1198537
+	buildings_max_level_factor=1
+	state_category="city"
+
+	resources={
+		#aluminium=2
+	}
+}

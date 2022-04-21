@@ -1,0 +1,26 @@
+state=
+{
+	id=95
+	name="STATE_269"
+	manpower = 344700
+	state_category = enclave
+	history= {
+		victory_points = {
+			3153 1
+		}
+		victory_points = {
+			5753 1
+		}
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 3
+			3153 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		3523 284 416 2047 2250 2515 2850 3153 3310 3422 3830 5753 11193 11197 11200 11209 11214 11236
+	}
+}

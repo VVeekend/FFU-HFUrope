@@ -1,0 +1,20 @@
+state={
+	id=132
+	name="Deir-az-Zur"
+	provinces={
+		293 722 1336 2354 3157 3658 3756 3987 4567 5623 10139 10140 10270
+	}
+	manpower = 324110
+	state_category = wasteland
+	history={
+		owner = TUR
+		add_core_of=TUR
+		victory_points = {
+			293 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	buildings_max_level_factor=1.000
+}

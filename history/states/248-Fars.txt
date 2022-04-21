@@ -1,0 +1,31 @@
+state={
+	id=248
+	name="Fars"
+	provinces={
+		261 406 477 481 557 837 954 1332 1421 1671 1923 2621 3575 4144 4307 4365 5004 5021 5083 5245 5863 6027 10833 10850 10871 10899 10911 10921 11548
+	}
+	manpower = 918619
+	resources={
+		oil=22 # was: 10
+	}
+
+	state_category = rural
+	history={
+		owner = PER
+		victory_points = {
+			477 1
+		}
+		victory_points = {
+			2621 3
+		}
+		buildings = {
+			infrastructure = 2
+			2621 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = PER
+	}
+
+	buildings_max_level_factor=1.000
+}

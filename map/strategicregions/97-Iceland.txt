@@ -1,0 +1,7 @@
+strategic_region={
+	id=97
+	name="STRATEGICREGION_97"
+	provinces={
+		413 571 931 1253 2370 2514
+	}
+}

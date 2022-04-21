@@ -1,0 +1,27 @@
+state=
+{
+	id=478
+	name="STATE_118"
+	manpower=21372
+	state_category = enclave
+	history={
+		owner = ENG
+		victory_points = { 4486 10 }
+		buildings = {
+			infrastructure = 6
+			anti_air_building = 6
+			4486 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+			3337 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+		}
+
+	}
+	provinces={
+		3337 4231 4486
+	}
+}

@@ -1,0 +1,22 @@
+state={
+	id=370
+	name="STATE_406" # Gurev
+	manpower = 146494
+
+	state_category = wasteland
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		victory_points = {
+			3176 1
+		}
+	}
+
+	provinces={
+		169 1306 1576 1847 2235 2319 2782 3176 3589 3815 4904 8541 8750 8760 8862 8943 9042
+	}
+}

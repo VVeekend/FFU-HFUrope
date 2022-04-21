@@ -1,0 +1,35 @@
+
+state={
+	id=172
+	name="STATE_64"
+	manpower = 7265029
+	buildings_max_level_factor = 1
+
+	state_category = megalopolis
+	resources={
+		rubber=25
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			2046 50
+		}
+		victory_points = {
+			7764 5
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 5
+			industrial_complex = 4
+			anti_air_building = 2
+
+		}
+		add_core_of = GER
+
+	}
+
+	provinces={
+		4699 7862 7905 1360 1584 4627 5591 7620 7621 7661 7674 7764 7765 7785 7806 2046 2463 2612 2905 2983 3668 6076 6296 7650 7709 7719 7759 7766 7775 7794 7807 7816 7817 7818 7906 7918
+	}
+}

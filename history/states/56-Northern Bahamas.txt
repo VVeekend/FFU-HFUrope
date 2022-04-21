@@ -1,0 +1,45 @@
+state={
+	id=56
+	name="Northern Bahamas"
+	provinces={
+		11518 11504 11505 11507 11519 11515 11521 11523
+	}
+	manpower = 40000
+	state_category = tiny_island
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			11518 1
+		}
+		buildings = {
+			infrastructure = 4
+			11518 = {
+				naval_base = 1
+			}
+			11504 = {
+				naval_base = 1
+			}
+			11505 = {
+				naval_base = 1
+			}
+			11507 = {
+				naval_base = 1
+			}
+			11519 = {
+				naval_base = 1
+			}
+			11515 = {
+				naval_base = 1
+			}
+			11521 = {
+				naval_base = 1
+			}
+			11523 = {
+				naval_base = 1
+			}
+
+		}
+	}
+	buildings_max_level_factor=1.000
+}

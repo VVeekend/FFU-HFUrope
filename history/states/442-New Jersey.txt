@@ -1,0 +1,25 @@
+state={
+	id=442
+	name="New Jersey"
+	provinces={
+		1210 1558
+	}
+	manpower = 4160165
+
+	state_category = large_city
+
+	history={
+		owner = USA
+		victory_points = {
+			1558 5
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 7
+			air_base = 4
+
+		}
+		add_core_of = USA
+	}
+	buildings_max_level_factor=1.000
+}

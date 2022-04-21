@@ -1,0 +1,25 @@
+state={
+	id=449
+	name="Puerto Rico"
+	provinces={
+		5137 10608 11538 11535
+	}
+	manpower = 1543913
+	state_category = rural
+	history={
+		owner = USA
+		add_core_of=SWE
+		victory_points = {
+			10608 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 4
+			10608 = {
+				naval_base = 3
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

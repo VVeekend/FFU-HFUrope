@@ -1,0 +1,23 @@
+state={
+	id=84
+	name="STATE_274"
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			1727 1
+		}
+		buildings = {
+			infrastructure = 3
+			1727 = {
+				naval_base = 2
+			}
+		}
+	}
+	provinces={
+		11586 794 852 1385 1727 1772 1775 2327 2437 2878 3433 5163 11211 11241 11243 11252 11265 11273
+	}
+	manpower=3163600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

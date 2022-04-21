@@ -1,0 +1,45 @@
+
+state={
+	id=44
+	name="STATE_130"
+	manpower = 4762495
+
+	state_category = metropolis
+
+	resources={
+		steel=71 # was: 120
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			7329 15
+		}
+		victory_points = {
+			7342 10
+		}
+		victory_points = {
+			7412 3
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 3
+			air_base = 10
+			7342 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = ENG
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces={
+		1623 3672 3763 4472 4619 5111 5790 6287 7273 7285 7286 7310 7329 7334 7342 7354 7368 7388 7412
+	}
+}

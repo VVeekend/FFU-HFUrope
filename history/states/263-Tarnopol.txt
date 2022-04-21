@@ -1,0 +1,27 @@
+state={
+	id=263
+	name="STATE_91" # Lwow
+	manpower = 3227800
+
+	state_category = city
+
+	history={
+		owner = AUS
+		victory_points = {
+			16 3
+		}
+		#victory_points = {
+			#	3483 5
+			#}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			air_base = 10
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		16 991 2400 3063 4085 4296 4666 5146 5197 5587 5973 6234 6305 8203 8204 8239 8250 8293 8322 8323 8376 8394 8420 8482 8489 8497 8536 8548
+	}
+}

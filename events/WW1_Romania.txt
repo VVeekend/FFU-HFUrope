@@ -1,0 +1,49 @@
+﻿add_namespace = ww1_romania
+
+news_event = {
+	id=ww1_romania.1
+	title=ww1_romania.1.t#Carol I Dies!
+	desc=ww1_romania.1.d#Carol I has died. Ferdinand is now King
+	picture=ww1_romania_1
+
+	major = yes
+
+	trigger = {
+		#has_government = neutrality
+		ROM = {
+			NOT = {
+				has_country_flag=carol_dead
+			}
+		
+		}
+		date > 1914.10.10
+	}
+
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	immediate = {
+		hidden_effect = {
+			ROM = {
+				kill_country_leader=yes
+				create_country_leader={
+					name="Ferdinand I"
+					desc=ROM_ferdinand_i_DESC
+					picture="gfx/leaders/ROM_ferdinand_i.dds"
+					expire="1935.1.1"
+					ideology=conservatism
+					traits={}
+				}
+				set_country_flag=carol_dead
+			}
+		}
+	}
+
+	option={
+		name = ww1_romania.1.a
+		ai_chance={
+			factor=100
+		}	
+	}
+}

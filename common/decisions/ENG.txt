@@ -1,0 +1,119 @@
+foreign_politics = {
+ENG_annex_EGY = {
+		icon = generic_operation
+
+			allowed = {
+				tag = ENG
+			}
+
+			available = {
+				EGY = { is_ai = yes }
+			}
+			
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+			country_exists = EGY
+				}
+				
+			complete_effect = {
+				ENG = { 
+					annex_country = {
+						target = EGY
+						transfer_troops = yes 
+					}
+			}
+		}
+    }
+ENG_annex_CAN = {
+		icon = generic_operation
+
+			allowed = {
+				tag = ENG
+			}
+
+			available = {
+				CAN = { is_ai = yes }
+			}
+			
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+			country_exists = CAN
+				}
+				
+			complete_effect = {
+				ENG = { 
+					annex_country = {
+						target = CAN
+						transfer_troops = yes 
+					}
+			}
+		}
+    }
+ENG_annex_POR = {
+		icon = generic_operation
+
+			allowed = {
+				tag = ENG
+			}
+
+			available = {
+				POR = { is_ai = yes }
+				date > 1914.07.29
+			}
+			
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+			country_exists = POR
+				}
+				
+			complete_effect = {
+				ENG = { 
+					annex_country = {
+						target = POR
+						transfer_troops = yes 
+					}
+			}
+		}
+    }
+ENG_annex_BEL = {
+		icon = generic_operation
+		
+		available = {
+			date > 1914.07.29
+		}
+			allowed = {
+				tag = ENG
+			}
+
+			available = {
+				BEL = { is_ai = yes }
+				35 = { is_controlled_by = BEL }
+			}
+			
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+			country_exists = BEL
+				}
+				
+			complete_effect = {
+				ENG = { 
+					annex_country = {
+						target = BEL
+						transfer_troops = yes 
+					}
+			}
+		}
+    }
+}

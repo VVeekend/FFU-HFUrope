@@ -1,0 +1,29 @@
+state={
+	id=197
+	name="STATE_309"
+	provinces={
+		1180 1248 1249 1554 2244 3302 3551 3854 4878 5172 5817 11117 11128
+	}
+	manpower = 152001
+	state_category = town
+	history={
+		owner = HOL
+		add_core_of=SWE
+		add_state_modifier = {
+					modifier = {
+						local_building_slots_factor = 0.5
+					}}
+	
+		victory_points = {
+			4878 1
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			4878 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

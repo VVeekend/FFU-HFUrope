@@ -1,0 +1,25 @@
+state={
+	id=37
+	name="Newfoundland"
+	provinces={
+		208 798 2353 2390 2490 2603 2846 3495 3605 3715 6773 6823 1950
+	}
+	manpower = 255060
+
+	state_category = town
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			1950 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAN
+		add_core_of = ENG
+	}
+
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,21 @@
+state={
+	id=272
+	name="Quetta"
+	provinces={
+		688 908 1175 2418 3292
+	}
+	manpower = 405100
+	state_category = wasteland
+	history={
+		victory_points = {
+			688 1
+		}
+		owner = RAJ
+		add_core_of=RAJ
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+		}
+	}
+	buildings_max_level_factor=1.000
+}

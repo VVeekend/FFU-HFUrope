@@ -1,0 +1,17 @@
+state=
+{
+	id=481
+	name="STATE_298"
+	manpower = 1
+	state_category = rural
+	resources={
+	}
+	history= {
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces={
+		1157 1607 2433 2779 2864 4238 5366 11271
+	}
+}

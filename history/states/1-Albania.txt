@@ -1,0 +1,43 @@
+
+state={
+	id=1
+	name="STATE_44"
+	manpower = 1003000
+	resources={
+		aluminium=2 # was: 3
+		chromium=2 # was: 3
+	}
+
+	state_category = town
+
+	history={
+		owner = TUR
+		victory_points = {
+			4738 5
+		}
+		victory_points = {
+			9891 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+			9891 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = ALB
+		add_claim_by = ITA
+
+		1939.4.12 = {
+			owner = ITA
+			controller = ITA
+			remove_claim_by = ITA
+		}
+	}
+
+	provinces={
+		96 833 980 3617 3939 4738 5232 5256 5563 5764 5919 9709 9710 9718 9743 9757 9772 9776 9803 9877 9891 9896 9902
+	}
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=396
+	name="STATE_516" # Northwestern Siberia
+	manpower = 43948
+
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		27 227 600 757 834 867 1137 1468 1527 2114 2709 3120 3516 4847 5269 6511 6530 6626 298 414 527 624 673 913 1311 1409 2036 2955 3045 3203 6550
+	}
+}

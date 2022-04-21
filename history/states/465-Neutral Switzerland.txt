@@ -1,0 +1,18 @@
+state={
+	id=465
+	name="Neutral Switzerland"
+	provinces={
+		1778 2991 3089 4467 5599 5956 8821 8833 8856 8874 8932 8960 8987 8997 17 2739 4502 5252 5278 5541 8849 8855 8891 8920 8949 8950 8964 8986 9004 9026 9027 9034 9071 9108 9119
+	}
+	manpower=1
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 6
+		}
+		add_core_of = SWI
+	}
+	state_category = megalopolis
+	buildings_max_level_factor=1.000
+}

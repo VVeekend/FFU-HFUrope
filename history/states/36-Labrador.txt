@@ -1,0 +1,27 @@
+state={
+	id=36
+	name="Labrador"
+	provinces={
+		81 89 122 387 423 606 904 939 1006 1186 1202 1341 1383 1397 1619 1836 1840 2008 2261 2719 2940 2966 3092 3392 3944 4286 5421 5471 5662 6162 6531 6578 6627 11458 11444 13062 5453 13117 10239 10327
+	}
+
+	state_category = wasteland
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+
+			122 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CAN
+		add_core_of = ENG
+
+	}
+
+	manpower=22179
+
+	buildings_max_level_factor=1.000
+}

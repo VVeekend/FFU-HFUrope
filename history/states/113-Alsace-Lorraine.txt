@@ -1,0 +1,77 @@
+
+state={
+	id=113
+	name="STATE_28" # Alsace-Lorraine
+	manpower = 1915600
+
+	state_category = city
+	resources={
+		steel=100 # was: 236
+	}
+
+	history={
+		owner = GER
+		victory_points = { 8780 5 }
+		victory_points = { 8532 5 }
+		victory_points = { 4282 10 }
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+			4282 = {
+				bunker = 10
+
+			}
+			8426 = {
+				bunker = 10
+
+			}
+			8461 = {
+				bunker = 10
+
+			}
+			8495 = {
+				bunker = 10
+
+			}
+			8502 = {
+				bunker = 10
+
+			}
+			8603 = {
+				bunker = 10
+
+			}
+
+			6182 = {
+				bunker = 10
+
+			}
+			8740 = {
+				bunker = 10
+
+			}
+			8780 = {
+				bunker = 10
+
+			}
+			8832= {
+				bunker = 10
+
+			}
+			anti_air_building = 5
+			air_base = 5
+
+		}
+		add_core_of = GER
+		add_core_of = FRA
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces={
+		2734 3007 3844 4282 6130 6182 8426 8460 8461 8495 8502 8532 8544 8555 8603 8740 8780 8832
+	}
+}

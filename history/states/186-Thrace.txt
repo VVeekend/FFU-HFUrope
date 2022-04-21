@@ -1,0 +1,28 @@
+
+state={
+	id=186
+	name="STATE_184"
+	manpower = 382500
+
+	state_category = rural
+
+	resources={
+		#chromium=11 moved to South Tyrol
+	}
+
+	history={
+		victory_points = {
+			3553 1
+		}
+		owner = TUR
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GRE
+		add_core_of = BUL
+	}
+
+	provinces={
+		3209 3553 4461 4890 5671 5704 9750 9788 9795 9804 9808 9809 9825 9835
+	}
+}

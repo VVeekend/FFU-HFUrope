@@ -1,0 +1,36 @@
+
+state={
+	id=53
+	name="STATE_123"
+
+	history={
+		owner = ENG
+		victory_points = {
+			1317 10
+		}
+		victory_points = {
+			8081 1
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			anti_air_building = 2
+			radar_station = 1
+			air_base = 6
+			1317 = {
+				naval_base = 8
+
+			}
+
+		}
+		add_core_of = ENG
+
+	}
+
+	provinces={
+		1317 5891 6032 6278 7893 7901 7932 7969 7979 7991 7992 7993 8021 8035 8036 8049 8081
+	}
+	manpower=1221013
+	buildings_max_level_factor=1.000
+	state_category=town
+}

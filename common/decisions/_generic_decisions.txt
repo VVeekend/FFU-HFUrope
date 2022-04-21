@@ -1,0 +1,411 @@
+political_actions = {
+
+
+	improved_worker_conditions = {
+
+		icon = generic_industry
+		
+		allowed = {
+			is_playable_country =yes
+		}
+		
+		available = {
+			has_stability < 1.0
+			if = {
+				limit = {
+					tag = SPR
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 180
+		days_re_enable = 540
+
+		cost = 100
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+			modifier = {
+				factor = 0
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+		}
+	}
+
+	promises_of_peace = {
+
+		icon = generic_political_discourse
+		
+		allowed = {
+			is_playable_country =yes
+		}
+		
+		available = {
+			has_war = no
+			has_war_support > 0.2
+			has_stability < 1.0
+			if = {
+				limit = {
+					tag = SPR
+				}
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		remove_trigger = {
+			has_war = yes
+			has_war_support < 0.05
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = -0.01
+			political_power_gain = -0.5
+		}
+
+		days_remove = 90
+		days_re_enable = 360
+
+		cost = 50
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 0
+				original_tag = SPR
+				NOT = { has_global_flag = spanish_civil_war }
+			}
+		}
+	}
+}
+
+
+propaganda_efforts = {
+
+	war_propaganda = {
+	
+			allowed = {
+			is_playable_country =yes
+		}
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { has_country_flag = war_propaganda_campaign_running }
+			threat > 0.5
+			has_war_support < 0.5
+			has_offensive_war = no
+			if = {
+				limit = {
+					tag = SPR
+					has_dlc = "La Resistance"
+				}
+			}
+			if = {
+				limit = {
+					original_tag = SPR
+					has_dlc = "La Resistance"
+				}
+				has_global_flag = scw_over
+			}
+		}
+
+		visible = {
+			
+		}
+
+		fire_only_once = no
+
+		days_remove = 90
+		days_re_enable = 180
+
+		cost = 150
+
+		modifier = {
+			war_support_weekly = 0.01
+		}
+
+		complete_effect = {
+			set_country_flag = war_propaganda_campaign_running
+		}
+		remove_effect = {
+			clr_country_flag = war_propaganda_campaign_running
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_war_support < 0.4
+				has_war = yes
+			}
+		}
+	}
+}
+
+war_measures = {
+	
+	emergency_factory_conversion_defensive = {
+
+		icon = generic_industry
+		
+		allowed = {
+			is_playable_country =yes
+		}
+		
+		available = {
+			num_of_civilian_factories > 5 #Change this if amount of factories change
+		}
+
+		visible = {
+			has_defensive_war = yes
+			has_offensive_war = no			
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 90
+
+		cost = 100
+
+		complete_effect = {
+			replace_civ_with_arms_factories = yes
+			add_war_support = -0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	emergency_factory_conversion_offensive = {
+
+		icon = generic_industry
+		
+		allowed = {
+			is_playable_country =yes
+		}
+		
+		available = {
+			num_of_civilian_factories > 5 #Change this if amount of factories change
+		}
+
+		visible = {
+			has_offensive_war = yes
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 90
+
+		cost = 100
+
+		complete_effect = {
+			replace_civ_with_arms_factories = yes
+			add_war_support = -0.05
+			add_stability = -0.03
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	desperate_defense = {
+
+		icon = generic_prepare_civil_war
+		
+		allowed = {
+			is_playable_country =yes
+		}
+		
+		available = {
+			surrender_progress > 0.5
+		}
+
+		visible = {
+			surrender_progress > 0
+		}
+
+		fire_only_once = no
+
+		days_remove = 45
+		days_re_enable = 360
+
+		cost = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				surrender_progress > 0.6
+				factor = 10
+			}
+		}
+
+		modifier = {
+			defence = 0.2
+			dig_in_speed_factor = 0.5
+		}
+
+		complete_effect = {
+
+		}
+	}
+
+    war_bonds = {
+
+    	icon = generic_industry
+
+    	allowed = {
+			is_playable_country =yes
+        }
+
+        available = {
+            has_war = yes
+            OR = {
+                AND = {
+                    has_government = democratic
+                    has_war_support > 0.79
+                }
+                AND = {
+                    has_government = communism
+                    has_war_support > 0.79
+                }
+                AND = {
+                    has_government = fascism
+                    OR = {
+                        has_war_support > 0.89
+                        surrender_progress > 0
+                    }
+                }
+                AND = {
+                    has_government = neutrality
+                    has_war_support > 0.84
+                    has_stability > 0.7
+                }
+            }
+        }
+        visible = {
+            has_war = yes
+            NOT = { tag = SPC }
+        }
+
+        fire_only_once = no
+
+		days_remove = 180
+
+		cost = GER_war_bonds_var?50
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power < 100
+				factor = 0 #use as pp dump
+			}
+
+			modifier = {
+				factor = 0
+				original_tag = SOV
+			}
+		}
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_var
+						value = 50
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = GER_war_bonds_var
+					value = 50
+				}
+			}
+			add_to_variable = {
+				var = GER_war_bonds_var
+				value = 25
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_var
+						value = 100
+						compare = greater_than_or_equals
+					}
+					check_variable = {
+						var = GER_war_bonds_war_support_var
+						value = -0.025
+						compare = greater_than
+					}
+				}
+				set_variable = {
+					var = GER_war_bonds_war_support_var
+					value = -0.025
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = GER_war_bonds_war_support_var
+						value = -0.025
+						compare = less_than_or_equals
+					}
+				}
+				add_to_variable = {
+					var = GER_war_bonds_war_support_var
+					value = -0.025
+				}
+				add_war_support = GER_war_bonds_war_support_var
+			}
+		}
+    }
+}
+
+foreign_politics = {
+
+}
+
+economy_decisions = {
+
+}

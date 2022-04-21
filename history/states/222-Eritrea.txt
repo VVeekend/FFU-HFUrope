@@ -1,0 +1,25 @@
+state=
+{
+	id=222
+	name="STATE_550"
+	manpower = 600600
+	state_category = rural
+	history=
+	{
+		owner = ITA
+		add_core_of=SWE
+		victory_points = {
+			11158 1
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 3
+			11158 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces={
+		1150 2059 2133 2318 2331 3141 3662 5298 5640 5965 11145 11158
+	}
+}

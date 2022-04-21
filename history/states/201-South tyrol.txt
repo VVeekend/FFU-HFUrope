@@ -1,0 +1,30 @@
+
+state={
+	id=201
+	name="STATE_39" # South Tyrol
+	manpower = 641650
+
+	state_category = town
+
+	resources={
+		aluminium=14 # was: 22
+		#chromium=44 #7 from Aegean Islands, 14 from Epirus, 12 from Thessaly/Greece, 11 from Thrace 44 CHROMIUM MOVED TO SICILY
+	}
+
+	history={
+		victory_points = {
+			1546 1
+		}
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 6
+		}
+		add_core_of = AUS
+		add_core_of = ITA
+	}
+
+	provinces={
+		1546 2668 3232 3245 3871 4353 6449 8934 8965 8977 9035 9081 9120 9133 9169
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=330
+	name="STATE_651" # Ufa
+	manpower = 2552075
+
+	state_category = city
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			1335 5
+		}
+		victory_points = {
+			2758 1
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		1335 1399 1561 1941 2071 2139 2242 2659 2758 3977 5282 7340 7409 7442 7456
+	}
+}

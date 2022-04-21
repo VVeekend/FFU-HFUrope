@@ -1,0 +1,21 @@
+state={
+	id=93
+	name="Diego Garcia"
+	provinces={
+		11594
+	}
+	manpower=2147
+	state_category = tiny_island
+	history=
+	{
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 3
+			11594 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=4
+	name="STATE_153"
+	manpower = 1655340
+
+	state_category = town
+
+	history={
+		owner = AUS
+		victory_points = {
+			8857 5
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 3
+		}
+		add_core_of = AUS
+
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+	}
+
+	provinces={
+		1488 1634 2807 3835 4389 4546 4564 4898 8813 8814 8834 8857 8875 8876 8892 8904 8911 8921 8933 9005
+	}
+}

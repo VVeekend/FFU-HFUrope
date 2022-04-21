@@ -1,0 +1,20 @@
+state={
+	id=153
+	name="STATE_774"
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			1894 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		12184 20 69 517 960 1078 1478 1826 1894 2605 3168 4780 5054 5131 6357 11176 11202 11219
+	}
+	manpower=1442456
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

@@ -1,0 +1,20 @@
+state={
+	id=239
+	name="Tibriz"
+	provinces={
+		801 1244 2069 2374 2764 3057 6406 10109 11578
+	}
+	manpower = 1431714
+	state_category = rural
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			2374 3
+		}
+		add_core_of = PER
+	}
+	buildings_max_level_factor=1.000
+}

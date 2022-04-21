@@ -1,0 +1,22 @@
+state={
+	id=267
+	name="Northern Kashmir"
+	provinces={
+		1466 1802 10193
+	}
+	manpower = 1415800
+
+	state_category = rural
+
+	history={
+		victory_points = {
+			1802 1
+		}
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = RAJ
+	}
+	buildings_max_level_factor=1.000
+}

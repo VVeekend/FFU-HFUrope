@@ -1,0 +1,35 @@
+state={
+	id=234
+	name="Nord-Norge"
+	manpower = 355251
+
+	state_category = rural
+	impassable=yes
+	resources={
+		steel=9 # was: 12
+		tungsten = 25 # was: 20
+	}
+
+	history={
+		owner = NOR
+		buildings = {
+			infrastructure = 3
+
+
+		}
+		victory_points = {
+			1370 1
+		}
+		victory_points = {
+			6489 1
+		}
+		victory_points = {
+			6487 1
+		}
+		add_core_of = NOR
+	}
+
+	provinces={
+		131 144 382 615 910 984 1021 1036 1088 1322 1345 1370 1428 1609 1694 1783 1882 2024 2153 2299 2523 2601 3332 3368 3486 3712 3832 3857 3983 4024 4206 4325 4427 4500 4583 4675 4805 5029 5105 5456 5794 6474 6476 6479 6481 6482 6483 6485 6487 6489 6492 6496 6501 6538 6548 6572 6503 3428 6473 3097
+	}
+}

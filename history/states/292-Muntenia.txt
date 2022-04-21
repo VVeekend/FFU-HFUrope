@@ -1,0 +1,36 @@
+
+state={
+	id=292
+	name="STATE_46" # Muntenia
+	manpower = 4461400
+	resources={
+		oil=50 # was: 72
+	}
+
+	state_category = large_city
+
+	history={
+		owner = ROM
+		victory_points = { 9379 20 }
+		victory_points = { 9340 5 }
+		victory_points = { 5230 3 }
+		buildings = {
+			infrastructure = 6
+			arms_factory = 5
+			industrial_complex = 1
+			air_base = 3
+			5230 = {
+				naval_base = 8
+			}
+			9304 = {
+				naval_base = 1
+			}
+			dockyard = 1
+		}
+		add_core_of = ROM
+	}
+
+	provinces={
+		3353 3740 3821 4111 4190 4771 4931 5230 5494 5795 5913 6398 9241 9253 9264 9265 9272 9302 9303 9304 9315 9316 9317 9329 9340 9348 9359 9379 9386 9387 9394 9410 9421 9426 9432 9443 1101 3280 4046 5442 6375 9252 9358 1557 3652 4462 4903 4927 5341 9347 9357 9385 9402 9442 9458 9471 9494
+	}
+}

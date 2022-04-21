@@ -1,0 +1,25 @@
+state={
+	id=275
+	name="Lucknow"
+	provinces={
+		34 876 1114 3423 10919 11014
+	}
+	manpower = 33491000
+	state_category = rural
+	resources={
+		aluminium=60
+		tungsten=125
+	}
+	history={
+		owner = RAJ
+		add_core_of=RAJ
+		victory_points = {
+			876 1
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

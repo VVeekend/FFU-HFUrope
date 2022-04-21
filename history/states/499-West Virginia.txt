@@ -1,0 +1,25 @@
+
+state={
+	id=499
+	name="STATE_499"
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			air_base = 10
+			arms_factory = 2
+			fuel_silo = 1
+		}
+		add_core_of = USA
+		victory_points = {
+			2243 1 
+		}
+	}
+	provinces={
+		269 2243 3247 10721 
+	}
+	manpower=1901974
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,0 +1,39 @@
+state={
+	id=255
+	name="STATE_86"
+	manpower = 2106500
+
+
+	state_category = city
+	history={
+		owner = GER
+		victory_points = {
+			6376 15
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			6068 = {
+				bunker = 1
+
+			}
+			963 = {
+				bunker = 1
+
+			}
+			3512 = {
+				bunker = 1
+
+			}
+			air_base = 3
+		}
+		add_core_of = GER
+		1938.3.12 = {
+			add_claim_by = GER
+		}
+	}
+
+	provinces={
+		963 1715 2295 3512 3920 4407 5055 5730 6068 6150 6376 6389 7651 7703 7720 7786 7787 7839 7864 7884
+	}
+}

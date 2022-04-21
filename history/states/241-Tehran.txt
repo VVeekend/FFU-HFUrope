@@ -1,0 +1,22 @@
+state={
+	id=241
+	name="Tehran"
+	provinces={
+		999 2379 3126 4650 10121
+	}
+	manpower = 796396
+
+	state_category = rural
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			3126 10
+		}
+		add_core_of = PER
+	}
+	buildings_max_level_factor=1.000
+}

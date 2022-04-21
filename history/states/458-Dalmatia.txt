@@ -1,0 +1,28 @@
+
+state={
+	id=458
+	name="STATE_103" # Dalmatia
+	manpower = 1431700
+
+	state_category = large_town
+
+
+	history={
+		owner = AUS
+
+
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 3
+
+		}
+		add_core_of = AUS
+		add_core_of = SER
+		#add_claim_by = ITA #added by focus
+	}
+
+	provinces={
+		1290 3001 3115 3840 4622 6065 9407
+	}
+}

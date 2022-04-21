@@ -1,0 +1,17 @@
+state={
+	id=453
+	name="Bolivar"
+	provinces={
+		207 1148 1620 2064 2186 2702 3150 3458 3489 3718 4116 5043 5703 5944 11102 11110
+	}
+	manpower = 1
+
+	state_category = pastoral
+
+	history={
+		owner = VEN
+
+		add_core_of = VEN
+
+		}	buildings_max_level_factor=1.000
+}

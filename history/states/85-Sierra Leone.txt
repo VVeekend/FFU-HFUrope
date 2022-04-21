@@ -1,0 +1,23 @@
+state={
+	id=85
+	name="STATE_700"
+	manpower = 1768500
+	state_category = pastoral
+	history=
+	{
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			5359 1
+		}
+		buildings = {
+			infrastructure = 3
+			5359 = {
+				naval_base = 3
+			}
+		}
+	}
+	provinces={
+		176 1051 1295 1501 1504 5359 11234
+	}
+}

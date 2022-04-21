@@ -1,0 +1,11 @@
+state={
+	id=483
+	name="Map Border"
+	provinces={
+		11584 4572 5382 6477 6478 6480 6494 6495 6510 6516 6631 6653 6687 6750 6994 7021 7258 9440 9546 9589
+	}
+	manpower=1
+	state_category = wasteland
+	buildings_max_level_factor=1.000
+
+}

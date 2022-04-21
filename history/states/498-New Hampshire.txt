@@ -1,0 +1,24 @@
+
+state={
+	id=498
+	name="STATE_498"
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			air_base = 10
+			fuel_silo = 1
+		}
+		add_core_of = USA
+		victory_points = {
+			10555 1
+		}
+	}
+	provinces={
+		2181 10555 
+	}
+	manpower=491524
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

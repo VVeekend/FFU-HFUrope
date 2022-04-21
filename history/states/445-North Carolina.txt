@@ -1,0 +1,31 @@
+
+state={
+	id=445
+	name="North Carolina"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+			air_base = 3
+			166 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = USA
+		victory_points = {
+			894 3 
+		}
+
+	}
+
+	provinces={
+		166 894 1880 3049 3798 5615 10692 
+	}
+	manpower=3571623
+	buildings_max_level_factor=1.000
+	state_category=city
+}

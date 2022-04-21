@@ -1,0 +1,28 @@
+
+state={
+	id=406
+	name="STATE_171"
+	manpower = 2295085
+	impassable=yes
+	state_category = city
+
+	history={
+		owner = SPR
+		victory_points = {
+			9529 5
+		}
+		victory_points = {
+			9699 3
+		}
+		buildings = {
+			infrastructure = 6
+			anti_air_building = 10
+			arms_factory = 1
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		723 3370 3619 4175 4220 4879 4974 5509 5732 5749 6291 9496 9529 9553 9554 9560 9585 9593 9604 9612 9650 9651 9671 9692 9699 9712
+	}
+}

@@ -1,0 +1,20 @@
+state={
+	id=10
+	name="STATE_769"
+	state_category = pastoral
+	history={
+		owner = BEL
+		add_core_of=SWE
+		victory_points = {
+			383 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		383 2329
+	}
+	manpower=2145731
+	buildings_max_level_factor=1.000
+}

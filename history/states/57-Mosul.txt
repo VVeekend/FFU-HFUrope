@@ -1,0 +1,23 @@
+state={
+	id=57
+	name="Mosul"
+	provinces={
+		402 832 1041 1043 1725 2257 2756 2915 3165 3439 4351 5714 10120 10191 10250
+	}
+	manpower = 1182741
+	state_category = town
+	resources={
+		oil=14
+	}
+	history={
+		owner = TUR
+		add_core_of=TUR
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			1725 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=501
+	name="STATE_501"
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 8
+			dockyard = 4
+			air_base = 10
+			arms_factory = 1
+			fuel_silo = 1
+		}
+		add_core_of = USA
+		victory_points = {
+			1893 10 
+		}
+	}
+	provinces={
+		883 1600 1893 
+	}
+	manpower=4316721
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

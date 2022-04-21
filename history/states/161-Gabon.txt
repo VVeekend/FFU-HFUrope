@@ -1,0 +1,26 @@
+state={
+	id=161
+	name="STATE_539"
+	resources={
+		steel=60
+	}
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			11335 15
+		}
+		buildings = {
+			infrastructure = 3
+			11335 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		205 874 1160 1999 2052 2132 2168 2177 2366 2388 2653 2662 3220 3687 3773 4223 4290 5047 5174 5918 6355 11335 11343 11346 11348 11351 11353 11370
+	}
+	manpower=409752
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=304
+	name="STATE_580" # Tobolsk
+	manpower = 88126
+
+	state_category = wasteland
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		76 507 568 603 687 690 729 891 1035 1532 1633 1861 1922 2012 3175 4588 6675 6770
+	}
+}

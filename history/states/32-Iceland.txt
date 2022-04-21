@@ -1,0 +1,27 @@
+state={
+	id=32
+	name="Iceland"
+	provinces={
+		413 571 931 1253 2370 2514
+	}
+	manpower = 115870
+
+	state_category = rural
+
+
+	history=
+	{
+		owner = DEN
+		victory_points = { 931 5 }
+		victory_points = { 571 1 }
+		buildings = {
+			infrastructure = 2
+			931 ={
+				naval_base = 1
+			}
+		}
+		#add_core_of = DEN
+	}
+
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,27 @@
+state={
+	id=278
+	name="Gujarat"
+	provinces={
+		200 281 569 726 1437 4833
+	}
+	manpower = 10590200
+	state_category = town
+	resources={
+		oil=3
+	}
+	history={
+		owner = RAJ
+		add_core_of=RAJ
+		victory_points = {
+			200 1
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			200 = {
+				naval_base = 2
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

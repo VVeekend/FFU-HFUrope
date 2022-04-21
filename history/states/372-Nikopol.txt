@@ -1,0 +1,32 @@
+state={
+	id=372
+	name="STATE_226" # Dnipropertovsk
+	manpower = 2391047
+
+	state_category = town
+
+	resources={
+		oil=4 # was: 6
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			8679 10
+		}
+		victory_points = {
+			8792 1
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			air_base = 2
+		}
+		add_core_of = SOV
+
+	}
+
+	provinces={
+		1602 1776 3206 3285 3522 3574 3608 4098 4560 4718 5201 8521 8538 8551 8562 8576 8596 8597 8611 8622 8634 8635 8653 8665 8666 8679 8716 8724 8736 8792
+	}
+}

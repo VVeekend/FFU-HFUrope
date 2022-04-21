@@ -1,0 +1,28 @@
+state={
+	id=285
+	name="Madurai"
+	provinces={
+		40 364 539 950 3741
+	}
+	manpower = 29147500
+	state_category = rural
+	resources={
+		rubber=19
+	}
+	history={
+		owner = RAJ
+		add_core_of=RAJ
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 1
+			364 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			364 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

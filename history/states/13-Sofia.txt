@@ -1,0 +1,30 @@
+
+state={
+	id=13
+	name="STATE_48"
+	manpower = 1891500
+	resources={
+		steel=10
+		aluminium=4 # was: 2
+	}
+
+
+	state_category = large_city
+
+	history={
+		owner = BUL
+		victory_points = {
+			3447 15
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 6
+			air_base = 3
+		}
+		add_core_of = BUL
+	}
+
+	provinces={
+		115 1438 1559 2650 3447 3993 4603 4952 5820 9493 9535 9566 9567 9591 9600 9624 9631 9638 9649 9677 9705 9739 9745 9767 9773 5694 9499
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=338
+	name="STATE_582"
+	resources={
+		steel=40.000
+		oil=6.000
+		tungsten=20
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 5
+
+		}
+		add_core_of = SOV
+		victory_points = {
+			411 3
+		}
+	}
+
+	provinces={
+		167 411 789 1054 1109 1538 1672 1740 2026 2291 2311 2335 3243 3567 3926 4283 4538 5627 7341 7677 7956 8056 8057
+	}
+	manpower=1044991
+	buildings_max_level_factor=1.000
+	state_category = city
+}

@@ -1,0 +1,23 @@
+state={
+	id=67
+	name="Jamaica"
+	provinces={
+		2534 5611 10607 11533
+	}
+	manpower = 1075000
+	state_category = town
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			5611 1
+		}
+		buildings = {
+			infrastructure = 4
+			5611 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

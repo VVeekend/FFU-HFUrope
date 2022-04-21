@@ -1,0 +1,26 @@
+state={
+	id=78
+	name="Oman"
+	provinces={
+		279 412 737 815 848 911 1234 1310 1749 1796 1842 2363 2538 2752 3212 3238 3255 3739 3876 4305 5001 5276 6004 11031 11059 11076 11077 11098 11104 11106 11126 11133
+	}
+	manpower = 369000
+	state_category = rural
+	resources={
+		oil=0
+	}
+	history={
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 2
+			1796 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			1796 3
+		}
+	}
+	buildings_max_level_factor=1.000
+}

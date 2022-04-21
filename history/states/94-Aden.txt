@@ -1,0 +1,30 @@
+state={
+	id=94
+	name="Aden"
+	provinces={
+		10 399 475 818 1263 1455 1617 1946 2001 2006 2572 2790 3041 3564 3694 4475 5802 6113 11148 11152 11153 11160 11163 11169 11170 1944 1199 1906 2332 2484 2512 11138 11144 11146
+	}
+
+	manpower = 891505
+	state_category = pastoral
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			1617 1
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			1617 = {
+				naval_base = 3
+			}
+			1944 = {
+				naval_base = 1
+			}
+		}
+	}
+
+
+	buildings_max_level_factor=1.000
+}

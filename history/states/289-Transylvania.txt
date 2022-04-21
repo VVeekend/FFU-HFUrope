@@ -1,0 +1,28 @@
+
+state={
+	id=289
+	name="STATE_84"
+	manpower = 1622300
+	resources={
+		steel=15 # was: 4
+	}
+
+	state_category = large_city
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+		}
+		victory_points = {
+			5002 1
+		}
+		add_core_of = AUS
+		add_core_of = ROM
+	}
+
+	provinces={
+		1395 2109 2618 2680 4874 5002 5139 5499 5823 5886 9018 9063 9064 9065 9084 9102 9103 9109 9125 9136 9155 9156 9172 9180 9203
+	}
+}

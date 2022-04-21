@@ -1,0 +1,21 @@
+state={
+	id=91
+	name="Seychelles"
+	provinces={
+		1589
+	}
+	manpower = 126703
+	state_category = small_island
+	history=
+	{
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 3
+			1589 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,33 @@
+
+
+state={
+	id=308
+	name="STATE_653" # Sverdlovsk
+	manpower = 2161650
+
+	state_category = city
+
+	history={
+		owner = SOV
+		victory_points = {
+			6973 5
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 1
+
+		}
+		add_core_of = SOV
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+			}
+		}
+	}
+
+	provinces={
+		246 253 935 940 1638 1762 2500 2928 3281 5363 6762 6887 6973 7052
+	}
+}

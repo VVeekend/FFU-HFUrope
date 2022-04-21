@@ -1,0 +1,25 @@
+state={
+	id=27
+	name="STATE_71"
+	manpower = 1197800
+
+	state_category = rural
+
+	history={
+		victory_points = {
+			8405 3
+		}
+		owner = AUS
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = AUS
+
+		1939.3.14 = {
+		}
+	}
+
+	provinces={
+		1563 2623 2705 4078 4185 4697 6138 8405 8417 8449 8466 8467 8480 8504 8526 8535 8557
+	}
+}

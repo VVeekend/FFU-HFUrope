@@ -1,0 +1,23 @@
+state={
+	id=215
+	name="STATE_451"
+	manpower = 45628
+	state_category = wasteland
+	history={
+		owner = ITA
+		add_core_of=SWE
+		victory_points = {
+			3137 10
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 4
+			3137 = {
+				naval_base = 8
+			}
+		}
+	}
+	provinces={
+		58 2885 3137 4802 5958 6020 10426 10435 10447 10460 10466 10473 10503 10532 10546 10567 10591
+	}
+}

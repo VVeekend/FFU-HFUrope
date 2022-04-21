@@ -1,0 +1,19 @@
+state={
+	id=243
+	name="Kurdistan"
+	provinces={
+		806 1177 1533 2160 3375 3565 4841 5684 6124 10316
+	}
+	manpower = 780278
+
+	state_category = rural
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PER
+	}
+	buildings_max_level_factor=1.000
+}

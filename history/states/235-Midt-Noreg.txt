@@ -1,0 +1,28 @@
+state={
+	id=235
+	name="Tröndelag"
+	manpower = 280271
+
+	state_category = rural
+
+	history={
+		owner = NOR
+		buildings = {
+			infrastructure = 4
+			arms_factory = 0
+			industrial_complex = 1
+			1134 = {
+				naval_base = 3
+				coastal_bunker = 2
+			}
+		}
+		victory_points = {
+			1134 3
+		}
+		add_core_of = NOR
+	}
+
+	provinces={
+		25 751 1134 1443 1850 2647 3171 3178 5343 5521 6118 6583 6585 6597 6602 6634 6643
+	}
+}

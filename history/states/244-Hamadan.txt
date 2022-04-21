@@ -1,0 +1,21 @@
+state={
+	id=244
+	name="Hamadan"
+	provinces={
+		892 1204 1545 3009 10210 10229 10300
+	}
+	manpower = 3446250
+	state_category = town
+	impassable = yes
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = PER
+	}
+	buildings_max_level_factor=1.000
+}

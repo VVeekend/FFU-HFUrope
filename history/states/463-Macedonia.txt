@@ -1,0 +1,31 @@
+
+state={
+	id=463
+	name="STATE_106"
+	resources={
+		chromium=60.000 #10 chromium moved from macedonia
+		#aluminium=16.000
+	}
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 2
+
+		}
+		victory_points = {
+			5082 5
+		}
+		add_core_of = SER
+		add_core_of = BUL
+	}
+
+	provinces={
+		860 2215 4512 5082 6159 6267 6335 9698 9711 9719 9744 9758 9784 9794 9799 9823 9826 9676 9655 9616 5263 9686
+	}
+	manpower=1374200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

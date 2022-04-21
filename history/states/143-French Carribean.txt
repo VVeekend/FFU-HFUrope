@@ -1,0 +1,33 @@
+state={
+	id=143
+	name="French Carribean"
+	provinces={
+		10818 10903 11543 11537
+	}
+	manpower = 444290
+	resources={
+		chromium=90
+	}
+	state_category = rural
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			10818 5
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+			10818 = {
+				naval_base = 3
+			}
+			10903 = {
+				naval_base = 1
+			}
+			11543 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,32 @@
+state={
+	id=434
+	name="STATE_141" # Svealand
+	manpower = 1
+	state_category = city
+
+	resources={
+		#steel=24 # was: 40
+		#aluminium=2 # was: 4
+	}
+
+	history={
+		owner = SWE
+		victory_points = {
+			318 20
+		}
+		buildings = {
+			infrastructure = 7
+
+			318 = {
+				naval_base = 5
+				coastal_bunker = 3
+			}
+
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		318 1845 1895 2140 2884 3267 6758 6774 6792 6825 11545 11542
+	}
+}

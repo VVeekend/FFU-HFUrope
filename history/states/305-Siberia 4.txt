@@ -1,0 +1,24 @@
+
+state={
+	id=305
+	manpower = 29299
+	name="STATE_577"
+	resources={
+
+		aluminium = 50 # was: 30
+	}
+
+	state_category = wasteland
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		100 563 882 938 1071 1465 2527 2541 2766 6651 6724
+	}
+}

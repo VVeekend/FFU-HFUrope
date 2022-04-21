@@ -1,0 +1,25 @@
+
+state={
+	id=39
+	name="STATE_136"
+	manpower = 745466
+
+	state_category = town
+	resources={
+		tungsten=4 # was: 6
+		aluminium=3 # was: 4
+	}
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 6
+			dockyard = 2
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		1991 2179 3306 3322 3460 3539 4065 4584 5235 5693 6105 6894 6895 6905 6918 6922 6958 6962 6968 6993 7013
+	}
+}

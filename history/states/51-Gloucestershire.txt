@@ -1,0 +1,32 @@
+
+state={
+	id=51
+	name="STATE_338"
+	manpower = 1800615
+	resources={
+		steel=9 # was: 16
+	}
+
+	state_category = city
+
+	history={
+		owner = ENG
+		victory_points = {
+			7803 5
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 2
+			7803 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		1480 2404 3414 4031 4159 5746 7755 7756 7803 7814 7871 7881 7882
+	}
+}

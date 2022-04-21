@@ -1,0 +1,23 @@
+state={
+	id=55
+	name="Azores"
+	provinces={
+		11513
+	}
+	manpower = 212012
+	state_category = small_island
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			11513 3
+		}
+		buildings = {
+			infrastructure = 3
+			11513 = {
+				naval_base = 3
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

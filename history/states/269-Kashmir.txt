@@ -1,0 +1,20 @@
+state={
+	id=269
+	name="Kashmir"
+	provinces={
+		490 1288 3067 3496 10266
+	}
+	manpower = 2123700
+
+	state_category = rural
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+			industrial_complex=3
+		}
+		add_core_of = RAJ
+	}
+	buildings_max_level_factor=1.000
+}

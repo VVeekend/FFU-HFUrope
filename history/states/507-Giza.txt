@@ -1,0 +1,26 @@
+
+state={
+	id=507
+	name="Giza"
+
+	history={
+		owner = ENG
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 5
+			air_base = 10
+
+		}
+		victory_points = {
+			1632 1 
+		}
+
+	}
+
+	provinces={
+		323 1173 1472 1632 3962 3997 4492 5641 6003 6018 10756 10763 10764 10791 10802 10807 10812 10821 10823 10824 10829 10837 10855 10873 
+	}
+	manpower=603458
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

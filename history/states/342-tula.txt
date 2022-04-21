@@ -1,0 +1,30 @@
+
+state={
+	id=342
+	name="STATE_223"
+	manpower = 1635549
+
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			3099 3
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			air_base = 1
+		}
+		add_core_of = SOV
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+			}
+		}
+	}
+
+	provinces={
+		560 797 1070 1196 1574 1896 1905 2875 3074 3099 5179 7332 7339 7366 7373 7396 7407 7438 7470 7478 7493 7516 7534 7535 7536 7591 7606 7615 7667
+	}
+}

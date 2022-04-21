@@ -1,0 +1,28 @@
+
+state={
+	id=41
+	name="STATE_121" # Lothian
+	manpower = 1431624
+
+	state_category = city
+
+	history={
+		owner = ENG
+		victory_points = { 7096 10 }
+		victory_points = { 7057 1 }
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 4
+			dockyard = 1
+			air_base = 8
+			7057 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		162 1265 2757 3135 4360 5064 5518 6142 7053 7057 7072 7086 7089 7096 7111
+	}
+}

@@ -1,0 +1,39 @@
+state={
+	id=193
+	name="Friesland"
+	provinces={
+		4256 5352 5581 5729 7542 7573 7574 7595 7596 7609 7649 7689 7690 7702 7738 7739 7783 7793 7836 7837 11564
+	}
+	history={
+		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			7783 5
+		}
+		victory_points = {
+			5729 1
+		}
+		victory_points = {
+			5581 3
+		}
+		victory_points = {
+			7595 1
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			7595 = {
+				naval_base = 3
+
+			}
+
+		}
+
+	}
+
+	manpower=2364000
+
+	state_category=city
+
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,21 @@
+state=
+{
+	id=423
+	name="STATE_297"
+	manpower = 1
+	state_category = enclave
+	history=
+	{
+		owner = SPR
+		add_core_of=SWE
+		victory_points = {
+			11582 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		2207 11315 11582
+	}
+}

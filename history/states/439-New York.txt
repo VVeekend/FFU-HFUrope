@@ -1,0 +1,37 @@
+state={
+	id=439
+	name="New York"
+	provinces={
+		198 1085 1622 1625 2016 2828 3393 4131 7209 7570
+	}
+	resources={
+		steel=13 # was: 24.000
+	}
+
+	state_category = megalopolis
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+			industrial_complex = 7
+			dockyard = 3
+			air_base = 10
+			1625 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			1625 30.0
+		}
+		victory_points = {
+			1622 3
+		}
+	}
+
+	manpower=13479142
+
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=319
+	name="STATE_571" # Omsk
+	manpower = 1317157
+
+	state_category = city
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+		}
+		victory_points = {
+			24 3
+		}
+		add_core_of = SOV
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+			}
+		}
+	}
+
+	provinces={
+		24 1612 1848 2278 6990 7316
+	}
+}

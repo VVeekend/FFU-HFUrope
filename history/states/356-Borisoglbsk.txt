@@ -1,0 +1,26 @@
+
+state={
+	id=356
+	#name="STATE_287"
+	name="Voronezh"
+	manpower = 567983
+
+	state_category = town
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			air_base = 6
+		}
+		victory_points = {
+			7930 5
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		1537 1601 2824 2994 4071 4580 5118 5545 7913 7923 7930 7967 7968 7977 7987 7988 8019 8032 8033 8080
+	}
+}

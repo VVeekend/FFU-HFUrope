@@ -1,0 +1,32 @@
+
+state={
+	id=307
+	name="STATE_398"
+	manpower = 2135879
+	state_category = rural
+	resources={
+		aluminium=6 # was: 10
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+
+		}
+		victory_points = {
+			3453 1
+		}
+		add_core_of = SOV
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+			}
+		}
+	}
+
+	provinces={
+		189 630 736 966 1663 1898 1933 2362 2468 2526 2654 2838 2921 2979 3160 3453 3911 3974 4594 4837 4862 5051 5845 5964 6029 6723 6783 6928 7046 7066 7098
+	}
+}

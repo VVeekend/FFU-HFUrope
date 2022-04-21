@@ -1,0 +1,46 @@
+
+state={
+	id=203
+	name="STATE_159"
+	manpower = 5597704
+	state_category = metropolis
+
+
+	resources={
+		steel=25 # was: 12
+		tungsten = 20 # was: 20
+	}
+
+
+
+
+
+
+
+
+
+
+	history={
+		owner = ITA
+		victory_points = {
+			2417 15
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 7
+			air_base = 10
+
+		}
+		add_core_of = ITA
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 7
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces={
+		1102 1583 2268 2417 2867 3470 4049 4385 5069 5449 6405 9132 9160 9168 9198 9212 9270 9325
+	}
+}

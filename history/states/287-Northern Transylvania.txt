@@ -1,0 +1,25 @@
+
+state={
+	id=287
+	name="STATE_76"
+	manpower=2352700
+
+	state_category = wasteland
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			8968 5
+		}
+		add_core_of = AUS
+		add_core_of = ROM
+	}
+
+	provinces={
+		1273 1330 3965 4278 4913 5171 6440 8734 8763 8799 8809 8895 8896 8913 8937 8968 912 976 2936 3326 4764 4888 5238 6095 8775 8838 8858 8880 8914 8969 8970 9008 9019 9110
+	}
+}

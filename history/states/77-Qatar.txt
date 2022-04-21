@@ -1,0 +1,23 @@
+state={
+	id=77
+	name="Qatar"
+	provinces={
+		2115 3525 11551
+	}
+	manpower = 51600
+	state_category = pastoral
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			2115 1
+		}
+		buildings = {
+			infrastructure = 2
+			2115 = {
+				naval_base = 2
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

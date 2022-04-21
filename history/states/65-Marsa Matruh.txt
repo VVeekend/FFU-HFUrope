@@ -1,0 +1,21 @@
+state={
+	id=65
+	name="STATE_452"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = SWE
+
+	}
+
+	provinces={
+		623 672 1942 2142 2455 3111 3235 3291 3448 3628 3862 4694 4961 5603 5898 5969 6026 10583 10592 10597 10605 10634 10643 10644 10650 10659 10660 10674 10679 10680 10681 10690 10699 10705 10711 10716 10725 10729 10730 10742 10750 10754 10772
+	}
+	manpower=52556
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

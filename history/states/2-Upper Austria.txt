@@ -1,0 +1,44 @@
+
+state={
+	id=2
+	name="STATE_152"
+	manpower = 2275377
+
+	state_category = city
+
+	resources={
+		steel=5 # was: 8
+		aluminium=1 # was: 1
+	}
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+		}
+		victory_points = {
+			8773 10
+		}
+		victory_points = {
+			8988 3
+		}
+		victory_points = {
+			2967 3
+		}
+		victory_points = {
+			2785 10
+		}
+		add_core_of = AUS
+
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+	}
+
+	provinces={
+		55 1292 1759 2011 2785 2967 4321 5236 5414 5423 5743 5841 5961 6298 8478 8589 8605 8606 8646 8647 8660 8673 8684 8709 8729 8773 8783 8784 8865 8877 8988 8989
+	}
+}

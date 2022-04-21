@@ -1,0 +1,23 @@
+state={
+	id=135
+	name="Aleppo"
+	provinces={
+		2102 2546 2696 2787 2813 4352 5311 10134 10200
+	}
+	manpower = 1325594
+	state_category = town
+	history={
+		owner = TUR
+		add_core_of=TUR
+		victory_points = {
+			5311 2
+		}
+		victory_points = {
+			2546 1
+		}
+		buildings = {
+			infrastructure = 3
+		}
+	}
+	buildings_max_level_factor=1.000
+}

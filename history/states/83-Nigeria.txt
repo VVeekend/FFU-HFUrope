@@ -1,0 +1,34 @@
+
+state={
+	id=83
+	name="STATE_558"
+	resources={
+		rubber=7.000
+	}
+
+	history={
+		owner = ENG
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 3
+			arms_factory = 0
+			industrial_complex = 1
+			3955 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			3955 1
+		}
+
+	}
+
+	provinces={
+		74 133 355 581 597 614 619 825 1055 1111 1188 1207 1470 1473 1580 1752 1817 1841 2032 2033 2454 2522 2549 3046 3093 3360 3789 3933 3955 4088 4340 4695 5104 5348 5443 5800 5870 5967 11199 11201 11208 11216 11218 11228 11230 11244 11248 11249 11251 11253 11272 11276
+	}
+	manpower=19757000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,23 @@
+state={
+	id=450
+	name="Panama Canal"
+	provinces={
+		2903 6107 11063 11101
+	}
+	manpower = 39467
+	state_category = enclave
+	history={
+		owner = USA
+		add_core_of=SWE
+		victory_points = {
+			11063 5
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 6
+			11063 = {
+				naval_base = 3
+			}
+		}
+		}	buildings_max_level_factor=1.000
+}

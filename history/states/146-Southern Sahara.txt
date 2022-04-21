@@ -1,0 +1,18 @@
+state={
+	id=146
+	name="Southern Sahara"
+	state_category = pastoral
+	impassable = yes
+	history={
+		owner = FRA
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		30 38 134 228 257 260 386 491 500 694 1029 2055 2065 3889 11099 11131 10159
+	}
+	manpower=1456356
+	buildings_max_level_factor=1.000
+}

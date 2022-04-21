@@ -1,0 +1,28 @@
+state={
+	id=20
+	name="Nova Scotia"
+	provinces={
+		128 903 928 1411 2986 6974 7184 4555
+	}
+	manpower = 490912
+
+	state_category = city
+
+	history={
+		owner = CAN
+		victory_points = {
+			128 3
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 3
+			128 = {
+				naval_base = 4
+
+			}
+		}
+		add_core_of = CAN
+	}
+	buildings_max_level_factor=1.000
+}

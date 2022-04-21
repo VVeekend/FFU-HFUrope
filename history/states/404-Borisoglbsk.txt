@@ -1,0 +1,23 @@
+
+state={
+	id=404
+	name="Novo Voronezh" # Voronezh
+	manpower = 2567983
+
+	state_category = town
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			air_base = 6
+		}
+
+		add_core_of = SOV
+	}
+
+	provinces={
+		1662 2009 2444 2869 3014 3733 4075 4106 4420 5019 5108 5135 6066 6292 7978 7989 7990 8020 8034 8048 8063 8071 8088 8099 8111 8131 8186 8207 8208 8209 8243 8244 8277 8302 8327 8334
+	}
+}

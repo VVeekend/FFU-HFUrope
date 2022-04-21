@@ -1,0 +1,18 @@
+state={
+	id=283
+	name="Madras"
+	provinces={
+		1858 2440 3603 6190
+	}
+	manpower = 15791700
+	state_category = rural
+	history={
+		owner = RAJ
+		add_core_of=RAJ
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

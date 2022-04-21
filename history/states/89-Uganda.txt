@@ -1,0 +1,22 @@
+state={
+	id=89
+	name="STATE_548"
+	state_category = rural
+
+	history={
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			487 1
+		}
+	}
+	provinces={
+		11588 77 101 244 487 698 1681 1719 2481 3265 3413 3809 3945 4332 4908 4963 4982 6183 11303 11314 11319 11333
+
+	}
+	manpower=3515625
+	buildings_max_level_factor=1.000
+}

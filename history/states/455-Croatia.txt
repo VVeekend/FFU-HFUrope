@@ -1,0 +1,25 @@
+
+state={
+	id=455
+	name="STATE_109" # Croatia
+	manpower = 2224400
+
+	state_category = large_town
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+		}
+		victory_points = {
+			1595 10
+		}
+		add_core_of = AUS
+		add_core_of = SER
+	}
+
+	provinces={
+		958 1595 1746 1806 2762 2797 4368 4526 4925 4975 5129 5747 6252 6442 9100 9123 9170 9179 9189 9190 9199 9214 9233 9250 9285 9298
+	}
+}

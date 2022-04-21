@@ -1,0 +1,45 @@
+
+state={
+	id=206
+	name="STATE_162"
+	manpower = 3084933
+
+	state_category = large_city
+
+	history={
+		owner = ITA
+		victory_points = {
+			2592 3
+		}
+		victory_points = {
+			9438 1
+		}
+		victory_points = {
+			4224 1
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 3
+			air_base = 2
+			9438 = {
+				naval_base = 10
+			}
+			4224 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = ITA
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		1566 2499 2574 2592 4016 4224 5257 5537 9438 9456 9460 9483 9502 9511 9523 9545 9587 9588 9622
+	}
+}

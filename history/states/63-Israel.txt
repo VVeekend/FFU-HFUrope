@@ -1,0 +1,28 @@
+state={
+	id=63
+	name="Israel"
+	provinces={
+		721 1075 3029 4844 5605 5622 5883 10728 10481 10516 10552 10577 10612 10613 10661 10739 10776
+	}
+	manpower = 933142
+	state_category = rural
+	history={
+		owner = TUR
+		add_core_of=TUR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 2
+			10552 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			10552 1
+		}
+		victory_points = {
+			5622 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

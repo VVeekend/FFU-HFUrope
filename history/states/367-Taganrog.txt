@@ -1,0 +1,23 @@
+state={
+	id=367
+	name="STATE_228" # Voroshilovgrad
+	manpower = 2167411
+
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			5027 1
+		}
+		buildings = {
+			infrastructure = 5
+			air_base = 6
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		1587 3566 3737 3956 4295 4551 4964 5027 5565 5711 6064 8312 8353 8354 8366 8423 8436 8445 8484 8529 8552 8612 8702
+	}
+}

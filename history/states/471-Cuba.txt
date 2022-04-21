@@ -1,0 +1,10 @@
+state={
+	id=471
+	name="Cuba"
+	provinces={
+		309 1224 1425 1771 1791 2271 3464 4153 5506 10225 10235 10336 10418
+	}
+	manpower=1
+	state_category = wasteland
+	buildings_max_level_factor=1.000
+}

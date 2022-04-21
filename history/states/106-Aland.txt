@@ -1,0 +1,25 @@
+
+state=
+{
+	id=106
+	name="STATE_145"
+	manpower = 27400
+
+	state_category = small_island
+
+	history=
+	{
+		owner = FIN
+		buildings = {
+			infrastructure = 5
+			11470 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = FIN
+	}
+
+	provinces={
+		11470
+	}
+}

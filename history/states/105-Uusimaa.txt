@@ -1,0 +1,41 @@
+state={
+	id=105
+	name="STATE_111" # Uusimaa
+	manpower = 1670190
+
+	state_category = city
+
+	history={
+		owner = SOV
+		victory_points = {
+			6710 15
+		}
+		victory_points = {
+			1824 1
+		}
+		victory_points = {
+			5124 1
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 5
+			6710 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+			1824 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = FIN
+		add_core_of = SOV
+	}
+
+	provinces={
+		715 965 1141 1477 1713 1750 1824 2435 3465 4498 5124 5186 5635 5770 6657 6688 6691 6692 6701 6709 6710 6711
+		11529 11534 11517 11516 11520 13280 11522}
+}

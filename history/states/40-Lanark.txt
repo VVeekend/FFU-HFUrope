@@ -1,0 +1,44 @@
+
+state={
+	id=40
+	name="STATE_133"
+	resources={
+		steel=21.000
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			7100 15
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			dockyard = 4
+			anti_air_building = 2
+			air_base = 8
+			2933 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = ENG
+		1939.1.1 = {
+			buildings = {
+				dockyard = 5
+				industrial_complex = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1994 2933 3781 4497 4907 5328 5748 5773 5935 6101 7047 7100 7139 7146 7157 7169 7170 7185 7193
+	}
+	manpower=2257723
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=411
+	name="STATE_165"
+	manpower = 3036537
+	impassable=yes
+	state_category = large_city
+
+	history={
+		owner = SPR
+		victory_points = {
+			9783 15
+		}
+		victory_points = {
+			6320 1
+		}
+		victory_points = {
+			9725 1
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			anti_air_building = 10
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		1483 2041 2626 2895 3211 3295 3324 3620 4739 4962 5317 5826 6320 9637 9646 9662 9675 9694 9695 9703 9704 9724 9725 9760 9782 9783 9855
+	}
+}

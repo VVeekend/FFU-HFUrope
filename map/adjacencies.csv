@@ -1,0 +1,162 @@
+From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
+2015;7241;sea;3144;-1;-1;-1;-1;;denmark
+7221;4020;sea;12224;-1;-1;-1;-1;;denmark
+7241;11487;sea;3144;-1;-1;-1;-1;;denmark
+11487;4020;sea;3144;-1;-1;-1;-1;;denmark
+4020;11484;sea;12224;-1;-1;-1;-1;;denmark
+7195;11486;sea;3144;-1;-1;-1;-1;;denmark
+7195;5535;sea;12224;-1;-1;-1;-1;;denmark
+6351;11486;sea;3144;-1;-1;-1;-1;;denmark
+6351;7287;sea;3144;-1;-1;-1;-1;;denmark
+7278;7287;sea;3144;-1;-1;-1;-1;;denmark
+7287;11486;sea;12224;-1;-1;-1;-1;;denmark
+3320;7278;sea;12224;-1;-1;-1;-1;;denmark
+3320;60;sea;12578;-1;-1;-1;-1;;denmark
+60;7278;sea;12642;-1;-1;-1;-1;;denmark
+6151;4641;sea;12578;-1;-1;-1;-1;;denmark-sweden
+6852;1381;sea;6318;-1;-1;-1;-1;;harju
+6858;2312;sea;1873;-1;-1;-1;-1;;harju
+4104;2312;sea;1873;-1;-1;-1;-1;;harju
+4325;6503;sea;13410;-1;-1;-1;-1;;norway
+3486;3428;sea;13410;-1;-1;-1;-1;;norway
+9230;4787;sea;1626;-1;-1;-1;-1;;crimea
+2115;11551;sea;12025;-1;-1;-1;-1;;qatar
+798;1397;sea;11810;-1;-1;-1;-1;;newfoundland
+11558;11555;sea;10934;-1;-1;-1;-1;;trinidad
+11554;11549;sea;11919;-1;-1;-1;-1;;caribbean
+11549;10933;sea;11885;-1;-1;-1;-1;;caribbean
+10933;10903;sea;11885;-1;-1;-1;-1;;caribbean
+10903;11544;sea;12903;-1;-1;-1;-1;;caribbean
+11544;10818;sea;10254;-1;-1;-1;-1;;caribbean
+10818;11543;sea;10254;-1;-1;-1;-1;;caribbean
+10818;11541;sea;12324;-1;-1;-1;-1;;caribbean
+11541;11539;sea;12906;-1;-1;-1;-1;;caribbean
+11537;11539;sea;12906;-1;-1;-1;-1;;caribbean
+10608;11538;sea;13314;-1;-1;-1;-1;;caribbean
+11538;11535;sea;13314;-1;-1;-1;-1;;caribbean
+10091;6006;sea;13527;-1;-1;-1;-1;;greece
+9993;10033;sea;11967;-1;-1;-1;-1;;greece
+10033;10044;sea;11967;-1;-1;-1;-1;;greece
+4193;1227;sea;12030;-1;-1;-1;-1;;greece
+11514;10068;sea;12281;-1;-1;-1;-1;;greece
+10068;10004;sea;12736;-1;-1;-1;-1;;greece
+3943;10004;sea;10489;-1;-1;-1;-1;;greece
+11497;9503;sea;12608;-1;-1;-1;-1;;yugo
+3554;11497;sea;12964;-1;-1;-1;-1;;yugo
+5807;10029;sea;12360;-1;-1;-1;-1;;sicily
+9798;9764;sea;12860;-1;-1;-1;-1;;corsica
+5262;579;sea;5084;-1;-1;-1;-1;;quebec
+11468;442;sea;13333;-1;-1;-1;-1;;quebec
+11464;1397;sea;4857;-1;-1;-1;-1;;quebec
+11451;5662;sea;11785;-1;-1;-1;-1;;quebec
+6247;5017;sea;10366;-1;-1;-1;-1;;scotland
+6910;6864;sea;12194;-1;-1;-1;-1;;scotland
+6910;6893;sea;12194;-1;-1;-1;-1;;scotland
+6893;6944;sea;12194;-1;-1;-1;-1;;scotland
+5953;11480;sea;3674;-1;-1;-1;-1;;scotland
+5953;11479;sea;3674;-1;-1;-1;-1;;scotland
+7068;4751;sea;12081;-1;-1;-1;-1;;scotland
+5409;11483;sea;12081;-1;-1;-1;-1;;scotland
+11845;7193;sea;5175;-1;-1;-1;-1;;scotland
+13264;7506;sea;13264;-1;-1;-1;-1;;wales
+11491;7994;sea;13200;-1;-1;-1;-1;;netherlands
+11491;7946;sea;13200;-1;-1;-1;-1;;netherlands
+10335;10364;sea;12135;-1;-1;-1;-1;;gabes
+7659;7595;sea;11564;-1;-1;-1;-1;;holland
+9907;8674;sea;;-1;-1;-1;-1;Berlin-Madrid;Berlin-Madrid
+9907;2046;sea;;-1;-1;-1;-1;Vienna-Madrid;Vienna-Madrid
+10653;6733;sea;;-1;-1;-1;-1;road_of_life;road_of_life1
+10653;532;sea;;-1;-1;-1;-1;road_of_life;road_of_life2
+10893;13204;sea;2678;-1;-1;-1;-1;SUEZ_CANAL;Suez
+12358;12397;sea;11063;-1;-1;-1;-1;PANAMA_CANAL;Panama
+13111;3144;sea;7277;-1;-1;-1;-1;KIEL_CANAL;Kiel
+12775;13161;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
+12924;13275;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
+12283;12366;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar North
+12283;13138;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar South
+5769;3711;;-1;-1;-1;-1;-1;PACIFIC_ROUTE;Pacific naval route
+13055;12864;;-1;-1;-1;-1;-1;CAPE_ROUTE;Cape of Africa naval route
+4183;12943;;-1;-1;-1;-1;-1;SOUTH_AMERICAN_ROUTE;South American naval route
+5714;3057;impassable;-1;-1;-1;-1;-1;;IRAN
+2915;3057;impassable;-1;-1;-1;-1;-1;;IRAN
+2756;3057;impassable;-1;-1;-1;-1;-1;;IRAN
+1533;3057;impassable;-1;-1;-1;-1;-1;;IRAN
+1533;10109;impassable;-1;-1;-1;-1;-1;;IRAN
+5684;10109;impassable;-1;-1;-1;-1;-1;;IRAN
+5684;2764;impassable;-1;-1;-1;-1;-1;;IRAN
+5684;4899;impassable;-1;-1;-1;-1;-1;;IRAN
+9620;6257;impassable;-1;-1;-1;-1;-1;;Spain
+9620;9556;impassable;-1;-1;-1;-1;-1;;Spain
+9645;9556;impassable;-1;-1;-1;-1;-1;;Spain
+9645;9571;impassable;-1;-1;-1;-1;-1;;Spain
+9645;6294;impassable;-1;-1;-1;-1;-1;;Spain
+3679;6294;impassable;-1;-1;-1;-1;-1;;Spain
+3679;3685;impassable;-1;-1;-1;-1;-1;;Spain
+
+10170;12283;impassable;-1;-1;-1;-1;-1;;Spain
+10170;13138;impassable;-1;-1;-1;-1;-1;;Spain
+10207;12283;impassable;-1;-1;-1;-1;-1;;Spain
+10207;13138;impassable;-1;-1;-1;-1;-1;;Spain
+10207;10346;impassable;-1;-1;-1;-1;-1;;Spain
+10211;10346;impassable;-1;-1;-1;-1;-1;;Spain
+10211;12283;impassable;-1;-1;-1;-1;-1;;Spain
+10211;13500;impassable;-1;-1;-1;-1;-1;;Spain
+10211;10346;impassable;-1;-1;-1;-1;-1;;Spain
+10211;6372;impassable;-1;-1;-1;-1;-1;;Spain
+10211;5991;impassable;-1;-1;-1;-1;-1;;Spain
+
+6349;13500;impassable;-1;-1;-1;-1;-1;;Spain
+6349;5991;impassable;-1;-1;-1;-1;-1;;Spain
+6349;10319;impassable;-1;-1;-1;-1;-1;;Spain
+6349;1747;impassable;-1;-1;-1;-1;-1;;Spain
+
+6685;6689;impassable;-1;-1;-1;-1;-1;;Finland
+5396;6689;impassable;-1;-1;-1;-1;-1;;Finland
+5396;3305;impassable;-1;-1;-1;-1;-1;;Finland
+5396;6671;impassable;-1;-1;-1;-1;-1;;Finland
+270;6671;impassable;-1;-1;-1;-1;-1;;Finland
+270;5287;impassable;-1;-1;-1;-1;-1;;Finland
+270;3311;impassable;-1;-1;-1;-1;-1;;Finland
+923;3311;impassable;-1;-1;-1;-1;-1;;Finland
+923;1801;impassable;-1;-1;-1;-1;-1;;Finland
+923;146;impassable;-1;-1;-1;-1;-1;;Finland
+923;6228;impassable;-1;-1;-1;-1;-1;;Finland
+684;6228;impassable;-1;-1;-1;-1;-1;;Finland
+684;4200;impassable;-1;-1;-1;-1;-1;;Finland
+2423;4200;impassable;-1;-1;-1;-1;-1;;Finland
+2423;1009;impassable;-1;-1;-1;-1;-1;;Finland
+2737;1009;impassable;-1;-1;-1;-1;-1;;Finland
+47;1009;impassable;-1;-1;-1;-1;-1;;Finland
+47;6012;impassable;-1;-1;-1;-1;-1;;Finland
+5151;6012;impassable;-1;-1;-1;-1;-1;;Finland
+5151;3122;impassable;-1;-1;-1;-1;-1;;Finland
+5151;2145;impassable;-1;-1;-1;-1;-1;;Finland
+2877;2145;impassable;-1;-1;-1;-1;-1;;Finland
+639;6566;impassable;-1;-1;-1;-1;-1;;Finland
+639;6558;impassable;-1;-1;-1;-1;-1;;Finland
+2708;6558;impassable;-1;-1;-1;-1;-1;;Finland
+2708;6083;impassable;-1;-1;-1;-1;-1;;Finland
+2708;6524;impassable;-1;-1;-1;-1;-1;;Finland
+1454;6524;impassable;-1;-1;-1;-1;-1;;Finland
+6520;6524;impassable;-1;-1;-1;-1;-1;;Finland
+1509;6524;impassable;-1;-1;-1;-1;-1;;Finland
+1509;6506;impassable;-1;-1;-1;-1;-1;;Finland
+
+1757;2382;impassable;-1;-1;-1;-1;-1;;Spain Africa
+1757;6353;impassable;-1;-1;-1;-1;-1;;Spain Africa
+1757;10554;impassable;-1;-1;-1;-1;-1;;Spain Africa
+
+2022;400;impassable;-1;-1;-1;-1;-1;;Spain Africa
+755;400;impassable;-1;-1;-1;-1;-1;;Spain Africa
+
+11315;13259;impassable;-1;-1;-1;-1;-1;;Spain Africa
+11315;11840;impassable;-1;-1;-1;-1;-1;;Spain Africa
+11315;11335;impassable;-1;-1;-1;-1;-1;;Spain Africa
+11315;4290;impassable;-1;-1;-1;-1;-1;;Spain Africa
+11315;2803;impassable;-1;-1;-1;-1;-1;;Spain Africa
+11315;11307;impassable;-1;-1;-1;-1;-1;;Spain Africa
+11315;2662;impassable;-1;-1;-1;-1;-1;;Spain Africa
+2207;4290;impassable;-1;-1;-1;-1;-1;;Spain Africa
+2207;3687;impassable;-1;-1;-1;-1;-1;;Spain Africa
+2207;2662;impassable;-1;-1;-1;-1;-1;;Spain Africa
+-1;-1;;-1;-1;-1;-1;-1;-1

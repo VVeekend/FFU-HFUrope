@@ -1,0 +1,33 @@
+state={
+	id=131
+	name="STATE_458"
+	manpower = 1982940
+	state_category = town
+	resources={
+		steel=6
+	}
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+		2396	 10
+		}
+		victory_points = {
+		 10100	 1
+		}
+		victory_points = {
+			10232 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 8
+			 10100 = {
+				naval_base = 8
+			}
+		}
+	}
+	provinces={
+		 1362 2396 5003 5350 6399 10097 10100 10105 10138 10143 10145 10190 10232 
+	}
+}

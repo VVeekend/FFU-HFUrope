@@ -1,0 +1,33 @@
+
+state={
+	id=431
+	name="STATE_666" # Lappland
+	manpower = 1
+	resources={
+		tungsten=40 # was: 70
+		steel= 127 # was: 80
+		chromium = 70 # was: 40
+		aluminium = 2
+	}
+
+	state_category = rural
+
+	history={
+		owner = SWE
+		victory_points = {
+			3503 1
+		}
+		buildings = {
+			infrastructure = 6
+
+			3503 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		241 504 593 622 712 771 787 792 868 873 1299 1312 1423 1521 1696 1741 1986 2066 2178 2210 2222 2399 2420 2460 2576 2798 2946 2956 2976 2980 3386 3446 3479 3503 3641 3797 3819 4429 4481 4657 5092 5538 6008 6072 6416 6512 6521 6557 6561 6564 6565 6568 6574 6579 6584 6592 11492
+	}
+}

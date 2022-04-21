@@ -1,0 +1,32 @@
+state={
+	id=60
+	name="Baghdad"
+	provinces={
+		6284 446 885 1047 1201 1581 1628 1978 2173 2911 3853 4055 4511 4843 5411 10355 10381 10410 10495
+	}
+	manpower = 2044165
+	state_category = town
+	resources={
+		oil=15
+	}
+	history={
+		owner = TUR
+		add_core_of=TUR
+		victory_points = {
+			1581 5
+		}
+		victory_points = {
+			5411 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 4
+			5411 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

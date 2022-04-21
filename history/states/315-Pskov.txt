@@ -1,0 +1,24 @@
+
+state={
+	id=315
+	name="Pskov" # Pskov
+	manpower = 639587
+
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			5602 3
+		}
+		buildings = {
+			infrastructure = 6
+			air_base = 4
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		12 114 256 1349 3502 3823 4294 5330 5530 5602 5661 5665 6154 6158 6390 6845 6855 6867 6876 6877 6891 6906 6913 6937 6938 6939 6953 6960 6963 6964 6965 6966 6978 6987 7016 7017 7039
+	}
+}

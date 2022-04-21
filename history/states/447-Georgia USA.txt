@@ -1,0 +1,28 @@
+state={
+	id=447
+	name="Georgia"
+	provinces={
+		5445
+	}
+	manpower = 3123723
+
+	state_category = city
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			air_base = 2
+			5445 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			5445 10
+		}
+
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,22 @@
+state={
+	id=217
+	name="STATE_663"
+
+	history={
+		owner = ITA
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = LBA
+
+	}
+
+	provinces={
+		682 1491 1756 1786 2620 2767 2912 3158 3646 3839 3984 4004 4147 4176 4423 4470 5042 5203 5233 5431 5860 6311 6329 10509 10540 10569 10570 10576 10590 10625 10626 10631 10632 10633 10658 10666 10667 10673 10677 10678 10704
+	}
+	manpower=8808
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

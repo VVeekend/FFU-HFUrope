@@ -1,0 +1,22 @@
+
+state={
+	id=221
+	name="STATE_449"
+
+	history={
+		owner = ITA
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		2469 3043 3846 4895 5022 6059 6415 6445 10479 10642 10694 10696 10722 10748 10762 10767 10789 10799 10819 
+	}
+	manpower=53431
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

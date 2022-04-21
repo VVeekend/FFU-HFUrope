@@ -1,0 +1,35 @@
+state={
+	id=23
+	name="STATE_9"
+	manpower = 4492600
+	resources={
+		steel=5 # was: 8
+	}
+
+	state_category = large_city
+
+	history={
+		owner = AUS
+		victory_points = { 8199 30 }
+		victory_points = { 8260 5 }
+		victory_points = { 1309 5 }
+		#victory_points = { 9541 3 }
+		buildings = {
+			infrastructure = 7
+			arms_factory = 3
+			industrial_complex = 2
+			anti_air_building = 5
+			air_base = 5
+		}
+		add_core_of = AUS
+
+		1939.3.14 = {
+			owner = GER
+			controller = GER
+		}
+	}
+
+	provinces={
+		223 1309 2194 2503 3006 3719 4615 5240 5975 6386 8146 8147 8175 8190 8199 8216 8224 8230 8260 8261 8269 8279 8319 8320 8360 8374 8393 8413 8433 8487
+	}
+}

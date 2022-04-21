@@ -1,0 +1,29 @@
+state={
+	id=17
+	name="Northern Ontario"
+	provinces={
+		250 417 768 816 947 1710 2266 2602 3599 4693 6684 6985 6053 11463
+	}
+
+	state_category = town
+
+	resources={
+		steel=15 # was: 12.000
+		aluminium=9 # was: 14.000
+	}
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = CAN
+
+	}
+
+	manpower=149059
+
+	buildings_max_level_factor=1.000
+}

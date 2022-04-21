@@ -1,0 +1,32 @@
+state= {
+	id=38
+	name="STATE_120"
+	manpower = 265873
+
+	state_category = rural
+
+	resources={
+		chromium=1 # was: 2
+		tungsten=16 # was: 22
+		aluminium=9 # was: 12
+	}
+
+	history= {
+		owner = ENG
+		victory_points = { 6247 1 }
+		buildings = {
+			infrastructure = 4
+			anti_air_building = 2
+			industrial_complex = 1
+			air_base = 8
+			6247 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces = {
+		388 542 2524 2553 2783 3082 3725 3732 4017 4138 4154 4751 5017 5409 5690 5786 5805 5844 5953 6074 6247 6381 6396 6679 6803 6808 6832 6833 6834 6837 6850 6864 6865 6872 6873 6882 6888 6893 6904 6910 6915 6926 6935 6944 6945 6946 6959 6992 7037 7068 7088 7123 11479 11480 11483 11559
+	}
+}

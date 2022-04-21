@@ -1,0 +1,37 @@
+
+state={
+	id=237
+	name="Østlandet"
+	resources={
+		aluminium=20.000
+	}
+
+	history={
+		victory_points = {
+			2357 15
+		}
+		owner = NOR
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 1
+			air_base = 4
+			2357 = {
+				naval_base = 6
+				coastal_bunker = 3
+
+			}
+
+		}
+		add_core_of = NOR
+
+	}
+
+	provinces={
+		3745 306 540 823 1221 1651 1854 2113 2357 2442 2732 3513 4032 4700 5195 5277 5405 5523 5562 5766 5840 6654 6656 6672 6698 6716 6751 6788 7748 11540
+	}
+	manpower=1410219
+	buildings_max_level_factor=1.000
+	state_category=city
+}

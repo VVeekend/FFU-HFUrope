@@ -1,0 +1,26 @@
+state={
+	id=73
+	name="Leeward Islands"
+	provinces={
+		11544 11541 11539
+	}
+	manpower=	25678
+	state_category = tiny_island
+	history={
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 4
+			11544 = {
+				naval_base = 1
+			}
+			11541 = {
+				naval_base = 1
+			}
+			11539 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

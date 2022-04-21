@@ -1,0 +1,10 @@
+state={
+	id=474
+	name="Haiti"
+	provinces={
+		4902 10599
+	}
+	manpower=1
+	state_category = wasteland
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,23 @@
+state={
+	id=33
+	name="Faroe Islands"
+	provinces={
+		6633
+	}
+	manpower = 25900
+
+	state_category = enclave
+
+	history=
+	{
+		owner = DEN
+		buildings = {
+			infrastructure = 4
+			6633 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = DEN
+	}
+	buildings_max_level_factor=1.000
+}

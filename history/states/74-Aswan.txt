@@ -1,0 +1,20 @@
+state=
+{
+	id=74
+	name="STATE_456"
+	manpower = 4224516
+	state_category = rural
+	history = {
+		victory_points = {
+			5143 1
+		}
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 4
+		}
+	}
+	provinces={
+		67 1698 2090 2095 2313 2447 3236 3696 4058 4586 5143 5358 5683 6455 10927 10938 10946 10949 10956 10969 10986 10995 11005 11021 11028 11036 
+	}
+}

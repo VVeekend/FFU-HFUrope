@@ -1,0 +1,36 @@
+state={
+	id=441
+	name="Ohio"
+	provinces={
+		1812 2407 2473
+	}
+	resources={
+		steel=380 # was: 48.000
+		aluminium=200
+		tungsten = 120
+		oil = 800
+		rubber=40
+		chromium=100
+	}
+
+	state_category = metropolis
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 6
+
+		}
+		add_core_of = USA
+
+		victory_points = {
+			1812 10
+		}
+	}
+
+	manpower=6907612
+
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,26 @@
+state={
+	id=400
+	name="STATE_257" # Tambov
+	manpower = 1779583
+
+	state_category = rural
+
+	resources={
+		chromium=7 # was: 10
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = SOV
+		victory_points = {
+			3039 1
+		}
+	}
+
+	provinces={
+		840 2259 3039 3585 4591 5011 5284 5667 7736 7747 7770 7771 7780 7781 7801 7812 7813 7824 7834 7859 7870 7880 7914 7931 1016 4456 4677 5383 5751 5824 7592 7616 7644 7656 7670 7671 7707 7754
+	}
+}

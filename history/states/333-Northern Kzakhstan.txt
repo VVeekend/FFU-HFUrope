@@ -1,0 +1,26 @@
+
+
+state={
+	id=333
+	name="STATE_590" # Akmolinsk
+	manpower = 980533
+
+	state_category = rural
+
+	history={
+		owner = SOV
+
+		victory_points = {
+			3028 1
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = SOV
+		#add_core_of = KAZ
+	}
+
+	provinces={
+		94 438 454 562 681 835 1164 3028 7378 7772
+	}
+}

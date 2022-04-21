@@ -1,0 +1,24 @@
+
+state={
+	id=417
+	name="STATE_168"
+	manpower = 1007605
+	impassable=yes
+	state_category = town
+
+	history={
+		owner = SPR
+		victory_points = {
+			10057 1
+		}
+		buildings = {
+			infrastructure = 5
+			anti_air_building = 10
+		}
+		add_core_of = SPR
+	}
+
+	provinces={
+		8 2594 4703 5012 5785 6387 9958 9970 9979 9991 9996 9999 10024 10042 10047 10057 10063
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=274
+	name="Rajahstan"
+	provinces={
+		418 780 918 1286 1433 2561 5899 10941
+	}
+	manpower = 11786000
+	state_category = town
+	resources={
+	}
+	history={
+		victory_points = {
+			918 1
+		}
+		owner = RAJ
+		add_core_of=RAJ
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

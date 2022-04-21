@@ -1,0 +1,22 @@
+
+state={
+	id=219
+	name="STATE_662"
+
+	history={
+		owner = ITA
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		2882 3200 3645 4488 4660 4846 5293 5370 5606 5705 5948 10630 10672 10676 10689 10719 10720 10749 10768 10778 
+	}
+	manpower=1520
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,24 @@
+state={
+	id=284
+	name="Mysore"
+	provinces={
+		340 695 927 1890 4885
+	}
+	manpower = 12348200
+	state_category = rural
+	resources={
+		chromium=10
+	}
+	history={
+		owner = RAJ
+		add_core_of=RAJ
+		victory_points = {
+			340 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

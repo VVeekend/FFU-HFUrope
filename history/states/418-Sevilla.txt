@@ -1,0 +1,30 @@
+state={
+	id=418
+	name="STATE_169"
+	impassable=yes
+	history={
+		owner = SPR
+		victory_points = {
+			1846 3
+		}
+		victory_points = {
+			10081 10
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			anti_air_building = 10
+
+		}
+		add_core_of = SPR
+
+	}
+
+	provinces={
+		1647 1846 1961 2857 3040 3376 3818 3921 4259 4359 4453 4684 5060 5267 5850 5907 6147 6149 9995 10006 10010 10016 10020 10031 10035 10038 10045 10052 10055 10056 10072 10074 10075 10077 10081 10084 10096
+	}
+	manpower=1746650
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,51 @@
+
+state={
+	id=189
+	name="STATE_47" # Thessaly
+	manpower=2312500
+	resources={
+		#steel=3 # was: 4 moved to Campania
+		#chromium=12 # moved to South Tyrol
+		aluminium=46 # was: 58
+		tungsten = 10 # was: 20
+	}
+
+	state_category = city
+
+	history={
+		owner = GRE
+
+		victory_points = {
+			9934 3
+		}
+		#victory_points = {
+			#	863 1
+			#}
+		#victory_points = {
+			#	3864 3
+			#}
+		#victory_points = {
+			#	2135 1
+			#}
+		victory_points = {
+			36 3
+		}
+		victory_points = {
+			10036 1
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 4
+
+
+		}
+		add_core_of = GRE
+
+	}
+
+	provinces={
+		784 2135 2446 3913 4827 6194 9929 9931 9934 9977 10001 10014 10018 10019 10036 36 9980 10091
+	}
+}

@@ -1,0 +1,39 @@
+state= {
+	id=35
+	name="STATE_37"
+	manpower = 2034114
+
+	state_category = large_city
+
+	history=
+	{
+		owner = DEN
+		victory_points = {
+			6151 20
+		}
+		victory_points = {
+			4020 5
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+			industrial_complex = 4
+			dockyard = 2
+			air_base = 6
+			6151 = {
+				naval_base = 8
+			}
+			4020 = {
+				naval_base = 3
+			}
+			1238 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = DEN
+	}
+
+	provinces= {
+		2999 3320 5535 6151 7136 7171 7200 1238 7287 7278 60 6351 4020 7195 11484 7241 11487 11486
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=461
+	name="STATE_108"
+	resources={
+		#steel=3.000 moved to Campania
+	}
+
+	history={
+		victory_points = {
+			9486 3
+		}
+		owner = SER
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = SER
+
+	}
+
+	provinces={
+		949 2019 2197 3145 4121 4255 4409 4763 5373 5781 5879 6135 6242 9373 9408 9409 9420 9486 9492 9526 9573 9599 9609 9614 9615 9648
+	}
+	manpower=1533000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

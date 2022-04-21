@@ -1,0 +1,19 @@
+state={
+	id=148
+	name="STATE_557"
+	manpower = 225000
+	state_category = pastoral
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			2111 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		92 400 2111 4437
+	}
+}

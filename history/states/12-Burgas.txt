@@ -1,0 +1,35 @@
+
+state={
+	id=12
+	name="STATE_211"
+	manpower = 1575499
+
+
+	state_category = large_city
+
+	history={
+		owner = BUL
+		victory_points = {
+			3409 5
+		}
+		victory_points = {
+			5170 3
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			3409 = {
+				naval_base = 3
+			}
+			5170 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = BUL
+	}
+
+	provinces={
+		956 3070 3264 3409 3691 4260 4330 4510 5121 5170 5941 6166 9500 9514 9537 9538 9549 9582 9617 9626 9639 9658 9669
+	}
+}

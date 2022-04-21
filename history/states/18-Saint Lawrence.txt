@@ -1,0 +1,36 @@
+state={
+	id=18
+	name="Saint Lawrence"
+	provinces={
+		381 1770 1819 2890 3348 4337 4942 6849 7067
+	}
+	manpower = 2432754
+
+	state_category = city
+
+	resources={
+		aluminium=3 # was: 4
+	}
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			dockyard = 1
+			industrial_complex = 3
+			air_base = 3
+			1770 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = CAN
+		victory_points = {
+			7067 20
+		}
+		victory_points = {
+			1770 3
+		}
+	}
+	buildings_max_level_factor=1.000
+}

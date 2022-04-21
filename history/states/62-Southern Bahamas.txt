@@ -1,0 +1,35 @@
+state={
+	id=62
+	name="Southern Bahamas"
+	provinces={
+		11532 11528 11527 11526 11530 11531
+	}
+	manpower = 15000
+	state_category = tiny_island
+	history={
+		owner = ENG
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 4
+			11532 = {
+				naval_base = 1
+			}
+			11528 = {
+				naval_base = 1
+			}
+			11527 = {
+				naval_base = 1
+			}
+			11526 = {
+				naval_base = 1
+			}
+			11530 = {
+				naval_base = 1
+			}
+			11531 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

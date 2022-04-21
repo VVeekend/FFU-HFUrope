@@ -1,0 +1,1383 @@
+focus_tree = {
+	id = german_focus
+	default = no
+	country = { factor=0 modifier = { add = 10 tag = GER } }	
+	continuous_focus_position = { x = 450 y = 700 }
+
+ 	#Focus for Chemical Industry Expansion
+	focus = {
+		id = GER_chemical_industry_expansion
+		icon = GFX_GER_chemical_industry_expansion-73665
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_research_funding }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			93 = {	add_extra_state_shared_building_slots = 3
+add_building_construction = {
+ type = industrial_complex level = 3 
+instant_build = yes  } }
+
+92 = {	add_extra_state_shared_building_slots = 3				add_building_construction = {
+ type = industrial_complex level = 3 
+instant_build = yes  } }
+		}
+	}
+
+	#Focus for New Industry Developments
+	focus = {
+		id = GER_new_industry_developments
+		icon = GFX_GER_new_industry_developments-45150
+		prerequisite = {focus = GER_weltpolitik }
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=industrial_bonus bonus=1.0 uses=3 category=industry }
+			78 = {	add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+		            type = industrial_complex level = 3 
+instant_build = yes  } }
+			79 = {	add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+		            type = industrial_complex level = 3 
+instant_build = yes  } }
+		}
+	}
+
+	#Focus for Militarism
+	focus = {
+		id = GER_militarism
+		icon = GFX_GER_militarism-86387
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_mllitary_leagues_demands }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas=militarism_focus army_experience=20 set_rule={ can_send_volunteers=yes }
+		}
+	}
+
+	#Focus for Extreme Military Spending
+	focus = {
+		id = GER_extreme_military_spending
+		icon = GFX_focus_generic_tungsten
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_new_industry_developments 
+			focus = GER_mllitary_leagues_demands 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = { idea=GER_extreme_military_spending days = 365 }
+            add_stability = -0.1
+		}
+	}
+
+	#Focus for Industrialization of Warfare
+	focus = {
+		id = GER_industrialization_of_warfare
+		icon = GFX_GER_industrialization_of_warfare-86391
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_mllitary_leagues_demands }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { add_ideas = GER_industrialized_warfare }
+	}
+
+	#Focus for Poison Gas Development
+	focus = {
+		id = GER_poison_gas_development
+		icon = GFX_GER_poison_gas_development-86218
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_stahlhelm 
+			focus = GER_electronic_industry_development 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ bonus=2 uses=1           
+            technology = chemical_research
+            technology = nukes
+	    technology = chemical_research3
+	    ahead_reduction = 1
+		} } }
+ #This may not be in the right place. If your focus tree is having issues, check the above focus, as this closing brace was added to close the focus.
+
+	#Focus for Sturmtruppen
+	focus = {
+		id = GER_sturmtruppen
+		icon = GFX_GER_sturmtruppen-86215
+		x = 20
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_stahlhelm }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+bonus = 2
+uses = 2
+category = stormtrooper_tech }
+		}
+	}
+
+	#Focus for Submarine Expansion
+	focus = {
+		id = GER_submarine_expansion
+		icon = GFX_goal_generic_navy_submarine
+		x = 31
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_naval_design_advancement 
+			focus = GER_redirected_funding
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ bonus=2 uses=2    
+            technology = early_ship_hull_submarine
+			technology = basic_ship_hull_submarine
+       	    technology = improved_ship_hull_submarine
+            technology = advanced_ship_hull_submarine }
+		}
+	}
+
+	#Focus for Our Place in the Sun
+	focus = {
+		id = GER_our_place_in_the_sun
+		icon = GFX_focus_generic_navy_battleship2
+		x = 30
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_weltpolitik }
+		mutually_exclusive = { focus = GER_redirected_funding }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_ideas = GER_reinventated_navy 
+			91 = {
+         add_extra_state_shared_building_slots=5 add_building_construction={ type=dockyard level=5 instant_build=yes }
+			}
+78 = {
+         add_extra_state_shared_building_slots=5 add_building_construction={ type=dockyard level=5 instant_build=yes }
+			}
+		}
+	}
+
+	#Focus for Deutsches Heer
+	focus = {
+		id = GER_deutsches_heer
+		icon = GFX_focus_ger_oppose_hitler
+		x = 23
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_weltpolitik }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 100
+add_tech_bonus = {
+name = support_tech_bonus
+bonus = 1.0
+uses = 2
+category = support_tech
+			}
+		}
+	}
+
+	#Focus for Stahlhelm
+	focus = {
+		id = GER_stahlhelm
+		icon = GFX_GER_stahlhelm-86393
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_deutsches_heer }
+		ai_will_do = {
+			factor = 1
+		}
+				
+		completion_reward = {
+		    army_experience=50 
+			add_tech_bonus={ bonus=1 uses=3           
+       	    technology = support_weapons2
+            technology = ww1_infantry2_equip
+            technology = support_weapons3 
+			technology = support_weapons4 
+			technology = support_weapons5 
+			technology = infantry_grenade
+            technology = infantry_ww1_machinegun2 
+            technology = infantry_ww1_machinegun3
+            technology = infantry_ww1_machinegun4
+            technology = infantry_gasmask
+            technology = infantry_ww1_mortar1
+            technology = infantry_flamethrower1 
+            technology = infantry_ww1_mortar2	
+            technology = infantry_flamethrower2	
+            technology = infantry_ww1_mortar3  }
+		   }
+		}
+
+	#Focus for Research Funding
+	focus = {
+		id = GER_research_funding
+		icon = GFX_GER_research_funding-86390
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_extreme_military_spending 
+			focus = GER_electronic_industry_development 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot=1
+		}
+	}
+
+	#Focus for Align Austria-Hungary
+	focus = {
+		id = GER_align_austriahungary
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		x = 3
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_consolidate_central_powers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			AUS = {
+            add_timed_idea= { 
+            idea = GER_Investment
+            days = 365 
+         }
+        add_stability = 0.1 }
+		}
+	}
+
+	#Focus for Align Ottomans
+	focus = {
+		id = GER_align_ottomans
+		icon = GFX_focus_generic_befriend_turkey
+		x = 7
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_consolidate_central_powers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+            add_timed_idea= { 
+            idea = GER_Investment
+            days = 365 
+         }
+        add_stability = 0.05 }
+		}
+	}
+
+	#Focus for Consolidate Central Powers
+	focus = {
+		id = GER_consolidate_central_powers
+		icon = GFX_GER_consolidate_central_powers-86219
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_weltpolitik }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			GER = {
+ 			add_to_tech_sharing_group = central_powers_research }
+			
+		AUS = {
+ 			add_to_tech_sharing_group = central_powers_research }
+	
+		TUR = {
+ 			add_to_tech_sharing_group = central_powers_research }
+	
+		BUL = {
+ 			add_to_tech_sharing_group = central_powers_research }
+		}
+	}
+
+	#Focus for Korsettstangen Units
+	focus = {
+		id = GER_korsettstangen_units
+		icon = GFX_GER_korsettstangen_units-86220
+		x = 5
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_consolidate_central_powers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		TUR = { add_ideas=GER_korsettstangen }
+		AUS = { add_ideas=GER_korsettstangen } 
+		BUL = { add_ideas=GER_korsettstangen } }
+	}
+
+	#Focus for German War Economy
+	focus = {
+		id = GER_german_war_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_militarism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			92 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+93 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+86 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+280 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+		}
+	}
+
+	#Focus for Naval Excerises
+	focus = {
+		id = GER_naval_excerises
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 28
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_our_place_in_the_sun }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ bonus=2 uses=3 category=naval_doctrine }
+		}
+	}
+
+	#Focus for Naval Design Advancement
+	focus = {
+		id = GER_naval_design_advancement
+		icon = GFX_GER_naval_design_advancement-75816
+		x = 30
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_our_place_in_the_sun }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+bonus = 2
+uses = 4
+category = naval_equipment }
+		}
+	}
+
+	#Focus for Luftstreitkrafte
+	focus = {
+		id = GER_luftstreitkrafte
+		icon = GFX_focus_ger_reichskommisariats
+		x = 25
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_deutsches_heer }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+category = air_doctrine 
+uses = 2
+bonus = 1 }
+air_experience
+= 100
+		}
+	}
+
+	#Focus for Adriatic Sea Reinforcement
+	focus = {
+		id = GER_adriatic_sea_reinforcement
+		icon = GFX_GER_adriatic_sea_reinforcement-45124
+		x = 3
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_align_austriahungary }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			100 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+			38 = {
+				add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+				}			
+
+	  }
+		}
+	}
+
+	#Focus for Mllitary Leagues Demands
+	focus = {
+		id = GER_mllitary_leagues_demands
+		icon = GFX_GER_mllitary_leagues_demands-86384
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_weltpolitik }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			282 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+            81 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+	} }
+
+	#Focus for Specialist Units
+	focus = {
+		id = GER_specialist_units
+		icon = GFX_GER_specialist_units-46526
+		x = 19
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_sturmtruppen 
+			focus = GER_poison_gas_development 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+bonus = 1
+uses = 2
+category = mountaineers_tech }
+		}
+	}
+
+	#Focus for Pariser Kanon
+	focus = {
+		id = GER_pariser_kanon
+		icon = GFX_goal_generic_army_artillery2
+		x = 22
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_stahlhelm }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=artillery_bonus bonus=2 uses = 1 ahead_reduction = 1 category=artillery }
+		}
+	}
+
+	#Focus for A7V
+	focus = {
+		id = GER_a7v
+		icon = GFX_GER_a7v-86394
+		x = 22
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_specialist_units 
+			focus = GER_pariser_kanon 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=armor_bonus bonus=2 uses = 1 category=armor }
+		}
+	}
+
+	#Focus for Air Innovations
+	focus = {
+		id = GER_air_innovations
+		icon = GFX_goal_generic_air_fighter2
+		x = 25
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luftstreitkrafte }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=light_fighter_bonus bonus=2 uses = 1 category=light_fighter}
+		}
+	}
+
+	#Focus for Weltpolitik
+	focus = {
+		id = GER_weltpolitik
+		icon = GFX_GER_weltpolitik-86382
+		x = 19
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 150
+		}
+	}
+
+	#Focus for Asienkorps Units
+	focus = {
+		id = GER_asienkorps_units
+		icon = GFX_GER_asienkorps_units-86387
+		x = 7
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_align_ottomans }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		TUR = { add_ideas=GER_asienkorps} }
+	}
+
+	#Focus for Electronic Industry Development
+	focus = {
+		id = GER_electronic_industry_development
+		icon = GFX_GER_electronic_industry_development-73665
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {focus = GER_new_industry_developments }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=electronics_bonus bonus=1 uses=2 category=electronics }
+90 = {	add_extra_state_shared_building_slots = 3
+add_building_construction = {
+ type = industrial_complex level = 3 
+instant_build = yes  } }
+
+87 = {	add_extra_state_shared_building_slots = 3				add_building_construction = {
+ type = industrial_complex level = 3 
+instant_build = yes  } }
+		}
+	}
+
+	#Focus for Light Bomber Development
+	focus = {
+		id = GER_light_bomber_development
+		icon = GFX_goal_generic_air_bomber
+		x = 26
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luftstreitkrafte }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=light_fighter_bonus bonus=2 uses = 1 category=tactical_bomber }
+		}
+	}
+
+	#Focus for Redirected Funding
+	focus = {
+		id = GER_redirected_funding
+		icon = GFX_GER_redirected_funding-73683
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = GER_our_place_in_the_sun  }
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GER_weltpolitik }
+		completion_reward = {
+			96 = {				add_extra_state_shared_building_slots = 3				
+			add_building_construction = {
+		            type = arms_factory level = 3 instant_build = yes
+		        }
+			}
+280 = {				add_extra_state_shared_building_slots = 3				
+            add_building_construction = {
+		            type = arms_factory level = 3 instant_build = yes
+		        }
+			}	
+97 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+		            type = arms_factory level = 3 instant_build = yes
+		        }
+			} } }
+
+	#Focus for Auxiliary Service Law
+	focus = {
+		id = GER_auxiliary_service_law
+		icon = GFX_GER_auxiliary_service_law-87477
+		x = 13
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_industrialization_of_warfare }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= GER_auxiliary_service_law
+            add_stability = -0.10
+		}
+	}
+
+	#Focus for Weapons Development
+	focus = {
+		id = GER_weapons_development
+		icon = GFX_goal_generic_small_arms
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_stahlhelm }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		army_experience=100 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=2 category=infantry_weapons} }
+	}
+
+	#Focus for Hydroplane Develoipment
+	focus = {
+		id = GER_hydroplane_develoipment
+		icon = GFX_goal_generic_navy_carrier
+		x = 29
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_luftstreitkrafte 
+			focus = GER_naval_design_advancement 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus={ name=naval_air_bonus bonus=2 uses = 1 category= naval_air }
+		}
+	}
+
+	#Focus for Military Workshop
+	focus = {
+		id = GER_military_workshop
+		icon = GFX_GER_military_workshop-45144
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_deutsches_heer }
+		ai_will_do = {
+			factor = 1
+		} completion_reward = {
+		92 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			}
+        93 = {				add_extra_state_shared_building_slots = 2				add_building_construction = {
+		            type = arms_factory level = 2 instant_build = yes
+		        }
+			} }
+	}
+
+	#Focus for Hindenburg Line
+	focus = {
+		id = GER_hindenburg_line
+		icon = GFX_goal_generic_fortify_city
+		x = 19
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_deutsches_heer }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				59 = {
+			    add_building_construction = {
+		            type = infrastructure level = 2 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 19626 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 9582 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 9720 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 14681 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 6419 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 19666 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 6808 instant_build = yes
+		        }
+			    add_building_construction = {
+		            type = trench level = 3 province = 19670 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 14481 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 11111 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = trench level = 3 province = 19641 instant_build = yes
+		        }
+		        add_building_construction = {
+		            type = bunker level = 3 province = 19635 instant_build = yes
+		        }
+				add_building_construction = {
+		            type = bunker level = 3 province = 19654 instant_build = yes
+		        }
+				add_building_construction = {
+		            type = bunker level = 3 province = 19671 instant_build = yes
+		        }
+				add_building_construction = {
+		            type = bunker level = 3 province = 19675 instant_build = yes
+		        }
+		    } }
+	}
+
+	#Focus for Auftragstaktik
+	focus = {
+		id = GER_auftragstaktik
+		icon = GFX_GER_auftragstaktik-69190
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_deutsches_heer }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { army_experience = 100	}
+	}
+
+	#Focus for Unrestricted submarine warfare
+	focus = {
+		id = GER_unrestricted_submarine_warfare
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_submarine_expansion }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = GER_ww1_kaiserschlacht
+		prerequisite = { }
+		icon = GFX_hoi4tgw_ironcross
+		available = { date > 1916.1.1 }
+		completion_reward = { 
+			add_timed_idea = {
+					days = 100
+					idea = GER_westernfront
+			}
+		}
+		ai_will_do = { factor = 2000 }
+		cost = 2
+		x = 18
+		y = 8
+	}
+	
+	focus = {
+		id = GER_East
+		prerequisite = {  }
+		icon = GFX_hoi4tgw_ironcross
+		available = {  has_war_with = SOV }
+		completion_reward = { 
+			add_timed_idea = {
+					days = 100
+					idea = GER_East_attack
+			}
+			AUS = {
+				add_timed_idea = {
+					days = 100
+					idea = GER_East_attack
+			}
+			}
+			
+			TUR = {
+				add_timed_idea = {
+					days = 100
+					idea = GER_East_attack
+			  }
+			}
+			BUL = {
+				add_timed_idea = {
+					days = 100
+					idea = GER_East_attack
+			  }
+			}
+		}
+		ai_will_do = { factor = 2000 }
+		cost = 2
+		x = 17
+		y = 7
+	}
+
+focus = {
+		id = GER_ww1_army_effort_1
+		icon = GFX_goal_generic_allies_build_infantry
+		completion_reward = { army_experience = 50 }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_1 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_1 }
+		cost = 10
+		x = 38
+		y = 1
+		}
+focus = {
+		id = GER_ww1_equipment_effort_1
+		prerequisite = {  }
+		icon = GFX_goal_generic_small_arms
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=infantry_weapons} }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_1 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_1 }
+		cost = 10
+		x = 40
+		y = 1
+	}
+focus = {
+		id = GER_ww1_artillery_effort_1
+		prerequisite = { }
+		icon = GFX_goal_generic_army_artillery2
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=artillery } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_1 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_1 }
+		cost = 10
+		x = 42
+		y = 1
+	}
+focus = {
+		id = GER_ww1_aircraftprod_1
+		prerequisite = {  }
+		icon = GFX_goal_generic_air_production
+		completion_reward = { add_tech_bonus={ name=aircraftprod_1_bonus bonus=1 uses=1 category=air_equipment } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_1 }
+		cost = 10
+		x = 44
+		y = 1
+	}
+focus = {
+		id = GER_ww1_large_navy_1
+		prerequisite = {  }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		completion_reward = { navy_experience=15 add_tech_bonus={ name=newnavalcanons_1_bonus bonus=1 uses=1 category=naval_doctrine } add_tech_bonus={ name=air_doc_bonus bonus=1 uses=1 category=air_doctrine }}
+		ai_will_do = { factor=10 modifier={ factor=0 all_owned_state={ OR={ is_coastal=no dockyard < 1 } } } }
+		mutually_exclusive = { focus = GER_ww1_army_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_1 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_1 }
+		cost = 5
+		x = 46
+		y = 1
+		
+		}
+
+	##############################################################################
+
+focus = {
+		id = GER_ww1_army_effort_2
+		prerequisite = { focus=GER_ww1_army_effort_1
+		 focus=GER_ww1_equipment_effort_1
+		 focus=GER_ww1_artillery_effort_1
+		 focus=GER_ww1_aircraftprod_1
+		 focus=GER_ww1_large_navy_1}
+		icon = GFX_goal_generic_allies_build_infantry
+		completion_reward = { army_experience = 50 }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_2 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_2 }
+		cost = 10
+		x = 38
+		y = 2
+		}
+focus = {
+		id = GER_ww1_equipment_effort_2
+		prerequisite = { focus=GER_ww1_army_effort_1
+		 focus=GER_ww1_equipment_effort_1
+		 focus=GER_ww1_artillery_effort_1
+		 focus=GER_ww1_aircraftprod_1
+		 focus=GER_ww1_large_navy_1}
+		icon = GFX_goal_generic_small_arms
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=infantry_weapons} }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_2 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_2}
+		cost = 10
+		x = 40
+		y = 2
+	}
+focus = {
+		id = GER_ww1_artillery_effort_2
+		prerequisite = { focus=GER_ww1_army_effort_1
+		 focus=GER_ww1_equipment_effort_1
+		 focus=GER_ww1_artillery_effort_1
+		 focus=GER_ww1_aircraftprod_1
+		 focus=GER_ww1_large_navy_1}
+		icon = GFX_goal_generic_army_artillery2
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=artillery } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_2 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_2 }
+		cost = 10
+		x = 42
+		y = 2
+	}
+focus = {
+		id = GER_ww1_aircraftprod_2
+		prerequisite = { focus=GER_ww1_army_effort_1
+		focus=GER_ww1_equipment_effort_1
+		focus=GER_ww1_artillery_effort_1
+		focus=GER_ww1_aircraftprod_1
+		focus=GER_ww1_large_navy_1}
+		icon = GFX_goal_generic_air_production
+		completion_reward = { add_tech_bonus={ name=aircraftprod_1_bonus bonus=1 uses=1 category=air_equipment } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_2 }
+		cost = 10
+		x = 44
+		y = 2
+	}
+focus = {
+		id = GER_ww1_large_navy_2
+		prerequisite = { focus=GER_ww1_army_effort_1
+		focus=GER_ww1_equipment_effort_1
+		focus=GER_ww1_artillery_effort_1
+		focus=GER_ww1_aircraftprod_1
+		focus=GER_ww1_large_navy_1}
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		completion_reward = { navy_experience=38 add_tech_bonus={ name=newnavalcanons_1_bonus bonus=1 uses=1 category=naval_doctrine } add_tech_bonus={ name=air_doc_bonus bonus=1 uses=1 category=air_doctrine }}
+		ai_will_do = { factor=10 modifier={ factor=0 all_owned_state={ OR={ is_coastal=no dockyard < 1 } } } }
+		mutually_exclusive = { focus = GER_ww1_army_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_2 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_2 }
+		cost = 5
+		x = 46
+		y = 2
+	}
+	################################################################
+
+focus = {
+		id = GER_ww1_army_effort_3
+		prerequisite = { focus=GER_ww1_army_effort_2
+		 focus=GER_ww1_equipment_effort_2
+		 focus=GER_ww1_artillery_effort_2
+		 focus=GER_ww1_aircraftprod_2
+		 focus=GER_ww1_large_navy_2}
+		icon = GFX_goal_generic_allies_build_infantry
+		completion_reward = { army_experience=38 army_experience = 50 }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_3 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_3 }
+		cost = 10
+		x = 38
+		y = 3
+		}
+focus = {
+		id = GER_ww1_equipment_effort_3
+		prerequisite = { focus=GER_ww1_army_effort_2
+		 focus=GER_ww1_equipment_effort_2
+		 focus=GER_ww1_artillery_effort_2
+		 focus=GER_ww1_aircraftprod_2
+		 focus=GER_ww1_large_navy_2}
+		icon = GFX_goal_generic_small_arms
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=infantry_weapons} }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_3 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_3}
+		cost = 10
+		x = 40
+		y = 3
+	}
+focus = {
+		id = GER_ww1_artillery_effort_3
+		prerequisite = { focus=GER_ww1_army_effort_2
+		 focus=GER_ww1_equipment_effort_2
+		 focus=GER_ww1_artillery_effort_2
+		 focus=GER_ww1_aircraftprod_2
+		 focus=GER_ww1_large_navy_2}
+		icon = GFX_goal_generic_army_artillery2
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=artillery } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_3 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_3 }
+		cost = 10
+		x = 42
+		y = 3
+	}
+focus = {
+		id = GER_ww1_aircraftprod_3
+		prerequisite = { focus=GER_ww1_army_effort_2
+		focus=GER_ww1_equipment_effort_2
+		focus=GER_ww1_artillery_effort_2
+		focus=GER_ww1_aircraftprod_2
+		focus=GER_ww1_large_navy_2}
+		icon = GFX_goal_generic_air_production
+		completion_reward = { add_tech_bonus={ name=aircraftprod_1_bonus bonus=1 uses=1 category=air_equipment } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_3 }
+		cost = 10
+		x = 44
+		y = 3
+	}
+focus = {
+		id = GER_ww1_large_navy_3
+		prerequisite = { focus=GER_ww1_army_effort_2
+		focus=GER_ww1_equipment_effort_2
+		focus=GER_ww1_artillery_effort_2
+		focus=GER_ww1_aircraftprod_2
+		focus=GER_ww1_large_navy_2 }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		completion_reward = { navy_experience=38 add_tech_bonus={ name=newnavalcanons_1_bonus bonus=1 uses=1 category=naval_doctrine } add_tech_bonus={ name=air_doc_bonus bonus=1 uses=1 category=air_doctrine }}
+		ai_will_do = { factor=10 modifier={ factor=0 all_owned_state={ OR={ is_coastal=no dockyard < 1 } } } }
+		mutually_exclusive = { focus = GER_ww1_army_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_3 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_3 }
+		cost = 5
+		x = 46
+		y = 3
+	}
+	################################################################
+
+focus = {
+		id = GER_ww1_army_effort_4
+		prerequisite = { focus=GER_ww1_army_effort_3
+		 focus=GER_ww1_equipment_effort_3
+		 focus=GER_ww1_artillery_effort_3
+		 focus=GER_ww1_aircraftprod_3
+		 focus=GER_ww1_large_navy_3}
+		icon = GFX_goal_generic_allies_build_infantry
+		completion_reward = { army_experience=38 army_experience = 50 }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_4 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_4 }
+		cost = 10
+		x = 38
+		y = 4
+		}
+focus = {
+		id = GER_ww1_equipment_effort_4
+		prerequisite = { focus=GER_ww1_army_effort_3
+		 focus=GER_ww1_equipment_effort_3
+		 focus=GER_ww1_artillery_effort_3
+		 focus=GER_ww1_aircraftprod_3
+		 focus=GER_ww1_large_navy_3}
+		icon = GFX_goal_generic_small_arms
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=infantry_weapons} }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_4 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_4 }
+		cost = 10
+		x = 40
+		y = 4
+	}
+focus = {
+		id = GER_ww1_artillery_effort_4
+		prerequisite = { focus=GER_ww1_army_effort_3
+		 focus=GER_ww1_equipment_effort_3
+		 focus=GER_ww1_artillery_effort_3
+		 focus=GER_ww1_aircraftprod_3
+		 focus=GER_ww1_large_navy_3 }
+		icon = GFX_goal_generic_army_artillery2
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=artillery } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_4 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_4 }
+		cost = 10
+		x = 42
+		y = 4
+	}
+focus = {
+		id = GER_ww1_aircraftprod_4
+		prerequisite = { focus=GER_ww1_army_effort_3
+		focus=GER_ww1_equipment_effort_3
+		focus=GER_ww1_artillery_effort_3
+		focus=GER_ww1_aircraftprod_3
+		focus=GER_ww1_large_navy_3}
+		icon = GFX_goal_generic_air_production
+		completion_reward = { add_tech_bonus={ name=aircraftprod_1_bonus bonus=1 uses=1 category=air_equipment } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_4 }
+		cost = 10
+		x = 44
+		y = 4
+	}
+focus = {
+		id = GER_ww1_large_navy_4
+		prerequisite = { focus=GER_ww1_army_effort_3
+		focus=GER_ww1_equipment_effort_3
+		focus=GER_ww1_artillery_effort_3
+		focus=GER_ww1_aircraftprod_3
+		focus=GER_ww1_large_navy_3 }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		completion_reward = { navy_experience=38 add_tech_bonus={ name=newnavalcanons_1_bonus bonus=1 uses=1 category=naval_doctrine } add_tech_bonus={ name=air_doc_bonus bonus=1 uses=1 category=air_doctrine }}
+		ai_will_do = { factor=10 modifier={ factor=0 all_owned_state={ OR={ is_coastal=no dockyard < 1 } } } }
+		mutually_exclusive = { focus = GER_ww1_army_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_4 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_4 }
+		cost = 5
+		x = 46
+		y = 4
+	}
+
+   ############################################################################
+ 	################################################################
+
+focus = {
+		id = GER_ww1_army_effort_5
+		prerequisite = { focus=GER_ww1_army_effort_4
+		 focus=GER_ww1_equipment_effort_4
+		 focus=GER_ww1_artillery_effort_4
+		 focus=GER_ww1_aircraftprod_4
+		 focus=GER_ww1_large_navy_4}
+		icon = GFX_goal_generic_allies_build_infantry
+		completion_reward = { army_experience=38 army_experience = 50 }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_5 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_5 }
+		cost = 10
+		x = 38
+		y = 5
+		}
+focus = {
+		id = GER_ww1_equipment_effort_5
+		prerequisite = { focus=GER_ww1_army_effort_4
+		 focus=GER_ww1_equipment_effort_4
+		 focus=GER_ww1_artillery_effort_4
+		 focus=GER_ww1_aircraftprod_4
+		 focus=GER_ww1_large_navy_4}
+		icon = GFX_goal_generic_small_arms
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=infantry_weapons} }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_5 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_5 }
+		cost = 10
+		x = 40
+		y = 5
+	}
+focus = {
+		id = GER_ww1_artillery_effort_5
+		prerequisite = { focus=GER_ww1_army_effort_4
+		 focus=GER_ww1_equipment_effort_4
+		 focus=GER_ww1_artillery_effort_4
+		 focus=GER_ww1_aircraftprod_4
+		 focus=GER_ww1_large_navy_4 }
+		icon = GFX_goal_generic_army_artillery2
+		completion_reward = { army_experience=10 add_tech_bonus={ name=infantry_weapons_bonus bonus=1 uses=1 category=artillery } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_5 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_5 }
+		cost = 10
+		x = 42
+		y = 5
+	}
+focus = {
+		id = GER_ww1_aircraftprod_5
+		prerequisite = { focus=GER_ww1_army_effort_4
+		focus=GER_ww1_equipment_effort_4
+		focus=GER_ww1_artillery_effort_4
+		focus=GER_ww1_aircraftprod_4
+		focus=GER_ww1_large_navy_4}
+		icon = GFX_goal_generic_air_production
+		completion_reward = { add_tech_bonus={ name=aircraftprod_1_bonus bonus=1 uses=1 category=air_equipment } }
+		ai_will_do = { factor = 10 }
+		mutually_exclusive = { focus = GER_ww1_army_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_large_navy_5 }
+		cost = 10
+		x = 44
+		y = 5
+	}
+focus = {
+		id = GER_ww1_large_navy_5
+		prerequisite = { focus=GER_ww1_army_effort_4
+		focus=GER_ww1_equipment_effort_4
+		focus=GER_ww1_artillery_effort_4
+		focus=GER_ww1_aircraftprod_4
+		focus=GER_ww1_large_navy_4 }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		completion_reward = { navy_experience=38 add_tech_bonus={ name=newnavalcanons_1_bonus bonus=1 uses=1 category=naval_doctrine } add_tech_bonus={ name=air_doc_bonus bonus=1 uses=1 category=air_doctrine }}
+		ai_will_do = { factor=10 modifier={ factor=0 all_owned_state={ OR={ is_coastal=no dockyard < 1 } } } }
+		mutually_exclusive = { focus = GER_ww1_army_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_equipment_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_artillery_effort_5 }
+		mutually_exclusive = { focus = GER_ww1_aircraftprod_5 }
+		cost = 5
+		x = 46 
+		y = 5
+	}
+
+   ############################################################################
+focus = {
+		id = GER_ww1_armor_effort_1
+		prerequisite = { focus=GER_ww1_army_effort_5
+		focus=GER_ww1_equipment_effort_5
+		focus=GER_ww1_artillery_effort_5
+		focus=GER_ww1_aircraftprod_5
+		focus=GER_ww1_large_navy_5 }
+		icon = GFX_hoi4tgw_renaultft
+		completion_reward = { army_experience=50 add_tech_bonus={ name=armor_bonus bonus=1 uses=2 category=armor } }
+		ai_will_do = { factor = 10 }
+		cost = 10
+		x = 42
+		y = 6
+	}
+}
+	
+
+	
+	
+
+	   
+
+
+

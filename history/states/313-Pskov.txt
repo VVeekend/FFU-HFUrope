@@ -1,0 +1,24 @@
+
+state={
+	id=313
+	name="STATE_208" # Luga
+	manpower = 341819
+
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 5
+			air_base = 3
+		}
+		add_core_of = SOV
+		victory_points = {
+			6846 1
+		}
+	}
+
+	provinces={
+		1868 2600 2811 2913 3284 3560 3762 4094 4448 4578 5050 5159 5187 6759 6771 6776 6777 6786 6789 6790 6793 6801 6804 6805 6811 6812 6829 6835 6846 6853 6856
+	}
+}

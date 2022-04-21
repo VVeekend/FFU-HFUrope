@@ -1,0 +1,25 @@
+state={
+	id=428
+	name="STATE_175"
+
+	history={
+		owner = SPR
+		victory_points = {
+			2943 1
+		}
+		buildings = {
+			#industrial_complex = 1
+			infrastructure = 6
+			anti_air_building = 10
+		}
+		add_core_of = SPR
+
+	}
+
+	provinces={
+		523 2943 3695 4101 4346 4861 5058 5072 5971 6249 9933 9951 9969 9986 9988 9990 9998 10003 10007
+	}
+	manpower=526903
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

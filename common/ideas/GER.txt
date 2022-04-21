@@ -1,0 +1,464 @@
+ideas={
+
+	political_advisor={
+	        GER_Emil={ allowed={ tag=GER } picture = rudolf_hess traits={ captain_of_industry } ai_will_do={ factor=1 } }
+			GER_bernhard_von_bulow={ allowed={ tag=GER } traits={ prince_of_terror } ai_will_do={ factor=1 } }
+			GER_theobald_von_bethmann_hollweg={ allowed={ tag=GER } traits={ appeaser } ai_will_do={ factor=1 } }
+			#GER_georg_von_hertling={ allowed={ tag=GER } traits={ national_integralist } ai_will_do={ factor=1 } }
+			GER_gottlieb_von_jagow={ allowed={ tag=GER } traits={ propaganda_expert } ai_will_do={ factor=1 } }
+			GER_arthur_zimmermann={ allowed={ tag=GER } traits={ smooth_talking_charmer } ai_will_do={ factor=1 } }
+			GER_karl_von_einem={ allowed={ tag=GER } traits={ national_integralist } ai_will_do={ factor=1 } }
+			GER_reinhold_von_sydow={ allowed={ tag=GER } traits={ quartermaster_general } ai_will_do={ factor=1 } }
+			#GER_hermann_kuhn={ allowed={ tag=GER } traits={ armaments_organizer } ai_will_do={ factor=1 } }
+			GER_clemens_von_delbruck={ allowed={ tag=GER } traits={ popular_figurehead } ai_will_do={ factor=1 } }
+			GER_karl_trimborn={ allowed={ tag=GER } traits={ silent_workhorse } ai_will_do={ factor=1 } }
+			#GER_gustav_bauer={ allowed={ tag=GER } traits={ editor } ai_will_do={ factor=1 } }
+
+			GER_wolfgang_kapp={
+					allowed={ tag=GER }
+					traits={ technocrat }
+					ai_will_do={ factor=1 }
+				}
+			}
+
+	naval_manufacturer={
+			designer = yes
+			
+			AG_Vulcan_yard = {
+			
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = GER
+			}
+		
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+		    }
+			
+			blohm_und_voss = {
+			
+			picture = generic_industrial_concern_1
+			allowed = {
+				original_tag = GER
+			}
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+		    }
+		
+			kaiserliche_werft_wilhelmshaven={ allowed={ TAG=GER } research_bonus={ naval_equipment=0.10 } traits={ atlantic_fleet_naval_manufacturer } picture=generic_naval_manufacturer_3 }
+			#vulcan_werke_ag={ allowed={ TAG=GER } research_bonus={ naval_equipment=0.10 } traits={ convoy_escort_naval_manufacturer } picture=generic_naval_manufacturer_1 }
+			}
+
+	aircraft_manufacturer={
+			designer = yes
+			#junkers={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ CAS_manufacturer } }
+			#messerschmitt={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } }
+			#focke_wulf={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ medium_aircraft_manufacturer } }
+
+			#Fokker Aeroplanbau
+			fokker={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } }
+
+			#Luftschiffbau Zeppelin
+			luftschiffbau_zeppelin={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ heavy_aircraft_manufacturer } }
+
+			#Allgemeine Elektricitäts-Gesellschaft
+			allgemeine_elektricitats_gesellschaft={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ medium_aircraft_manufacturer } }
+
+			#Albatros is for AUH
+			#albatros_flugzeugwerke_gmbh={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ naval_aircraft_manufacturer } }
+
+			#Gothaer Waggonfabrik
+			gothaer_waggonfabrik={ allowed={ TAG=GER } research_bonus={ air_equipment=0.10 } traits={ medium_aircraft_manufacturer } }
+			}
+
+	materiel_manufacturer={
+			designer = yes
+			mauser={ allowed={ TAG=GER } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } }
+			rheinmetall={ allowed={ TAG=GER } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } }
+			}
+	industrial_concern={
+			designer = yes
+			krupp={ allowed={ TAG=GER }    research_bonus = {
+							    industry = 0.10
+
+							   } traits={ industrial_concern } }
+
+
+			#oberschlesien_eisen_industrie_ag={ allowed={ TAG=GER }    research_bonus = {  industry = 0.10    } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
+
+			siemens={ allowed={ TAG=GER }    research_bonus = {
+							    electronics = 0.10
+							   } traits={ electronics_concern } }
+			}
+	tank_manufacturer={
+			designer = yes
+			opel={ allowed={ TAG=GER } research_bonus={ armor=0.10 } traits={ fast_tank_manufacturer } picture=generic_tank_manufacturer_3 }
+			daimler_motoren_gesellschaft={ allowed={ TAG=GER } research_bonus={ armor=0.10 } traits={ medium_tank_manufacturer } }
+			}
+
+	country={
+			sour_loser={ allowed={ always=no } allowed_civil_war={ always=yes } removal_cost=-1 modifier={ drift_defence_factor=0.5 } rule={ can_create_factions=yes } }
+			general_staff={ allowed={ original_tag=GER } allowed_civil_war={ always=yes } removal_cost=-1 modifier={ army_org_Factor=0.05 planning_speed=0.25 } }
+			triumphant_will={ allowed={ always=no } removal_cost=-1 allowed_civil_war={ has_government=fascism } modifier={ political_power_gain=1 drift_defence_factor=0.5 } rule={ can_create_factions=yes } }
+			GER_air_innovations_2_idea={ removal_cost=-1 allowed={ always=no } allowed_civil_war={ always=yes } picture=generic_air_bonus research_bonus={ battlefield_support_tree=0.10 jet_technology=0.10 } }
+			rhineland_challenge_met={ allowed={ always=no } allowed_civil_war={ has_government=fascism } removal_cost=-1 picture=generic_democratic_drift_bonus modifier={ stability_factor =-0.10 } }
+
+
+		#KiS ======================================================
+		
+		GER_reinventated_navy = {
+			picture = generic_sea_focused_navy
+			modifier = {
+				navy_refit_ic_cost = -0.25
+                navy_refit_speed = 0.5
+			}
+		}	
+		
+
+		GER_industrialized_warfare = {
+			ledger = army
+			picture = ger_rebuild_the_nation
+			modifier = { production_speed_rail_way_factor = 0.1 }
+			equipment_bonus = {
+				infantry_equipment = {					
+                build_cost_ic = -0.04 instant = yes
+				}
+                support_equipment = {					
+                 build_cost_ic = -0.04 instant = yes
+				}
+                fighter_equipment = {					
+                 build_cost_ic = -0.04 instant = yes
+				}			
+			}
+		}
+			GER_extreme_military_spending = {
+			picture = YUG_local_militias
+			allowed = {
+				TAG=GER
+			}
+			modifier = {
+				production_speed_dockyard_factor = 0.20
+			    production_speed_arms_factory_factor = 0.20
+		        production_speed_industrial_complex_factor = 0.10
+			    industrial_capacity_dockyard = 0.25
+				production_speed_rail_way_factor = 0.33
+				production_speed_supply_node_factor = 0.33
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		GER_auxiliary_service_law = {
+			picture = GER_auxiliary_service_law-87477
+			modifier = {
+				stability_weekly = -0.0015	production_factory_efficiency_gain_factor = 0.05              
+				production_factory_start_efficiency_factor = 0.05
+                production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		GER_asienkorps = {
+			ledger = army
+			picture = GER_asienkorps-86387
+			modifier = {
+				planning_speed = 0.1										
+                max_planning = 0.05
+                max_dig_in = 1
+                conscription = 0.01
+			}
+		}
+
+		GER_korsettstangen = {
+			ledger = army
+			picture = YUG_all_yugoslavian_regiments
+			modifier = {
+				conscription = 0.01
+			}
+		}
+
+		GER_1916_blockade = {
+			picture = chi_hyper_inflation3
+			research_bonus = {
+		    consumer_goods_factor = 0.5
+            stability_weekly = -0.2
+			}
+		}
+		
+		GER_Investment = {
+		
+			allowed = {
+				always = no #event or decision
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = German_staff_ww1
+			
+			modifier = { production_speed_arms_factory_factor = 0.10
+
+			}
+			
+		}
+		
+		GER_East_attack = {
+		
+			allowed = {
+				original_tag = GER
+				always = no #event or decision
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = German_staff_ww1
+			
+			modifier = { 
+				ai_focus_aggressive_factor = 0.1
+			}	
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.25
+			}
+						
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.25
+			}
+			
+		}
+
+		GER_schlieffen1 = {
+		
+			allowed = {
+				original_tag = GER
+				always = no #event or decision
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = German_staff_ww1
+			
+			modifier = { 
+				ai_focus_aggressive_factor = 0.1
+			}	
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.50
+				breakthrough_factor = 0.20
+				defense_bonus_against = 0.10
+			}
+						
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+			
+			targeted_modifier = {
+				tag = POR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			
+		}
+		
+		GER_schlieffen2 = {
+		
+			allowed = {
+				original_tag = GER
+				always = no #event or decision
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = German_staff_ww1
+			
+			modifier = { 
+				ai_focus_aggressive_factor = 0.1
+			}	
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.50
+				breakthrough_factor = 0.20
+				defense_bonus_against = 0.10
+			}
+						
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+			
+			targeted_modifier = {
+				tag = POR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.10
+			}
+			
+		}
+		
+		GER_westernfront = {
+		
+			allowed = {
+				original_tag = GER
+				always = no #event or decision
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = { 
+				ai_focus_defense_factor = 0.1
+				army_infantry_defence_factor = 0.05
+				max_dig_in = 10
+			}
+			
+			picture = German_staff_ww1
+			
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.25
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.25
+			}
+
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.25
+			}
+
+			targeted_modifier = {
+				tag = SER
+				attack_bonus_against = 0.25
+			}
+			
+			targeted_modifier = {
+				tag = GRE
+				attack_bonus_against = 0.25
+			}
+			
+			targeted_modifier = {
+				tag = BEL
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = ROM
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = POR
+				attack_bonus_against = 0.25
+			}
+		}
+
+		GER_ww1_North_German_Confederation = {
+
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = { 	
+			   experience_gain_army_factor = 0.15
+			   experience_gain_navy_factor = 0.15
+			   experience_gain_air_factor = 0.15	   
+			}
+
+			modifier={ stability_factor  = 0.10 
+			global_building_slots_factor = 0.5
+
+			}
+		}
+		
+
+		German_staff_ww1 = {
+					allowed = { always = yes }
+					allowed_civil_war = { always = yes }
+
+					removal_cost = -1
+
+         picture=GFX_idea_German_staff_ww1
+
+					modifier = {
+				        conscription = 0.01
+						army_leader_start_level = 1
+						experience_gain_army = 0.03
+						army_speed_factor = 0.10
+						army_attack_factor = 0.05
+						breakthrough_factor = 0.1
+			         	planning_speed = 0.1
+					}
+				}
+
+		idea_oppression_minorities = {
+
+			allowed = {
+				always = no
+			}
+
+			research_bonus = {
+				land_doctrine = -0.10
+				naval_doctrine = -0.10
+				air_doctrine = -0.10
+			}
+
+			modifier = {
+				army_org_factor = -0.25
+			}
+		}
+	}
+}
+

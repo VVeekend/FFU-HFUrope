@@ -1,0 +1,22 @@
+state={
+	id=249
+	name="STATE_625"
+	provinces={
+		718 831 1073 1151 1340 1544 2670 2947 4372 4936 5149 5168 5184 5507 10917 10966 10980 10985
+	}
+	manpower = 341053
+
+	state_category = rural
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 6
+			2670 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PER
+	}
+	buildings_max_level_factor=1.000
+}

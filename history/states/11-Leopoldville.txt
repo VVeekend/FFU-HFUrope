@@ -1,0 +1,32 @@
+state={
+	id=11
+	name="STATE_295"
+	manpower = 3540948
+	state_category = rural
+	impassable=yes
+	resources={
+		tungsten=2
+	}
+	history={
+		owner = BEL
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			15 = {
+				naval_base = 1
+			}
+		}
+		#victory_points = {
+			#191 1
+			#}
+		victory_points = {
+			745 3
+		}
+	}
+	provinces={
+		15 35 119 127 327 635 745 906 994 1163 1217 1328 1329 1618 1630 1867 2144 2293 2412 2557 2711 2730 2760 3570 3583 3998 4083 4269 4477 5416 5821 6035 11380 11381 11386 11388 11390 11393 11400 11407 11410
+		28 587 765 1165 3287 3705 4335 4852 5436 5468 5559 11401 11404 11405 11408
+		463 511 1938 2432 2478 3147 3442 11382 11391 11395
+	}
+}

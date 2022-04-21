@@ -1,0 +1,23 @@
+state={
+	id=107
+	name="STATE_773"
+	manpower = 2945782
+	state_category = rural
+	history={
+		owner = GER
+		victory_points = {
+			5491 1
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+			11294 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		132 239 267 822 857 1072 1083 1116 1300 1365 1373 1907 2038 2051 2339 2578 2769 2803 3062 3169 3403 3660 3937 4287 4416 4728 4790 4791 5406 5491 5600 6275 6285 11267 11275 11286 11294 11296 11299 11301 11307
+	}
+}

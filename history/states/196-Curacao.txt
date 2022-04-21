@@ -1,0 +1,30 @@
+state={
+	id=196
+	name="Curacao"
+	provinces={
+		10973
+	}
+	manpower = 76299
+	state_category = town
+	resources={
+		oil=35
+	}
+	history={
+		owner = HOL
+		add_core_of=SWE
+		add_state_modifier = {
+					modifier = {
+						local_building_slots_factor = 0.5
+					}}
+		victory_points = {
+			10973 1
+		}
+		buildings = {
+			infrastructure = 3
+			10973 = {
+				naval_base = 1
+				coastal_bunker = 2
+			}
+		}
+		}	buildings_max_level_factor=1.000
+}

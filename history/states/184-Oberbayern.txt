@@ -1,0 +1,39 @@
+
+state={
+	id=184
+	name="STATE_52"
+	manpower = 2679413
+	resources={
+		aluminium=60 # was: 30
+	}
+
+	state_category = city
+
+	history={
+		owner = GER
+		victory_points = {
+			8672 20
+		}
+		victory_points = {
+			8604 3 #10
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 5
+			air_base = 6
+		}
+		add_core_of = GER
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 10
+			}
+		}
+	}
+
+	provinces={
+		3312 3949 4361 4630 5081 5395 5454 5582 6146 8486 8604 8619 8630 8658 8659 8672 8708 8719 8720 8728 8762 8771 8772 8782
+	}
+}
+

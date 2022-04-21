@@ -1,0 +1,32 @@
+
+state={
+	id=444
+	name="Maryland"
+
+	history={
+		owner = USA
+		victory_points = {
+			5427 40 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 15
+			dockyard = 1
+			arms_factory = 2
+			air_base = 6
+			5427 = {
+				naval_base = 10
+
+			}
+
+		}
+		add_core_of = USA
+	}
+
+	provinces={
+		486 1513 1664 3825 5427 
+	}
+	manpower=1821244
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

@@ -1,0 +1,22 @@
+state={
+	id=240
+	name="Khorasan"
+	provinces={
+		1081 1369 1420 2143 2321 2458 2587 2809 2925 3276 3769 4562 5525 6143 10076 10147 10192 10206 10283
+	}
+	manpower = 332362
+
+	state_category = wasteland
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			5029 1
+		}
+		add_core_of = PER
+	}
+	buildings_max_level_factor=1.000
+}

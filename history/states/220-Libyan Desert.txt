@@ -1,0 +1,22 @@
+
+state={
+	id=220
+	name="STATE_273"
+	impassable=yes
+	history={
+		owner = ITA
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 0
+
+		}
+
+	}
+
+	provinces={
+		95 175 180 197 206 332 341 368 558 652 744 952 1087 1107 1347 1782 2120 2276 2904 3128 3146 3371 3373 3480 3524 4784 4810 4919 5076 5165 5814 5924 5934 10698 10709 10710 10724 10741 10769 10771 10784 10865 11016 
+	}
+	manpower=42633
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

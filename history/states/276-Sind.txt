@@ -1,0 +1,24 @@
+state={
+	id=276
+	name="Sind"
+	provinces={
+		245 1350 1697 2056 5496 10968
+	}
+	manpower = 3887000
+	state_category = rural
+	history={
+		owner = RAJ
+		add_core_of=RAJ
+		victory_points = {
+			245 3
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			245 = {
+				naval_base = 4
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,52 @@
+
+state={
+	id=236
+	name="Vestlandet"
+	resources={
+		chromium=1.000
+		aluminium=15.000
+	}
+
+	history={
+		owner = NOR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			air_base = 1
+			6851 = {
+				naval_base = 3
+				coastal_bunker = 1
+
+			}
+			3597 = {
+				naval_base = 1
+				coastal_bunker = 1
+
+			}
+			3478 = {
+				naval_base = 3
+				coastal_bunker = 2
+
+			}
+
+		}
+		victory_points = {
+			6851 1
+		}
+		victory_points = {
+			3597 1
+		}
+		victory_points = {
+			3478 3
+		}
+		add_core_of = NOR
+
+	}
+
+	provinces={
+		1001 1004 1795 2058 2237 2367 2710 2780 3270 3478 3597 3882 4297 4682 4918 5871 6255 6637 6768 6800 6851 6896 11485
+	}
+	manpower=880945
+	buildings_max_level_factor=1.000
+	state_category=town
+}

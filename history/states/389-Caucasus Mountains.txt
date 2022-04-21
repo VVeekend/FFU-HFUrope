@@ -1,0 +1,30 @@
+
+state={
+	id=389
+	name="STATE_233"
+	resources={
+		chromium=35 # was: 46.000
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = SOV
+		victory_points = {
+			2679 3
+		}
+		victory_points = {
+			9527 1
+		}
+	}
+
+	provinces={
+		13 1666 1711 2411 2516 2679 3268 3476 3626 3701 3996 4084 4431 4854 4884 5032 5261 5478 5487 5604 5842 9433 9472 9488 9495 9506 9508 9516 9527 9528 9539 9550 9551 9552 9558 9568 9575 9576 9584 9592 9602 9618 9628 9633 9641 9642 9659 9688
+	}
+	manpower=1463970
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

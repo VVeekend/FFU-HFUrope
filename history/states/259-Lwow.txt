@@ -1,0 +1,32 @@
+state={
+	id=259
+	name="STATE_90" # Kielce
+	manpower = 1835700
+
+	state_category = town
+
+	resources={
+		steel=8 # was: 12
+	}
+
+	history={
+		victory_points = {
+			7959 5
+		}
+		victory_points = {
+			6404 5
+		}
+		#victory_points = {
+			#	562 3
+			#}
+		owner = SOV
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		7959 7997 8017 8018 8051 8067 8117 1522 2997 3230 4105 6132 6404 8042 8084 8095 8155 8192
+	}
+}

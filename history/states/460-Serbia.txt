@@ -1,0 +1,28 @@
+state={
+	id=460
+	name="STATE_107"
+
+	history={
+		owner = SER
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 4
+			air_base = 5
+
+		}
+		victory_points = {
+			2466 15
+		}
+		add_core_of = SER
+
+
+	}
+
+	provinces={
+		821 2466 5125 5401 5809 5997 9378 9417 9418 9419 9430 9478
+	}
+	manpower=1279121
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

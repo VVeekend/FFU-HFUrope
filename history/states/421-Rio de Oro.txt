@@ -1,0 +1,20 @@
+state={
+	id=421
+	name="STATE_699"
+	manpower = 1
+	state_category = wasteland
+	history={
+		owner = SPR
+		add_core_of=SWE
+		buildings = {
+			infrastructure = 1
+			anti_air_building = 10
+		}
+		victory_points = {
+			1757 1
+		}
+	}
+	provinces={
+		755 1192 1691 1757 2022
+	}
+}

@@ -1,0 +1,50 @@
+
+state={
+	id=170
+	name="STATE_59"
+	manpower = 2438286
+	resources={
+		oil=2 # was: 4
+	}
+
+	state_category = large_city
+
+	history={
+		owner = GER
+		victory_points = {
+			5517 5
+		}
+		victory_points = {
+			4452 10
+		}
+
+		victory_points = {
+			3774 10
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 3
+			industrial_complex = 1
+			dockyard = 2
+			air_base = 8
+			7543 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = GER
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 6
+				arms_factory = 4
+				industrial_complex = 3
+				dockyard = 3
+			}
+		}
+	}
+
+	provinces={
+		967 1246 2799 2892 3231 3483 3573 3774 3879 3985 4452 4654 5216 5517 5911 6235 6312 6350 6447 7459 7543 7586 7587 7597 7636 7637 7638 7679 7729 7784 7838 7897
+	}
+}

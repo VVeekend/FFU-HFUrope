@@ -1,0 +1,21 @@
+state={
+	id=140
+	name="Damascus"
+	provinces={
+		2886 4258 5028 10315 10752
+	}
+	manpower = 547797
+	state_category = rural
+	history={
+		owner = TUR
+		add_core_of=TUR
+		victory_points = {
+			2886 2
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+		}
+	}
+	buildings_max_level_factor=1.000
+}

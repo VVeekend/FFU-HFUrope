@@ -1,0 +1,29 @@
+
+state={
+	id=138
+	name="STATE_665"
+
+	history={
+		owner = FRA
+		add_core_of = SWE
+		victory_points = {
+			10364 1 
+		}
+		buildings = {
+			infrastructure = 3
+			10335 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		781 1555 1766 1829 2014 2781 4136 4397 5349 5570 5720 6015 6080 6397 6457 10335 10344 10364 10365 10471 10530 10536 10621 11580 11581 
+	}
+	manpower=427824
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

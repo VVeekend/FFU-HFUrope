@@ -1,0 +1,25 @@
+state={
+	id=160
+	name="STATE_772"
+	manpower = 746415
+	state_category = rural
+	resources={
+		rubber=0
+	}
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			1903 2
+		}
+		buildings = {
+			infrastructure = 3
+			11385 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		160 365 369 594 973 1206 1215 1903 2212 2219 2494 2693 2701 2817 3648 4167 4178 4713 4725 5038 5271 5304 11297 11311 11323 11329 11330 11337 11347 11377 11383 11385
+	}
+}

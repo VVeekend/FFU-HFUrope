@@ -1,0 +1,19 @@
+state={
+	id=141
+	name="STATE_462"
+	manpower = 1865552
+	state_category = wasteland
+	history={
+		owner = FRA
+		add_core_of=SWE
+		victory_points = {
+			4108 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		72 220 528 544 1260 1489 1701 2279 2382 2812 3131 3498 3836 4064 4730 4796 5839 6325 6353 6394 10367 10384 10390 10396 10397 10412 10413 10462 10468 10474 10476 10488 10498 10505 10513 10519 10548 10554 10586 10594 10600 10617
+	}
+}

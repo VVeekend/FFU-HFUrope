@@ -1,0 +1,26 @@
+state={
+	id=82
+	name="British Guyana"
+	provinces={
+		184 347 424 457 776 979 1462 1674 2624 3300 4628 4687 4855 5260 11114 11120 11125 11136 11143 11149 11154
+	}
+	manpower = 309000
+	state_category = pastoral
+	resources={
+		aluminium=78
+	}
+	history={
+		owner = ENG
+		add_core_of=SWE
+		victory_points = {
+			4628 1
+		}
+		buildings = {
+			infrastructure = 2
+			4628 = {
+				naval_base = 1
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,30 @@
+state={
+	id=213
+	name="Dodecanese"
+	provinces={
+		10155 11524
+	}
+	manpower = 120000
+
+	state_category = small_island
+
+	history=
+	{
+		owner = ITA
+		victory_points = {
+			10155 1
+		}
+		buildings = {
+			infrastructure = 5
+			air_base = 1
+			10155 = {
+				naval_base = 4
+			}
+			11524 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GRE
+	}
+	buildings_max_level_factor=1.000
+}

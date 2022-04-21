@@ -1,0 +1,22 @@
+
+state={
+	id=142
+	name="STATE_514"
+	impassable=yes
+	history={
+		owner = FRA
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 0
+
+		}
+
+	}
+
+	provinces={
+		3 78 80 98 136 219 248 310 395 425 462 576 643 658 739 884 974 1020 1158 1159 1195 1357 1459 1653 2002 2029 3410 3468 3510 4053 4658 5681 5868 6217 6425 10453 10491 10521 10524 10544 10573 10578 10579 10587 10589 10618 10639 10654 11050 
+	}
+	manpower=207733
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

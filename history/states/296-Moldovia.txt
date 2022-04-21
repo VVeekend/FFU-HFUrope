@@ -1,0 +1,28 @@
+state=
+{
+	id=296
+	name="STATE_79"
+	manpower = 2806400
+
+	state_category = large_city
+
+	history=
+	{
+		owner = ROM
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 6
+		}
+		victory_points = {
+			5264 1
+		}
+		victory_points = {
+			9217 1
+		}
+		add_core_of = ROM
+	}
+	provinces=
+	{
+		218 1930 1932 1987 2676 3219 3657 4483 4646 5264 6258 6269 6446 8800 8868 8952 8953 8999 9009 9048 9049 9104 9163 9204 9216 9217 608 4417 5087 5180 6156 8825 8881 8938 9037 971 2643 4343 8713 8744 8764 	}
+}

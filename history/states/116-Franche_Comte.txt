@@ -1,0 +1,31 @@
+state={
+	id=116
+	name="STATE_17" # Lorraine
+	manpower = 1517500
+
+	state_category = city
+
+	resources={
+		steel=28 # was: 48
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			8854 5
+		}
+		victory_points = {
+			8511 5
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			air_base = 5
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		11 1526 2007 3666 4142 4226 5173 5327 5708 5767 5874 8511 8639 8761 8770 8854 8864 8890 8910 8948
+	}
+}

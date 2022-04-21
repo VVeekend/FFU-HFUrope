@@ -1,0 +1,24 @@
+state={
+	id=360
+	name="STATE_402"
+	resources={
+		chromium=15.000
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = SOV
+
+	}
+
+	provinces={
+		32 104 331 378 396 915 1063 1091 1097 1198 1325 1502 2063 2131 2182 2195 2456 2461 2498 2589 3024 3149 3307 3863 3881 3942 3982 4082 4145 4161 4568 4639 4745 5258 5768 8315 8367 8542 8599 8615 8739 8885 8928 13231 10436 13086 12839
+	}
+	manpower=282245
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

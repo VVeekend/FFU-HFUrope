@@ -1,0 +1,26 @@
+
+state = {
+	id=199
+	name="STATE_154"
+	manpower = 2735383
+
+	state_category = city
+
+	history = {
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 2
+		}
+		victory_points = {
+			4442 1
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		545 2003 2334 4019 4189 4442 5353 5674 5954 6106 6121 6179 8686 8723 8743 8756 8774 8788 8808 8837 8951 8967 8979 8998 9016 9017 9029 9036 9052 9074 9075
+	}
+}
