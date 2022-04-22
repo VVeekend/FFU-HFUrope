@@ -5,25 +5,6 @@ on_actions = {
 			add_to_array = { global.army_leader_ids = THIS.id }
 		}
 	}
-	on_daily = {
-		effect = {
-			every_state = {
-				limit = {
-					check_variable = { provinces_on_gas_attack^num > 0 }
-				}
-			}
-		}
-	}
-	on_monthly = {
-		effect = {
-			every_state = {
-				limit = {
-					check_variable = { provinces_on_gas_attack^num > 0 }
-				}
-				gas_state_event_effect = yes #After capitulation of the controller, some provinces remain gassed forever. This is a bandaid not a fix. I'm really tired at this point and there is only a week before the midterm exams :(
-			}
-		}
-	}
 	on_startup = {
 		effect = {
 			FRA = {
@@ -395,15 +376,6 @@ on_actions = {
 
 	on_capitulation = {
 		effect = {
-			if = {
-				limit = {
-					original_tag = BEL
-					GER = { has_war_with = BEL }
-				}
-				teleport_armies = {
-					to_state = 55
-				}
-			}
 			if = {
 				limit = {
 					original_tag = RUS

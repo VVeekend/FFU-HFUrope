@@ -131,7 +131,7 @@ country_event = {
 			    type = take_state_focus 
 			    target = TUR 
 			    generator = {
-			        155
+			        463
 			    }
 			}
 			add_ideas = SER_First_Balkan
@@ -253,8 +253,8 @@ country_event = {
 		TUR = {
 			has_war_with = SER
 			NOT = {
-				controls_state = 156
-				controls_state = 134
+				controls_state = 463
+				controls_state = 187
 			}
 		}
 	}
@@ -298,8 +298,7 @@ country_event = {
 		MNT = { white_peace = TUR }
 
 		SER = {
-			transfer_state = 156
-			transfer_state = 155
+			transfer_state = 495
              
 
 			diplomatic_relation = {
@@ -314,8 +313,8 @@ country_event = {
 			remove_ideas = SER_First_Balkan
 		}
 		GRE = {
-			transfer_state = 135
-			transfer_state = 134
+			transfer_state = 187
+			transfer_state = 496
 			transfer_state = 132
 			remove_ideas = GRE_First_Balkan
 			diplomatic_relation = {
