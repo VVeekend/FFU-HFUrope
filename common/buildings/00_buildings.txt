@@ -45,7 +45,7 @@ buildings = {
 		base_cost = 1000
 		icon_frame = 5
 		air_base = yes
-		max_level = 5
+		max_level = 10
 		value = 1
 		damage_factor = 0.5
 	}
@@ -124,7 +124,7 @@ buildings = {
 		anti_air = yes
 		disabled_in_dmz = yes
 		air_defence = 1
-		max_level = 5 # This is the max unlock level
+		max_level = 10 # This is the max unlock level
 		damage_factor = 0.1
 		value = 1
 	}

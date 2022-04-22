@@ -16,5 +16,6 @@ is_playable_country = {
 		tag = SER
 		tag = EGY
 		tag = CAN
+		tag = RAJ
 	}
 }

@@ -1,26 +1,77 @@
 ﻿capital = 257
 
-oob = "POL_1936"
-
 set_research_slots = 3
 
-# Starting tech
+1910.1.1 = {
+
 set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_mountaineers = 1
-	tech_support = 1
-	tech_engineers = 1
-	tech_recon = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-	gwtank = 1
-	early_fighter = 1
-	early_bomber = 1
-	CAS1 = 1
-	trench_warfare = 1
-}
-add_timed_idea = { idea = no_training days= 730 }
+
+		# Infantry
+		infantry_weapons = 1
+		ww1infantry_weapons1 = 1
+		support_weapons = 1
+		infantry_binoculars = 1
+		infantry_grenade = 1
+		machine_gun = 1
+		machine_gun_1 = 1
+		ww1_ambulance1 = 1
+		early_motorised = 1
+		
+
+		# Support
+		tech_support = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_military_police = 1
+		tech_maintenance_company = 1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+		basic_train = 1
+
+		# Armor
+		gwtank=1 # 1910 Armored Car
+
+		# Artillery
+		light_field_gun1 = 1
+		heavy_field_gun1 = 1
+		interwar_antiair=1
+
+		# Navy
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		ship_hull_super_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_heavy_armor_scheme = 1
+		basic_ship_hull_cruiser = 1
+		mtg_transport = 1
+
+
+		# Air
+
+		# Engineering
+		electronic_mechanical_engineering = 1
+		chemical_research = 1
+		tank_unlocker1 = 1
+
+		# Industry
+		
+		# Doctrine
+		ww1_infantry = 1
+		ww1_artillery = 1
+		ww1_battlefield_support = 1
+		mobile_doctrines = 1
+		
+	}
+	
 add_equipment_to_stockpile = {
 	type = infantry_equipment_1
 	amount = 20600
@@ -45,103 +96,42 @@ set_popularities = {
 	communism = 2
 	neutrality = 65
 }
-create_country_leader = {
-	name = "Ignacy Mościcki"
-	desc = "POLITICS_IGNACY_MOSCICKI_DESC"
-	picture = "Portrait_Poland_Ignacy_Moscicki.dds"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		#
-	}
-}
+recruit_character = POL_regency_council
+recruit_character = POL_jozef_pilsudski
 
-create_field_marshal = {
-	name = "Władysław Sikorski"
-	picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
-	traits = { defensive_doctrine }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
+recruit_character = POL_gabriel_narutowicz
+recruit_character = POL_ignacy_daszynski
+recruit_character = POL_maurycy_klemens_zamoyski
+recruit_character = POL_tadeusz_jordan_rozwadowski
+recruit_character = POL_stanislaw_haller
+recruit_character = POL_jozef_dowbor_musnicki
+recruit_character = POL_edward_rydzsmigly
+recruit_character = POL_jozef_haller
+recruit_character = POL_stanislaw_szeptycki
+recruit_character = POL_lucjan_zeligowski
+recruit_character = POL_kazimierz_sosnkowski
+recruit_character = POL_zygmunt_zielinski
+recruit_character = POL_bogumil_nowotny
+recruit_character = POL_kazimierz_porebski
+recruit_character = POL_hipolit_lossowski
+recruit_character = POL_gustaw_macewicz
+recruit_character = POL_stefan_frankowski
+recruit_character = POL_felix_dzerzhinsky
 
-create_field_marshal = {
-	name = "Władysław Bortnowski"
-	gfx = "GFX_POL_wladyslaw_bortnowski"
-	traits = {  thorough_planner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
+recruit_character = POL_adam_ludwik_i
+recruit_character = POL_karol_stefan_i
+recruit_character = POL_leopold_i
+recruit_character = POL_albrecht_i
+recruit_character = POL_fryderyk_krystian_i
+recruit_character = POL_august_iv
 
-create_field_marshal = {
-	name = "Stanisław Kopański"
-	gfx = "GFX_POL_stanislav_kopanski"
-	traits = {  offensive_doctrine }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
+recruit_character = POL_jedrzej_moraczewski
+recruit_character = POL_leon_wasilewski
+recruit_character = POL_ignacy_jan_paderewski
+recruit_character = POL_wladyslaw_grabski
+recruit_character = POL_stanislaw_wojciechowski
+recruit_character = POL_eustachy_sapiecha
+recruit_character = POL_maciej_rataj
+recruit_character = POL_ignacy_matuszewski
 
-create_corps_commander = {
-	name = "Władysław Anders"
-	gfx = "GFX_POL_wladislaw_anders"
-	traits = {  armor_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Roman Abraham"
-	gfx = "GFX_POL_roman_abraham"
-	traits = {  }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Wincenty Kowalski"
-	gfx = "GFX_POL_wincenty_kowalski"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Roman Czerniawski"
-		GFX = GFX_portrait_roman_czerniawski
-		traits = { }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { POL }
-	}
-
-	create_operative_leader = {
-		name = "Krystyna Skarbek"
-		GFX = GFX_portrait_krystyna_skarbek
-		traits = { operative_commando operative_seducer }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { POL }
-	}
-}
+recruit_character = POL_jan_jacyna }

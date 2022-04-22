@@ -1,0 +1,30 @@
+characters={
+	EST_konstantin_pats={
+		name="EST_konstantin_pats"
+		portraits={
+			civilian={
+				large="gfx/leaders/EST/portrait_est_konstantin_pats.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			
+			
+			
+		}
+	}
+	EST_jaan_tonisson={
+		name="EST_jaan_tonisson"
+		portraits={
+			civilian={
+				large="gfx/leaders/EST/EST_jaan_tonisson.png"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			
+			
+			
+		}
+	}
+}
