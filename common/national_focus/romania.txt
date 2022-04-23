@@ -48,14 +48,14 @@ focus = {
 		icon = GFX_SOV_stolypins_land_reform-45113
 		completion_reward = {  add_stability= 0.1 
 		
-		111={
+		293={
 			add_extra_state_shared_building_slots = 2
 		}
-		365 = {
+		292 = {
 			add_extra_state_shared_building_slots = 2
 
 		}
-		236 = {
+		296 = {
 			add_extra_state_shared_building_slots = 4
 
 		}
@@ -71,7 +71,7 @@ focus = {
 		id = ROM_prepare_for_war
 		prerequisite = { focus = ROM_reform_effort}
 		icon = GFX_goal_generic_construct_mil_factory
-		completion_reward = {  236 = {
+		completion_reward = {  292 = {
 		add_extra_state_shared_building_slots = 4
 		add_building_construction = { type = arms_factory level = 4 instant_build = yes
 		}}}
@@ -699,7 +699,7 @@ focus = {
 		prerequisite = {focus = ROM_modernize_industry }
 		completion_reward = {	
 		
-			111 = {
+			292 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 		              type=infrastructure level=2 instant_build=yes 
@@ -721,7 +721,7 @@ focus = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = {focus = ROM_retrofit_railroads }
 		completion_reward = { 
-			365 = {
+			296 = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 		            type=industrial_complex level=1 instant_build=yes 
@@ -745,7 +745,7 @@ focus = {
 		x = -2
 		y = 2
 		completion_reward = {
-		 	111 = { add_extra_state_shared_building_slots = 4 add_building_construction={ type=industrial_complex level=3 instant_build=yes } } 
+		 	293 = { add_extra_state_shared_building_slots = 4 add_building_construction={ type=industrial_complex level=3 instant_build=yes } } 
 			add_timed_idea= { 
         		idea = ROM_encourage_foreign_investment   
          		Days = 360
@@ -777,7 +777,7 @@ focus = {
 		 add_resource= { 
          type = oil 
          amount = 20
-         state = 111
+         state = 292
          }
 		}
 		ai_will_do = { factor = 10 }
@@ -835,7 +835,7 @@ focus = {
 		icon = GFX_AUS_hungarian_industrialization-45108
 		prerequisite = {focus = ROM_strengthen_war_industry }
 		completion_reward = { 
-			111 = {
+			292 = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 		            type=industrial_complex level=3 instant_build=yes 
@@ -853,7 +853,7 @@ focus = {
 		icon = GFX_AUS_hungarian_industrialization-45108
 		prerequisite = {focus = ROM_strengthen_war_industry }
 		completion_reward = { 
-			365 = {
+			296 = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 		            type=industrial_complex level=2 instant_build=yes 
@@ -871,7 +871,7 @@ focus = {
 		icon = GFX_AUS_hungarian_industrialization-45108
 		prerequisite = {focus = ROM_strengthen_war_industry }
 		completion_reward = { 
-			236 = {
+			293 = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 		            type=industrial_complex level=2 instant_build=yes 

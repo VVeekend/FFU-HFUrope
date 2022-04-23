@@ -153,9 +153,9 @@ focus_tree = {
 		icon = GFX_hoi4tgw_marianne
 		completion_reward = { FRA={ add_opinion_modifier={ target=ITA modifier=ger_ita_alliance_focus } } ENG={ add_opinion_modifier={ target=ITA modifier=HOI4TGW_Opinion_ger_auh_alliance_focus_malus } } 
 		
-		37 = {add_extra_state_shared_building_slots=2 
+		123 = {add_extra_state_shared_building_slots=2 
 		      add_building_construction={ type=arms_factory level=2 instant_build=yes } } 
-	    63 = {add_extra_state_shared_building_slots=2 
+	    225 = {add_extra_state_shared_building_slots=2 
 		      add_building_construction={ type=arms_factory level=2 instant_build=yes } } 
 		}
 		ai_will_do = { 
@@ -181,7 +181,7 @@ focus_tree = {
 		}
 		completion_reward = { 
 			add_political_power = 150 
-			army_experience = 20 navy_experience = 40 air_experience = 10
+			army_experience = 50 navy_experience = 50 air_experience = 50
 		}
 		ai_will_do = { factor = 2000 }
 		cost = 10
@@ -240,47 +240,47 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure	
 		
 		completion_reward = {
-		    37 = {
+		    225 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		    42 = {
+		    203 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		   36 = {
+		   202 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		    34 = {
+		    208 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		    33 = {
+		    226 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		   32 = {
+		   208 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		    31 = {
+		    209 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		    30= {
+		    211= {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
 		    }
-		    29 = {
+		    212 = {
 		        add_building_construction = {
 		            type = infrastructure level = 1 instant_build = yes
 		        }
@@ -333,55 +333,35 @@ focus_tree = {
 		add_resource= { 
          type = steel 
          amount = 20
-         state = 39 
+         state = 226 
          }
 		add_resource= { 
          type = steel 
          amount = 16
-         state = 27 
+         state = 209 
          }
 		add_resource= { 
          type = steel 
          amount = 9
          state = 34 
          }
-        add_resource= { 
-         type = wood
-         amount = 35
-         state = 34 
-          }
-        add_resource= { 
-         type = coal
-         amount = 12
-         state = 37 
-          }
 		}
 	completion_reward = {
 		add_resource= { 
          type = steel 
          amount = 20
-         state = 39 
+         state = 226 
          }
 		add_resource= { 
          type = steel 
          amount = 16
-         state = 27 
+         state = 209 
          }
 		add_resource= { 
          type = steel 
          amount = 9
          state = 34 
          }
-        add_resource= { 
-         type = wood
-         amount = 35
-         state = 34 
-          }
-        add_resource= { 
-         type = coal
-         amount = 12
-         state = 37 
-          }
 		}
 	}
 	
@@ -395,7 +375,6 @@ focus_tree = {
 		cost = 10
 		x = 12
 		y = 4
-		mutually_exclusive = { focus=ITA_ww1_invest_civil }
 	}
 
 	focus = {
@@ -408,7 +387,6 @@ focus_tree = {
 		cost = 10
 		x = 14
 		y = 4
-		mutually_exclusive = { focus=ITA_ww1_invest_military }
 	}
 	#-----------------------------------------------------------------------
 
@@ -427,50 +405,13 @@ focus_tree = {
 		y = 1
 	}
 
-	focus = {
-		id = ITA_ww1_fortification_effort_entente
-		prerequisite = { focus=ITA_ww1_italian_expansionism}
-		icon = GFX_goal_generic_construction2
-		available = {
-			ITA = { 
-				controls_state = 39
-			}
-		}
-		completion_reward = { 
-			39 = {
-		        add_building_construction = {
-		            type = trench level = 1 province = 19477 instant_build = yes
-		        }
-		        add_building_construction = {
-		            type = trench level = 1 province = 19491 instant_build = yes
-		        }
-		        add_building_construction = {
-		            type = trench level = 1 province = 15286 instant_build = yes
-		        }
-		        add_building_construction = {
-		            type = trench level = 1 province = 15288 instant_build = yes
-		        }
-		        add_building_construction = {
-		            type = trench level = 1 province = 15198 instant_build = yes
-		        }
-		        add_building_construction = {
-		            type = trench level = 1 province = 5540 instant_build = yes
-		        }
-		    }
-		}
-		ai_will_do = { factor = 20 }
-		cost = 10
-		x = 15
-		y = 2
-	}
-
 	#----------
 	focus = {
 		id = ITA_ww1_italian_develop_tripoli
 		prerequisite = { focus=ITA_ww1_italian_expansionism }
 		icon = GFX_goal_generic_construct_infrastructure
 		completion_reward = {
-		    355 = {
+		    214 = {
 		        add_building_construction = {
 		            type = infrastructure level = 2 instant_build = yes
 		        }
@@ -487,7 +428,7 @@ focus_tree = {
 		prerequisite = { focus=ITA_ww1_italian_develop_tripoli }
 		icon = GFX_goal_generic_construct_mil_factory
 		completion_reward = { 
-			355 = {
+			214 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = arms_factory level = 2 instant_build = yes
@@ -507,7 +448,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
-			355 = {
+			214 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -520,27 +461,6 @@ focus_tree = {
 		y = 5
 	}
 	
-	focus = {
-		id = ITA_ww1_italian_fortify_tripoli
-		prerequisite = { focus=ITA_ww1_italian_civil_tripoli }
-		icon = GFX_goal_generic_fortify_city
-		available = {
-		}
-		completion_reward = { 
-			355 = {
-		        add_building_construction = {
-		            type = trench level = 1 province = 6630 instant_build = yes
-		        }
-		        add_building_construction = {
-		            type = coastal_bunker level = 1 province = 10918 instant_build = yes
-		        }
-		    }
-		}
-		ai_will_do = { factor = 10 }
-		cost = 10
-		x = 16
-		y = 6
-	}
 	#----------
 	focus = {
 		id = ITA_ww1_italian_develop_cyrenaica
@@ -549,7 +469,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-		    357 = {
+		    216 = {
 		        add_building_construction = {
 		            type = infrastructure level = 2 instant_build = yes
 		        }
@@ -568,7 +488,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
-			357 = {
+			216 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = arms_factory level = 2 instant_build = yes
@@ -588,7 +508,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = { 
-			357 = {
+			216 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes

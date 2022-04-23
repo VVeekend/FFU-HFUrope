@@ -1,30 +1,32 @@
+
 state={
 	id=190
 	name="Aegean Islands"
-	provinces={
-		3943 10004 11514 10068
-	}
-	manpower = 322600
-
-	state_category = small_island
-
-	resources={
-		#chromium=7 moved to South Tyrol
-	}
 
 	history={
-		owner = GRE
+		owner = TUR
 		buildings = {
 			infrastructure = 4
 			dockyard = 1
 			3943 = {
 				naval_base = 1
+
 			}
 			10004 = {
 				naval_base = 1
+
 			}
+
 		}
 		add_core_of = GRE
+
 	}
+
+	provinces={
+		3943 10004 10068 11502 11514 
+	}
+	manpower=322600
 	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
 }

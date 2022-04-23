@@ -1,8 +1,9 @@
-
 state={
-	id=466
-	name="STATE_466"
-
+	id=524
+	name="STATE_524"
+	provinces={
+		1361 2372 2563 4369 5321 5536 9878 9892 
+	}
 	history={
 		owner = TUR
 		add_core_of = TUR
@@ -16,12 +17,7 @@ state={
 		}
 
 	}
-
-	provinces={
-		1902 5332 9775 9796 9805 9818 
-	}
-	manpower=1
+	manpower=0
 	buildings_max_level_factor=1.000
-	state_category=wasteland
 	local_supplies=0.000
 }

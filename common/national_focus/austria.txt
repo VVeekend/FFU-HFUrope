@@ -22,72 +22,52 @@ focus_tree = {
 		}
 		 
 		completion_reward = {
-		100 = {
+		204 = {
 	    add_building_construction = {
-		            type = coastal_bunker level = 2 province = 4828  instant_build = yes
+		            type = coastal_bunker level = 1 province = 9122  instant_build = yes
 		        }
         add_building_construction = {
-		            type = coastal_bunker level = 1 province = 4410  instant_build = yes
+		            type = coastal_bunker level = 2 province = 5619  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = coastal_bunker level = 1 province = 9218  instant_build = yes
+		            type = coastal_bunker level = 1 province = 9249  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = coastal_bunker level = 1 province = 15679  instant_build = yes
+		            type = coastal_bunker level = 1 province = 9261  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = trench level = 2 province = 4828  instant_build = yes
+		            type = trench level = 1 province = 9122  instant_build = yes
 		        }
         add_building_construction = {
-		            type = trench level = 1 province = 4410  instant_build = yes
+		            type = trench level = 2 province = 5619  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = trench level = 1 province = 9218  instant_build = yes
+		            type = trench level = 1 province = 9249  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = trench level = 1 province = 15679  instant_build = yes
+		            type = trench level = 1 province = 9261  instant_build = yes
 		        }				
 				     }
-		38 = {
+		207 = {
 	    add_building_construction = {
-		            type = coastal_bunker level = 2 province = 3579  instant_build = yes
+		            type = coastal_bunker level = 2 province = 5208  instant_build = yes
 		        }
         add_building_construction = {
-		            type = coastal_bunker level = 1 province = 11212  instant_build = yes
+		            type = coastal_bunker level = 1 province = 11496  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = coastal_bunker level = 1 province = 15348 instant_build = yes
+		            type = coastal_bunker level = 1 province = 9512 instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = coastal_bunker level = 1 province = 8094 instant_build = yes
-		        }
-	    add_building_construction = {
-		            type = trench level = 2 province = 3579  instant_build = yes
+		            type = trench level = 2 province = 5208  instant_build = yes
 		        }
         add_building_construction = {
-		            type = trench level = 1 province = 11212  instant_build = yes
+		            type = trench level = 1 province = 11496  instant_build = yes
 		        }
 	    add_building_construction = {
-		            type = trench level = 1 province = 15348 instant_build = yes
-		        }
-	    add_building_construction = {
-		            type = trench level = 1 province = 8094 instant_build = yes
+		            type = trench level = 1 province = 9512 instant_build = yes
 		        }				
-				     }	
-		56 = {
-	    add_building_construction = {
-		            type = coastal_bunker level = 2 province = 7018  instant_build = yes
-		        }
-        add_building_construction = {
-		            type = coastal_bunker level = 1 province = 20122  instant_build = yes
-		        }
-	    add_building_construction = {
-		            type = trench level = 2 province = 7018  instant_build = yes
-		        }
-        add_building_construction = {
-		            type = trench level = 1 province = 20122  instant_build = yes
-		        }
-				     }					 
+				     }						 
 			}
 	}
 
@@ -118,19 +98,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-			56 = {
-         add_extra_state_shared_building_slots=4 add_building_construction={ type=dockyard level=4 instant_build=yes }
-			}
-			38 = {
-         add_extra_state_shared_building_slots=4 add_building_construction={ type=dockyard level=4 instant_build=yes }
-			}
-		}
 		completion_reward = {
-			56 = {
+			207 = {
          add_extra_state_shared_building_slots=4 add_building_construction={ type=dockyard level=4 instant_build=yes }
 			}
-			38 = {
+			204 = {
          add_extra_state_shared_building_slots=4 add_building_construction={ type=dockyard level=4 instant_build=yes }
 			}
 		}
@@ -524,7 +496,7 @@ remove_ideas = AUS_czech_autonomy_demands
 			focus = AUS_economic_boom 
 		}
 		complete_tooltip = {
-			103 = {
+			198 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 		            type = arms_factory level = 4 instant_build = yes
@@ -532,7 +504,7 @@ remove_ideas = AUS_czech_autonomy_demands
 			}
 		}
 		completion_reward = {
-			103 = {
+			198 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 		            type = arms_factory level = 4 instant_build = yes
@@ -572,16 +544,8 @@ remove_ideas = AUS_czech_autonomy_demands
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-			73 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-		            type = industrial_complex level = 2 instant_build = yes
-		           }
-			}
-		}
 		completion_reward = {
-			72 = {
+			2 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -602,16 +566,8 @@ remove_ideas = AUS_czech_autonomy_demands
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-			105 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-		            type = industrial_complex level = 2 instant_build = yes
-		           }
-			}
-		}
 		completion_reward = {
-			105 = {
+			198 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -632,16 +588,8 @@ remove_ideas = AUS_czech_autonomy_demands
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-			73 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-		            type = industrial_complex level = 2 instant_build = yes
-		           }
-			}
-		}
 		completion_reward = {
-			73 = {
+			3 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -725,7 +673,7 @@ remove_ideas = AUS_czech_autonomy_demands
             technology = advanced_ship_hull_submarine
             technology = improved_ship_torpedo_launcher
 			technology = advanced_ship_torpedo_launcher }
-			100 = {
+			490 = {
             add_extra_state_shared_building_slots=2 add_building_construction={ type=dockyard level=2 instant_build=yes }
 			   }
 			}
@@ -747,7 +695,7 @@ remove_ideas = AUS_czech_autonomy_demands
        		technology = improved_ship_hull_heavy
             technology = advanced_ship_hull_heavy
             technology = improved_heavy_armor_scheme }
-			100 = {
+			207 = {
             add_extra_state_shared_building_slots=2 add_building_construction={ type=dockyard level=2 instant_build=yes }
 			}
 			}
@@ -798,16 +746,8 @@ technology = tech_mountaineers3
 		ai_will_do = {
 			factor = 1
 		}
-		complete_tooltip = {
-			98 = {
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-		            type = arms_factories level = 6 instant_build = yes
-		           }
-			}
-		}
 		completion_reward = {
-			98 = {
+			23 = {
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 		            type = arms_factorY level = 6 instant_build = yes

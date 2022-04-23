@@ -115,7 +115,6 @@ equipments = {
 		resources = {
 			#oil = 1
 			steel = 3
-			wood = 3
 		}
 		fuel_consumption = 4.2
 	}

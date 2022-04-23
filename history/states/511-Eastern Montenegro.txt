@@ -1,0 +1,19 @@
+state={
+	id=511
+	name="STATE_511"
+	provinces={
+		4701 6368 9598 
+	}
+	history={
+		owner = TUR
+		add_core_of = MNT
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	manpower=50600
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

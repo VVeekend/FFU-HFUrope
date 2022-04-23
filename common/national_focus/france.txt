@@ -37,7 +37,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			67 = {				add_extra_state_shared_building_slots = 4				add_building_construction = {
+			118 = {				add_extra_state_shared_building_slots = 4				add_building_construction = {
 		            type = arms_factory level = 4 instant_build = yes		           }
 			}
 		}
@@ -222,7 +222,7 @@ add_political_power= -100
 			factor = 1
 		}
 		completion_reward = {
-			124 = {
+			189 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -244,7 +244,7 @@ add_political_power= -100
 			factor = 1
 		}
 		completion_reward = {
-			308 = {
+			141 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -269,11 +269,11 @@ add_political_power= -100
 			factor = 1
 		}
 		completion_reward = {
-			124 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+			141 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
 		            type = arms_factory level = 3 instant_build = yes		           }
 			}
 
-308 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+131 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
 		            type = arms_factory level = 3 instant_build = yes		           }
 			}
 		}
@@ -331,18 +331,18 @@ add_political_power= -100
 		}
 		completion_reward = {
 			SOV = {
-204 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+327 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
 		            type = arms_factory level = 3 instant_build = yes		           }
 			}
 
-172 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+310 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
 		            type = arms_factory level = 3 instant_build = yes		           }
 			}
-204 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+403 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
 		            type = arms_factory level = 3 instant_build = yes		           }
 			}
 
-114 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
+377 = {				add_extra_state_shared_building_slots = 3				add_building_construction = {
 		            type = arms_factory level = 3 instant_build = yes		           }
 			}  }
 		}
@@ -383,7 +383,7 @@ add_political_power= -100
 		}
 		completion_reward = {
 			add_ideas= FRA_reinventated_navy
-63 = {
+128 = {
          add_extra_state_shared_building_slots=6 add_building_construction={ type=dockyard level=6 instant_build=yes }
 		}
 	}
@@ -419,19 +419,19 @@ add_political_power= -100
 			factor = 1
 		}
 		completion_reward = {
-			55 = {
+			114 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           }
 			}
-			51 = {
+			128 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           }
 			}
-			63 = {
+			162 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = arms_factory level = 2 instant_build = yes
@@ -454,19 +454,19 @@ add_political_power= -100
 		}
 		completion_reward = { 
 		ENG = {
-					10 = {
+					50 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           } } }
 	    SOV = {
-					202 = {
+					327 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           } } }
 		ITA = {
-					33 = {
+					208 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -602,7 +602,7 @@ add_political_power = 100
 			factor = 1
 		}
 		completion_reward = {
-			55 = {
+			128 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -625,7 +625,7 @@ add_political_power = 100
 		available = {
 			BEL = { 		
 			      NOT = {
-			        	controls_state = 48
+			        	controls_state = 6
 			    }
 			}
 		}
@@ -647,12 +647,12 @@ add_offsite_building= { type = industrial_complex level = 10 }  add_manpower = 2
 			factor = 1
 		}
 		completion_reward = {	ITA = {
-					33 = {
+					225 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           } }
-					33 = {
+					209 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = dockyard level = 2 instant_build = yes
@@ -706,7 +706,7 @@ add_offsite_building= { type = industrial_complex level = 10 }  add_manpower = 2
 		}
 		completion_reward = {
 			add_tech_bonus={ name=industry_bonus bonus=2 uses=1 category=industry }
-			55 = {
+			121 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
@@ -727,10 +727,10 @@ add_offsite_building= { type = industrial_complex level = 10 }  add_manpower = 2
 			factor = 1
 		}
 		completion_reward = {
-			63 = {
+			128 = {
          add_extra_state_shared_building_slots=4 add_building_construction={ type=dockyard level=4 instant_build=yes }
 			}
-			65 = {
+			126 = {
          add_extra_state_shared_building_slots=4 add_building_construction={ type=dockyard level=4 instant_build=yes }
 			}
 		}
@@ -751,22 +751,22 @@ add_offsite_building= { type = industrial_complex level = 10 }  add_manpower = 2
 		}
 		completion_reward = {
 			add_ideas= FRA_defunded_and_disregarded_navy 
-				55 = {
+				114 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           } }
-				65 = {
+				162 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           } }
-				 51 = {
+				118 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
 		           } }
-				57 = {
+				121 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 		            type = industrial_complex level = 2 instant_build = yes
