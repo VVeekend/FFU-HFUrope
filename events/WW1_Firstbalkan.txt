@@ -155,7 +155,6 @@ country_event = {
 			set_global_flag = kis_firstbalkan_war
 			news_event = { days = 1 id = ww1_firstbalkan.100 }
 
-			44 = { set_border_war = no }
 
 			SER = {
 				add_manpower = 15000
@@ -254,7 +253,7 @@ country_event = {
 			has_war_with = SER
 			NOT = {
 				controls_state = 463
-				controls_state = 187
+				controls_state = 496
 			}
 		}
 	}
@@ -315,7 +314,8 @@ country_event = {
 		GRE = {
 			transfer_state = 187
 			transfer_state = 496
-			transfer_state = 132
+			transfer_state = 192
+			transfer_state = 190
 			remove_ideas = GRE_First_Balkan
 			diplomatic_relation = {
 				country = TUR
@@ -323,25 +323,25 @@ country_event = {
 			}
 		}
 		BUL = {
-			transfer_state = 360
-			transfer_state = 361
-			transfer_state = 154
-			transfer_state = 133
-            transfer_state = 160
+			transfer_state = 510
+			transfer_state = 463
+			transfer_state = 186
+			transfer_state = 512
+            transfer_state = 156
 			diplomatic_relation = {
 				country = TUR
 				relation = non_aggression_pact
 			}
 		}
 		MNT = {
-			transfer_state = 151
+			transfer_state = 511
 			diplomatic_relation = {
 				country = TUR
 				relation = non_aggression_pact
 			}
 		}
 		ALB = {
-			transfer_state = 129
+			transfer_state = 1
 			diplomatic_relation = {
 				country = TUR
 				relation = non_aggression_pact
