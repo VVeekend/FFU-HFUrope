@@ -1,0 +1,51 @@
+characters={
+	FNG_zhang_zuolin={
+		name="Zhang Zuolin"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/CHI_zhang_zuolin.png"
+			}
+		}
+		corps_commander={
+			traits={ substance_abuser organizer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			
+		}
+		country_leader={
+			ideology=stratocracy
+			traits={ generallissimo  }
+			
+			
+		}
+		country_leader={
+			ideology=despotism
+			traits={ generallissimo  }
+			
+			
+		}
+	}
+	FNG_zhang_xueliang={
+		name="Zhang Xueliang"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHI/CHI_Zhang_Xueliang.png"
+			}
+		}
+		country_leader={
+			ideology=stratocracy
+			
+			
+			
+		}
+		country_leader={
+			ideology=despotism
+			
+			
+			
+		}
+	}
+}

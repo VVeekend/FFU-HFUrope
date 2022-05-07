@@ -1,0 +1,70 @@
+add_namespace = ww1_georgia
+country_event = {
+	id = ww1_georgia.1
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = GEO
+		OR = {
+			has_cosmetic_tag = GEO_TSCN_commissariat
+			has_cosmetic_tag = GEO_TSCN
+		}
+		ARM = { exists = yes }
+		AZR = { exists = yes }
+	}
+	immediate = {
+        every_state = {
+			limit = {
+				OR = {
+					is_core_of = ARM
+					is_core_of = AZR
+				}
+				NOT = {
+					state = 816
+					state = 748
+					state = 231
+					state = 233
+				}
+			}
+			ROOT = { remove_state_core = PREV }
+		}
+		drop_cosmetic_tag = yes
+		set_party_name = {
+			ideology = neutrality 
+			long_name = GEO_neutrality_party 
+			name = GEO_neutrality_party 
+		}
+		set_research_slots = 2
+		set_stability = 0.56
+		promote_character = GEO_noe_zhordania
+	}
+}
+country_event = {
+	id = ww1_georgia.2
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		tag = GEO
+		has_cosmetic_tag = GEO_TSCN_commissariat
+		NOT = {
+			has_government = neutrality 
+			is_subject_of = RUS
+		}
+		OR = {
+			ARM = { exists = no }
+			AZR = { exists = no }
+		}
+	}
+	immediate = {
+		add_stability = 0.05
+		set_cosmetic_tag = GEO_TSCN
+		set_party_name = { 
+			ideology = neutrality 
+			long_name = GEO_TSCN_neutrality_party 
+			name = GEO_TSCN_neutrality_party 
+		}
+		GEO_nikoloz_chkheidze = {
+			promote_character = socialism
+		}
+	}
+}

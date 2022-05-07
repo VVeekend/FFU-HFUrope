@@ -1,49 +1,640 @@
 ﻿add_namespace = ww1_romania
 
-news_event = {
-	id=ww1_romania.1
-	title=ww1_romania.1.t#Carol I Dies!
-	desc=ww1_romania.1.d#Carol I has died. Ferdinand is now King
-	picture=ww1_romania_1
-
-	major = yes
-
+# ROMANIAN KING IS DEAD
+###############################
+country_event = {
+	id = ww1_romania.1
+	title = ww1_romania.1.t
+	desc = ww1_romania.1.d
+	picture = GFX_report_event_royal_parade
 	trigger = {
-		#has_government = neutrality
-		ROM = {
-			NOT = {
-				has_country_flag=carol_dead
-			}
-		
-		}
-		date > 1914.10.10
+	    original_tag = ROM
+		has_country_leader = {
+          		character = ROM_carol_i
+           		ruling_only = no
+       		}
+		date > 1914.10.1
 	}
+	mean_time_to_happen = {
+		days = 9
+	}
+	immediate = {
+		hidden_effect = {
+			retire_character = ROM_carol_i
+			promote_character = ROM_ferdinand_i
+		}
+	}
+	option = {
+		name = ww1_romania.1.a
+		effect_tooltip = {
+			create_country_leader = {
+				name = "ROM_ferdinand_i"
+				
+				ideology = autocracy
+			}
+		}
+	}
+}
 
+# TAKE TRANSLIVANIA FROM HUNGARY
+###############################
+country_event = {
+	id = ww1_romania.2
+	title = ww1_romania.2.t
+	desc = ww1_romania.2.d
+	picture = GFX_report_event_generic_read_write
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 10
+	}
+	trigger = {
+		tag = ROM
+		is_subject = no
+		AUH = {
+			exists = no
+		}
+		HUN = {
+			exists = yes
+			is_subject = no
+			NOT = {
+				has_war_with = ROM
+			}
+			owns_state = 76
+			owns_state = 84
+			owns_state = 83
+			owns_state = 82
+			owns_state = 778
+		}
+		OR = {
+			has_global_flag = hungarian_revolution
+			HUN = {
+				has_war = yes
+			}
+		}
+	}
+	option = {
+		name = ww1_romania.2.a
+		transfer_state = 76
+		transfer_state = 84
+		transfer_state = 83
+		transfer_state = 82
+		transfer_state = 80
+		transfer_state = 778
+		every_state = {
+			limit = {
+				is_owned_by = ROM
+			}
+			remove_core_of = HUN
+		}
+		hidden_effect = {
+			add_state_core = 76
+			add_state_core = 84
+			add_state_core = 83
+			add_state_core = 82
+			add_state_core = 80
+			add_state_core = 778
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# AUH swear to give Bucovnia if Romania joins them
+country_event = {
+	id = ww1_romania.5
+	title = ww1_romania.5.t
+	desc = ww1_romania.5.d
+	picture = ww1_romania_5
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_romania.5.a
+		ai_chance = {
+			factor = 100
+		}
+		AUH = {
+			remove_state_core = 80
+		}
+		ROM = {
+			transfer_state = 80
+			set_country_flag = kis_romania_accept_auh_offer
+		}
+	}
+	option = {
+		name = ww1_romania.5.b
+		ai_chance = {
+			factor = 0
+		}
+		ROM = {
+			set_country_flag = kis_romania_decline_auh_offer
+		}
+	}
+}
+
+#____________________________________________________________
+# Romania Honour the Triple Alliance?
+#____________________________________________________________
+country_event = {
+	id = ww1_romania.6
+	title = ww1_romania.6.t	#Honour the Triple Alliance?
+	desc = ww1_romania.6.d
+	picture = ww1_romania_6
+	is_triggered_only = yes
+	option = {
+		name = ww1_romania.6.a
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = SER
+				modifier = large_increase
+			}
+		}
+		AUH = {
+			add_opinion_modifier = {
+				target = SER
+				modifier = large_increase
+			}
+		}
+		AUH = {
+			add_opinion_modifier = {
+				target = SER
+				modifier = large_increase
+			}
+		}
+		FRA = {
+			add_opinion_modifier = {
+				target = SER
+				modifier = large_increase
+			}
+		}
+		RUS = {
+			add_opinion_modifier = {
+				target = SER
+				modifier = large_increase
+			}
+		}
+		ROM = {
+			#remove_ideas=neutrality_idea
+			add_opinion_modifier = {
+				target = RUS
+				modifier = large_decrease
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_decrease
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = large_decrease
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = AUH
+				modifier = large_increase
+			}
+			if = {
+				limit = {
+					GER = {
+						is_faction_leader = yes
+					}
+				}
+				GER = {
+					add_to_faction = ROM
+				}
+			}
+			if = {
+				limit = {
+					AUH = {
+						is_faction_leader = yes
+					}
+				}
+				AUH = {
+					add_to_faction = ROM
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_romania.6.b
+		ai_chance = {
+			factor = 0
+		}
+		ROM = {
+			set_country_flag = ROM_neutral
+			add_ideas = neutrality_idea
+			add_opinion_modifier = {
+				target = RUS
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = large_decrease
+			}
+			add_opinion_modifier = {
+				target = AUH
+				modifier = large_decrease
+			}
+			if = {
+				limit = {
+					is_in_faction_with = GER
+				}
+				GER = {
+					remove_from_faction = ROM
+				}
+			}
+		}
+	}
+}
+
+#Moldavia Joins
+country_event = {
+	id = ww1_romania.7
+	title = ww1_romania.7.t
+	desc = ww1_romania.7.d
+	is_triggered_only = yes
+	picture = GFX_report_event_gre_megali_conference_signing
+	option = {
+		name = ww1_romania.7.a
+		ai_chance = {
+			factor = 100
+		}
+		annex_country = {
+			target = MOL
+			transfer_troops = yes
+		}
+		if = {
+			limit = {
+				is_ai = yes
+				MOL = {
+					is_ai = no
+				}
+			}
+			change_tag_from = MOL
+		}
+	}
+	option = {
+		name = ww1_romania.7.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Dummy Event
+#country_event = { 
+#	id = ww1_romania.8
+#	title = ww1_romania.8.t
+#	desc = ww1_romania.8.d
+#}
+
+#Romanian reaction to Hungarian Revolution
+country_event = {
+	id = ww1_romania.9
+	title = ww1_romania.9.t
+	desc = ww1_romania.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			ROM = {
+				has_capitulated = no
+				is_subject = no
+			}
+		}
+		name = ww1_romania.9.a
+		ai_chance = {
+			factor = 100
+		}
+		set_global_flag = ROM_HUN_war_1919
+		ROM = {
+			declare_war_on = {
+				target = HUN
+				type = take_core_state
+			}
+		}
+		CZE = {
+			if = {
+				limit = {
+					exists = yes
+					is_subject = no
+					NOT = {
+						has_government = communism
+						has_war_with = ROM
+						is_in_faction_with = HUN
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = SLO
+					}
+					add_core_of = PREV
+				}
+				declare_war_on = {
+					target = HUN
+					type = take_core_state
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_romania.9.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#white peace
+country_event = {
+	id = ww1_romania.10
+	title = ww1_romania.10.t
+	desc = ww1_romania.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ww1_romania.10.a
+		ai_chance = {
+			factor = 100
+		}
+		every_state = {
+			limit = {
+				is_owned_by = HUN
+				is_core_of = ROM
+			}
+			ROM = { transfer_state = PREV }
+		}
+		if = {
+            limit = {
+				CZE = {
+					has_war_with = HUN
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = HUN
+					is_core_of = CZE
+				}
+				CZE = { transfer_state = PREV }
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_war_with = HUN
+			}
+			hidden_effect = {
+				set_country_flag = hungarian_romanian_war_winner
+			}
+			white_peace = HUN
+			set_truce = {
+				target = HUN
+				days = 365
+			}
+		}
+		if = {
+            limit = {
+				SER = {
+					exists = yes
+					is_subject = no
+					not = { has_country_flag = great_war_loser }
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = HUN
+					is_core_of = SER
+				}
+				SER = { transfer_state = PREV }
+			}
+		}			
+		HUN = {
+			drop_cosmetic_tag = yes
+			leave_faction = yes
+			country_event = ww1_hungary.2
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_government = communism
+					has_non_aggression_pact_with = HUN
+				}
+				diplomatic_relation = {
+					country = HUN
+					relation = non_aggression_pact
+					active = no
+				}
+			}
+			# Interwar Diplomacy
+			ROM = {
+				add_ideas = neutrality_idea
+			}
+			if = {
+				limit = {
+					CZE = {
+						has_country_flag = hungarian_romanian_war_winner
+					}
+				}
+				ROM = {
+					give_guarantee = CZE
+				}
+				CZE = {
+					give_guarantee = ROM
+				}
+			}
+			if = {
+				limit = {
+					SER = {
+						has_country_flag = great_war_winner
+					}
+				}
+				ROM = {
+					give_guarantee = SER
+				}
+				CZE = {
+					give_guarantee = SER
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_country_flag = great_war_winner
+					}
+				}
+				FRA = {
+					give_guarantee = ROM
+					give_guarantee = CZE
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_romania.10.a
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Death of Ferdinand I
+############################
+country_event = {
+	id = ww1_romania.11
+	title = ww1_romania.11.t
+	desc = {
+		text = ww1_romania.11.d
+		trigger = {
+			NOT = {
+				has_country_flag = great_war_loser
+			}
+		}
+	}
+	desc = {
+		text = ww1_romania.11.d_carol
+		trigger = {
+			has_country_flag = great_war_loser
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		original_tag = ROM
+		has_country_leader = {
+			character = ROM_ferdinand_i
+			ruling_only = no
+		}
+		date > 1927.7.20
+	}
 	mean_time_to_happen = {
 		days = 0
 	}
-
-	immediate = {
-		hidden_effect = {
-			ROM = {
-				kill_country_leader=yes
-				create_country_leader={
-					name="Ferdinand I"
-					desc=ROM_ferdinand_i_DESC
-					picture="gfx/leaders/ROM_ferdinand_i.dds"
-					expire="1935.1.1"
-					ideology=conservatism
-					traits={}
-				}
-				set_country_flag=carol_dead
+	option = {
+		name = ww1_romania.11.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			NOT = {
+				has_country_flag = great_war_loser
 			}
 		}
+		retire_character = ROM_ferdinand_i
+		promote_character = ROM_mihai_i
+		# Regent
+		promote_character = ROM_prince_nicolae
+		add_ideas = ROM_figurehead_king_michael
 	}
+	option = {
+		name = ww1_romania.11.b
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			has_country_flag = great_war_loser
+		}
+		retire_character = ROM_ferdinand_i
+		promote_character = ROM_carol_ii
+	}
+}
 
-	option={
-		name = ww1_romania.1.a
-		ai_chance={
-			factor=100
-		}	
+# Carol II
+#############################
+country_event = {
+	id = ww1_romania.12
+	title = ww1_romania.12.t
+	desc = ww1_romania.12.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = ROM
+		OR = {
+			has_country_leader = {
+				character = ROM_mihai_i
+				ruling_only = no
+			}
+			has_country_leader = {
+				character = ROM_prince_nicolae
+				ruling_only = no
+			}
+		}
+		date > 1930.6.1
+	}
+	mean_time_to_happen = {
+		days = 8
+	}
+	option = {
+		name = ww1_romania.12.a
+		ai_chance = {
+			factor = 100
+		}
+		retire_character = ROM_prince_nicolae
+		remove_ideas = ROM_figurehead_king_michael
+		add_ideas = ROM_king_carol_ii_hedonist
+		ROM_carol_ii = {
+			add_country_leader_trait = hedonist
+			promote_character = autocracy
+		}
+	}
+}
+
+# Carol II with Iron Guard
+#############################
+country_event = {
+	id = ww1_romania.13
+	title = ww1_romania.13.t
+	desc = ww1_romania.13.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = ROM
+		has_country_leader = {
+			character = ROM_carol_ii
+			ruling_only = yes
+		}
+		date > 1934.1.1
+		has_country_flag = great_war_loser
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	option = {
+		name = ww1_romania.12.a
+		set_party_name = {
+			ideology = fascism
+			long_name = ROM_legionary_party_long
+			name = ROM_legionary_party
+		}
+		set_cosmetic_tag = ROM_legionary
+		set_popularities = {
+			communism = 0
+			democratic = 38
+			neutrality = 18
+			fascism = 44
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		promote_character = ROM_corneliu_zelea_codreanu
+		ROM_carol_ii = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = fascism_ideology
+					
+					expire = "1935.1.1.1"
+				}
+			}
+			promote_character = fascism_ideology
+		}
 	}
 }

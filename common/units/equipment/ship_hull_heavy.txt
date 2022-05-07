@@ -1,7 +1,7 @@
 equipments = {
 
 	ship_hull_heavy = {
-		year = 1922
+		year = 1900
 
 		is_archetype = yes
 		is_buildable = no
@@ -22,11 +22,11 @@ equipments = {
 				allowed_module_categories = { ship_heavy_battery }
 			}
 			fixed_ship_anti_air_slot = {
-				required = yes
+				required = no
 				allowed_module_categories = { ship_anti_air }
 			}
 			fixed_ship_fire_control_system_slot = {
-				required = yes
+				required = no
 				allowed_module_categories = { ship_fire_control_system }
 			}
 			fixed_ship_radar_slot = {
@@ -113,9 +113,9 @@ equipments = {
 		
 		max_strength = 350
 
-		fuel_consumption = 67
+		fuel_consumption = 0
 		
-		build_cost_ic = 3300
+		build_cost_ic = 1650
 		resources = {
 			steel = 1
 			chromium = 1
@@ -172,9 +172,9 @@ equipments = {
 		
 		max_strength = 300
 		naval_speed = 13
-		fuel_consumption = 67
+		fuel_consumption = 0
 		reliability = 0.65
-		build_cost_ic = 3000
+		build_cost_ic = 1500
 		resources = {
 			steel = 1
 			chromium = 1
@@ -183,7 +183,7 @@ equipments = {
 		manpower = 3200
 	}
 	ship_hull_heavy_1 = {
-		year = 1922
+		year = 1900
 		archetype = ship_hull_heavy
 		priority = 1500
 		parent = ship_hull_pre_dreadnought
@@ -267,13 +267,13 @@ equipments = {
 		
 		max_strength = 350
 		reliability = 0.80
-		fuel_consumption = 67
+		fuel_consumption = 0
 		
-		build_cost_ic = 3300
+		build_cost_ic = 1650
 	}
 
 	ship_hull_heavy_2 = {
-		year = 1936
+		year = 1910
 
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -323,9 +323,9 @@ equipments = {
 		
 		max_strength = 370
 		reliability = 0.85
-		fuel_consumption = 67
+		fuel_consumption = 0
 		naval_speed = 22
-		build_cost_ic = 3400
+		build_cost_ic = 1700
 		resources = {
 			#oil = 1
 			steel = 1
@@ -336,7 +336,7 @@ equipments = {
 	}
 
 	ship_hull_heavy_3 = {
-		year = 1940
+		year = 1916
 
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -387,9 +387,9 @@ equipments = {
 		naval_speed = 24
 		max_strength = 400
 		reliability = 0.9
-		fuel_consumption = 67
+		fuel_consumption = 33
 		
-		build_cost_ic = 3500
+		build_cost_ic = 1750
 		resources = {
 			#oil = 1
 			steel = 1
@@ -400,7 +400,7 @@ equipments = {
 	}
 
 	ship_hull_heavy_4 = {
-		year = 1944
+		year = 1922
 
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -451,9 +451,9 @@ equipments = {
 		
 		max_strength = 450
 		naval_speed = 26
-		fuel_consumption = 67
+		fuel_consumption = 33
 		reliability = 0.95
-		build_cost_ic = 3600
+		build_cost_ic = 1800
 		resources = {
 			#oil = 1
 			steel = 1
@@ -464,7 +464,7 @@ equipments = {
 	}
 
 	ship_hull_super_heavy_1 = {
-		year = 1940
+		year = 1916
 
 		archetype = ship_hull_heavy
 		model = super_heavy_battleship
@@ -480,7 +480,7 @@ equipments = {
 				allowed_module_categories = { ship_anti_air }
 			}
 			fixed_ship_fire_control_system_slot = {
-				required = no
+				required = yes
 				allowed_module_categories = { ship_fire_control_system }
 			}
 			fixed_ship_radar_slot = {
@@ -548,7 +548,7 @@ equipments = {
 		max_strength = 700
 		fuel_consumption = 75
 		reliability = 0.80
-		build_cost_ic = 5500
+		build_cost_ic = 2750
 		resources = {
 			steel = 1
 			chromium = 1
@@ -557,7 +557,7 @@ equipments = {
 	}
 
 	battleship_1 = { 
-		year = 1922
+		year = 1900
 		archetype = ship_hull_heavy
 		priority = 1500
 		visual_level = 0
@@ -651,9 +651,9 @@ equipments = {
 		
 		max_strength = 350
 
-		fuel_consumption = 67
+		fuel_consumption = 0
 		
-		build_cost_ic = 5600
+		build_cost_ic = 2800
 		resources = {
 			#oil = 1
 			steel = 3
@@ -664,7 +664,7 @@ equipments = {
 	}
 	
 	battleship_2 = {
-		year = 1936
+		year = 1910
 		visual_level = 1
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -706,8 +706,9 @@ equipments = {
 
 		max_strength = 450		
 
+		fuel_consumption = 0
 
-		build_cost_ic = 5400
+		build_cost_ic = 2700
 		resources = {
 			#oil = 2
 			steel = 4
@@ -718,7 +719,7 @@ equipments = {
 	}
 	
 	battleship_3 = {
-		year = 1940
+		year = 1916
 		visual_level = 1
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -760,9 +761,9 @@ equipments = {
 		
 		max_strength = 500
 		
-
+		fuel_consumption = 33
 		
-		build_cost_ic = 5200
+		build_cost_ic = 2600
 		resources = {
 			#oil = 2
 			steel = 4
@@ -773,7 +774,7 @@ equipments = {
 	}
 	
 	battleship_4 = {
-		year = 1944
+		year = 1922
 		visual_level = 1
 		archetype = ship_hull_heavy
 		priority = 1500
@@ -815,9 +816,9 @@ equipments = {
 		
 		max_strength = 550
 		
-
+		fuel_consumption = 33
 		
-		build_cost_ic = 6000
+		build_cost_ic = 3000
 		resources = {
 			#oil = 2
 			steel = 5
@@ -829,7 +830,7 @@ equipments = {
 
 
 	SH_battleship_1 = {
-		year = 1936
+		year = 1910
 		visual_level = 0
 		archetype = ship_hull_heavy
 		model = super_heavy_battleship
@@ -937,7 +938,7 @@ equipments = {
 
 		fuel_consumption = 93
 		
-		build_cost_ic = 8500
+		build_cost_ic = 4250
 		resources = {
 			#oil = 2
 			steel = 4
@@ -947,7 +948,7 @@ equipments = {
 	}
 	
 	SH_battleship_2 = {
-		year = 1944
+		year = 1922
 		visual_level = 0
 		archetype = ship_hull_heavy
 		model = super_heavy_battleship
@@ -1057,7 +1058,7 @@ equipments = {
 
 		fuel_consumption = 93
 		
-		build_cost_ic = 13000
+		build_cost_ic = 6500
 		resources = {
 			#oil = 2
 			steel = 5
@@ -1067,7 +1068,7 @@ equipments = {
 		
 	}
 	battle_cruiser_1 = {
-		year = 1922
+		year = 1900
 		visual_level = 0
 		archetype = ship_hull_heavy
 		priority = 1600
@@ -1109,9 +1110,9 @@ equipments = {
 		max_strength = 350
 		
 
-		fuel_consumption = 67
+		fuel_consumption = 0
 		
-		build_cost_ic = 2500
+		build_cost_ic = 1250
 		resources = {
 			#oil = 1
 			steel = 3
@@ -1122,7 +1123,7 @@ equipments = {
 	}
 	
 	battle_cruiser_2 = {
-		year = 1940
+		year = 1916
 		visual_level = 1
 		archetype = ship_hull_heavy
 		priority = 1600
@@ -1164,9 +1165,9 @@ equipments = {
 		
 		max_strength = 400
 		
+		fuel_consumption = 67
 
-
-		build_cost_ic = 4000
+		build_cost_ic = 2000
 		resources = {
 			#oil = 1
 			steel = 4

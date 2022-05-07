@@ -1,752 +1,200 @@
 characters={
-	AUS_viktor_adler={
-		name="Viktor Adler"
+	AUS_karl_seitz={
+		name="AUS_karl_seitz"
 		portraits={
 			civilian={
-				large="gfx/hoi4tgw_portraits/AUH/country_leaders/AUH_viktor_adler.dds"
+				large="gfx/leaders/AUS/AUS_karl_seitz.png"
 			}
 		}
 		country_leader={
-			##desc="AUH_viktor_adler_DESC"
-			ideology=marxism
-			expire="1935.1.1.1"
-			id=-1
+			ideology=socialism				
 		}
 	}
-	AUS_franz_ferdinand={
-		name="Franz Ferdinand"
+	AUS_karl_renner={
+		name=AUS_karl_renner
 		portraits={
 			civilian={
-				large="gfx/hoi4tgw_portraits/AUH/country_leaders/AUH_franz_ferdinand.dds"
+				large="gfx/leaders/AUS/AUS_Karl_Renner.png"
 			}
 		}
 		country_leader={
-			##desc="AUH_franz_ferdinand_DESC"
-			ideology=despotism
-			expire="1935.1.1.1"
-			id=-1
+			ideology=socialism				
 		}
 	}
-	AUS_franz_joseph_i={
-		name="Franz Joseph I"
+	AUS_franz_koritschoner={
+		name="AUS_franz_koritschoner"
 		portraits={
 			civilian={
-				large="gfx/hoi4tgw_portraits/AUH/country_leaders/AUH_franz_joseph_i.dds"
+				large="gfx/leaders/AUH/AUH_franz_koritschoner.png"
 			}
 		}
 		country_leader={
-			##desc="AUH_franz_joseph_i_DESC"
-			ideology=autocracy
-			traits={ autocratic_imperialist }
-			expire="1935.1.1.1"
-			id=-1
+			ideology=marxism	
 		}
 	}
-	AUS_conrad_von_hötzendorf={
-		name="Conrad von Hotzendorf"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_Conrad_von_Hotzendorf.dds" 
-			}
-		}
-		field_marshal={
-			traits={ aggressive_assaulter }
-			skill=3
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=6137
-		}
-	}
-	AUS_arthur_von_bolfras={
-		name="Arthur von Bolfras"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_von_Bolfras.dds"
-			}
-		}
-		field_marshal={
-			skill=2
-			attack_skill=1
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=6386
-		}
-	}
-	AUS_stögersteiner_von_steinstätten={
-		name="Stöger-Steiner von Steinstätten"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_von_Steinstatten.dds"
-			}
-		}
-		corps_commander={
-		    traits={ infantry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=6401
-		}
-	}
-	AUS_svetozar_borojević_von_bojna={
-		name="Svetozar von Bojna"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_von_Bojna.dds" 
-			}
-		}
-		corps_commander={
-			traits={ infantry_leader trait_mountaineer hill_fighter }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=6010
-		}
-	}
-	AUS_karl_von_pflanzerbaltin={
-		name="Karl von Pflanzer-Baltin"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_von_Pflanzer_Baltin.dds"
-			}
-		}
-		corps_commander={
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=6111
-		}
-	}
-	AUS_viktor_dankl_von_krasnik={
-		name="Viktor Dankl von Krasnik"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_Dankl_von_Krasnik.dds"
-			}
-		}
-		corps_commander={
-			traits={ trait_reckless inflexible_strategist scavenger expert_improviser }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=6139
-		}
-	}
-	AUS_hermann_kövess_von_kövessháza={
-		name="Hermann Kövess von Kövessháza"
-		portraits={
-
-			army={
-				large="gfx/leaders/AUH/AUH_von_Kovesshaza.dds"
-			}
-		}
-		corps_commander={
-			traits={ urban_assault_specialist }
-			skill=2
-			attack_skill=5
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=6396
-		}
-	}
-	AUS_anton_haus={
-		name="Anton Haus"
-		advisor={
-			slot = high_command
-			idea_token = AUH_anton_haus
-			ledger  = navy 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_capital_ship_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-
-			navy={
-				small="GFX_idea_AUH_anton_haus"
-			}
-			army={
-				large="gfx/leaders/AUH/AUH_Anton_Haus.dds"
-			}
-		}
-		navy_leader={
-			traits={ gunnery_expert }
-			skill=3
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=3
-			coordination_skill=2
-			legacy_id=6162
-		}
-	}
-	AUS_hermann_von_spaun={
-		name="Hermann von Spaun"
-		advisor={
-			slot = navy_chief
-			idea_token = AUH_hermann_von_spaun
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_chief_reform_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-
-			navy={
-				small="GFX_idea_AUH_hermann_von_spaun"
-			}
-			army={
-				large="gfx/leaders/AUH/AUH_von_Spaun.dds"
-			}
-		}
-		navy_leader={
-		    traits = { gentlemanly }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=3
-			legacy_id=6234
-		}
-	}
-	AUS_miklós_horthy={
-		name="Miklós Horthy"
-		portraits={
-
-			army={
-				large="gfx/leaders/HUN/HUN_miklos_horthy.dds"
-			}
-		}
-		navy_leader={
-			traits={ superior_tactician navy_media_personality }
-			skill=3
-			attack_skill=1
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=3
-			legacy_id=6394
-		}
-	}
-	AUS_alex_williams={
-		name="Alex Williams"
+	AUS_wilhelm_miklas={
+		name="AUS_wilhelm_miklas"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_4"
+				large="gfx/leaders/AUS/AUS_wilhelm_miklas.png"
 			}
 		}
 		country_leader={
-			ideology=liberalism
-			expire="1917.1.1.1"
-			id=-1
+			ideology=authoritarian_democracy
 		}
 	}
-	AUS_bob_wilson={
-		name="Bob Wilson"
+	AUS_michael_hainisch={
+		name="AUS_michael_hainisch"
 		portraits={
 			civilian={
-				large="GFX_portrait_europe_generic_4"
+				large="gfx/leaders/AUS/AUS_michael_hainisch.png"
 			}
 		}
 		country_leader={
-			ideology=falangism
-			traits={ smooth_talking_charmer quartermaster_general }
-			expire="1927.1.1.1"
-			id=-1
+			ideology=conservatism
 		}
 	}
-	AUS_AUH_agenor_goluchowski={
+	AUS_hans_knirsch={
+		name="AUS_hans_knirsch"
+		portraits={
+			civilian={
+				large="gfx/leaders/AUH/AUH_hans_knirsch.png"
+			}
+		}
+		country_leader={
+			ideology=nazism
+		}
+	}
+	AUS_engelbert_dollfuss={
+		name="AUS_engelbert_dollfuss"
+		portraits={
+			civilian={
+				large="gfx/leaders/AUS/AUS_Engelbert_Dollfuss.png"
+			}
+			army={
+				large="gfx/leaders/AUS/AUS_Engelbert_Dollfuss_general.png"
+			}
+		}
+		country_leader={
+			ideology=authoritarian_democracy
+			traits = { dislikes_germany }
+		}
+		country_leader={
+			ideology=fascism_ideology	
+			traits = { dictator dislikes_germany}
+		}
+	}
+	AUS_kurt_schuschnigg={
+		name=AUS_kurt_schuschnigg
+		portraits={
+			civilian={
+				large = GFX_portrait_AUS_kurt_schuschnigg
+			}
+		}
+	}
+	AUS_alfred_klahr={
+		name=AUS_alfred_klahr
+		portraits={
+			civilian={
+				large="gfx/leaders/AUS/AUS_Alfred_Klahr.png"
+			}
+		}
+	}
+	AUS_julius_raab={
 		advisor={
 			slot = political_advisor
-			idea_token = AUH_agenor_goluchowski
+			idea_token = AUS_julius_raab
 			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					silent_workhorse 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_agenor_goluchowski"
-		portraits={
-			army={
-				small="GFX_idea_AUH_agenor_goluchowski"
-			}
-		}
-	}
-	AUS_AUH_franz_von_holub={
-		advisor={
-			slot = navy_chief
-			idea_token = AUH_franz_von_holub
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_chief_decisive_battle_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_franz_von_holub"
-		portraits={
-			army={
-				small="GFX_idea_AUH_franz_von_holub"
-			}
-		}
-	}
-	AUS_AUH_oskar_von_hranilovic_czvetassin={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_oskar_von_hranilovic_czvetassin
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					quartermaster_general 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_oskar_von_hranilovic_czvetassin"
-		portraits={
-			army={
-				small="GFX_idea_AUH_oskar_von_hranilovic_czvetassin"
-			}
-		}
-	}
-	AUS_archduke_franz_ferdinand={
-		advisor={
-			slot = political_advisor
-			idea_token = AUS_archduke_franz_ferdinand
-			traits  = {
-					archduke 
-				}
-				available  = {
-					AUS = {
-						has_completed_focus  = AUS_archduke_franz_ferdinand_naval_affairs 
-					}
-				}
-				cost  = 25.000
-				allowed  = {
-					tag  = AUS
-				}
-		}
-		name="AUS_archduke_franz_ferdinand"
-		portraits={
-			army={
-				small="GFX_idea_rudolf_hess"
-			}
-		}
-	}
-	AUS_AUH_alois_lexa_von_aehrenthal={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_alois_lexa_von_aehrenthal
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					prince_of_terror 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_alois_lexa_von_aehrenthal"
-		portraits={
-			army={
-				small="GFX_idea_AUH_alois_lexa_von_aehrenthal"
-			}
-		}
-	}
-	AUS_istvan_tisza={
-		advisor={
-			slot = political_advisor
-			idea_token = AUS_istvan_tisza
-			traits  = {
-					conservative_nationalist 
-				}
-				allowed  = {
-					tag  = AUS
-				}
-		}
-		name="AUS_istvan_tisza"
-		portraits={
-			army={
-				small="GFX_idea_rudolf_hess"
-			}
-		}
-	}
-	AUS_AUH_gyula_andrassy={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_gyula_andrassy
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					smooth_talking_charmer 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_gyula_andrassy"
-		portraits={
-			army={
-				small="GFX_idea_AUH_gyula_andrassy"
-			}
-		}
-	}
-	AUS_AUH_ottokar_czernin={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_ottokar_czernin
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					ideological_crusader 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_ottokar_czernin"
-		portraits={
-			army={
-				small="GFX_idea_AUH_ottokar_czernin"
-			}
-		}
-	}
-	AUS_AUH_emil_uzelac={
-		advisor={
-			slot = air_chief
-			idea_token = AUH_emil_uzelac
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					air_air_superiority_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_emil_uzelac"
-		portraits={
-			army={
-				small="GFX_idea_AUH_emil_uzelac"
-			}
-		}
-	}
-	AUS_AUH_maximilian_njegovan={
-		advisor={
-			slot = high_command
-			idea_token = AUH_maximilian_njegovan
-			ledger  = navy 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_fleet_logistics_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_maximilian_njegovan"
-		portraits={
-			army={
-				small="GFX_idea_AUH_maximilian_njegovan"
-			}
-		}
-	}
-	AUS_AUH_karl_kailer_von_kagenfels={
-		advisor={
-			slot = high_command
-			idea_token = AUH_karl_kailer_von_kagenfels
-			ledger  = navy 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_anti_submarine_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_karl_kailer_von_kagenfels"
-		portraits={
-			army={
-				small="GFX_idea_AUH_karl_kailer_von_kagenfels"
-			}
-		}
-	}
-	AUS_AUH_maximilian_daublebsky_von_sterneck={
-		advisor={
-			slot = high_command
-			idea_token = AUH_maximilian_daublebsky_von_sterneck
-			ledger  = navy 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_amphibious_assault_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_maximilian_daublebsky_von_sterneck"
-		portraits={
-			army={
-				small="GFX_idea_AUH_maximilian_daublebsky_von_sterneck"
-			}
-		}
-	}
-	AUS_AUH_eugen_hordliczka={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_eugen_hordliczka
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					war_industrialist 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_eugen_hordliczka"
-		portraits={
-			army={
-				small="GFX_idea_AUH_eugen_hordliczka"
-			}
-		}
-	}
-	AUS_AUH_blasius_schemua={
-		advisor={
-			slot = high_command
-			idea_token = AUH_blasius_schemua
-			ledger  = army 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					army_artillery_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_blasius_schemua"
-		portraits={
-			army={
-				small="GFX_idea_AUH_blasius_schemua"
-			}
-		}
-	}
-	AUS_AUH_august_urbanski={
-		advisor={
-			slot = theorist
-			idea_token = AUH_august_urbanski
-			ledger  = army 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					military_theorist 
-				}
-				research_bonus  = {
-					land_doctrine  = 0.100
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_august_urbanski"
-		portraits={
-			army={
-				small="GFX_idea_AUH_august_urbanski"
-			}
-		}
-	}
-	AUS_AUH_artur_arz_von_straussenberg={
-		advisor={
-			slot = army_chief
-			idea_token = AUH_artur_arz_von_straussenberg
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					army_entrenchment_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_artur_arz_von_straussenberg"
-		portraits={
-			army={
-				small="GFX_idea_AUH_artur_arz_von_straussenberg"
-			}
-		}
-	}
-	AUS_AUH_gabor_ugron={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_gabor_ugron
-			allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					popular_figurehead 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_gabor_ugron"
-		portraits={
-			army={
-				small="GFX_idea_AUH_gabor_ugron"
-			}
-		}
-	}
-	AUS_AUH_friedrich_von_beck_rzikowsky={
-		advisor={
-			slot = high_command
-			idea_token = AUH_friedrich_von_beck_rzikowsky
-			ledger  = army 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					army_infantry_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_friedrich_von_beck_rzikowsky"
-		portraits={
-			army={
-				small="GFX_idea_AUH_friedrich_von_beck_rzikowsky"
-			}
-		}
-	}
-	AUS_AUH_rudolf_montecuccoli={
-		advisor={
-			slot = high_command
-			idea_token = AUH_rudolf_montecuccoli
-			ledger  = navy 
-				allowed  = {
-					tag  = AUS
-				}
-				traits  = {
-					navy_screen_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="AUH_rudolf_montecuccoli"
-		portraits={
-			army={
-				small="GFX_idea_AUH_rudolf_montecuccoli"
-			}
-		}
-	}
-	AUS_AUH_leon_von_bilinski={
-		advisor={
-			slot = political_advisor
-			idea_token = AUH_leon_von_bilinski
-			allowed  = {
-					tag  = AUS
+					original_tag  = AUS
 				}
 				traits  = {
 					captain_of_industry 
 				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
 		}
-		name="AUH_leon_von_bilinski"
+		name="AUS_julius_raab"
 		portraits={
 			army={
-				small="GFX_idea_AUH_leon_von_bilinski"
+				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
 	}
-	AUS_charles_i={
+	AUS_arthur_seyss-inquart={
 		advisor={
 			slot = political_advisor
-			idea_token = AUS_charles_i
-			traits  = {
-					conservative_grandee 
+			idea_token = AUS_arthur_seyss-inquart
+			allowed  = {
+					original_tag  = AUS
 				}
-				cost  = 25.000
-				allowed  = {
-					tag  = AUS
+				traits  = {
+					prince_of_terror 
 				}
 		}
-		name="AUS_charles_i"
+		name="AUS_arthur_seyss-inquart"
 		portraits={
 			army={
-				small="GFX_idea_rudolf_hess"
+				small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
 	}
-	AUS_AUH_franz_conrad_von_hotzendorf={
+	AUS_franz_bohme={
 		advisor={
 			slot = army_chief
-			idea_token = AUH_franz_conrad_von_hotzendorf
+			idea_token = AUS_franz_bohme
 			allowed  = {
-					tag  = AUS
+					original_tag  = AUS
 				}
 				traits  = {
-					army_chief_offensive_2 
+					army_chief_maneuver_2 
 				}
 				ai_will_do  = {
 					factor  = 1.000
 				}
 		}
-		name="AUH_franz_conrad_von_hotzendorf"
+		name="AUS_franz_bohme"
 		portraits={
 			army={
-				small="GFX_idea_AUH_franz_conrad_von_hotzendorf"
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+	}
+	AUS_franz_joseph_i={
+		name = "AUH_franz_joseph_i"
+		portraits={
+			civilian={
+				large="gfx/leaders/AUH/AUH_franz_joseph_i.png"
+			}
+		}
+	}
+	AUS_franz_ferdinand_i={
+		name = "AUH_franz_ferdinand_von_habsburg"
+		portraits={
+			civilian={
+				large="gfx/leaders/AUH/AUH_franz_ferdinand.png"
+			}
+		}
+	}
+	AUS_karl_i={
+		name = "AUH_karl_von_habsburg"
+		portraits={
+			civilian={
+				large="gfx/leaders/AUH/AUH_karl_i.png"
+			}
+		}
+	}
+	AUS_otto_von_habsburg = {
+		name = "AUH_otto_von_habsburg"
+		portraits = {
+			civilian = {
+				large="gfx/leaders/AUH/AUH_otto_von_hapsburg.png"
+			}
+		}
+	}
+	AUS_zita_von_bourbonparma = {
+		name = "AUH_zita_von_bourbonparma"
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AUH/AUH_Zita.png"
 			}
 		}
 	}

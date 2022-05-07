@@ -1,42 +1,445 @@
-operations = {
-	ROM_second_balkan_war = {
-
-		icon = ger_mefo_bills
-
+GER_great_war = {
+	ROM_great_war_intervention = {
+		allowed = {
+			original_tag = ROM
+		}
+		icon = GFX_decision_generic_operation
+		target_trigger = {
+			FROM = {
+				tag = AUH
+			}
+		}
 		available = {
-			AND = {
-				SER = {
-					surrender_progress > 0.8
+			is_subject = no
+			NOT = { has_war_with = RUS }			
+			if = {
+				limit = {
+					RUS = { has_war_with = AUH }
+					NOT = { FRA = { has_war_with = AUH } }
 				}
-				GRE = {
-					surrender_progress > 0.8
+				RUS = { is_in_faction = yes }
+			}
+			NOT = {
+				has_country_leader = {
+					character = ROM_carol_i
+					ruling_only = yes
 				}
-				has_global_flag = kis_secondbalkan_war
+			}	
+		}
+		visible = {
+			NOT = { 
+				has_war_with = AUH 
+				has_country_flag = ROM_neutral
+				has_global_flag = great_war_ends
+				has_global_flag = treaty_of_bucharest_1918
+			}
+			RUS = { has_war_with = AUH }
+			is_in_faction = no
+			has_global_flag = kis_war
+		}
+		fire_only_once = yes		
+		days_remove = 10
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				OR = {
+					SER = {
+						has_war_with = AUH
+						has_capitulated = yes
+					}
+					AUH = { casualties > 500000 }
+					AUH = { surrender_progress > 0.1 }
+				}
+			}
+			modifier = {
+				factor = 0
+				date < 1916.8.17
 			}
 		}
-
-
-        allowed = { original_tag = ROM }
-
+		remove_effect = {
+			if = {
+				limit = {
+					FRA = { 
+						has_war_with = AUH 
+						is_faction_leader = yes
+					}
+				}
+				FRA = { country_event = { id = generic.2 } 
+					add_ai_strategy = {
+						type = alliance
+						id = "ROM"
+						value = 200
+					}
+				}
+				else_if = {
+					limit = {
+						RUS = { 
+							is_faction_leader = yes
+						}
+					}
+					RUS = { country_event = { id = generic.2 } 
+						add_ai_strategy = {
+							type = alliance
+							id = "ROM"
+							value = 200
+						}
+					}
+					else = {
+						add_to_war = { 
+							targeted_alliance = RUS 
+							enemy = AUH
+						}	
+					}
+				}
+			}
+		}
+	}
+	ROM_great_war_surrender = {
+		allowed = {
+			original_tag = ROM
+		}
+		icon = GFX_decision_generic_nationalism
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
+		}
+		available = {
+			is_subject = no
+			has_capitulated = yes
+			GER = { NOT = { has_war_with = RUS } }
+		}
+		visible = {
+			has_war_with = GER
+			NOT = {
+				has_global_flag = GER_capitulation
+				has_global_flag = treaty_of_bucharest_1918
+			}
+			has_global_flag = kis_war
+			is_in_faction = yes
+		}
 		fire_only_once = yes
-
 		complete_effect = {
-
-			SER = {
-				add_to_faction = ROM
-			}
-			ROM = {
-				set_global_flag = kis_secondbalkanwar_romanian_intervention
-				add_to_war = {
-					targeted_alliance = SER enemy = BUL
+			GER = {
+				country_event = {
+					id = ww1_germany.74
+					days = 3
+					random = 10
 				}
 			}
-			news_event = { days = 1 id = ww1_secondbalkan.102 }
 		}
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				has_global_flag = AI_conference_off
+			}
+			modifier = {
+				factor = 0
+				surrender_progress < 0.02
+				has_war_with = RUS
+				NOT = { has_war_with = SOV }
+				RUS = { has_war_with = SOV }
+			}
+			modifier = {
+				factor = 0
+				date < 1918.10.11
+				surrender_progress < 0.2
+				casualties < 2500000
+				NOT = {
+					AND = {
+						AUH = {
+							is_in_faction_with = GER
+						}
+						AUH = {
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				BEL = {
+					has_war_with = GER
+					has_capitulated = no
+				}
+				surrender_progress < 0.2
+				casualties < 2000000
+			}
+			modifier = {
+				factor = 0
+				BEL = {
+					has_capitulated = yes
+				}
+				surrender_progress < 0.2
+				casualties < 2500000
+			}
+			modifier = {
+				factor = 0
+				SOV = {
+					exists = yes
+				}
+				surrender_progress < 0.2
+				casualties < 2500000
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					any_country = {
+						OR = {
+							is_in_faction_with = GER
+							tag = GER
+						}						
+						controls_state = 16
+					}
+					any_country = {
+						OR = {
+							is_in_faction_with = GER
+							tag = GER
+						}
+						controls_state = 195
+					}
+					any_country = {
+						OR = {
+							is_in_faction_with = GER
+							tag = GER
+						}
+						controls_state = 126
+					}
+					AND = {
+						ENG = {
+							is_in_faction_with = FRA
+						}
+						ENG = {
+							has_capitulated = yes
+						}
+					}
+					AND = {
+						RUS = {
+							is_in_faction_with = FRA
+						}
+						RUS = {
+							has_capitulated = yes
+						}
+					}
+				}
+				surrender_progress < 0.3
+				casualties < 3000000
+			}
+		}
+	}
+	ROM_great_war_rejoin = {
+		allowed = {
+			original_tag = ROM
+		}
+		icon = GFX_decision_generic_operation
+		target_trigger = {
+			FROM = {
+				tag = GER
+			}
+		}
+		available = {
+			is_subject = no
+			has_war = no
+			OR = {
+				GER = {
+					OR = {
+						surrender_progress > 0.05
+						has_idea = ger_famine
+						has_war_support < 0.10
+						has_stability < 0.10
+					}
+				}
+				BUL = {
+					is_in_faction_with = GER
+					has_capitulated = yes
+				}
+				AUH = {
+					is_in_faction_with = GER
+					surrender_progress > 0.5
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				has_global_flag = great_war_ends
+				has_war_with = GER
+			}
+			has_global_flag = treaty_of_bucharest_1918
+			FRA = { has_war_with = GER }
+			NOT = {
+				has_global_flag = FRA_capitulation
+			}
+		}		
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					FRA = {
+						is_faction_leader = yes
+					}	
+				}
+				add_to_faction = ROOT 
+			}
+			add_to_war = {
+				targeted_alliance = FRA 
+				enemy = GER 
+			}
+			every_state = {
+				limit = {
+					is_core_of = ROM
+					is_owned_by = GER
+				}
+                transfer_state_to = ROM
+				add_claim_by = GER
+			}
+			GER = { remove_resource_rights = 46 }
+			remove_ideas = idea_army_restrictions
+			if = {
+				limit = {
+					is_ai = yes
+					num_divisions < 10
+				}
+                load_oob = "ROM_1910"
+			}
+		}
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = GER_capitulation }
+			}
+		}
+	}
+}	
 
 
+foreign_politics = {
+	ROM_balkan_war_intervention_decision = {
+		allowed = {
+			original_tag = ROM
+		}
+		available = {
+			is_subject = no
+			BUL = { 
+				has_war_with = SER 
+				owns_state = 77
+			}
+			is_in_faction = no
+		}
+		target_trigger = {
+			FROM = {
+				tag = BUL
+			}
+		}
+		visible = {
+			NOT = {
+				has_war_together_with = GER
+				has_war_together_with = FRA
+			}
+			NOT = { has_global_flag = kis_secondbalkanwar_victory }
+			NOT = { has_global_flag = kis_secondbalkanwar_lose }
+			SER = {
+				NOT = { 
+					is_in_faction_with = GER 
+					has_war_together_with = GER
+					is_in_faction_with = FRA 
+					has_war_together_with = FRA
+				}
+			}
+			BUL = {
+				NOT = { 
+					is_in_faction_with = GER 
+					has_war_together_with = GER
+					is_in_faction_with = FRA 
+					has_war_together_with = FRA
+				}
+			}
+			BUL = { has_war_with = SER }
+		}
+		fire_only_once = yes		
+		days_remove = 20
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					SER = {
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.1
+						}
+					}
+					has_war = yes
+					AND = {
+						GRE = {
+							has_war_with = BUL
+							OR = {
+								has_capitulated = yes
+								surrender_progress > 0.1
+							}
+						}
+					}
+				}				
+			}
+		}
+		war_with_on_remove = BUL
+		remove_effect = {
+			country_event = { id = ww1_secondbalkan.2 }
+			add_state_claim = 77	
+		}
+	}
+}
+
+peace_deals = {
+	ROM_sue_for_peace_HUN = {
+		allowed = {
+			original_tag = ROM
+		}
+		available = {
+			has_war_with = HUN
+			surrender_progress > 0.1
+		}
+		visible = {
+			has_global_flag = ROM_HUN_war_1919
+			has_war_with = HUN
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				controls_state = 46
+				controls_state = 79
+				controls_state = 81
+				surrender_progress < 0.7
+			}
+		}
+		complete_effect = {
+			HUN = {
+				annex_country = {
+					target = ROM
+					transfer_troops = no
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = ROM
+						NOT = {
+							is_core_of = HUN
+							is_core_of = TRA
+						}
+					}
+					transfer_state_to = ROM				
+				}
+				ROM = {
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = no 
+					}
+				}
+				puppet = ROM
+			}
 		}
 	}
 }

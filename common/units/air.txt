@@ -34,16 +34,6 @@ sub_units = {
 		need = { heavy_fighter_equipment = 1 }
 		categories = { category_heavy_fighter }
 	}
-
-	jet_fighter = {
-		sprite = jet_plane
-		priority = 1
-		active = yes
-		type = { fighter }
-		need = { jet_fighter_equipment = 1 }
-		categories = { category_fighter }
-	}
-	
 	
 	cas = {
 		sprite = light_plane
@@ -91,33 +81,14 @@ sub_units = {
 		need = { tac_bomber_equipment = 1 }
 		categories = { category_tac_bomber }
 	}
-	
-	jet_tac_bomber = {
-		sprite = medium_plane
-		priority = 4
-		active = yes
-		type = { tactical_bomber }
-		need = { jet_tac_bomber_equipment = 1 }
-		categories = { category_tac_bomber }
-	}
 
 
 	strat_bomber = {
-		sprite = airship_plane
+		sprite = heavy_plane
 		priority = 5
 		active = yes
-		type = { suicide }
 		type = { strategic_bomber }
 		need = { strat_bomber_equipment = 1 }
-		categories = { category_strat_bomber }
-	}
-
-	jet_strat_bomber = {
-		sprite = airship_plane
-		priority = 5
-		active = yes
-		type = { strategic_bomber }
-		need = { jet_strat_bomber_equipment = 1 }
 		categories = { category_strat_bomber }
 	}
 	
@@ -128,21 +99,5 @@ sub_units = {
 		active = yes
 		type = { air_transport }
 		need = { transport_plane_equipment = 1 }
-	}
-
-	rocket_interceptor = {
-		sprite = light_plane
-		priority = 7
-		active = yes
-		type = { interceptor }
-		need = { rocket_interceptor_equipment = 1 }
-	}
-	
-	suicide_craft = {
-		sprite = light_plane
-		priority = 9
-		active = yes
-		type = { suicide }
-		need = { suicide_craft_equipment = 1 }
 	}
 }

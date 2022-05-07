@@ -9,6 +9,7 @@ sub_units = {
 		map_icon_category = infantry
 		
 		priority = 600
+		ai_priority = 200
 		active = no
 
 		type = {
@@ -27,68 +28,24 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 22
-		max_organisation = 50
-		default_morale = 0.2
-		manpower = 300
-
-		#Misc Abilities
-		training_time = 90
-		suppression = 1
-		weight = 0.5
-		
-		supply_consumption = 0.04
-	
-		need = {
-			infantry_equipment = 300
-		}
-	}
-
-	infantry2 = {
-		sprite = infantry2
-		map_icon_category = infantry
-		
-		priority = 600
-		active = no
-
-		type = {
-			infantry
-		}
-		
-		group = infantry
-		
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-		}
-		
-		combat_width = 2
-		
-		#Size Definitions
-		max_strength = 30
+		max_strength = 25
 		max_organisation = 60
 		default_morale = 0.3
-		manpower = 300
+		manpower = 1000
 
 		#Misc Abilities
 		training_time = 90
 		suppression = 1
 		weight = 0.5
 		
-		supply_consumption = 0.04
-		
-	    fort = {
-			defence = 0.25
-		}
-		
+		supply_consumption = 0.07
+	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 100
 		}
 	}
-	
-    bicycle_battalion = {
+
+	bicycle_battalion = {
 		sprite = bicycle
 		map_icon_category = infantry
 		
@@ -116,17 +73,17 @@ sub_units = {
 		max_organisation = 60
 		default_morale = 0.3
 		maximum_speed = 0.6
-		manpower = 750
+		manpower = 1000
 
 		#Misc Abilities
 		training_time = 90
-		suppression = 1
+		suppression = 1.2
 		weight = 0.5
 		
-		supply_consumption = 0.04
+		supply_consumption = 0.07
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 100
 			support_equipment = 10			
 		}
 
@@ -166,6 +123,7 @@ sub_units = {
 		marines = yes
 		
 		priority = 601
+		ai_priority = 200
 		active = no
 
 		type = {
@@ -179,6 +137,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
+			category_special_forces
 		}
 		
 		combat_width = 2
@@ -187,17 +146,17 @@ sub_units = {
 		max_strength = 20
 		max_organisation = 70
 		default_morale = 0.4
-		manpower = 300
+		manpower = 1000
 
 		#Misc Abilities
 		training_time = 120
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.04
+		supply_consumption = 0.06
 		breakthrough = 0.3
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 150
 		}
 
 		marsh = {
@@ -218,6 +177,7 @@ sub_units = {
 		mountaineers = yes
 
 		priority = 601
+		ai_priority = 200
 		active = no
 
 		type = {
@@ -231,7 +191,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
-                        category_special_forces
+			category_special_forces
 		}
 		
 		combat_width = 2
@@ -240,18 +200,18 @@ sub_units = {
 		max_strength = 20
 		max_organisation = 70
 		default_morale = 0.4
-		manpower = 300
+		manpower = 1000
 
 		#Misc Abilities
 		training_time = 120
 		suppression = 1
 		weight = 0.5
 		
-		supply_consumption = 0.04
+		supply_consumption = 0.07
 		breakthrough = 0.3
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 140
 		}
 
 		hills = {
@@ -272,6 +232,7 @@ sub_units = {
 		special_forces = yes
 
 		priority = 2
+		ai_priority = 2
 		active = no
 
 		type = {
@@ -285,7 +246,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_army
-                        category_special_forces
+			category_special_forces
 		}
 		
 		combat_width = 2
@@ -294,129 +255,27 @@ sub_units = {
 		max_strength = 22
 		max_organisation = 70
 		default_morale = 0.4
-		manpower = 300
+		manpower = 1000
 
 		#Misc Abilities
 		training_time = 150
 		suppression = 1
 		weight = 0.5
-		supply_consumption = 0.04
+		supply_consumption = 0.06
 
 		can_be_parachuted = yes
 	
 		need = {
-			infantry_equipment = 300
+			infantry_equipment = 130
 		}
 	}
-	
-	Stormtrooper = {
-		sprite = infantry
-		map_icon_category = infantry
-		special_forces = yes
 
-		ai_priority = 50
-		priority = 3000
-		active = no
-
-		type = {
-			infantry
-		}
-
-		group = infantry
-
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-			category_special_forces
-		}
-
-		combat_width = 2
-
-		#offensive abilities
-		#soft_attack = 0.2
-
-		#Size Definitions
-		max_strength = 25
-		max_organisation = 70
-		default_morale = 0.4
-		manpower = 300
-
-		#Misc Abilities
-		training_time = 120
-		suppression = 1
-		weight = 0.4
-		supply_consumption = 0.04
-		breakthrough = 0.2 
-
-		need = {
-			infantry_equipment = 300
-		}
-		
-		fort = {
-			attack = 0.10
-			movement = 0.25
-		}
-	}
-	
-	jaeger = {
-		sprite = infantry
-		map_icon_category = infantry
-		special_forces = yes
-		ai_priority = 2
-		priority = 601
-		active = no
-		type = {
-			infantry
-		}
-		group = infantry
-		categories = {
-			category_front_line
-			category_light_infantry
-			category_all_infantry
-			category_army
-			category_special_forces		
-		}
-
-		combat_width = 2
-
-		#Size Definitions
-		max_strength = 25
-		max_organisation = 70
-		default_morale = 0.4
-		manpower = 300
-
-		#Misc Abilities
-		training_time = 150
-		suppression = 1
-		weight = 0.5
-		supply_consumption = 0.08
-		breakthrough = 0.20
-
-		need = {
-			infantry_equipment = 300
-		}
-
-		marsh = {
-			attack = 0.05
-			movement = 0.05
-		}
-		forest = {
-			attack = 0.05
-			defence = 0.05
-			movement = 0.1
-		}
-		amphibious = {
-			attack = 0.2
-		}			
-	}
-	
 	motorized = {
 		sprite = motorized
 		map_icon_category = infantry
 
 		priority = 599
+		ai_priority = 200
 		active = no
 
 		type = {
@@ -434,22 +293,22 @@ sub_units = {
 		combat_width = 2
 		
 		#Size Definitions
-		max_strength = 35
-		max_organisation = 65
+		max_strength = 25
+		max_organisation = 60
 		default_morale = 0.30
-		manpower = 1000
+		manpower = 1200
 
 		#Misc Abilities
 		training_time = 90
-		suppression = 1
+		suppression = 2.0 #2.2
 		weight = 0.75
-		supply_consumption = 0.04
+		supply_consumption = 0.11
 	
 		# this is what moves us and sets speed
 		transport = motorized_equipment
 	
 		need = {
-			infantry_equipment = 900
+			infantry_equipment = 100
 			motorized_equipment = 50
 		}
 
@@ -520,5 +379,4 @@ sub_units = {
 			infantry_equipment = 1
 		}
 	}
-
 }

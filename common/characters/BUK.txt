@@ -1,0 +1,44 @@
+characters={
+	BUK_mohammed_alim_khan={
+		name="BUK_mohammed_alim_khan"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_mohammed_alim_khan.png"
+			}
+		}
+		country_leader={
+			ideology=autocracy
+			
+			
+			
+		}
+	}
+	BUK_usman_khodzha={
+		name="BUK_usman_khodzha"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_usman_khodzha.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+			
+			
+			
+		}
+	}
+	BUK_fayzulla_khodzhayev={
+		name="BUK_fayzulla_khodzhayev"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUK/BUK_fayzulla_khodzhayev.png"
+			}
+		}
+		country_leader={
+			ideology=religious_communism
+			
+			
+			
+		}
+	}
+}

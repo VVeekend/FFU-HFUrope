@@ -1,192 +1,42 @@
 characters={
-	SPR_antonio_garcía_quejido={
-		name="Antonio García Quejido"
+	SPR_gonzalo_queipo_de_llano={
+		name="Gonzalo Queipo de Llano"
 		portraits={
-			civilian={
-				large="gfx/leaders/SPR_antonio_garcia_quejido.dds"
-			}
-		}
-		country_leader={
-			ideology=leninism
-			expire="1935.1.1.1"
-			id=-1
-		}
-	}
-	SPR_julián_besteiro={
-		name="Julián Besteiro"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR_julian_besteiro.dds"
-			}
-		}
-		country_leader={
-			ideology=leninism
-			expire="1935.1.1.1"
-			id=-1
-		}
-	}
-	SPR_ramón_lamoneda={
-		name="Ramón Lamoneda"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR_ramon_lamoneda.dds"
-			}
-		}
-		country_leader={
-			ideology=stalinism
-			expire="1935.1.1.1"
-			id=-1
-		}
-	}
-	SPR_alejandro_lerroux={
-		name="Alejandro Lerroux"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR_alejandro_lerroux.dds"
-			}
-		}
-		country_leader={
-			ideology=liberalism
-			expire="1935.1.1.1"
-			id=-1
-		}
-	}
-	SPR_pablo_iglesias={
-		name="Pablo Iglesias"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR_pablo_iglesias.dds"
-			}
-		}
-		country_leader={
-			ideology=leninism
-			expire="1935.1.1.1"
-			id=-1
-		}
-	}
-	SPR_alfonso_xiii={
-		name="Alfonso XIII"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR_alfonso_xiii.dds"
-			}
-		}
-		country_leader={
-			ideology=conservatism
-			expire="1935.1.1.1"
-			id=-1
-		}
-	}
-	SPR_berenguer_d.={
-		name="Berenguer D."
-		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_berenguer_d.dds"
+				small="GFX_idea_generic_army_log"
+			}
+			army={
+				large="gfx/leaders/SPR/SPR_gonzalo_queipo_de_llano.png"
 			}
 		}
 		corps_commander={
-			traits={ old_guard }
+			traits={ infantry_officer trait_engineer }
 			skill=2
-			attack_skill=1
-			defense_skill=1
+			attack_skill=2
+			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=86009
+			legacy_id=86031
 		}
 	}
-	SPR_cavalcanti={
-		name="Cavalcanti"
+	SPR_miguel_primo_de_rivera={
+		name="Miguel Primo de Rivera"
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_miguel_primo_de_rivera
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					silent_workhorse 
+				}
+		}
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_cavalcanti.dds"
+				small="GFX_idea_generic_democratic_reformer_western_european_2d"
 			}
-		}
-		corps_commander={
-			traits={ commando }
-			skill=3
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=86011
-		}
-	}
-	SPR_gómez_jordana={
-		name="Gómez Jordana"
-		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_gomez_jordana.dds"
-			}
-		}
-		corps_commander={
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=86015
-		}
-	}
-	SPR_lopez_ochoa={
-		name="Lopez Ochoa"
-		portraits={
-
-			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_lopez_ochoa.dds"
-			}
-		}
-		corps_commander={
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=86017
-		}
-	}
-	SPR_martínez_anido={
-		name="Martínez Anido"
-		portraits={
-
-			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_martinez_anido.dds"
-			}
-		}
-		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=86021
-		}
-	}
-	SPR_primo_de_rivera_f.={
-		name="Primo de Rivera F."
-		portraits={
-
-			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_primo_de_rivera_f.dds"
-			}
-		}
-		corps_commander={
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=86029
-		}
-	}
-	SPR_primo_de_rivera_m.={
-		name="Primo de Rivera M."
-		portraits={
-
-			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_primo_de_rivera_m.dds"
+				large="gfx/leaders/SPR/SPR_miguel_primo_de_rivera.png"
 			}
 		}
 		corps_commander={
@@ -198,98 +48,228 @@ characters={
 			legacy_id=86030
 		}
 	}
-	SPR_queipo_de_llano={
-		name="Queipo De Llano"
+	SPR_fernando_primo_de_rivera={
+		name="Fernando Primo de Rivera"
+		advisor={
+			slot = army_chief
+			idea_token = SPR_fernando_primo_de_rivera
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					army_chief_maneuver_3 
+				}
+		}
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_queipo_de_llano.dds"
+				small="GFX_idea_generic_army_europe_1"
+			}
+			army={
+				large="gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
 			}
 		}
-		corps_commander={
-			traits={ trait_engineer }
+		field_marshal={
+			traits={ old_guard }
 			skill=2
 			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=86031
+			legacy_id=86029
 		}
 	}
-	SPR_sanjurjo={
-		name="Sanjurjo"
+	SPR_niceto_alcalázamora={
+		name="Niceto Alcalá-Zamora"
 		portraits={
-
+			civilian={
+				large="gfx/leaders/SPR/SPR_niceto_zamora.png"
+			}
+		}
+		country_leader={
+			ideology=social_liberalism
+			
+			
+			
+		}
+	}
+	SPR_pablo_iglesias={
+		name="Pablo Iglesias"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_pablo_iglesias.png"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			
+			
+			
+		}
+	}
+	SPR_alfonso_xiii={
+		name="Alfonso XIII"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_alfonso_xiii.png"
+			}
+		}
+		country_leader={
+			ideology=autocracy
+			
+			
+			
+		}
+	}
+	SPR_juan_olazábal={
+		name="Juan Olazábal"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/SPR_juan_ramery.png"
+			}
+		}
+		country_leader={
+			ideology=fundamentalism
+			
+			
+			
+		}
+	}
+	SPR_dámaso_berenguer={
+		name="Dámaso Berenguer"
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_damaso_berenguer
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					prince_of_terror 
+				}
+		}
+		portraits={
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_sanjurjo.dds"
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 			}
 		}
 		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=86009
+		}
+	}
+	SPR_josé_cavalcanti={
+		name="José Cavalcanti"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
 			skill=3
 			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=86034
+			legacy_id=86011
 		}
 	}
-	SPR_silvestre={
-		name="Silvestre"
+	SPR_francisco_gómezjordana={
+		name="Francisco Gómez-Jordana"
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_silvestre.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 			}
 		}
 		corps_commander={
+			traits={ politically_connected }
 			skill=1
 			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=86037
+			legacy_id=86015
 		}
 	}
-	SPR_weyler={
-		name="Weyler"
+	SPR_eduardo_lópez_ochoa={
+		name="Eduardo López Ochoa"
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/army_generals/SPR_weyler.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_5.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
 			}
 		}
 		corps_commander={
-			skill=3
+			skill=2
 			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=86069
+			legacy_id=86017
 		}
 	}
-	SPR_echague={
-		name="Echague"
+	SPR_severiano_martínez_anido={
+		name="Severiano Martínez Anido"
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/fieldmarshal/SPR_echague.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_6.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
 			}
 		}
-		field_marshal={
-			skill=1
+		corps_commander={
+			traits={ harsh_leader }
+			skill=2
 			attack_skill=1
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=86001
+			legacy_id=86021
 		}
 	}
-	SPR_aznar_cabañas={
-		name="Aznar Cabañas"
+	SPR_miguel_cabanellas={
+		name="Miguel Cabanellas"
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/navy_admirals/SPR_aznar_cabanas.dds"
+				small="GFX_idea_generic_army_art"
+			}
+			army={
+				large="gfx/leaders/SPR/SPR_miguel_cabanellas.png"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=86032
+		}
+	}
+	SPR_juan_bautista_aznarcabañas={
+		name="Juan Bautista Aznar-Cabañas"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
 			}
 		}
 		navy_leader={
@@ -302,16 +282,18 @@ characters={
 			legacy_id=86042
 		}
 	}
-	SPR_miranda_y_godoy={
-		name="Miranda y Godoy"
+	SPR_augusto_miranda_y_godoy={
+		name="Augusto Miranda y Godoy"
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/navy_admirals/SPR_miranda_y_godoy.dds"
+				small="gfx/interface/ideas/idea_europe_generic_navy_15.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/portrait_europe_generic_navy_15.dds"
 			}
 		}
 		navy_leader={
-			traits={ blockade_runner }
+			traits={ old_guard }
 			skill=2
 			attack_skill=1
 			defense_skill=1
@@ -320,48 +302,354 @@ characters={
 			legacy_id=86049
 		}
 	}
-	SPR_rodriguez={
-		name="Rodriguez"
+	SPR_federico_berenguer={
+		advisor={
+			slot = high_command
+			idea_token = SPR_federico_berenguer
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = army 
+				traits  = {
+					army_entrenchment_2 
+				}
+		}
+		name="SPR_federico_berenguer"
 		portraits={
-
 			army={
-				large="gfx/hoi4tgw_portraits/SPR/navy_admirals/SPR_rodriguez.dds"
+				small="GFX_idea_generic_army_south_america_2"
 			}
-		}
-		navy_leader={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=86051
 		}
 	}
-	SPR_dámaso_hevia={
-		name="Dámaso Hevia"
-		portraits={
-			civilian={
-				large="GFX_Portrait_europe_generic_7"
-			}
+	SPR_jose_pidal={
+		advisor={
+			slot = high_command
+			idea_token = SPR_jose_pidal
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = navy 
+				traits  = {
+					navy_naval_air_defense_1 
+				}
 		}
-		country_leader={
-			ideology=falangism
-			traits={ tenacious_negotiator }
-			expire="1931.1.1.1"
-			id=-1
+		name="SPR_jose_pidal"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
 		}
 	}
-	SPR_félix_villar={
-		name="Félix Villar"
+	SPR_alfredo_kindelan={
+		advisor={
+			slot = high_command
+			idea_token = SPR_alfredo_kindelan
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = air 
+				traits  = {
+					air_air_superiority_2 
+				}
+		}
+		name="SPR_alfredo_kindelan"
 		portraits={
-			civilian={
-				large="GFX_Portrait_europe_generic_7"
+			army={
+				small="GFX_idea_generic_air_south_america_3"
 			}
 		}
-		country_leader={
-			ideology=despotism
-			expire="1916.1.1.1"
-			id=-1
+	}
+	SPR_jose_rivera={
+		advisor={
+			slot = navy_chief
+			idea_token = SPR_jose_rivera
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					navy_chief_naval_aviation_1 
+				}
+		}
+		name="SPR_jose_rivera"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_1"
+			}
+		}
+	}
+	SPR_angel_aznar={
+		advisor={
+			slot = army_chief
+			idea_token = SPR_angel_aznar
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					army_chief_offensive_2 
+				}
+		}
+		name="SPR_angel_aznar"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SPR_alberto_bayo={
+		advisor={
+			slot = high_command
+			idea_token = SPR_alberto_bayo
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = air 
+				traits  = {
+					air_naval_strike_1 
+				}
+		}
+		name="SPR_alberto_bayo"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+	}
+	SPR_joaquin_ruiz={
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_joaquin_ruiz
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					popular_figurehead 
+				}
+		}
+		name="SPR_joaquin_ruiz"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_4"
+			}
+		}
+	}
+	SPR_manuel_de_florez={
+		advisor={
+			slot = high_command
+			idea_token = SPR_manuel_de_florez
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = navy 
+				traits  = {
+					navy_amphibious_assault_2 
+				}
+		}
+		name="SPR_manuel_de_florez"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SPR_alvaro_de_figueroa={
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_alvaro_de_figueroa
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					ideological_crusader 
+				}
+		}
+		name="SPR_alvaro_de_figueroa"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+	}
+	SPR_luis_aizpuru={
+		advisor={
+			slot = army_chief
+			idea_token = SPR_luis_aizpuru
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					army_chief_defensive_2 
+				}
+		}
+		name="SPR_luis_aizpuru"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+	}
+	SPR_mariano_ordonez={
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_mariano_ordonez
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					captain_of_industry 
+				}
+		}
+		name="SPR_mariano_ordonez"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+	}
+	SPR_santiago_alba={
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_santiago_alba
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					compassionate_gentleman 
+				}
+		}
+		name="SPR_santiago_alba"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+	}
+	SPR_augusto_miranda={
+		advisor={
+			slot = navy_chief
+			idea_token = SPR_augusto_miranda
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					navy_chief_commerce_raiding_1 
+				}
+		}
+		name="SPR_augusto_miranda"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	SPR_honorio_cornejo={
+		advisor={
+			slot = navy_chief
+			idea_token = SPR_honorio_cornejo
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					navy_chief_decisive_battle_1 
+				}
+		}
+		name="SPR_honorio_cornejo"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_3"
+			}
+		}
+	}
+	SPR_jose_maria_chacon={
+		advisor={
+			slot = high_command
+			idea_token = SPR_jose_maria_chacon
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = navy 
+				traits  = {
+					navy_screen_2 
+				}
+		}
+		name="SPR_jose_maria_chacon"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_3"
+			}
+		}
+	}
+	SPR_mateo_garcia_de_los_reyes={
+		advisor={
+			slot = high_command
+			idea_token = SPR_mateo_garcia_de_los_reyes
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = navy 
+				traits  = {
+					navy_fleet_logistics_1 
+				}
+		}
+		name="SPR_mateo_garcia_de_los_reyes"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+	}
+	SPR_francisco_llano_de_la_encomienda={
+		advisor={
+			slot = army_chief
+			idea_token = SPR_francisco_llano_de_la_encomienda
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					army_chief_reform_1 
+				}
+		}
+		name="SPR_francisco_llano_de_la_encomienda"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	SPR_luis_silvela={
+		advisor={
+			slot = navy_chief
+			idea_token = SPR_luis_silvela
+			allowed  = {
+					original_tag  = SPR
+				}
+				traits  = {
+					navy_chief_reform_3 
+				}
+		}
+		name="SPR_luis_silvela"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	SPR_lucas_puente={
+		advisor={
+			slot = high_command
+			idea_token = SPR_lucas_puente
+			allowed  = {
+					original_tag  = SPR
+				}
+				ledger  = army 
+				traits  = {
+					army_logistics_3 
+				}
+		}
+		name="SPR_lucas_puente"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_5"
+			}
 		}
 	}
 }

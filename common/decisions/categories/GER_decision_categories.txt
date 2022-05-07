@@ -1,0 +1,123 @@
+GER_great_war = {
+	icon = military_operation
+	picture = GFX_decision_cat_picture_ger_case_anton
+	allowed = {
+	}
+	priority = 100
+}
+GER_decision_puppet_kingdoms = {
+	icon = generic_monarchism
+	allowed = {
+		tag = GER
+	}
+	priority = 83
+}
+GER_decision_joint_staff = {
+	icon = army_reform
+	allowed = {
+		tag = GER
+	}
+	visible = {
+		NOT = {
+			has_country_flag = great_war_loser
+		}
+	}
+	priority = 90
+}
+GER_decision_military_advisers = {
+	icon = military_operation
+	allowed = {
+		tag = GER
+	}
+	visible = {
+		NOT = {
+			has_country_flag = great_war_loser
+		}
+	}
+	priority = 80
+}
+GER_decision_federal_army = {
+	icon = generic_political_action
+	allowed = {
+		tag = GER
+	}
+	priority = 75
+}
+GER_decision_abwehr_operations = {
+	icon = border_conflicts
+	allowed = {
+		tag = GER
+	}
+	priority = 70
+}
+GER_decision_form_landsturm = {
+	icon = border_conflicts
+	allowed = {
+		tag = GER
+	}
+	priority = 65
+}
+GER_decison_colonial_exploitation = {
+	icon = generic_monarchism
+	allowed = {
+		tag = GER
+	}
+	visible = {
+		NOT = {
+			has_country_flag = great_war_loser
+		}
+	}
+	priority = 60
+}
+GER_decision_central_powers_conference = {
+	icon = generic_monarchism
+	priority = 85
+	visible = {
+		NOT = {
+			has_country_flag = great_war_loser
+		}
+	}
+}
+GER_agadir_crisis = {
+	icon = eng_move_to_secure_the_dominions
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	allowed = {
+	}
+	visible = { has_global_flag = agadir_crisis }
+	priority = 500
+}
+GER_afghan_expeditions = { 
+    icon = eng_move_to_secure_the_dominions
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	allowed = {
+	}
+	visible = {
+		NOT = {
+			has_country_flag = great_war_loser
+		}
+	}
+	priority = 75
+}
+GER_decision_paying_reparations = {
+	icon = spr_the_seeds_of_revolution
+	priority = 85
+}
+GER_interwar_reichspakt_category = {
+	icon = generic_monarchism
+	allowed = {
+	}
+	visible = {
+		has_country_flag = great_war_winner
+		is_faction_leader = yes
+	}
+	priority = 100
+}
+GER_prussian_blue_category = {
+	icon = spr_the_seeds_of_revolution
+	allowed = {
+	}
+	visible = {
+		has_global_flag = prussian_blue
+	}
+	priority = 100
+}

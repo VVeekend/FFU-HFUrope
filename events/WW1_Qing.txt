@@ -1,0 +1,318 @@
+﻿add_namespace = ww1_qing
+
+country_event = {
+	id = ww1_qing.1
+	title = ww1_qing.1.t
+	desc = ww1_qing.1.d
+	picture = GFX_report_event_generic_military_parade
+
+	fire_only_once = yes	
+	trigger = {
+		original_tag = QIN
+		has_war_with = FRA
+		has_government = neutrality
+	}
+	mean_time_to_happen = { days = 0 }
+	
+	option = {
+		name = ww1_qing.1.a
+		ai_chance = { factor = 100 }
+		create_field_marshal = {
+			name = "Ga Chi Ded"
+			portrait_path = "gfx/leaders/QIN/QIN_gachi_boi.png"
+			traits = { brilliant_strategist media_personality trait_reckless } 
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 1
+		}
+		set_country_flag = QIN_gachi_boi
+	}
+}
+
+country_event = {
+	id = ww1_qing.2
+	title = ww1_qing.2.t
+	desc = ww1_qing.2.d
+	picture = GFX_report_event_generic_military_parade
+
+	fire_only_once = yes	
+	trigger = {
+		tag = QIN
+		has_completed_focus = CHI_pacify_beiyang_army
+		has_completed_focus = CHI_reform_ministries
+		has_completed_focus = CHI_loyal_parliament
+		has_completed_focus = CHI_appeal_to_the_militarists
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = ww1_qing.2.a
+		custom_effect_tooltip = QIN_warlord_era_warning_tt
+		remove_ideas = QIN_idea_beiyang_army
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
+		}
+		add_timed_idea = { idea = QIN_idea_purge days = 720 }
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_stability > 0.85
+						has_country_flag = great_war_winner
+					}
+					has_idea = QIN_idea_low_legitimacy_5
+				}
+				add_political_power = 100
+			}
+			else = {
+				set_global_flag = qing_oppress_cliques
+				set_global_flag = chinese_warlord_crisis
+				activate_mission_tooltip = QIN_warlord_era_mission
+			}
+		}
+	}
+	option = {
+		name = ww1_qing.2.b
+		custom_effect_tooltip = QIN_warlord_era_mission_tt
+		swap_ideas = {
+			remove_idea = QIN_idea_beiyang_army
+			add_idea = QIN_idea_beiyang_army_2
+		}
+		if = {
+			limit = { has_idea = QIN_idea_low_legitimacy_5 }
+			swap_ideas = {
+				remove_idea = QIN_idea_low_legitimacy_5
+				add_idea = QIN_idea_low_legitimacy
+			}
+		}
+		if = {
+			limit = { has_idea = QIN_idea_low_legitimacy_4 }
+			swap_ideas = {
+				remove_idea = QIN_idea_low_legitimacy_4
+				add_idea = QIN_idea_low_legitimacy
+			}
+		}
+		if = {
+			limit = { has_idea = QIN_idea_low_legitimacy_3 }
+			swap_ideas = {
+				remove_idea = QIN_idea_low_legitimacy_3
+				add_idea = QIN_idea_low_legitimacy
+			}
+		}
+		if = {
+			limit = { has_idea = QIN_idea_low_legitimacy_2 }
+			swap_ideas = {
+				remove_idea = QIN_idea_low_legitimacy_2
+				add_idea = QIN_idea_low_legitimacy
+			}
+		}
+		hidden_effect = { set_country_flag = warlord_compromise }
+		ai_chance = { factor = 10 }
+	}
+}
+country_event = {
+	id = ww1_qing.3
+	title = ww1_qing.3.t
+	desc = ww1_qing.3.d
+	picture = GFX_report_event_generic_military_parade
+
+	fire_only_once = yes	
+	trigger = {
+		original_tag = QIN
+		has_government = neutrality
+		date > 1922.2.7
+	}
+	mean_time_to_happen = { days = 0 }
+	immediate = {
+		QIN = { set_country_flag = puyi_age }
+	}
+	option = {
+		name = ww1_qing.3.a
+		ai_chance = { factor = 50 }
+	}
+}
+country_event = {
+	id = ww1_qing.4
+	title = ww1_qing.4.t
+	desc = ww1_qing.4.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = ww1_qing.4.a
+		if = {
+			limit = { owns_state = 746 }
+			QIN = { transfer_state = 746 }
+		}
+		if = {
+			limit = { owns_state = 744 }
+			QIN = { transfer_state = 744 }
+		}
+		if = {
+			limit = { owns_state = 745 }
+			QIN = { transfer_state = 745 }
+		}
+		if = {
+			limit = { owns_state = 326 }
+			QIN = { transfer_state = 326 }
+		}
+		if = {
+			limit = { owns_state = 729 }
+			QIN = { transfer_state = 729 }
+		}
+		if = {
+			limit = { owns_state = 728 }
+			QIN = { transfer_state = 728 }
+		}
+		if = {
+			limit = { owns_state = 524 }
+			QIN = { transfer_state = 524 }
+		}
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = ww1_qing.4.b
+		QIN = { country_event = ww1_qing.5 }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				QIN = { has_army_manpower = { size < 750000 } }
+			}
+			modifier = {
+				factor = 100
+				original_tag = OST
+			}
+		}
+	}
+}
+country_event = {
+	id = ww1_qing.5
+	title = ww1_qing.5.t
+	desc = ww1_qing.5.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+
+	option = {
+		name = ww1_qing.5.a
+		create_wargoal = {
+			target = FROM
+			type = take_core_state
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+# CONSTITUTIONAL QING
+######################
+country_event = {
+	id = ww1_qing.6
+	title = ww1_qing.6.t
+	desc = ww1_qing.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ww1_qing.6.a
+		ai_chance = { factor = 60 }
+		add_stability = 0.05
+		add_political_power = -100
+	}
+	option = {
+		name = ww1_qing.6.b
+		ai_chance = { factor = 40 }
+		add_stability = -0.05
+		add_political_power = 100
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		add_ideas = QIN_idea_xuantong
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = warlord_era_end
+					NOT = { has_global_flag = warlord_era }
+					AND = {
+						has_global_flag = warlord_era
+						CHI = {
+							exists = no
+						}
+						PRC = {
+							exists = no
+						}
+						SHX = {
+							exists = no
+						}
+						XSM = {
+							exists = no
+						}
+						GXC = {
+							exists = no
+						}
+						YUN = {
+							exists = no
+						}
+						SIK = {
+							exists = no
+						}
+						ANC = {
+							exists = no
+						}
+						FNG = {
+							exists = no
+						}
+						GDC = {
+							exists = no
+						}
+						GMJ = {
+							exists = no
+						}
+						GZC = {
+							exists = no
+						}
+						HNC = {
+							exists = no
+						}
+						JNC = {
+							exists = no
+						}
+						JXC = {
+							exists = no
+						}
+						SCC = {
+							exists = no
+						}
+					}
+				}
+			}
+			set_cosmetic_tag = QIN_democratic
+		}
+	}
+}
+#Juan cabinet
+country_event = {
+	id = ww1_qing.7
+	title = ww1_qing.7.t
+	desc = ww1_qing.7.d
+	picture = GFX_report_event_chi_yuan_cabinet
+
+	is_triggered_only = yes
+	option = {
+		name = ww1_qing.7.a
+		QIN_yuan_shikai = {
+			promote_character = oligarchism
+		}	
+		set_party_name = {
+			ideology = neutrality
+			long_name = CHI_fascism_party
+			name = CHI_fascism_party
+		}
+	}
+}

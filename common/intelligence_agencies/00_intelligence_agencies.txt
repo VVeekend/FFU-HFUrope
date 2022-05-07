@@ -3,9 +3,26 @@
 # names is a list of names. Can be a localization entry, or the name directly. A random name will be picked from them.
 
 intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_pol
+	names = { "Imperial Special Chancellery" }
+	
+	default = { tag = RUS }
+	available = { original_tag = RUS }
+}
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_usa
+	names = { "MI-8" }
+	
+	default = { tag = USA }
+	available = { original_tag = USA }
+}
+
+intelligence_agency = {
 
 	picture = GFX_intelligence_agency_logo_uk
-	names = { "MI6" "SIS" }
+	names = { "Secret Service Bureau" "Directorate of Military Intelligence" }
 	
 	default = { tag = ENG }
 	available = { original_tag = ENG }
@@ -14,10 +31,13 @@ intelligence_agency = {
 intelligence_agency = {
 
 	picture = GFX_intelligence_agency_logo_sov
-	names = { "NKVD" }
+	names = { "Cheka" }
 	
 	default = { tag = SOV }
-	available = { original_tag = SOV }
+	available = {
+		original_tag = SOV
+		has_government = communism
+	}
 }
 
 intelligence_agency = {
@@ -31,20 +51,90 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_ger
-	names = { "Abwehr" }
+	picture = GFX_intelligence_agency_logo_ger_ww1
+	names = { "Abteilung III b" }
 	
 	default = { tag = GER }
 	available = { original_tag = GER }
 }
 
 intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_auh_ww1
+	names = { "Evidenzbureau" }
+
+	default = { tag = AUH }
+	available = { original_tag = AUH }
+}
+
+
+intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_ita
-	names = { "Servizio Informazioni Militare" }
+	picture = GFX_intelligence_agency_logo_jap
+	names = { "G-2 Department" "Section 3" }
+	
+	default = { tag = JAP }
+	available = { original_tag = JAP }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_chi_ww1
+	names = { "Beiyang Army Special Investigation Branch"}
+	
+	default = { tag = QIN }
+	available = { original_tag = QIN }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_chi_ww1
+	names = { "Beiyang Army Special Investigation Branch" "Natinal Bureau of Investigation and Statistics" }
+	
+	default = { tag = CHI }
+	available = { original_tag = CHI }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_ita_ww1
+	names = { "Ufficio I" }
 	
 	default = { tag = ITA }
-	available = { original_tag = ITA }
+	available = {
+		original_tag = ITA 	
+		NOT = {
+			has_government = communism
+			has_cosmetic_tag = ROI
+		}	
+	}
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_swe
+	names = { "Polisbyrån" }
+	
+	default = { tag = SWE }
+	available = { original_tag = SWE }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_nor
+	names = { "E-tjenesten" }
+	
+	default = { tag = NOR }
+	available = { original_tag = NOR }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_pol
+	names = { "Imperial Special Chancellery" }
+	
+	default = { tag = RUS }
+	available = { original_tag = RUS }
 }
 
 intelligence_agency = {
@@ -70,10 +160,26 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_rom
 	names = { "Serviciul Special de Informatii" }
 	
-	available = { always = yes }
-	
 	default = { tag = ROM }
 	available = { original_tag = ROM }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_prc
+	names = { "Intelligence Department Central Military Commission" }
+	
+	default = { tag = PRC }
+	available = { original_tag = PRC }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_chi
+	names = { "NBIS" }
+	
+	default = { tag = CHI }
+	available = { original_tag = CHI }
 }
 
 intelligence_agency = {
@@ -81,7 +187,6 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_spr
 	names = { "SIM" }
 	
-	available = { always = yes }
 	
 	default = { tag = SPR }
 	available = { original_tag = SPR }
@@ -89,10 +194,52 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
+	picture = GFX_intelligence_agency_logo_pol
+	names = { "Dwojka" }
+	
+	default = { tag = POL }
+	available = { original_tag = POL }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_tur_ww1
+	names = { "Teşkîlât-ı Mahsûsa" }
+	
+	default = { tag = TUR }
+	available = { original_tag = TUR }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_tur_ww1_2
+	names = { "Yıldız İstihbarat Teşkilatı" }
+
+	available = { original_tag = TUR }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_tur
+	names = { "Millî Emniyet Hizmeti" }
+	
+	default = { tag = TRR }
+	available = { original_tag = TRR }
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_man
+	names = { "Hoankyoku" }
+	
+	default = { tag = MAN }
+	available = { original_tag = MAN }
+}
+
+intelligence_agency = {
+	
 	picture = GFX_intelligence_agency_logo_por
 	names = { "PIDE" }
-	
-	available = { always = yes }
 	
 	default = { tag = POR }
 	available = { original_tag = POR }
@@ -109,8 +256,58 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
+	picture = GFX_intelligence_agency_logo_uk #needs updating
+	names = { "Special Intelligence Bureau" }
+	
+	default = { tag = AST }
+	available = { always = yes } #needs changing to account for civil war
+}
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_chl 
+	names = { "Sistema De Inteligencia Del Ejercito" }
+	
+	default = { tag = CHL }
+	available = { original_tag = CHL } 
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_kor
+	names = { "Military Police Command" }
+
+	default = { tag = KOR }
+	available = {
+		original_tag = KOR
+		OR = {
+			has_government = neutrality
+			has_cosmetic_tag = KOR_monarchist
+			has_cosmetic_tag = KOR_joseon
+		}
+	}
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_kor_rep
+	names = { "General Military Police Command" }
+
+	default = { tag = KOR }
+	available = {
+		original_tag = KOR
+		NOT = {
+			has_government = neutrality
+			has_cosmetic_tag = KOR_monarchist
+			has_cosmetic_tag = KOR_joseon
+		}
+	}
+}
+
+intelligence_agency = {
+	
 	picture = GFX_intelligence_agency_logo_generic_1
-	names = { "Rooke" }
+	names = { "Intelligence Service" }
 	
 	available = { always = yes }
 	

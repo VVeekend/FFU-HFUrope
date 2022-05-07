@@ -1,0 +1,101 @@
+foreign_politics = {
+	POL_sue_for_peace_SOV = {	
+		allowed = {
+			original_tag = POL
+		}
+		available = {
+			POL = {
+			        is_subject = no
+				has_war_with = SOV			
+				OR = {
+					surrender_progress > 0.5
+					casualties > 50000
+					NOT = {
+						controls_state = 10
+					}
+				}
+			}
+			SOV = { is_subject = no } 
+		}
+		visible = {
+			has_war_with = SOV
+			NOT = { has_global_flag = soviet_polish_war_truce }
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			SOV = {
+				country_event = { id = ww1_soviet.18 } #Белый мир.
+			}
+			set_global_flag = soviet_polish_war_truce
+		}
+	}
+}
+form_redania_category = {
+	POL_form_redania = {
+		allowed = {
+			original_tag = POL
+		}
+		available = {
+			has_war = no
+			has_government = neutrality
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			set_cosmetic_tag = POL_RED
+			set_country_flag = redania
+		}
+	}
+}
+special_projects = {
+	POL_consctruct_gdynia = {
+		icon = GFX_decision_generic_special_project
+		allowed = {
+			original_tag = POL
+		}
+		available = {
+			has_full_control_of_state = 85
+			num_of_civilian_factories > 3
+		}
+		visible = {
+			NOT = { has_global_flag = gdynia_constructed }
+		}
+		fire_only_once = no
+		days_remove = 730
+		cost = 200
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_full_control_of_state = 85
+				}
+				set_global_flag = gdynia_constructed
+				add_victory_points = {
+					province = 9263
+					value = 1
+				}
+				85 = {
+					set_building_level = {
+						type = naval_base
+						level = 3
+						province = {
+							id = 9263
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

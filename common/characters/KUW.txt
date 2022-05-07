@@ -1,0 +1,16 @@
+characters={
+	KUW_mubarak_alsabah={
+		name="Mubarak Al-Sabah"
+		portraits={
+			civilian={
+				large="gfx/leaders/KUW/KUW_mubarak_al_sabah.png"
+			}
+		}
+		country_leader={
+			ideology=autocracy
+			
+			expire="1915.11.28.1"
+			
+		}
+	}
+}

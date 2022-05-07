@@ -1,0 +1,1520 @@
+add_namespace = rusrevolt
+# MINISTER KERENSKY
+####################
+country_event = {
+	id = rusrevolt.1
+	title = rusrevolt.1.t
+	desc = rusrevolt.1.d
+	picture = rusrevolt_1
+	fire_only_once = yes
+	trigger = {
+		original_tag = RUS
+		has_global_flag = russian_revolution
+		has_country_leader = {
+			character = RUS_georgiy_lvov
+			ruling_only = yes
+		}
+		RUS = {
+			OR = {
+				has_war_with = GER
+				has_war_with = AUH
+			}
+			OR = {
+				casualties > 1500000
+				surrender_progress > 0.1
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.1.a
+		RUS_georgiy_lvov = {
+			remove_country_leader_role = {
+				ideology = social_liberalism
+			}	
+		}
+		RUS_alexander_kerensky = {
+			promote_character = {
+				Ideology = socialism
+			}
+		}
+		add_stability = 0.05
+		add_war_support = 0.05
+		set_country_flag = alexander_kerensky
+		clr_country_flag = georgy_lvov
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# TSAR ABDICATED
+###################
+country_event = {
+	id = rusrevolt.2
+	title = rusrevolt.2.t
+	desc = {
+		text = rusrevolt.2.d_mikhail
+		trigger = {
+			has_global_flag = tsar_mikhail
+		}
+	}
+	desc = {
+		text = rusrevolt.2.d
+		trigger = {
+			NOT = {
+				has_global_flag = tsar_mikhail
+			}
+		}
+	}
+	picture = GFX_report_february_revolution
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = rusrevolt.2.a
+		set_global_flag = russian_revolution
+		RUS_nikolai_ii = {
+			remove_country_leader_role = {
+				ideology = autocracy
+			}
+			remove_country_leader_role = {
+				ideology = authoritarian_democracy
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = tsar_mikhail
+			}	
+			RUS_mikhail_ii = {
+				set_character_name = {
+					name = mikhail_ii
+				}
+				add_country_leader_role = {
+					country_leader = {
+						ideology = autocracy
+					}
+				}
+				promote_character = autocracy
+			}
+		}
+		else = {
+			set_country_flag = dual_power
+			add_ideas = RUS_idea_dual_power
+			set_politics = {
+				ruling_party = democratic
+				last_election = "1912.9.1"
+				election_frequency = 60
+				elections_allowed = no
+			}
+			set_cosmetic_tag = RUS_republic
+			hidden_effect = {
+				set_popularities = {
+					democratic = 52
+					neutrality = 0
+					fascism = 10
+					communism = 38
+				}
+				RUS_mikhail_rodzyanko = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = authoritarian_democracy
+						}
+					}
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = RUS_democratic_party_long
+					name = RUS_democratic_party
+				}
+				every_country = {
+					limit = {
+						is_subject_of = RUS
+						OR = {
+							tag = KHI
+							tag = BUK
+						}
+					}
+					RUS = {
+						end_puppet = PREV
+					}
+					leave_faction = yes
+					clr_country_flag = protectorate
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader = {
+							character = RUS_alexander_kerensky
+							ruling_only = yes
+						}
+					}
+				}
+				RUS_provisional_government = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = social_liberalism
+						}
+					}
+				}
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = RUS_democratic_party_provisional_government_long
+				name = RUS_democratic_party_provisional_government
+			}
+			if = {
+				limit = {
+					has_idea = RUS_threat_of_revolution2
+				}
+				swap_ideas = {
+					remove_idea = RUS_threat_of_revolution2
+					add_idea = RUS_threat_of_revolution3
+				}
+			}
+			news_event = {
+				hours = 6
+				id = rusrevolt.5
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# MINISTER LVOV
+##################
+country_event = {
+	id = rusrevolt.3
+	title = rusrevolt.3.t
+	desc = rusrevolt.3.d_lvov
+	picture = rusrevolt_3
+	fire_only_once = yes
+	trigger = {
+		tag = RUS
+		has_global_flag = russian_revolution
+		has_country_leader = {
+			character = RUS_provisional_government
+			ruling_only = yes
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = rusrevolt.3.a
+		retire_country_leader = yes
+		RUS_georgiy_lvov = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = social_liberalism
+				}
+				promote_leader = yes
+			}
+		}
+		set_country_flag = georgy_lvov
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# LENIN DEMONSTRATION
+##########################
+country_event = {
+	id = rusrevolt.4
+	title = rusrevolt.4.t
+	desc = rusrevolt.4.d
+	picture = rusrevolt_4
+	fire_only_once = yes
+	trigger = {
+		original_tag = RUS
+		SOV = {
+			exists = no
+		}
+		NOT = {
+			has_global_flag = october_revolution
+		}
+		has_global_flag = russian_revolution
+		OR = {
+			has_country_leader = {
+				character = RUS_alexander_kerensky
+				ruling_only = yes
+			}
+			has_country_leader = {
+				character = RUS_pyotr_stolypin
+				ruling_only = yes
+			}
+		}
+		has_government = democratic
+		RUS = {
+			OR = {
+				has_war_with = GER
+				has_war_with = AUH
+			}
+			OR = {
+				surrender_progress > 0.1
+				casualties > 1500000
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	# REVOLUTION WILL BE SOON
+	option = {
+		name = rusrevolt.4.a
+		activate_mission = RUS_threat_of_bolshevik_revolution
+		add_popularity = {
+			ideology = communism
+			popularity = 0.09
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		custom_effect_tooltip = rusrevolt.4_tt
+		set_country_flag = RUS_bolshevik_threat
+		ai_chance = {
+			factor = 80
+		}
+	}
+	# KORNILOV DICTATORSHIP
+	option = {
+		name = rusrevolt.4.b
+		news_event = {
+			hours = 6
+			id = rusrevolt.8
+		}
+		trigger = {
+			RUS_lavr_kornilov = { is_unit_leader = yes }
+		}	
+		add_country_leader_role = {
+			Character = RUS_lavr_kornilov
+			Promote_leader = yes
+			Country_leader = {
+				ideology=stratocracy
+				traits={ dictator  }
+				
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.3
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.1
+		}
+		remove_ideas = RUS_idea_dual_power
+		clr_country_flag = dual_power
+		add_stability = -0.25
+		add_political_power = -150
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = RUS_ai_behavior 
+							option = DEFAULT
+						}
+					}
+					has_country_flag = RUS_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = RUS_ai_behavior 
+						option = HISTORICAL
+					}
+				}
+				NOT = {
+					has_game_rule = {
+						rule = russian_revolution_path
+						option = KORNILOV_IN_POWER
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				GER = {
+					is_ai = no
+					has_war_with = RUS
+				}
+				NOT = {
+					has_game_rule = {
+						rule = russian_revolution_path
+						option = KORNILOV_IN_POWER
+					}
+				}
+			}
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = russian_revolution_path
+					option = KORNILOV_IN_POWER
+				}
+			}
+		}
+	}
+	# KERENSKY DICTATORSHIP
+	option = {
+		name = rusrevolt.4.c
+		#news_event = {
+		#	hours = 6
+		#	id = rusrevolt.8
+		#}
+		trigger = {
+			has_country_leader = {
+				character = RUS_alexander_kerensky
+				ruling_only = yes
+			}
+		}
+		RUS_alexander_kerensky = {
+			set_portraits = {
+				civilian = {
+					large="gfx/leaders/RUS/RUS_alexander_kerensky_dictator.png"
+				}
+			}
+			add_country_leader_role = {
+				Promote_leader = yes
+				Country_leader = {
+					ideology=authoritarian_democracy
+					traits={ rus_knight_of_revolution dictator }	
+				}
+			}
+		}		
+		set_party_name = {
+			ideology = democratic
+			long_name = RUS_democratic_party_SR_long
+			name = RUS_democratic_party_SR
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = RUS_democratic_party_provisional_government_long
+			name = RUS_democratic_party_provisional_government
+		}
+		hidden_effect = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+		remove_ideas = RUS_idea_dual_power
+		clr_country_flag = dual_power
+		add_stability = -0.05
+		add_political_power = -200
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = RUS_ai_behavior 
+							option = DEFAULT
+						}
+					}
+					has_country_flag = RUS_AI_RANDOM_HISTORICAL
+					has_game_rule = {
+						rule = RUS_ai_behavior 
+						option = HISTORICAL
+					}
+				}
+				NOT = {
+					has_game_rule = {
+						rule = russian_revolution_path
+						option = KERENSKY_DICTATORSHIP
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				GER = {
+					is_ai = no
+					has_war_with = RUS
+				}
+				NOT = {
+					has_game_rule = {
+						rule = russian_revolution_path
+						option = KERENSKY_DICTATORSHIP
+					}
+				}
+			}
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = russian_revolution_path
+					option = KERENSKY_DICTATORSHIP
+				}
+			}
+		}
+	}
+}
+
+# TSAR ABDICATED. RUSSIAN REVOLUTION - NEWS
+############################################
+news_event = {
+	id = rusrevolt.5
+	title = rusrevolt.5.t
+	desc = rusrevolt.5.d
+	picture = rusrevolt_5
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = rusrevolt.5.a
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+				set_country_flag = SE_rus_february_revolution
+				play_song = "SE_rus_february_revolution"
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# BOLSHEVIKS REVOLUTION
+##########################
+country_event = {
+	id = rusrevolt.6
+	title = rusrevolt.6.t
+	desc = rusrevolt.6.d
+	picture = rusrevolt_6
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_global_flag = october_revolution
+			set_global_flag = russian_civil_war
+			if = {
+				limit = {
+					FRA = {
+						is_faction_leader = yes
+					}
+					RUS = {
+						is_in_faction_with = FRA
+					}
+				}
+				FRA = {
+					remove_from_faction = RUS
+				}
+			}
+			every_state = {
+				limit = {
+					is_claimed_by = RUS
+				}
+				remove_claim_by = RUS
+			}
+			if = {
+				limit = {
+					PER = {
+						is_subject_of = RUS
+					}
+				}
+				RUS = {
+					end_puppet = PER
+				}	
+				every_country = {
+					limit = {
+						has_war_with = PER
+						NOT = {
+							original_tag = PER
+							has_wargoal_against = PER
+							any_state = {
+								OR = {
+									is_owned_by = PER
+									is_owned_by = PRG
+								}
+								is_claimed_by = PREV			
+							}
+						}
+					}
+					PER = {
+						white_peace = PREV
+					}
+				}
+				PER = {
+					leave_faction = yes
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = RUS
+					NOT = {
+						tag = TAN
+					}
+				}
+				RUS = {
+					end_puppet = PREV
+				}
+				leave_faction = yes
+					clr_country_flag = protectorate
+			}
+			SOV = {
+				add_named_threat = {
+					threat = 10
+					name = rusrevolt.6.t
+				}
+				create_faction = red_movement
+				set_political_power = 0
+				set_stability = 0.65
+				transfer_state = 195
+				transfer_state = 264
+				transfer_state = 263
+				transfer_state = 209
+				transfer_state = 210
+				transfer_state = 246
+				transfer_state = 247
+				transfer_state = 219
+				transfer_state = 242
+				transfer_state = 205
+				declare_war_on = {
+					target = RUS
+					type = civil_war
+				}
+				every_state = {
+					limit = {
+						is_core_of = RUS
+					}
+					add_core_of = SOV
+				}
+				add_timed_idea = {
+					idea = SOV_idea_red_guard
+					days = 270
+				}
+				remove_ideas = neutrality_idea
+				remove_ideas = internationalism
+				country_event = {
+					days = 10
+					id = rusrevolt.9
+				}
+				load_oob = "SOV_1917"
+				if = {
+					limit = {
+						GER = {
+							has_completed_focus = GER_strike_from_the_shadows
+						}
+						has_global_flag = strike_from_the_shadows
+					}
+					SOV = {
+						add_timed_idea = {
+							idea = GER_idea_abwehr_support
+							days = 365
+						}
+						add_country_leader_trait = german_agent
+						set_global_flag = lenin_german_agent
+					}
+					GER = {
+						add_timed_idea = {
+							idea = GER_idea_abwehr_supports_revolution
+							days = 365
+						}
+					}
+				}
+				inherit_technology = RUS
+			}
+			RUS = {
+				create_country_leader = {
+					name = "No Central Government"
+					picture = "gfx/leaders/RUS/RUS_Anarchy.png"
+					
+					ideology = socialism
+					traits = {
+						anarchy
+					}
+				}
+				create_faction = white_movement
+				transfer_units_fraction = {
+					target = SOV
+					#size = 0.25
+					stockpile_ratio = 0.45
+					army_ratio = 0.6
+					navy_ratio = 0.95
+					air_ratio = 0.3
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
+				}
+				RUS_alexei_brusilov = {
+					set_nationality = SOV
+				}
+				RUS_mikhail_bonchbruevich = {
+					remove_unit_leader_trait = hidden_sympathies
+					set_nationality = SOV
+				}	
+				RUS_evgeniy_radkevich = {
+					set_nationality = SOV
+				}
+				delete_unit = {
+					disband = yes
+				}
+				load_oob = "RUS_civil_war"
+				random_owned_state = {
+					limit = {
+						is_controlled_by = RUS
+						impassable = no
+						is_core_of = RUS
+						NOT = {
+							has_state_flag = white_guard_state
+						}
+					}
+					create_unit = {
+						division = "division_template = \"White Guard Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+						owner = RUS
+						allow_spawning_on_enemy_provs = no
+						count = 6
+						country_score = {
+							base = 100
+						}
+					}
+					set_state_flag = white_guard_state
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = RUS
+						impassable = no
+						is_core_of = RUS
+						NOT = {
+							has_state_flag = white_guard_state
+						}
+					}
+					set_state_flag = white_guard_state
+					create_unit = {
+						division = "division_template = \"White Guard Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+						owner = RUS
+						allow_spawning_on_enemy_provs = no
+						count = 6
+						country_score = {
+							base = 100
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = RUS
+						impassable = no
+						is_core_of = RUS
+						NOT = {
+							has_state_flag = white_guard_state
+						}
+					}
+					set_state_flag = white_guard_state
+					create_unit = {
+						division = "division_template = \"White Guard Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+						owner = RUS
+						allow_spawning_on_enemy_provs = no
+						count = 6
+						country_score = {
+							base = 100
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = RUS
+						impassable = no
+						is_core_of = RUS
+						NOT = {
+							has_state_flag = white_guard_state
+						}
+					}
+					set_state_flag = white_guard_state
+					create_unit = {
+						division = "division_template = \"White Guard Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+						owner = RUS
+						allow_spawning_on_enemy_provs = no
+						count = 6
+						country_score = {
+							base = 100
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = RUS
+						impassable = no
+						is_core_of = RUS
+						NOT = {
+							has_state_flag = white_guard_state
+						}
+					}
+					set_state_flag = white_guard_state
+					create_unit = {
+						division = "division_template = \"White Guard Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+						owner = RUS
+						allow_spawning_on_enemy_provs = no
+						count = 6
+						country_score = {
+							base = 100
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = RUS
+						impassable = no
+						is_core_of = RUS
+						NOT = {
+							has_state_flag = white_guard_state
+						}
+					}
+					set_state_flag = white_guard_state
+					create_unit = {
+						division = "division_template = \"White Guard Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1"
+						owner = RUS
+						allow_spawning_on_enemy_provs = no
+						count = 6
+						country_score = {
+							base = 100
+						}
+					}
+				}
+				remove_ideas = RUS_threat_of_revolution3
+				remove_ideas = RUS_idea_dual_power
+				set_country_flag = petrograd_uprising
+				add_stability = -0.1
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.65
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.25
+					}
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.65
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.25
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.1
+					}
+				}
+				every_unit_leader = {
+					limit = {
+						has_trait = trait_royal
+					}		
+					remove_unit_leader_role = yes
+				}
+				RUS_pyotr_wrangel = {
+					set_portraits = {
+						army = {
+							large="gfx/leaders/RUS/RUS_pyotr_wrangel_civil_war.png"
+						}
+					}
+				}
+				#Transcaucasian Commissariat
+				country_event = {
+					id  = ww1_russia.32
+					days = 4
+				}
+				#Ukrainian People's Republic
+				country_event = {
+					id  = ww1_russia.34
+					days = 13
+				}
+				#Turkestan Autonomy
+				country_event = {
+					id = ww1_russia.36
+					days = 20
+				}
+				#Finland
+				country_event = {
+					id = ww1_russia.37
+					days = 30
+				}
+				#Crimea
+				country_event = {
+					id = rusrevolt.13
+					days = 36
+				}
+				#Moldavian Democratic Republic
+				country_event = {
+					id = ww1_russia.93
+					days = 38
+				}
+				#Alash Autonomy
+				country_event = {
+					id = ww1_russia.35
+					days = 49
+				}
+				#Kuban
+				country_event = {
+					id = ww1_russia.94
+					days = 82 
+				}	
+				#Don
+				country_event = {
+					id = ww1_russia.95
+					days = 192 
+				}				
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.6.a
+		news_event = {
+			hours = 6
+			id = rusrevolt.7
+		}
+		trigger = {
+			tag = RUS
+			NOT = {
+				tag = SOV
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = rusrevolt.6.b
+		SOV = {
+			change_tag_from = RUS
+		}
+		news_event = {
+			hours = 6
+			id = rusrevolt.7
+		}
+		trigger = {
+			tag = RUS
+			NOT = {
+				tag = SOV
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# BOLSHEVIKS REVOLUTION - NEWS
+###############################
+news_event = {
+	id = rusrevolt.7
+	title = rusrevolt.7.t
+	desc = rusrevolt.7.d
+	picture = rusrevolt_7
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = rusrevolt.7.a
+		trigger = {
+			NOT = {
+				TAG = SOV
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+				set_country_flag = SE_rus_october_revolution
+				play_song = "SE_rus_october_revolution"
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.7.b
+		trigger = {
+			TAG = SOV
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+			}
+			hidden_effect = {
+				set_country_flag = SE_rus_october_revolution
+				play_song = "SE_rus_october_revolution"
+			}
+		}
+	}
+}
+
+# KORNILOV IS DICTATOR - NEWS
+#############################
+news_event = {
+	id = rusrevolt.8
+	title = rusrevolt.8.t
+	desc = rusrevolt.8.d
+	picture = rusrevolt_8
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = rusrevolt.8.a
+	}
+}
+
+# OCTOBER REVOLUTION - UPRISING
+################################
+country_event = {
+	id = rusrevolt.9
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		SOV = {
+			transfer_state = 206			#Minsk
+			transfer_state = 207
+			transfer_state = 204
+			transfer_state = 194
+			transfer_state = 224			#Brynsk
+			transfer_state = 223
+			transfer_state = 254
+			transfer_state = 253			#Yaroslavl
+			transfer_state = 248
+			transfer_state = 252
+			transfer_state = 255
+			transfer_state = 257
+			transfer_state = 258
+			transfer_state = 351
+			transfer_state = 216
+			transfer_state = 214			#Arhangelsk
+			transfer_state = 215
+			transfer_state = 213
+			transfer_state = 243
+			transfer_state = 241
+			transfer_state = 722
+		}
+	}
+}
+
+# OCTOBER REVOLUTION - UPRISING 2
+#################################
+country_event = {
+	id = rusrevolt.10
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		SOV = {
+			transfer_state = 256
+			transfer_state = 250
+			transfer_state = 249
+			transfer_state = 251
+			transfer_state = 239
+			transfer_state = 401
+			transfer_state = 260
+			transfer_state = 240
+			transfer_state = 220
+		}
+	}
+}
+
+# FINNISH CIVIL WAR
+#####################
+country_event = {
+	id = rusrevolt.11
+	title = rusrevolt.11.t
+	desc = rusrevolt.11.d
+	picture = GFX_report_event_generic_military_parade
+	fire_only_once = yes
+	trigger = {
+		tag = FIN
+		NOT = {
+			has_government = communism
+		}
+		has_global_flag = russian_civil_war
+		RUS = {
+			has_war_with = SOV
+		}
+	}
+	mean_time_to_happen = {
+		days = 67
+	}
+	option = {
+		name  = rusrevolt.11.a
+		set_global_flag = finnish_civil_war
+		set_capital = { state = 149 }
+		start_civil_war = {
+			keep_political_leader = yes
+			keep_political_party_members = yes
+			keep_unit_leaders_trigger = {
+				always = yes
+			}
+			ideology = communism
+			size = 0.25
+			states = {
+				111
+			}
+			hidden_effect = {
+				set_cosmetic_tag = FIN_red
+				create_country_leader = {
+					name = "Kullervo Manner" 
+					picture = "gfx/leaders/FIN/FIN_kullervo_manner.png" 
+					 
+					ideology = marxism
+					  
+				}
+				if = {
+					limit = {
+						ROOT = {
+							owns_state = 145
+						}
+					}
+					transfer_state = 145
+				}
+			}
+		}
+	}
+	option = {
+		name  = rusrevolt.11.b
+		set_global_flag = finnish_civil_war
+		set_capital = { state = 149 }
+		start_civil_war = {
+			keep_political_leader = yes
+			keep_political_party_members = yes
+			keep_unit_leaders_trigger = {
+				always = yes
+			}
+			ideology = communism
+			size = 0.3
+			states = {
+				111
+			}
+			hidden_effect = {
+				set_cosmetic_tag = FIN_red
+				create_country_leader = {
+					name = "Kullervo Manner" 
+					picture = "gfx/leaders/FIN/FIN_kullervo_manner.png" 
+					 
+					ideology = marxism
+					  
+				}
+			}
+		}
+		every_other_country = {
+			limit = {
+				original_tag = FIN
+				has_government = communism
+			}
+			change_tag_from = FIN	
+		}
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+# UKRAINIAN CIVIL WAR
+########################
+country_event = {
+	id = rusrevolt.12
+	title = rusrevolt.12.t
+	desc = rusrevolt.12.d
+	picture = GFX_report_event_generic_military_parade
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = ukrainian_civil_war
+	}
+	option = {
+		name = rusrevolt.12.a
+		UKR = {
+			hidden_effect = {
+				promote_character = UKR_yuriy_pyatakov
+			}
+			start_civil_war = { 
+				ideology = SOV 
+				set_cosmetic_tag = UKR_SOV_provisional
+				hidden_effect = { 
+					set_party_name = { 
+						ideology = communism 
+						long_name = UKR_communist_party_long
+						name = UKR_communist_party 
+					}
+				}
+				size = 0.3 
+				states = { 221 228 227 226 200 240 222} 
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+				keep_political_party_members = yes
+				ROOT = {
+					puppet = PREV
+				}
+			}	
+		}
+		ROOT = {
+			declare_war_on = {
+				target = UKR
+				type = civil_war
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = rusrevolt.12.b
+		UKR = {
+			hidden_effect = {
+				promote_character = UKR_yuriy_pyatakov
+			}
+			start_civil_war = { 
+				ideology = SOV 
+				set_cosmetic_tag = UKR_SOV_provisional
+				hidden_effect = { 
+					set_party_name = { 
+						ideology = communism 
+						long_name = UKR_communist_party_long
+						name = UKR_communist_party 
+					}
+				}
+				size = 0.3 
+				states = { 221 228 227 226 200 240 222} 
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+				keep_political_party_members = yes
+				ROOT = {
+					puppet = PREV
+				}
+			}	
+		}
+		ROOT = {
+			declare_war_on = {
+				target = UKR
+				type = civil_war
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = UKR
+					has_government = SOV
+				}
+				change_tag_from = PREV
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# UPRISING OF CRIMEA
+####################
+country_event = {
+	id = rusrevolt.13
+	title = rusrevolt.13.t
+	desc = rusrevolt.13.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+	trigger = {
+		CRI = {
+			exists = no
+		}
+		has_war_with = SOV
+		owns_state = 137
+	}
+	immediate = {
+		hidden_effect = {
+			CRI = {
+				transfer_state = 137
+				load_oob = "CRI_1918"
+				set_popularities = {
+					democratic = 29
+					fascism = 0
+					communism = 71
+				}
+				set_politics = {
+					ruling_party = democratic
+				}
+				inherit_technology = RUS
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.13.a
+		effect_tooltip = {
+			release = CRI
+		}
+	}
+	option = {
+		name = rusrevolt.13.b
+		CRI = {
+			change_tag_from = ROOT
+		}
+		trigger = {
+			is_ai = no
+		}
+	}
+}
+
+# SOVIET CRIMEA
+################
+country_event = {
+	id = rusrevolt.14
+	title = rusrevolt.14.t
+	desc = rusrevolt.14.d
+	picture = GFX_report_event_generic_military_parade
+	fire_only_once = yes
+	trigger = {
+		tag = SOV
+		CRI = {
+			has_government = communism
+			is_subject = no
+		}
+		has_war_with = RUS
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		name = rusrevolt.14.a
+		SOV = {
+			puppet = CRI
+		}
+	}
+}
+
+# HERE IS NESTOR MAKHNO
+##########################
+country_event = {
+	id = rusrevolt.15
+	title = rusrevolt.15.t
+	desc = rusrevolt.15.d
+	fire_only_once = yes
+	trigger = {
+		tag = UKR
+		has_civil_war = yes
+		any_country = {
+			original_tag = UKR
+			owns_state = 226		
+		}
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	immediate = {
+		hidden_effect = {
+			VLN = {
+				add_state_core = 226
+				transfer_state = 226
+				load_oob = "VLN_1918"
+				declare_war_on = {
+					target = UKR
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.15.a
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = rusrevolt.15.b
+		VLN = { change_tag_from = PREV }
+		ai_chance = { factor = 100 }
+	}
+}
+
+# END OF RUSSIAN CIVIL WAR
+##########################
+news_event = {
+	id = rusrevolt.19
+	title = rusrevolt.19.t
+	desc = {
+		text = rusrevolt.19.d_soviet
+		trigger = {
+			SOV = {
+				has_country_flag = russian_civil_war_winner
+			}
+		}
+	}
+	desc = {
+		text = rusrevolt.19.d_russia
+		trigger = {
+			RUS = {
+				has_country_flag = russian_civil_war_winner
+			}
+		}
+	}
+	picture = rusrevolt_19
+	major = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					RUS = {
+						has_country_flag = russian_civil_war_winner
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SOV
+							is_claimed_by = SOV
+						}						
+					}
+					SOV = {
+						remove_state_claim = PREV
+						remove_state_core = PREV
+					}				
+				}
+				RUS = {
+					annex_country = {
+						target = SOV
+					}
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_country_flag = russian_civil_war_winner
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = RUS
+							is_claimed_by = RUS
+						}						
+					}
+					RUS = {
+						remove_state_claim = PREV
+						remove_state_core = PREV
+					}				
+				}
+				SOV = {
+					annex_country = {
+						target = RUS
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = news.64.a
+		trigger = {
+			NOT = {
+				tag = SOV
+				tag = RUS
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+				SOV = {
+					has_country_flag = russian_civil_war_winner
+					has_government = communism
+				}
+			}
+			hidden_effect = {
+				play_song = "SE_rus_civil_war_winner_red"
+				set_country_flag = SE_rus_civil_war_winner_red
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+				RUS = {
+					has_country_flag = russian_civil_war_winner
+				}
+			}
+			hidden_effect = {
+				play_song = "SE_rus_civil_war_winner_white"
+				set_country_flag = SE_rus_civil_war_winner_white
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.19.b
+		trigger = {
+			original_tag = SOV
+		}
+		delete_unit_template_and_units = {
+			division_template = "Brigada Opolcheniya"
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+				SOV = {
+					has_country_flag = russian_civil_war_winner
+					has_government = communism
+				}
+			}
+			hidden_effect = {
+				play_song = "SE_rus_civil_war_winner_red"
+				set_country_flag = SE_rus_civil_war_winner_red
+			}
+		}
+	}
+	option = {
+		name = rusrevolt.19.c
+		trigger = {
+			original_tag = RUS
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = rule_superevent
+					option = DEFAULT
+				}
+				is_ai = no
+				RUS = {
+					has_country_flag = russian_civil_war_winner
+				}
+			}
+			hidden_effect = {
+				play_song = "SE_rus_civil_war_winner_white"
+				set_country_flag = SE_rus_civil_war_winner_white
+			}
+		}
+	}
+}
