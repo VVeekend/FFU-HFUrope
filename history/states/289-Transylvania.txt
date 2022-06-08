@@ -13,7 +13,7 @@ state={
 		owner = AUS
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 4
+			arms_factory = 4
 		}
 		victory_points = {
 			5002 1

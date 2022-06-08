@@ -8,7 +8,8 @@ state={
 		add_core_of = POR
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 1
+			industrial_complex = 2
+			dockyard = 2
 			anti_air_building = 10
 
 		}

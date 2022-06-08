@@ -55,6 +55,34 @@ ENG_annex_CAN = {
 			}
 		}
     }
+ENG_annex_RAJ = {
+		icon = generic_operation
+
+			allowed = {
+				tag = ENG
+			}
+
+			available = {
+				RAJ = { is_ai = yes }
+			}
+			
+			fire_only_once = yes
+
+			cost = 0
+
+			visible = {
+			country_exists = RAJ
+				}
+				
+			complete_effect = {
+				ENG = { 
+					annex_country = {
+						target = RAJ
+						transfer_troops = yes 
+					}
+			}
+		}
+    }
 ENG_annex_POR = {
 		icon = generic_operation
 

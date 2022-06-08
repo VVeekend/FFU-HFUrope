@@ -4,20 +4,21 @@ state={
 	provinces={
 		2845 4623 5199 6328 9875 9880 9897 9903 9932 9935 
 	}
+	resources={
+		chromium=39
+	}
 	history={
 		owner = TUR
 		add_core_of = TUR
 		buildings = {
-			infrastructure = 6
-			arms_factory = 5
-			industrial_complex = 1
-			air_base = 3
-			dockyard = 1
+			infrastructure = 4
+			industrial_complex = 4
 
 		}
 
 	}
-	manpower=0
+	manpower=1026527
 	buildings_max_level_factor=1.000
+	state_category = town
 	local_supplies=0.000
 }

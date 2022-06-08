@@ -71,6 +71,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 12358;12397;sea;11063;-1;-1;-1;-1;PANAMA_CANAL;Panama
 13111;3144;sea;7277;-1;-1;-1;-1;KIEL_CANAL;Kiel
 12775;13161;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
+5332;1902;sea;;-1;-1;-1;-1;;Bosphorus
 12924;13275;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
 12283;12366;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar North
 12283;13138;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar South

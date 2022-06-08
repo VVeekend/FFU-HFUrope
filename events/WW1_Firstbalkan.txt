@@ -328,6 +328,7 @@ country_event = {
 			transfer_state = 186
 			transfer_state = 512
             transfer_state = 156
+            transfer_state = 532
 			diplomatic_relation = {
 				country = TUR
 				relation = non_aggression_pact
