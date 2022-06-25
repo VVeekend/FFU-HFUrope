@@ -11,19 +11,20 @@ ideas = {
 		}
 		industrial_destruction_spirit = {
 			ledger = air
+			visible = { has_tech = air_superiority }
 			research_bonus = {
 				heavy_air = 0.05
 			}
 			modifier = {
 				strat_bomber_equipment_design_cost_factor = -0.75
-				jet_strat_bomber_equipment_design_cost_factor = -0.75
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		dive_bombing_spirit = {
 			ledger = air
+			visible = { has_tech = formation_flying }
 			research_bonus = {
 				cas_bomber = 0.05
 			}
@@ -32,20 +33,20 @@ ideas = {
 				cv_CAS_equipment_design_cost_factor = -0.75
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		material_destruction_spirit = {
 			ledger = air
+			visible = { has_tech = force_rotation }
 			research_bonus = {
 				tactical_bomber = 0.05
 			}
 			modifier = {
 				tac_bomber_equipment_design_cost_factor = -0.75
-				jet_tac_bomber_equipment_design_cost_factor = -0.75
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		industry_liasons_spirit = {
@@ -110,7 +111,7 @@ ideas = {
 				air_carrier_night_penalty_reduction_factor = 0.33
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		veteran_air_instructors_spirit = {
@@ -139,7 +140,7 @@ ideas = {
 				air_untrained_pilots_penalty_factor = -0.33
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		home_defence_spirit = {
@@ -162,32 +163,32 @@ ideas = {
 		}
 		massed_strike_spirit = {
 			ledger = air
-			
+			visible = { has_tech = force_rotation }
 			modifier = {
 				army_bonus_air_superiority_factor = 0.05
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		continuous_strike_spirit = {
 			ledger = air
-			
+			visible = { has_tech = formation_flying }
 			modifier = {
 				air_cas_efficiency = 0.25
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 		strategic_strike_spirit = { 
 			ledger = air
-			
+			visible = { has_tech = air_superiority }
 			modifier = {
 				air_strategic_bomber_bombing_factor = 0.1
 			}
 			ai_will_do = {
-				factor = 1
+				factor = 1.5
 			}
 		}
 	}

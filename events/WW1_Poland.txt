@@ -1,0 +1,960 @@
+add_namespace = ww1_poland
+
+# Russian Color
+####################
+country_event = {
+	id = ww1_poland.100
+	
+	trigger = {
+		tag = POL
+		is_subject_of = RUS
+		RUS = {
+			NOT = { has_government = communism }
+		}
+		NOT = { has_cosmetic_tag = POL_RUS }
+	}	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		set_cosmetic_tag = POL_RUS
+	}
+}
+
+# Remove Russian Color
+####################
+country_event = {
+	id = ww1_poland.101
+	
+	trigger = {
+		tag = POL
+		NOT = { POL = { is_subject_of = RUS } }
+		has_cosmetic_tag = POL_RUS
+	}	
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		drop_cosmetic_tag = yes
+	}
+}
+
+# Unite with Galicia
+####################
+country_event = {
+	id = ww1_poland.102
+	
+	trigger = {
+		tag = POL
+		exists = yes
+		is_subject = no
+		has_war = no
+		GAL = {
+			exists = yes
+			OR = {
+				is_subject = no
+				is_subject_of = PREV
+			}
+			has_war = no
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+
+	hidden = yes
+
+	immediate = {
+		POL = {
+			annex_country = {
+				target = GAL
+				transfer_troops = yes
+			}
+			if = {
+				limit = {
+					WUK = {
+						exists = yes
+						is_subject = no
+						is_in_faction = no
+						has_war = no
+					}
+				}
+				annex_country = {
+					target = WUK
+					transfer_troops = no
+				}
+				every_state = {
+					limit = {
+						is_core_of = WUK
+					}
+					remove_core_of = WUK
+				}
+			}
+		}
+	}
+}
+
+# REPUBLIC OF POLAND
+#######################
+country_event = {
+	id = ww1_poland.1
+	title = ww1_poland.1.t
+	desc = ww1_poland.1.d
+	picture = GFX_report_event_generic_military_parade
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		OR = {
+			is_subject = no
+			AND = {
+				is_subject_of = GER
+				GER = { has_country_flag = great_war_loser }
+				NOT = { has_global_flag = versallies_treaty }
+			}
+       		}
+	}
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		hidden_effect = {
+			division_template = {
+				name = "Legiony Polskie"
+				regiments = {
+					infantry = {
+						x = 0
+						y = 0
+					}
+					infantry = {
+						x = 0
+						y = 1
+					}
+					infantry = {
+						x = 0
+						y = 2
+					}
+					infantry = {
+						x = 1
+						y = 0
+					}
+					infantry = {
+						x = 1
+						y = 1
+					}
+					infantry = {
+						x = 1
+						y = 2
+					}
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+			}
+			division_template = {
+				name = "Kawaleria Polskie"
+				regiments = {
+					cavalry = {
+						x = 0
+						y = 0
+					}
+					cavalry = {
+						x = 0
+						y = 1
+					}
+					cavalry = {
+						x = 0
+						y = 2
+					}
+					cavalry = {
+						x = 1
+						y = 0
+					}
+					cavalry = {
+						x = 1
+						y = 1
+					}
+					cavalry = {
+						x = 1
+						y = 2
+					}
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Legiony Polskie I\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie II\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie III\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie IV\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie V\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie VI\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie VII\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie VIII\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie IX\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie X\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XI\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XII\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XIII\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XIV\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XV\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XVI\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XVII\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XVIII\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XIX\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Legiony Polskie XX\" division_template = \"Legiony Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie I\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie II\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie III\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie IV\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie V\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie VI\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+				create_unit = {
+					division = "name = \"Kawaleria Polskie VII\" division_template = \"Kawaleria Polskie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POL
+				}
+			}
+		}
+	}
+	option = {
+		name = ww1_poland.1.a
+		if = {
+			limit = {
+				is_subject_of = GER
+			}
+			GER = { end_puppet = POL }
+			leave_faction = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = POL_declare_a_republic
+				}
+			}	
+			complete_national_focus = POL_declare_a_republic
+		}	
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = ww1_poland.1.b
+		hidden_effect = {
+			uncomplete_national_focus = {
+				focus = POL_declare_a_republic
+				uncomplete_children = yes
+			}
+		}
+		if = {
+			limit = {
+				is_subject_of = GER
+			}
+			GER = { end_puppet = POL }
+			leave_faction = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = POL_kingdom
+				}
+			}	
+			complete_national_focus = POL_kingdom
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+#Poland Annexes Galicia - Undead Unicorn wuz here, fixed by Silent Enforcer
+country_event = {
+	id = ww1_poland.2
+	title = ww1_poland.2.t
+	desc = ww1_poland.2.d
+	picture = GFX_report_event_generic_military_parade
+	fire_only_once = yes
+	trigger = {
+		has_subject = POL
+		has_subject = GAL
+		POL = {
+			NOT = {
+				has_government = communism
+			}	
+		}
+		has_war = no
+	}
+	option = {
+		name = ww1_poland.2.a
+		ai_chance = { factor = 95 }
+		POL = {
+			annex_country = {
+ 				target = GAL
+				transfer_troops = yes
+			}
+		}
+		if = {
+			limit = {
+				original_tag = AUH
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Waking the Tiger"
+					}
+				}
+				set_autonomy = {
+					target = POL
+					autonomy_state = autonomy_tgwr_crownland
+				}
+			}
+			else = {
+				add_political_power = 100
+			}
+		}
+		if = {
+			limit = {
+				UKR = {
+					is_subject_of = ROOT
+					owns_state = 766
+				}
+			}
+			POL = { transfer_state = 766 }
+		}
+	}
+	option = {
+		name = ww1_poland.2.b
+		ai_chance = { factor = 5 }
+		end_puppet = POL
+		POL = { leave_faction = yes }
+		hidden_effect = {
+			POL = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = yes
+				}
+				add_popularity = {
+					ideology = communism
+ 					popularity = 0.5
+				}
+				POL_jozef_pilsudski = {
+					add_country_leader_role = {
+						country_leader = {				
+							ideology = reformist_socialism
+							traits = { revolutionary_general dislikes_russia }
+						}	
+					}
+					promote_character = reformist_socialism
+					set_portraits = {
+						civilian = {
+							large="gfx/leaders/POL/POL_jozef_pilsudski_socialist.png"
+						}
+					}
+				}
+				set_cosmetic_tag = POL_republic
+			}
+		}
+		declare_war_on = {
+			target = POL
+			type = puppet_wargoal_focus
+		}
+	}
+}
+# Soviet Poland
+####################
+country_event = {
+	id = ww1_poland.3
+	title = ww1_poland.3.t
+	desc = ww1_poland.3.d
+	picture = GFX_report_event_soviet_soldiers
+	trigger = {
+		original_tag = POL
+		has_government = communism
+		NOT = { has_cosmetic_tag = POL_SOVIET }	
+		OR = {
+			OVERLORD = {
+				has_government = communism
+				OR = {
+					original_tag = SOV
+					AND = {
+						original_tag = RUS
+						OR  = {
+							has_cosmetic_tag = RUS_soviet
+							has_cosmetic_tag = RUS_absolutism #Soviet Empire (((((
+						}
+					}	
+				}			
+			}
+			AND = {
+				NOT = { has_country_leader = { character = POL_jozef_pilsudski ruling_only = yes } }
+				is_in_faction_with = SOV
+			}	
+		}
+	}
+	mean_time_to_happen = { days = 17 }	
+	option = {
+		name = ww1_poland.3.a
+		POL_felix_dzerzhinsky = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = vanguardism
+					traits = { prince_of_terror }
+				}
+			}
+		}
+		set_party_name = { ideology = communism name = POL_polrewkom_party long_name = POL_polrewkom_party_long }
+		set_cosmetic_tag = POL_SOVIET	
+	}
+}
+# Remove Soviet Poland
+####################
+country_event = {
+    id = ww1_poland.4
+	trigger = {
+		has_cosmetic_tag = POL_SOVIET
+		original_tag = POL
+		NOT = { has_government = communism }
+	}
+	mean_time_to_happen = { days = 0 }
+	hidden = yes
+	immediate = {
+		POL_felix_dzerzhinsky = {
+			remove_country_leader_role = { ideology = vanguardism }
+		}
+		POL_ignacy_daszynski = {
+			promote_character = reformist_socialism
+		}
+		set_party_name = { ideology = communism name = POL_communism_party long_name = POL_communism_party_long }
+		drop_cosmetic_tag = yes
+	}
+}
+#Ask for Galicia
+country_event = {
+	id = ww1_poland.5
+	title = ww1_poland.5.t
+	desc = ww1_poland.5.d
+	is_triggered_only = yes
+	option = {
+		name = ww1_poland.2.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = {
+				has_subject = MOL
+				has_subject = GAL
+			}
+			every_state = {
+				limit = {
+					is_owned_by = GAL
+					is_core_of = MOL
+					OR = {
+						is_core_of = GAL
+						state = 80
+						state = 867
+					}
+				}
+				transfer_state_to = MOL
+			}
+			else_if = {
+				limit = {
+					has_subject = TRA
+					has_subject = GAL
+				}
+				every_state = {
+					limit = {
+						is_owned_by = GAL
+						is_core_of = ROM
+						OR = {
+							is_core_of = GAL
+							state = 80
+							state = 867
+						}
+					}
+					transfer_state_to = TRA
+				}
+				else_if = {
+					limit = {
+						has_subject = ROM
+						has_subject = GAL
+					}
+					every_state = {
+						limit = {
+							is_owned_by = GAL
+							is_core_of = ROM
+							OR = {
+								is_core_of = GAL
+								state = 80
+								state = 867
+							}
+						}
+						transfer_state_to = ROM
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_subject = CZE
+				has_subject = GAL
+			}
+			every_state = {
+				limit = {
+					is_owned_by = GAL
+					is_core_of = CZE
+				}
+				transfer_state_to = CZE
+			}
+		}
+		if = {
+			limit = {
+				has_subject = WUK
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = AUH
+						AND = {
+							is_owned_by = GAL
+							GAL = {
+								is_subject_of = AUH
+							}	
+						}
+					}	
+					OR = {
+						is_core_of = UKR
+						is_core_of = MOL
+					}
+					OR = {
+						is_core_of = GAL
+						state = 80
+						state = 867
+					}
+					NOT = {
+						is_core_of = POL
+					}					
+				}
+				transfer_state_to = WUK
+			}
+			else_if = {
+				limit = {
+					has_subject = UKR
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = AUH
+							AND = {
+								is_owned_by = GAL
+								GAL = {
+									is_subject_of = AUH
+								}	
+							}
+						}							
+						OR = {
+							is_core_of = UKR
+							is_core_of = MOL
+						}
+						OR = {
+							is_core_of = GAL
+							state = 80
+							state = 867
+						}
+						NOT = {
+							is_core_of = POL
+						}
+					}
+					transfer_state_to = UKR
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_subject = GAL
+			}
+			FROM = {
+				annex_country = {
+					target = GAL
+					transfer_troops = yes
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						is_core_of = GAL
+						NOT = {
+							is_core_of = CZE
+						}					
+						OR = {
+							is_core_of = POL
+							is_core_of = UKR
+						}
+					}
+					transfer_state_to = FROM
+				}			
+			}
+		}
+	}
+	option = {
+		name = ww1_poland.2.b
+		ai_chance = { factor = 0 }
+		POL = { country_event = ww1_poland.7 }
+	}
+}
+#Ask for Galicia - accept
+country_event = {
+	id = ww1_poland.6
+	title = ww1_poland.6.t
+	desc = ww1_poland.6.d
+	is_triggered_only = yes
+	option = {
+		name = ww1_poland.6.a
+		effect_tooltip = {
+			AUH = { puppet = POL }
+		}
+		POL_karol_stefan_i = {
+			add_country_leader_trait = king_of_galicia_and_lodomeria
+		}	
+	}
+}
+#Ask for Galicia - reject
+country_event = {
+	id = ww1_poland.7
+	title = ww1_poland.7.t
+	desc = ww1_poland.7.d
+	is_triggered_only = yes
+	option = {
+		name = ww1_poland.7.a
+		add_opinion_modifier = {
+			target = AUH
+			modifier = large_decrease
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = POL_karol_stefan_i
+					ruling_only = yes 
+				}						
+			}
+			add_country_leader_trait = unpopular_monarch
+		}
+	}
+}
+#1922 Polish presidential elections
+country_event = {
+    id = ww1_poland.8
+	title = ww1_poland.8.t
+	desc = ww1_poland.8.d
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = POL_election_event
+	}
+	option = {
+		name = ww1_poland.8.a #PSL
+		complete_national_focus = POL_peoples_party_victory
+		ai_chance = { factor = 50 }
+	}
+	option = {
+		name = ww1_poland.8.a #ZLN
+		complete_national_focus = POL_national_democrat_victory
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 5
+				fascism > 0.4
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = ww1_poland.8.c #PSP
+		complete_national_focus = POL_socialist_victory
+		ai_chance = { 
+			factor = 10 
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = {
+			communism > 0.2
+		}
+	}
+}
+#Picking German Dynasty
+country_event = {
+    id = ww1_poland.9
+	title = ww1_poland.9.t
+	desc = ww1_poland.9.d
+	is_triggered_only = yes
+	option = {
+		name = ww1_poland.9.a #Wittelsbach
+		every_possible_country = {
+			limit = {
+				has_unit_leader = 34316
+			}
+			GER_lepold_von_bayern = {
+				set_character_name = POL_leopold_i
+				set_nationality = ROOT
+			}
+		}
+		POL_leopold_i = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = autocracy
+					traits = { german_agent }
+				}
+			}
+			promote_character = autocracy
+		}		
+		set_party_name = {
+			ideology = neutrality
+			name = BAY_neutrality_party
+			long_name = BAY_neutrality_party
+		}
+		ai_chance = { 
+			base = 30
+		}
+	}
+	option = {
+		name = ww1_poland.9.b #Württemberg
+		every_possible_country = {
+			limit = {
+				has_unit_leader = 34337
+			}
+			GER_albrecht_von_wurttemberg = {
+				set_character_name = POL_albrecht_i
+				set_nationality = ROOT
+			}
+		}
+		POL_albrecht_i = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = autocracy
+					traits = { german_agent }
+				}
+			}
+			promote_character = autocracy
+		}		
+		set_party_name = {
+			ideology = neutrality
+			name = WUR_neutrality_party
+			long_name = WUR_neutrality_party
+		}
+		ai_chance = { 
+			base = 50 
+		}
+	}
+	option = {
+		name = ww1_poland.9.c #	Wettin
+		POL_fryderyk_krystian_i = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = autocracy
+					traits = { german_agent }
+				}
+			}
+			promote_character = autocracy
+		}
+		set_party_name = {
+			ideology = neutrality
+			name = SAX_neutrality_party
+			long_name = SAX_neutrality_party
+		}
+		ai_chance = { 
+			base = 60 
+		}
+	}
+	option = {
+		name = ww1_poland.9.c #Hohenzollern
+		POL_august_iv = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = autocracy
+					traits = { auwi german_agent }
+				}
+			}
+			promote_character = autocracy
+		}
+		set_party_name = {
+			ideology = neutrality
+			name = GER_neutrality_party
+			long_name = GER_neutrality_party
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# GDANSK
+###########
+country_event = {
+	id = ww1_poland.10
+	hidden = yes
+	trigger = {
+		original_tag = POL
+		is_subject = no
+		has_global_flag = great_war_ends
+		has_global_flag = versallies_treaty
+		owns_state = 404
+		GER = {
+			owns_state = 763
+			NOT = {
+				is_subject_of = PREV
+				is_in_faction_with = PREV
+			}
+		}
+		has_war = yes
+		NOT = {
+			has_country_flag = danzig_demilitarization
+			has_government = fascism
+			has_government = communism
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		set_country_flag = danzig_demilitarization
+	}
+}
+# GDANSK
+###########
+country_event = {
+	id = ww1_poland.11
+	hidden = yes
+	trigger = {
+		original_tag = POL
+		is_subject = no
+		has_global_flag = great_war_ends
+		has_global_flag = versallies_treaty
+		owns_state = 404
+		GER = {
+			owns_state = 763
+			NOT = {
+				is_subject_of = PREV
+				is_in_faction_with = PREV
+			}
+		}
+		has_war = no
+		has_country_flag = danzig_demilitarization
+		NOT = {
+			has_government = fascism
+			has_government = communism
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	immediate = {
+		clr_country_flag = danzig_demilitarization
+		404 = {
+			add_dynamic_modifier = { modifier = international_city }
+			set_demilitarized_zone = yes
+		}
+	}
+}
+
+# PUPPET POLAND RELEASED
+###########################
+country_event = {
+	id = ww1_poland.12
+	title = ww1_poland.12.t
+	desc = ww1_poland.12.d
+	is_triggered_only = yes
+	option = {
+		name = ww1_poland.12.a
+	}
+	option = {
+		name = ww1_poland.12.b
+		POL = { change_tag_from = PREV }
+		ai_chance = { factor = 0 }
+	}
+}

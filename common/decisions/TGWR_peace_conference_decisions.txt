@@ -1,0 +1,863 @@
+GER_great_war = {
+	#ENTENTE ASK FOR PEACE
+	#######################
+	FRA_armistice = {
+		icon = GFX_decision_generic_nationalism
+		available = {
+			has_civil_war = no
+			has_global_flag = kis_war
+			surrender_progress > 0.10
+			NOT = {
+				has_global_flag = GER_capitulation
+				has_global_flag = FRA_capitulation
+			}
+		}
+		visible = {
+			NOT = {
+				has_global_flag = GER_capitulation
+				has_global_flag = FRA_capitulation
+			}
+		}
+		allowed = {
+			tag = FRA
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_global_flag = FRA_capitulation
+			GER = {
+				country_event = {
+					id = ww1_entente_capitulation.1
+					hours = 5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+			# French won't gonna surrender with Paris
+			modifier = {
+				factor = 0
+				has_full_control_of_state = 16 #Ile de France
+				has_capitulated = no
+			}
+			# French won't gonna surrender with the United States and major coastlines secured
+			modifier = {
+				factor = 0
+				USA = {
+					is_in_faction_with = PREV
+					has_war_with = GER
+					has_capitulated = no
+				}
+				AND = {
+					controls_province = 9737 #Bordeaux
+					controls_province = 11834 #Marseille
+				}
+				surrender_progress < 0.8
+				has_capitulated = no
+			}
+			# French won't gonna surrender without massive casualties or losing territories
+			modifier = {
+				factor = 0
+				has_capitulated = no
+				casualties < 250000
+				surrender_progress < 0.50
+			}
+		}
+	}
+	#ENTENTE - REFUSE TO SURRENDER
+	member_of_entente_armistice = {
+		icon = GFX_decision_generic_nationalism
+		available = {
+			has_war_with = GER
+			has_global_flag = FRA_capitulation
+			NOT = {
+				has_global_flag = frankfurt_armistice
+			}
+		}
+		visible = {
+			NOT = {
+				has_global_flag = frankfurt_armistice
+			}
+			is_in_faction_with = FRA
+			NOT = {
+				tag = FRA
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			leave_faction = yes
+			add_ai_strategy = {
+				type = alliance
+				id = FRA
+				value = -2000
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					set_country_flag = refused_to_surrender
+				}
+			}
+			set_country_flag = refused_to_surrender
+			news_event = {
+				id = ww1_entente_capitulation.4
+			}
+		}
+		ai_will_do = {
+			#Только для игроков.
+			factor = 0
+		}
+	}
+	#FRANKFURT ARMISTICE
+	frankfurt_armistice_mission = {
+		icon = generic_nationalism
+		available = {
+			has_global_flag = frankfurt_armistice
+		}
+		allowed = {
+			always = yes
+		}
+		days_mission_timeout = 10
+		activation = {
+			any_country = {
+				tag = GER
+				has_global_flag = germany_accepts_FRA_capitulation
+				has_war_with = FRA
+			}
+		}
+		visible = {
+			OR = {
+				tag = FRA
+				is_in_faction_with = FRA
+				has_country_flag = member_of_entente
+				tag = GER
+				has_country_flag = member_of_central_powers
+				is_in_faction_with = GER
+				has_country_flag = accepted_french_surrender
+			}
+			has_global_flag = germany_accepts_FRA_capitulation
+			NOT = {
+				has_global_flag = frankfurt_armistice
+			}
+		}
+		fire_only_once = yes
+		is_good = no
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = GER
+				}
+				set_global_flag = frankfurt_armistice
+				set_global_flag = great_war_ends
+				if = {
+					limit = {
+						GER = {
+							is_subject = no
+						}
+					}
+					every_country = {
+						limit = {
+							has_war_with = FRA
+							OR = {
+								tag = GER
+								is_in_faction_with = GER
+								is_subject_of = GER
+								has_country_flag = member_of_central_powers
+								has_country_flag = accepted_french_surrender
+							}
+							NOT = {
+								has_country_flag = refused_to_surrender
+							}
+						}
+						set_country_flag = great_war_winner
+						add_ideas = idea_armistice
+						every_country = {
+							limit = {
+								has_war = yes
+								OR = {
+									is_in_faction_with = FRA
+									tag = FRA
+									is_subject_of = FRA
+									has_country_flag = member_of_entente
+								}
+								NOT = {
+									has_country_flag = refused_to_surrender
+								}
+							}
+							set_country_flag = great_war_loser
+							add_ideas = idea_armistice
+							white_peace = {
+								tag = PREV
+								message = frankfurt_armistice_message
+							}
+							set_truce = {
+								target = PREV
+								days = 365
+							}
+							# PEACE WITH NON-FACTIONAL ENEMIES
+							# YOU CANNOT CONDUCT WAR ANYMORE SINCE YOU ARE GONNA LOST THE GREAT WAR
+							# BUT THEY ARE NOT GONNA RECOGNISED AS VICTOR OF THE GREAT WAR
+							every_other_country = {
+								limit = {
+									has_defensive_war_with = PREV
+									is_in_faction = no
+									is_subject = no
+									has_civil_war = no
+									NOT = {
+										has_country_flag = member_of_entente
+										has_country_flag = refused_to_surrender
+									}
+								}
+								PREV = {
+									white_peace = {
+										tag = PREV
+										message = frankfurt_armistice_message
+									}
+									set_truce = {
+										target = PREV
+										days = 365
+									}
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						GER = {
+							is_subject_of = AUH
+						}
+					}
+					every_country = {
+						limit = {
+							has_war_with = FRA
+							OR = {
+								tag = AUH
+								is_in_faction_with = AUH
+								is_subject_of = AUH
+								has_country_flag = member_of_central_powers
+								has_country_flag = accepted_french_surrender
+							}
+							NOT = {
+								has_country_flag = refused_to_surrender
+							}
+						}
+						set_country_flag = great_war_winner
+						add_ideas = idea_armistice
+						every_country = {
+							limit = {
+								has_war = yes
+								OR = {
+									is_in_faction_with = FRA
+									tag = FRA
+									is_subject_of = FRA
+									has_country_flag = member_of_entente
+									is_in_faction_with = FRA
+								}
+								NOT = {
+									has_country_flag = refused_to_surrender
+								}
+							}
+							set_country_flag = great_war_loser
+							add_ideas = idea_armistice
+							white_peace = {
+								tag = PREV
+								message = frankfurt_armistice_message
+							}
+							set_truce = {
+								target = PREV
+								days = 365
+							}
+							# PEACE WITH NON-FACTIONAL ENEMIES
+							# YOU CANNOT CONDUCT WAR ANYMORE SINCE YOU ARE GONNA LOST THE GREAT WAR
+							# BUT THEY ARE NOT GONNA RECOGNISED AS VICTOR OF THE GREAT WAR
+							every_other_country = {
+								limit = {
+									has_defensive_war_with = PREV
+									is_in_faction = no
+									is_subject = no
+									has_civil_war = no
+									NOT = {
+										has_country_flag = member_of_entente
+										has_country_flag = refused_to_surrender
+									}
+								}
+								PREV = {
+									white_peace = {
+										tag = PREV
+										message = frankfurt_armistice_message
+									}
+									set_truce = {
+										target = PREV
+										days = 365
+									}
+								}
+							}
+						}
+					}
+				}
+				hidden_effect = {
+					armistice_effect = yes
+				}
+			}
+		}
+	}
+	#FRANKFURT CONFERENCE
+	frankfurt_conference = {
+		icon = generic_nationalism
+		available = {
+			has_global_flag = frankfurt_treaty
+		}
+		allowed = {
+			always = yes
+		}
+		days_mission_timeout = 90
+		activation = {
+			any_country = {
+				tag = GER
+				has_global_flag = frankfurt_armistice
+				OR = {
+					has_country_flag = great_war_winner
+					has_country_flag = great_war_loser
+				}
+			}
+		}
+		visible = {
+			OR = {
+				tag = FRA
+				is_in_faction_with = FRA
+				has_country_flag = member_of_entente
+				tag = GER
+				has_country_flag = member_of_central_powers
+				has_country_flag = accepted_french_surrender
+				is_in_faction_with = GER
+			}
+			NOT = {
+				has_global_flag = frankfurt_treaty
+			}
+			has_global_flag = frankfurt_armistice
+		}
+		fire_only_once = yes
+		is_good = no
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = GER
+				}
+				set_global_flag = frankfurt_treaty
+				add_named_threat = {
+					name = frankfurt_treaty
+					threat = -20
+				}
+				hidden_effect = {
+					conference_effect = yes
+				}
+			}
+		}
+	}
+	#CP CAPITULATION
+	##################
+	GER_armistice = {
+		icon = GFX_decision_generic_nationalism
+		available = {
+			has_global_flag = kis_war
+			GER = {
+				has_war_with = FRA
+				OR = {
+					surrender_progress > 0.05
+					has_idea = ger_famine
+					has_war_support < 0.10
+					has_stability < 0.10
+				}
+			}
+			NOT = {
+				has_global_flag = GER_capitulation
+				has_global_flag = FRA_capitulation
+			}
+		}
+		visible = {
+			NOT = {
+				has_global_flag = GER_capitulation
+				has_global_flag = FRA_capitulation
+			}
+		}
+		allowed = {
+			tag = GER
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_global_flag = GER_capitulation
+			FRA = {
+				country_event = {
+					id = ww1_centre_capitulation.1
+					hours = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			##basic surrendering
+			modifier = {
+				surrender_progress > 0.1
+				add = 1000
+			}
+			#WOW WHAT THE FUCK IS HAPPENING TO ME ?!
+			modifier = {
+				surrender_progress > 0.05
+				has_war_with = RUS
+				has_war_with = FRA
+				has_war_with = USA
+				has_war_with = AUH
+				add = 1000
+			}
+			##historical trigger
+			#Germany loses ton of soliders
+			#France is not almost beaten at all
+			#Britain is not almost beaten at all
+			#USA is not almost beaten at all
+			#German war effort is destroyed
+			#The war last long
+			modifier = {
+				OR = {
+					casualties > 2000000
+					casualties_inflicted_by = {
+						opponent = FRA
+						thousands > 500
+					}
+				}
+				
+				FRA = {
+					surrender_progress < 0.25
+					has_war_with = GER
+				}
+				ENG = {
+					surrender_progress < 0.25
+					has_war_with = GER
+				}
+				USA = {
+					surrender_progress < 0.25
+					has_war_with = GER
+				}
+				OR = {
+					has_idea = ger_famine
+					has_war_support < 0.25
+				}
+				AUH = {
+					if = {
+						limit = {
+							is_in_faction_with = PREV
+						}
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.50
+						}
+					}
+				}
+				TUR = {
+					if = {
+						limit = {
+							is_in_faction_with = PREV
+						}
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.50
+						}
+					}
+				}
+				add = 1000
+			}
+			#same as above but with more causalities
+			modifier = {
+				casualties > 3000000
+				FRA = {
+					surrender_progress < 0.40
+					has_war_with = GER
+				}
+				ENG = {
+					surrender_progress < 0.40
+					has_war_with = GER
+				}
+				USA = {
+					surrender_progress < 0.40
+					has_war_with = GER
+				}
+				OR = {
+					has_idea = ger_famine
+					has_war_support < 0.40
+				}
+				AUH = {
+					if = {
+						limit = {
+							is_in_faction_with = PREV
+						}
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.15
+						}
+					}
+				}
+				TUR = {
+					if = {
+						limit = {
+							is_in_faction_with = PREV
+						}
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.15
+						}
+					}
+				}
+				add = 1000
+			}
+			## Schlieffen plan failed, its a nightmare !
+			modifier = {
+				casualties > 500000
+				surrender_progress > 0.10
+				FRA = {
+					surrender_progress < 0.10
+					has_war_with = GER
+				}
+				BEL = {
+					surrender_progress < 0.25
+					has_war_with = GER
+				}
+				RUS = {
+					surrender_progress < 0.25
+					has_war_with = GER
+				}
+				AUH = {
+					if = {
+						limit = {
+							is_in_faction_with = PREV
+						}
+						OR = {
+							has_capitulated = yes
+							surrender_progress > 0.10
+						}
+					}
+				}
+				date < 1917.1.1
+				add = 1000
+			}
+			## Russia is beating us !
+			modifier = {
+				casualties > 250000
+				FRA = {
+					surrender_progress < 0.10
+					has_war_with = GER
+				}
+				RUS = {
+					surrender_progress < 0.05
+					has_war_with = GER
+				}
+				64 = { #berlin
+					is_controlled_by = RUS 
+				}
+				66 = { #breslau
+					is_controlled_by = RUS
+				}
+				763 = { #konisberg
+					is_controlled_by = RUS
+				}
+				surrender_progress > 0.20
+				add = 1000
+			}
+			#Germany has no fight spirit
+			modifier = {
+				FRA = {
+					surrender_progress < 0.10
+					has_war_with = GER
+				}
+				OR = {
+					AND = {
+						has_war_support < 0.05
+						has_stability < 0.10
+						has_idea = ger_famine
+					}
+					AND = {
+						has_war_support < 0.01
+						has_stability < 0.01
+						casualties > 1000000
+					}
+				}
+				add = 1000
+			}
+			#German armistice historical trigger
+			modifier = {
+				GER = {
+					is_historical_focus_on = yes
+					OR = {
+						has_idea = GER_famine
+						has_stability < 0.05
+						has_war_support < 0.05
+					}
+					has_war_support < 0.25
+					has_stability < 0.25
+					casualties > 2000000 # 2 million minimum
+				}
+				#Germany has not invaded UK or USA, or Japan...
+				any_country = {
+					is_major = yes
+					has_war_with = ROOT
+					is_in_faction_with = FRA
+					has_capitulated = no
+					surrender_progress < 0.20
+				}
+				FRA = {
+					surrender_progress < 0.10
+					has_war_with = GER
+				}
+				ENG = {
+					surrender_progress < 0.10
+					has_war_with = GER
+				}
+				USA = {
+					surrender_progress < 0.10
+					has_war_with = GER
+				}
+				add = 1000
+			}
+			# override all factors
+			modifier = {
+				factor = 0
+				has_global_flag = AI_conference_off
+			}
+		}
+	}
+	#COMPIEGNE ARMISTICE
+	compiegne_armistice_mission = {
+		icon = generic_nationalism
+		available = {
+			has_global_flag = compiegne_armistice
+		}
+		allowed = {
+			always = yes
+		}
+		days_mission_timeout = 10
+		activation = {
+			any_country = {
+				tag = FRA
+				has_global_flag = france_accepts_GER_capitulation
+				has_war_with = GER
+			}
+		}
+		visible = {
+			OR = {
+				tag = FRA
+				is_in_faction_with = FRA
+				has_country_flag = member_of_entente
+				tag = GER
+				has_country_flag = member_of_central_powers
+				is_in_faction_with = GER
+				has_country_flag = accepted_german_surrender
+			}
+			has_global_flag = france_accepts_GER_capitulation
+			NOT = {
+				has_global_flag = compiegne_armistice
+			}
+		}
+		fire_only_once = yes
+		is_good = no
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = FRA
+				}
+				set_global_flag = compiegne_armistice
+				set_global_flag = great_war_ends
+				every_country = {
+					limit = {
+						has_war_with = GER
+						OR = {
+							tag = FRA
+							is_in_faction_with = FRA
+							is_subject_of = FRA
+							has_country_flag = member_of_entente
+							has_country_flag = accepted_german_surrender
+						}
+						NOT = {
+							has_country_flag = refused_to_surrender
+						}
+					}
+					set_country_flag = great_war_winner
+					add_ideas = idea_armistice
+					every_country = {
+						limit = {
+							has_war = yes
+							OR = {
+								is_in_faction_with = GER
+								tag = GER
+								is_subject_of = GER
+								has_country_flag = member_of_central_powers
+							}
+							NOT = {
+								has_country_flag = refused_to_surrender
+							}
+						}
+						if = {
+							limit = {
+								NOT = {
+									AND = {
+										is_subject = yes
+										OR = {
+											tag = POL
+											tag = LIT
+											tag = UKR
+											tag = GEO
+											tag = AZR
+											tag = YEM
+										}
+									}
+								}
+							}
+							set_country_flag = great_war_loser
+							add_ideas = idea_armistice
+						}
+						white_peace = {
+							tag = PREV
+							message = compiegne_armistice_message
+						}
+						set_truce = {
+							target = PREV
+							days = 365
+						}
+						# PEACE WITH NON-FACTIONAL ENEMIES
+						# YOU CANNOT CONDUCT WAR ANYMORE SINCE YOU ARE GONNA LOST THE GREAT WAR
+						# BUT THEY ARE NOT GONNA RECOGNISED AS VICTOR OF THE GREAT WAR
+						every_other_country = {
+							limit = {
+								has_defensive_war_with = PREV
+								is_in_faction = no
+								is_subject = no
+								has_civil_war = no
+								NOT = {
+									has_country_flag = member_of_entente
+									has_country_flag = refused_to_surrender
+								}
+							}
+							PREV = {
+								white_peace = {
+									tag = PREV
+									message = compiegne_armistice_message
+								}
+								set_truce = {
+									target = PREV
+									days = 365
+								}
+							}
+						}
+					}
+				}
+				hidden_effect = {
+					armistice_effect = yes
+				}
+			}
+		}
+	}
+	#CP - REFUSE TO SURRENDER
+	member_of_centre_armistice = {
+		icon = GFX_decision_generic_nationalism
+		available = {
+			has_war_with = FRA
+			has_global_flag = GER_capitulation
+			NOT = {
+				has_global_flag = compiegne_armistice
+			}
+		}
+		visible = {
+			NOT = {
+				has_global_flag = compiegne_armistice
+			}
+			is_in_faction_with = GER
+			NOT = {
+				tag = GER
+			}
+			is_subject = no
+		}
+		fire_only_once = yes
+		complete_effect = {
+			leave_faction = yes
+			GER = {
+				add_ai_strategy = {
+					type = alliance
+					id = PREV
+					value = -1000
+				}
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = GER
+				value = -1000
+			}
+			set_country_flag = refused_to_surrender
+			news_event = {
+				id = ww1_centre_capitulation.4
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					set_country_flag = refused_to_surrender
+				}
+			}
+		}
+		ai_will_do = {
+			#Только для игроков.
+			factor = 0
+		}
+	}
+	#VERSALLIES CONFERENCE
+	versallies_conference = {
+		icon = generic_nationalism
+		available = {
+			has_global_flag = versallies_treaty
+		}
+		allowed = {
+			always = yes
+		}
+		days_mission_timeout = 90
+		activation = {
+			any_country = {
+				tag = FRA
+				has_global_flag = compiegne_armistice
+				OR = {
+					has_country_flag = great_war_winner
+					has_country_flag = great_war_loser
+				}
+			}
+		}
+		visible = {
+			OR = {
+				tag = FRA
+				is_in_faction_with = FRA
+				has_country_flag = member_of_entente
+				tag = GER
+				has_country_flag = member_of_central_powers
+				is_in_faction_with = GER
+				has_country_flag = accepted_german_surrender
+			}
+			NOT = {
+				has_global_flag = versallies_treaty
+			}
+			has_global_flag = compiegne_armistice
+		}
+		fire_only_once = yes
+		is_good = no
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = FRA
+				}
+				set_global_flag = versallies_treaty
+				add_named_threat = {
+					name = versallies_treaty
+					threat = -70
+				}
+				hidden_effect = {
+					conference_effect = yes
+				}
+			}
+		}
+	}
+}

@@ -1,249 +1,32 @@
-ideas={
-	political_advisor={
-			AUH_alois_lexa_von_aehrenthal={ allowed={ tag=AUS } traits={ prince_of_terror } ai_will_do={ factor=1 } }
-			AUH_gyula_andrassy={ allowed={ tag=AUS } traits={ smooth_talking_charmer } ai_will_do={ factor=1 } }
-			AUH_ottokar_czernin={ allowed={ tag=AUS } traits={ ideological_crusader } ai_will_do={ factor=1 } }
-			AUH_agenor_goluchowski={ allowed={ tag=AUS } traits={ silent_workhorse } ai_will_do={ factor=1 } }
-			AUH_eugen_hordliczka={ allowed={ tag=AUS } traits={ war_industrialist } ai_will_do={ factor=1 } }
-
-			AUH_oskar_von_hranilovic_czvetassin={ allowed={ tag=AUS } traits={ quartermaster_general } ai_will_do={ factor=1 } }
-			AUH_leon_von_bilinski={ allowed={ tag=AUS } traits={ captain_of_industry } ai_will_do={ factor=1 } }
-			AUH_gabor_ugron={ allowed={ tag=AUS } traits={ popular_figurehead } ai_will_do={ factor=1 } }
-			
-			AUS_istvan_tisza = {
-			traits = {
-				conservative_nationalist
-			}
-			picture = rudolf_hess
-			allowed = {
-				TAG = AUS
-			}
- 
-		}
-
-		AUS_charles_i = {
-			traits = {
-				conservative_grandee
-			}
-			cost = 25
-			picture = rudolf_hess
-			allowed = {
-				TAG = AUS
-			}
-		 }
-		 
-		AUS_archduke_franz_ferdinand = {
-			traits = {
-				archduke
-			}
-			available = {
-				AUS = { has_completed_focus = AUS_archduke_franz_ferdinand_naval_affairs }
-			}
-			cost = 25
-			picture = rudolf_hess
-			allowed = {
-				TAG = AUS
-			}
-		  }
-		}
-
-	theorist={
-			AUH_august_urbanski={ ledger = army allowed={ tag=AUS } traits={ military_theorist } research_bonus = { land_doctrine = 0.10	} ai_will_do={ factor=1 } }
-	}
-
-	air_chief={
-			AUH_emil_uzelac={ allowed={ tag=AUS } traits={ air_air_superiority_1 } ai_will_do={ factor=1 } }
-	}
-
-	army_chief={
-			AUH_franz_conrad_von_hotzendorf={ allowed={ tag=AUS } traits={ army_chief_offensive_2 } ai_will_do={ factor=1 } }
-			AUH_artur_arz_von_straussenberg={ allowed={ tag=AUS } traits={ army_entrenchment_1 } ai_will_do={ factor=1 } }
-	}
-
-	navy_chief={
-			AUH_franz_von_holub={ allowed={ tag=AUS } traits={ navy_chief_decisive_battle_1 } ai_will_do={ factor=1 } }
-			AUH_hermann_von_spaun={ allowed={ tag=AUS } traits={ navy_chief_reform_1 } ai_will_do={ factor=1 } }
-	}
-
-	high_command={
-			AUH_blasius_schemua={ ledger = army allowed={ tag=AUS } traits={ army_artillery_1 } ai_will_do={ factor=1 } }
-			AUH_friedrich_von_beck_rzikowsky={ ledger = army allowed={ tag=AUS } traits={ army_infantry_1 } ai_will_do={ factor=1 } }
-			AUH_rudolf_montecuccoli={ ledger = navy allowed={ tag=AUS } traits={ navy_screen_1 } ai_will_do={ factor=1 } }
-			AUH_anton_haus={ ledger = navy allowed={ tag=AUS } traits={ navy_capital_ship_1 } ai_will_do={ factor=1 } }
-			AUH_karl_kailer_von_kagenfels={ ledger = navy  allowed={ tag=AUS } traits={ navy_anti_submarine_1 } ai_will_do={ factor=1 } }
-			AUH_maximilian_njegovan={ ledger = navy  allowed={ tag=AUS } traits={ navy_fleet_logistics_1 } ai_will_do={ factor=1 } }
-			AUH_maximilian_daublebsky_von_sterneck={ ledger = navy  allowed={ tag=AUS } traits={ navy_amphibious_assault_1 } ai_will_do={ factor=1 } }
-	}
-
-	naval_manufacturer={
-			designer = yes
-			stabilimento_tecnico_triestino={ allowed={ tag=AUS } research_bonus={ naval_equipment=0.10 } traits={ coastal_defence_naval_manufacturer } picture=generic_naval_manufacturer_2 }
-			ganz_and_co={ allowed={ tag=AUS } research_bonus={ naval_equipment=0.10 } traits={ raiding_fleet_naval_manufacturer } picture=generic_naval_manufacturer_3 }
-			}
-	aircraft_manufacturer={
-			designer = yes
-			osterreichische_aviatik={ allowed={ tag=AUS } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } picture=generic_air_manufacturer_2 }
-			#kuk_militar_aeronautischen_anstalt={ allowed={ tag=AUS } research_bonus={ air_equipment=0.10 } traits={ CAS_manufacturer } picture=generic_air_manufacturer_3 }
-			kuk_fliegerarsenal_fischamend={ allowed={ tag=AUS } research_bonus={ air_equipment=0.10 } traits={ medium_aircraft_manufacturer } picture=generic_air_manufacturer_1 }
-			}
-	materiel_manufacturer={
-			designer = yes
-			osterreichische_waffenfabriksgesellschaft={ allowed={ tag=AUS } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } picture=generic_infantry_equipment_manufacturer_3 }
-			kuk_munitionsfabrik_wollersdorf={ allowed={ tag=AUS } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_1 }
-			}
-	tank_manufacturer={
-			designer = yes
-			steyr_daimler_puch={ allowed={ tag=AUS } research_bonus={ armor=0.10 } traits={ tank_manufacturer } }
-			}
-
-	country={
-
-		AUS_booming = {
-			picture = AUS_aFHUqXGY-50788
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-
-		AUS_ruthenian_opposition = {
-			picture = AUS_ruthenian_opposition-50789
-			modifier = {
-				conscription_factor = -0.10
-                stability_factor = -0.05
-			}
-		}
-
-		AUS_czech_autonomy_demands = {
-			picture = AUS_czech_autonomy_demands-50791
-			modifier = {
-				stability_factor = -0.05
-                conscription_factor = -0.12
-			}
-		}
-
-		AUS_ruthenian_support = {
-			picture = AUS_ruthenian_support-50792
-			modifier = {
-				conscription_factor= -0.10
-                winter_attrition_factor = -0.20
-			}
-		}
-
-		AUS_czech_parliament = {
-			picture = AUS_czech_parliament-50793
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-                production_factory_start_efficiency_factor = 0.05
-                conscription_factor = -0.13
-			}
-		}
-
-		AUS_romanian_dissidents = {
-			picture = AUS_romanian_dissidents-50794
-			modifier = {
-				conscription_factor = -0.10
-			}
-		}
-
-		AUS_romanian_support = {
-			picture = AUS_romanian_support-50795
-			modifier = {
-				conscription_factor = -0.10
-                production_speed_arms_factory_factor = 0.05
-			}
-		}
-
-		AUS_serbian_aspirations = {
-			picture = AUS_serbian_aspirations-50796
-			modifier = {
-				stability_factor = -0.10
-                war_support_factor = -0.10
-				conscription_factor = -0.11
-			}
-		}
-
-		AUS_1912__1913_acts_of_protection = {
-			picture = AUS_1912__1913_acts_of_protection-46517
-			modifier = {
-				recruitable_population = 0.02
-			}
-		}
-
-		AUS_austrian_political_dominance = {
-			ledger = army
-			picture = AUS_austrian_political_dominance-46468
-			modifier = {
-				production_speed_arms_factory_factor = 0.05
-			}
-		}
-
-		AUS_trialism = {
-			picture = AUS_trialism-51416
-			modifier = {
-				conscription = 0.02				
-				army_core_attack_factor = 0.04				
-				army_core_defence_factor = 0.04
-			}
-		}
-
-		AUS_hungarian_political_dominance = {
-			picture = hun_hungarian_monarchy_habsburg
-			modifier = {
-				production_speed_industrial_complex_factor = 0.05             
-				production_speed_infrastructure_factor = 0.05
-			}
-		}
-
-		AUS_austrian_military_staff = {
-			picture = AUS_austrian_military_staff-51417
-			modifier = {
-				planning_speed = 0.20										
-				max_planning = -0.05
-				max_dig_in = -5
-			}
-			research_bonus = { 	land_doctrine = -0.1 }
-		}
-		
-		AUH_ww1_Multinational_State = {
-
+ideas = {
+	# TECHNOLOGY
+	tank_manufacturer = {		
+		designer = yes		
+		AUS_steyr_daimler_puch = {
+			picture = generic_tank_manufacturer_1			
 			allowed = {
 				original_tag = AUS
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier={ stability_factor=-0.10 }
+			}			
+			research_bonus = {
+				armor = 0.15
+			}			
+			traits = { tank_manufacturer }
 		}
-
-
-		AUH_ww1_House_Habsburg_Lorraine = {
-
+	}
+	materiel_manufacturer = {	
+		designer = yes	
+		AUS_hirtenberger = {
+			picture = generic_artillery_manufacturer_3
 			allowed = {
 				original_tag = AUS
-				always = no
+			}			
+			research_bonus = {
+				artillery = 0.15
+			}			
+			traits = { artillery_manufacturer }
+			ai_will_do = {
+				factor = 1
 			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			modifier={ political_power_gain = 0.1 }
 		}
-	    	hidden_ideas = {#country
-	}
-
-
-
-
-
-
-
 	}
 }

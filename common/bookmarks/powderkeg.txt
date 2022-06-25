@@ -11,8 +11,6 @@ bookmarks = {
 			history =  FRA_POWDERKEG_DESC 
 			ideology = democratic
 			ideas = {
-				FRA_ww1_Revanchism
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
 				
@@ -22,7 +20,6 @@ bookmarks = {
 			history =  TUR_POWDERKEG_DESC 
 			ideology = neutrality
 			ideas = {
-				ww1_Faith_Allah
 			}
 			focuses = {
 			}
@@ -31,8 +28,6 @@ bookmarks = {
 			history =  ENG_POWDERKEG_DESC 
 			ideology = democratic
 			ideas = {
-				stiff_upper_lip
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
 			}
@@ -41,9 +36,6 @@ bookmarks = {
 			history =  GER_POWDERKEG_DESC 
 			ideology = neutrality
 			ideas = {
-				#general_staff
-				GER_ww1_North_German_Confederation
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
 			}
@@ -52,18 +44,14 @@ bookmarks = {
 			history =  ITA_POWDERKEG_DESC 
 			ideology = democratic
 			ideas = {
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
-				ITA_ww1_back_france
 			}
 		}
 		 AUS ={
 			history =  AUH_POWDERKEG_DESC 
 			ideology = fascism
 			ideas = {
-				AUH_ww1_House_Habsburg_Lorraine
-				AUH_ww1_Multinational_State
 			}
 			focuses = {
 			}
@@ -72,12 +60,8 @@ bookmarks = {
 			history =  RUS_POWDERKEG_DESC 
 			ideology = neutrality
 			ideas = {
-			RUS_ww1_orthodox_church
-			RUS_ww1_tsushima_humiliation
-			RUS_ww1_mixed_railways
 			}
 			focuses = {
-				RUS_ww1_naval_effort
 			}
 		}
 

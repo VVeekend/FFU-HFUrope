@@ -1,34 +1,50 @@
 characters={
-	SAU_abdulaziz_ibn_abdulrahman_alsaud={
-		name="Abdul-Aziz ibn Abdul-Rahman al-Saud"
+	SAU_abdulazis_ibn_saud={
+		name="SAU_abdulazis_ibn_saud"
 		portraits={
 			civilian={
-				large="gfx/leaders/SAU/SAU_abdulazis_ibn_saud.dds"
+				large="gfx/leaders/SAU/SAU_abdulazis_ibn_saud.png"
 			}
 		}
 		country_leader={
-			ideology=despotism
-			expire="1935.1.1.1"
-			id=-1
+			ideology=autocracy
+			traits={ warmonger }
+		}
+		country_leader={
+			ideology=fundamentalism
+			traits={ warmonger }
+		}
+		field_marshal = {
+			traits = {
+				politically_connected
+				trait_reckless
+				offensive_doctrine
+				harsh_leader
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
 	}
-	SAU_abdulrahman_bin_faisal={
-		name="Abdul-Rahman bin Faisal"
+	SAU_muhammad_bin_abdul_rahman={
+		name="SAU_muhammad_bin_abdul_rahman"
 		portraits={
 			army={
-				small=""
-			}
-			army={
-				large="gfx/generals/SAU_abdul_rahman_bin_faisal.dds"
+				large="gfx/leaders/SAU/SAU_muhammad_bin_abdul_rahman.png"
 			}
 		}
-		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=80002
+		corps_commander = {
+			traits = {
+				trait_cautious
+				cavalry_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 }

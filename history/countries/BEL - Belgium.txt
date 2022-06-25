@@ -1,138 +1,97 @@
-﻿capital = 5
+﻿capital = 6
 
-#-------------------------------------------------------
-#					GENERIC VALUES
-#-------------------------------------------------------
-set_fuel_ratio = 0.20
 set_research_slots = 3
-set_stability = 0.60
-set_war_support = 0.2
-set_convoys = 150
+set_stability = 0.90
+set_war_support = 0.05
+set_convoys = 80
 
-#-------------------------------------------------------
-#					POLITICS & ARMY
-#-------------------------------------------------------
+set_country_flag = Scramble_for_Africa
+
 recruit_character = BEL_albert_i
-recruit_character = BEL_leman
-recruit_character = BEL_de_witte_de_haelen
-recruit_character = BEL_albert_lantonnois_van_rode
-recruit_character = BEL_Émile_dossin_de_saintgeorges
-recruit_character = BEL_didier_thorn
-recruit_character = BEL_charles_allard
-recruit_character = BEL_david_berger
+recruit_character = BEL_edward_anseele
+recruit_character = BEL_frans_schollaert
+recruit_character = BEL_august_borms
+
+recruit_character = BEL_laurent_vandersmissen
+recruit_character = BEL_charles_de_broqueville
+recruit_character = BEL_paul_hymans
+recruit_character = BEL_felix_fuchs
+recruit_character = BEL_antonin_de_selliers_de_moranville
+recruit_character = BEL_felix_wielemans
 recruit_character = BEL_cyriaque_gillain
+recruit_character = BEL_gerard_leman
+recruit_character = BEL_leon_de_witte
+recruit_character = BEL_jules_jacques_de_dixmude
+recruit_character = BEL_charles_tombeur
+recruit_character = BEL_albert_lantonnois_van_rode
+recruit_character = BEL_clement_de_saint_marcq
 recruit_character = BEL_jules_davignon
-recruit_character = BEL_baron_beyens
 recruit_character = BEL_geraard_cooreman
 recruit_character = BEL_baron_wahis
 recruit_character = BEL_joseph_hellebaut
-recruit_character = BEL_marcel_de_crombrugghe
-recruit_character = BEL_rucqouy
+recruit_character = BEL_baron_mathieu
 recruit_character = BEL_count_carton_de_wiart
-recruit_character = BEL_ridder_de_selliers_de_moranville
 recruit_character = BEL_edwart_anseele
 recruit_character = BEL_henry_h_maglinse
 recruit_character = BEL_leon_delacroix
-recruit_character = BEL_felix_wielemans
+recruit_character = BEL_gerard_cooreman
+recruit_character = BEL_adrian_carton_de_wiart
 
-
-set_technology = {
-	# Navy
-	transport = 1 # Naval Transport
-}
+recruit_character = BEL_adalbert
 
 1910.1.1 = {
 	oob = "BEL_1910"
 
-	#-------------------------------------------------------
-	#							NF
-	#-------------------------------------------------------
-
-	#-------------------------------------------------------
-
 	set_technology = {
-
-		# Infantry
+		#infantry
 		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
-		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		machine_gun = 1
-		machine_gun_1 = 1
-		ww1_ambulance1 = 1
-		early_motorised = 1
-
-		# Support
+		infantry_weapons1 = 1
+		bicycle_infantry = 1
+		
+		#support
 		tech_support = 1
 		tech_engineers = 1
 		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
+		
+		#armored
+		early_armored_car = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#doctrine
+		dispersed_offensive = 1
+		
+		#navy
+		transport = 1
+		
+		#engineering
+		electrical_engineering = 1
+		mechanical_engineering = 1
 		basic_train = 1
-		
-		# Armor
-		gwtank=1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		heavy_field_gun1 = 1
-		interwar_antiair=1
-
-		# Air
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-		chemical_research = 1
-
-		# Industry
-		
-		
-		# Navy
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		ship_hull_super_heavy = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		basic_heavy_armor_scheme = 1
-		basic_ship_hull_cruiser = 1
-		mtg_transport = 1
-
-		# Doctrine
-		ww1_infantry = 1
-		ww1_artillery = 1
-		ww1_battlefield_support = 1
-		mobile_doctrines = 1
 	}
-
+	
 	set_politics = {
-	    ruling_party = democratic
-	    last_election = "1908.5.24"
-	    election_frequency = 24
-	    elections_allowed = yes
+		ruling_party = democratic
+		last_election = "1908.5.24"
+		election_frequency = 24 
+		elections_allowed = yes 
 	}
+	
 	set_popularities = {
-	    democratic = 95
-	    fascism = 0
-	    communism = 5
-	    neutrality = 0
+		fascism = 0
+		communism = 9
+		democratic = 55
+		neutrality = 36
 	}
 
 	add_ideas = {
-		ww1_Scramble_for_Africa
-		limited_conscription
+		volunteer_only
+		BEL_idea_albert_i
+		neutrality_idea
+		BEL_idea_pacifism
+		BEL_neglected_military
+		BEL_congo_attrocities
+		BEL_nationalist_divides_1
 	}
-
-	
 }
-

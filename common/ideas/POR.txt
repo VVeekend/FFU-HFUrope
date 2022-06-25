@@ -1,40 +1,77 @@
 ideas={
-	political_advisor={
-			POR_antonio_caetano_macieira_junior={ allowed={ tag=POR } traits={ ideological_crusader } ai_will_do={ factor=1 } }
-			POR_antonio_joaquim_granjo={ allowed={ tag=POR } traits={ smooth_talking_charmer } ai_will_do={ factor=1 } }
-			POR_joao_de_sousa_barbosa={ allowed={ tag=POR } traits={ silent_workhorse } ai_will_do={ factor=1 } }
-			POR_afonso_augusto_da_costa={ allowed={ tag=POR } traits={ armaments_organizer } ai_will_do={ factor=1 } }
-			POR_joaquim_pimenta_de_castro={ allowed={ tag=POR } traits={ prince_of_terror } ai_will_do={ factor=1 } }
-			POR_antonio_maria_baptista={ allowed={ tag=POR } traits={ quartermaster_general } ai_will_do={ factor=1 } }
-			POR_antonio_teixeira_de_sousa={ allowed={ tag=POR } traits={ compassionate_gentleman } ai_will_do={ factor=1 } }
+	country = {
+		POR_idea_military_plot = {	
+			allowed = { original_tag = POR }
+			picture = generic_purge
+			allowed_civil_war = { always = no }			
+			removal_cost = -1
+			available = { 
+				NOT = { has_government = neutrality } 
 			}
+			modifier = {
+				stability_weekly = -0.01
+				neutrality_drift = 0.2
+			}
+		}
+		POR_unstable_monarchy = {
+			picture = por_unstable_monarchy
+			allowed = {
+				original_tag = POR
+			}
+			allowed_civil_war = {
+				original_tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+				stability_weekly = -0.003
+				production_speed_buildings_factor = -0.10	
+			}
+		}
+		POR_unstable_republic = {
+			picture = por_unstable_republic
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				original_tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+				stability_weekly = -0.005
+				production_speed_buildings_factor = -0.20	
+			}
+		}
+	}
 	naval_manufacturer={
 			designer = yes 
-			lisbon_dockyard={ allowed={ TAG=POR } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } picture=generic_naval_manufacturer_2 }
-			arsenal_alfeite={ allowed={ TAG=POR } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } }
-			arsenal_da_marinha={ allowed={ TAG=POR } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } picture=generic_naval_manufacturer_1 }
+			lisbon_dockyard={ allowed={ original_tag=POR } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } picture=generic_naval_manufacturer_2 }
 			}
 	aircraft_manufacturer={
 			designer = yes 
-			oficinas_gerais_de_material_aeronautico={ allowed={ TAG=POR } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } picture=generic_air_manufacturer_2 }
-			ogma={ allowed={ TAG=POR } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } }
+			oficinas_gerais_de_material_aeronautico={ allowed={ original_tag=POR } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } picture=generic_air_manufacturer_2 }
+			ogma={ allowed={ original_tag=POR } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } }
 			}
 	materiel_manufacturer={
 			designer = yes 
-			fabrica_militar_de_santa_clara={ allowed={ TAG=POR } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_2 }
-			fabrica_material_guerra={ allowed={ TAG=POR } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } }
+			fabrica_militar_de_santa_clara={ allowed={ original_tag=POR } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_2 }
+			fabrica_material_guerra={ allowed={ original_tag=POR } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } picture=generic_tank_manufacturer_3 }
 			}
 	industrial_concern={
 			designer = yes 
-			caminhos_de_ferro_portugueses={ allowed={ TAG=POR }    research_bonus = {
+			caminhos_de_ferro_portugueses={ allowed={ original_tag=POR }    research_bonus = {
 							    industry = 0.10
 							    
 							   } traits={ industrial_concern } picture=generic_tank_manufacturer_2 }
-			companhia_uniao_fabril={ allowed={ TAG=POR }    research_bonus = {
+			companhia_uniao_fabril={ allowed={ original_tag=POR }    research_bonus = {
 							    industry = 0.10
 							    
 							   } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
-			empresa_industria_portugesa={ allowed={ TAG=POR }    research_bonus = {
+			empresa_industria_portugesa={ allowed={ original_tag=POR }    research_bonus = {
 							    industry = 0.10
 							    
 							   } traits={ industrial_concern } picture=generic_tank_manufacturer_1 }

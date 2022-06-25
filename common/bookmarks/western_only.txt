@@ -11,8 +11,6 @@ bookmarks = {
 			history =  FRA_POWDERKEG_DESC 
 			ideology = democratic
 			ideas = {
-				FRA_ww1_Revanchism
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
 				
@@ -23,8 +21,6 @@ bookmarks = {
 			history =  ENG_POWDERKEG_DESC 
 			ideology = democratic
 			ideas = {
-				stiff_upper_lip
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
 			}
@@ -56,9 +52,6 @@ bookmarks = {
 			history =  GER_POWDERKEG_DESC 
 			ideology = neutrality
 			ideas = {
-				#general_staff
-				GER_ww1_North_German_Confederation
-				ww1_Scramble_for_Africa
 			}
 			focuses = {
 			}

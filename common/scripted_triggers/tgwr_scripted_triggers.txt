@@ -1,0 +1,110 @@
+is_usa_socialist_state = {
+	OR = {
+		state = 393
+		state = 261
+		state = 393
+		state = 395
+		state = 394
+		state = 391
+		state = 392
+		state = 396
+	}
+}
+is_usa_libertarian_state = {
+	OR = {
+		state = 357
+		state = 358
+	}
+}
+is_balkan_nation = {
+	custom_trigger_tooltip = {
+		tooltip = BUL_is_balkan_nation_tt
+		OR = {
+			original_tag = SER
+			original_tag = BUL
+			original_tag = MNT
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GRE
+			original_tag = ROM
+			original_tag = MOL
+			original_tag = ALB
+			original_tag = SLV
+			original_tag = MAC
+			original_tag = TUR
+		}
+	}
+}
+is_balkan_state = {
+	custom_trigger_tooltip = {
+		tooltip = is_balkan_state_tt
+		OR = {
+			is_core_of = BUL
+			is_core_of = GRE
+			is_core_of = ALB
+			is_core_of = ROM
+			is_core_of = TUR
+			is_core_of = SLV
+			is_core_of = BOS
+			is_core_of = MAC
+			is_core_of = SER
+			is_core_of = CRO
+			is_core_of = MNT
+		}
+		is_on_continent = europe
+	}	
+}
+
+is_italian_nation = {
+	OR = {
+		original_tag = ITA
+		original_tag = SRD
+		original_tag = VNC
+		original_tag = EMI
+		original_tag = PAP
+		original_tag = SIC
+		original_tag = TUS
+	}
+}
+is_russia_a_monarchy = {
+	custom_trigger_tooltip = {
+		tooltip = is_russia_a_monarchy_tt
+		OR = {
+			has_country_leader  = {
+				character = RUS_nikolai_ii
+				ruling_only  = no 
+			}
+			has_country_leader  = {
+				character = RUS_mikhail_ii
+				ruling_only  = no 
+			}
+		}
+		NOT = {
+			has_cosmetic_tag = RUS_republic
+			has_cosmetic_tag = RUS_socialism
+			has_cosmetic_tag = RUS_soviet
+			has_cosmetic_tag = RUS_state
+		}
+	}
+}
+is_using_german_language = {
+	OR = {
+		original_tag = GER
+		original_tag = AUH
+		original_tag = AUS
+		original_tag = BAY
+		original_tag = SHL
+		original_tag = HAN
+		original_tag = SAX
+		original_tag = HOL
+		original_tag = SWI
+		original_tag = PRE
+		original_tag = MAF
+		original_tag = OST
+		original_tag = RHN
+		original_tag = MEK
+		original_tag = GAL
+		original_tag = DNZ
+	}
+}
+

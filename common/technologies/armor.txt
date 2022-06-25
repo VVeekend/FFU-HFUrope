@@ -1,267 +1,380 @@
 technologies = {
-	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
-	gwtank1 = { # First Armored Car
 
-		enable_equipments = { gw_armored_car_equipment }
-        
-		enable_subunits = {
-			armored_car
-		}
-		
-		on_research_complete = {		
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
+	#armored cars = -8
+	#light tanks = -4 - танки сопровождения
+	#medium tanks = 0 - первый танк
+	#heavy tanks = 4 - танки прорыва
 	
-		path = {
-			leads_to_tech = ww1_armored_car_2
-			research_cost_coeff = 1
-		}
-		#path = {
-		#	leads_to_tech = ww1_prototype_tank
-		#	research_cost_coeff = 1
-		#}
+	@1910 = 0
+	@1912 = 2
+	@1914 = 4
+	@1916 = 6
+	@1917 = 8
+	@1918 = 10
+	@1919 = 12
+	@1920 = 14
+	@1922 = 16
+	@1924 = 18
+	@1926 = 20
+	@1928 = 22
+	@1930 = 24
 
-		path =
-		{
-			leads_to_tech = ww1_light_tank
-			research_cost_coeff = 1
+	#Great War
+	legacy_early_armored_car = {
+
+		enable_equipments = {
+			armored_car_equipment_1
 		}
-		path =
-		{
-			leads_to_tech = ww1_heavy_tank
-			research_cost_coeff = 1
+		dependencies = {
+			mechanical_engineering = 1
 		}
-	
+
 		research_cost = 2
 		start_year = 1910
 		folder = {
 			name = armour_folder
-			position = { x = -8 y = 0 }
+			position = { x = -4 y = @1910 }
 		}
+		path = {
+			leads_to_tech = legacy_basic_armored_car
+			research_cost_coeff = 1
+		}	
 		
 		ai_will_do = {
-			factor = 200
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 		
 		categories = {
 			armor
+			motorized_equipment
 			cat_light_armor
 		}
-	}	
-
-
-# hoi4tgw
-######################################
-
-	ww1_armored_car_2 =
-	{
-		enable_equipments = { ww1_armored_car_equipment_2 }
-
-		research_cost = 2
-		folder = { name=armour_folder position={ x=-8 y = 2 } }
-		categories = {
-			armor
-			cat_light_armor
-		}
-
-		path = { leads_to_tech=ww1_armored_car_3 research_cost_coeff=1 }
-		ai_will_do = { factor=1 }
-		start_year = 1912
 	}
 
-	ww1_armored_car_3 =
-	{
-		enable_equipments = { ww1_armored_car_equipment_3 }
-
-		research_cost = 2
-		folder = { name=armour_folder position={ x=-8 y = 6 } }
-		categories = {
-			armor
-			cat_light_armor
-		}
-		path = { leads_to_tech=ww1_armored_car_4 research_cost_coeff=1 }
-		ai_will_do = { factor=1 }
-		start_year = 1916
-	}
-
-	ww1_armored_car_4 =
-	{
-		enable_equipments = { ww1_armored_car_equipment_4 }
-
-		research_cost = 2
-		folder = { name=armour_folder position={ x=-8 y = 10 } }
-		categories = {
-			armor
-			cat_light_armor
-		}
-		path = { leads_to_tech=ww1_armored_car_5 research_cost_coeff=1 }
-		ai_will_do = { factor=1 }
-		start_year = 1918
-	}
-
-	#ww1_prototype_tank =
-	#{
-	#	#enable_equipments = { ww1_tank_prototype_equipment } // You can't build That Type of Tank
-	#	path =
-	#	{
-	#		leads_to_tech = ww1_light_tank
-	#		research_cost_coeff = 1
-	#	}
-	#	path =
-	#	{
-	#		leads_to_tech = ww1_heavy_tank
-	#		research_cost_coeff = 1
-	#	}
-	#	research_cost = 2
-	#	folder =
-	#	{
-	#		name = armour_folder
-	#		position = { x = 0 y = 2 }
-	#	}
-	#	categories = { armor }
-	#	ai_will_do = { factor=1 }
-	#	start_year = 1913
-	#}
-
-	ww1_light_tank =
-	{
-
-		enable_equipments = { ww1_light_tank_equipment_1 }
-
-		on_research_complete = {
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
-		dependencies = {
-			tank_unlocker2 = 1
-		}
-
-		path =
-		{
-			leads_to_tech = ww1_light_tank_interwar_1
-			research_cost_coeff = 1
-		}
-
-		sub_technologies = {
-			ww1_light_tank_b
-		}
-
-		research_cost = 2
-		folder =
-		{
-			name = armour_folder
-			position = { x = -4 y = 4 }
-		}
-		categories = {
-			armor
-			cat_light_armor
-		}
-		ai_will_do = { factor=50 }
-		start_year = 1915
-	}
-
-
-
-	ww1_light_tank_b = {
-
+	legacy_basic_armored_car = {
 		enable_equipments = {
-			ww1_light_tank_equipment_1b
-		}
-	
-		research_cost = 0.5
-		start_year = 1916
-		
-		ai_will_do = { factor = 0 }
-		
-		categories = { armor }
-	}
-
-
-	ww1_heavy_tank =
-	{
-		enable_equipments = { ww1_heavy_tank_equipment_1 }
-
-		on_research_complete = {
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-
-		dependencies = {
-			tank_unlocker2 = 1
-		}
-
-		path =
-		{
-			leads_to_tech = ww1_heavy_tank2
-			research_cost_coeff = 1
-		}
-
-		path =
-		{
-			leads_to_tech = ww1_super_heavy_tank
-			research_cost_coeff = 1
-		}
-
+			armored_car_equipment_2
+		}		
 		research_cost = 2
-		folder =
-		{
-			name = armour_folder
-			position = { x = 4 y = 6 }
-		}
-		categories = { armor }
-		ai_will_do = { factor=50 }
-		start_year = 1916
-	}
-
-	ww1_heavy_tank2 =
-	{
-		enable_equipments = { ww1_heavy_tank_equipment_2 }
-
-		path =
-		{
-			leads_to_tech = ww1_heavy_tank_interwar
-			research_cost_coeff = 1
-		}
-
-		path =
-		{
-			leads_to_tech = ww1_super_heavy_tank
-			research_cost_coeff = 0.9
-		}
-
-		path =
-		{
-			leads_to_tech = ww1_light_tank_interwar_1
-			research_cost_coeff = 0.9
-		}
-
-		research_cost = 2
-		folder =
-		{
-			name = armour_folder
-			position = { x = 4 y = 8 }
-		}
-		categories = { armor }
-		ai_will_do = { factor=50 }
-		start_year = 1917
-	}
-
-	ww1_super_heavy_tank = { #K-Wagen
-
-		enable_equipments = {
-			ww1_super_heavy_tank_equipment
-		}
-	
-		research_cost = 2.5
-		start_year = 1917
+		start_year = 1914
 		folder = {
 			name = armour_folder
-			position = { x = 8 y = 8 }
+			position = { x = -4 y = @1914 }
+		}
+		path = {
+			leads_to_tech = gwtank
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = legacy_improved_armored_car
+			research_cost_coeff = 1
+		}			
+		ai_will_do = {
+			factor = 75	
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				date < 1913.1.1
+				factor = 0
+			}
+		}
+		categories = {
+			armor
+			motorized_equipment
+			cat_light_armor
+		}
+	}
+
+	legacy_improved_armored_car = {
+		enable_equipments = {
+			armored_car_equipment_3
+		}		
+		research_cost = 2
+		start_year = 1918
+		folder = {
+			name = armour_folder
+			position = { x = -4 y = @1918 }
+		}
+		path = {
+			leads_to_tech = legacy_advanced_armored_car
+			research_cost_coeff = 1
+		}		
+		ai_will_do = {
+			factor = 1	
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+		categories = {
+			armor
+			motorized_equipment
+			cat_light_armor
+		}
+	}
+
+	legacy_advanced_armored_car = {
+		enable_equipments = {
+			armored_car_equipment_4
+		}		
+		research_cost = 2
+		start_year = 1920
+		folder = {
+			name = armour_folder
+			position = { x = -4 y = @1920 }
+		}	
+		ai_will_do = {
+			factor = 1	
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+		categories = {
+			armor
+			motorized_equipment
+			cat_light_armor
+		}
+	}
+	
+	#Original
+	gwtank = { #Mark I
+
+		enable_equipments = {
+			gw_tank_equipment
+		}
+		dependencies = {
+			tank_design = 1
+		}
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}	
+		path = {
+			leads_to_tech = basic_light_tank
+			research_cost_coeff = 1
+		}	
+		path = {
+			leads_to_tech = basic_heavy_tank
+			research_cost_coeff = 1
+		}		
+		research_cost = 2
+		start_year = 1916
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = @1916 }
+		}		
+		ai_will_do = {
+			factor = 2			
+			modifier = {
+				factor = 50
+				is_major = yes
+			}
+			modifier = {
+				date < 1914.1.1
+				factor = 0
+			}
+		}	
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+
+	basic_light_tank = { #FT-17
+
+		enable_equipments = {
+			light_tank_equipment_1 
 		}
 
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = { 
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		path = {
+			leads_to_tech = improved_light_tank
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1918
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = @1918 }
+		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1			
+			modifier = {
+				factor = 25
+				is_major = yes
+			}
+		}
+		
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+
+	improved_light_tank = { #MC-18
+
+		enable_equipments = {
+			light_tank_equipment_2 
+		}
+		
+		path = {
+			leads_to_tech = advanced_light_tank
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1920
+		
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = @1920 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 25
+				is_major = yes
+			}
+		}
+		
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+	
+	advanced_light_tank = { #Panzer I
+
+		enable_equipments = {
+			light_tank_equipment_3 
+		}	
+		
+		research_cost = 2
+		start_year = 1924
+		
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = @1924 }
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+		
+		categories = {
+			armor
+			cat_light_armor
+		}
+	}
+	
+	basic_heavy_tank = { #Mark V
+
+		enable_equipments = {
+			heavy_tank_equipment_1 
+		}
+
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = light_armor }
+			NOT = {	has_template_containing_unit = heavy_armor }
+			NOT = {	has_template_containing_unit = medium_armor }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_tanks_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_tanks"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		path = {
+			leads_to_tech = improved_heavy_tank
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+		start_year = 1918
+		
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = @1918 }
+		}
+		
+		ai_will_do = {
+			factor = 1		
+			modifier = {
+				factor = 25
+				is_major = yes
+			}
 		}
 		
 		categories = {
@@ -269,62 +382,93 @@ technologies = {
 			cat_heavy_armor
 		}
 	}
-
-
-	ww1_light_tank_interwar_1 =
-	{
-		enable_equipments = { ww1_light_tank_equipment_2 }
-
+	
+	improved_heavy_tank = {
+	
+		enable_equipments = {
+			heavy_tank_equipment_2 
+		}
+		
 		path = {
-			leads_to_tech = ww1_light_tank_interwar_2
+			leads_to_tech = advanced_heavy_tank 
 			research_cost_coeff = 1
 		}
-	
-		research_cost = 2
-		folder =
-		{
-			name = armour_folder
-			position = { x = -4 y = 8 }
-		}
-		categories = {
-			armor
-			cat_light_armor
-		}
-		ai_will_do = { factor=1 }
-		start_year = 1917
-	}
-
-
-	ww1_light_tank_interwar_2 =
-	{
-		enable_equipments = { ww1_light_tank_equipment_3 }
-
+		
 		path = {
-			leads_to_tech = basic_light_tank
+			leads_to_tech = super_heavy_tank 
 			research_cost_coeff = 1
 		}
-
-		path =
-		{
-			leads_to_tech = ww1_heavy_tank_interwar
-			research_cost_coeff = 0.9
-		}
-	
-		research_cost = 2
-		folder =
-		{
+		
+		research_cost = 2.5
+		start_year = 1920
+		
+		folder = {
 			name = armour_folder
-			position = { x = -4 y = 10 }
+			position = { x = 4 y = @1920 }
 		}
+		ai_will_do = {
+			factor = 1		
+			modifier = {
+				factor = 25
+				is_major = yes
+			}
+		}
+		
 		categories = {
 			armor
-			cat_light_armor
+			cat_heavy_armor
 		}
-		ai_will_do = { factor=1 }
-		start_year = 1918
 	}
+	
+	advanced_heavy_tank = { #T-28
 
+		enable_equipments = {
+			heavy_tank_equipment_3 
+		}
+		
+		research_cost = 2.5
+		start_year = 1924
+		
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = @1924 }
+		}
+		ai_will_do = {
+			factor = 1		
+			modifier = {
+				factor = 25
+				is_major = yes
+			}
+		}		
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
+	
+	super_heavy_tank = { #Char 2C
 
-###################################################
+		enable_equipments = {
+			super_heavy_tank_equipment_1
+		}
+		dependencies = {
+			tank_classification = 1
+		}
+		research_cost = 2.5
+		start_year = 1920
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = @1920 }
+		}
+		
+		ai_will_do = {
+			factor = 0 #Is it able to move?
+		}
+		
+		categories = {
+			armor
+			cat_heavy_armor
+		}
+	}
 	
 }

@@ -366,19 +366,18 @@ guiTypes = {
 					position = { x = 0 y = 0 }
 					Orientation = "UPPER_LEFT"			
 				}
-
+				iconType = {
+					name = "wild_west_province_icon" #TGW
+					spriteType = "GFX_modifiers_wild_west_province_icon"
+					position = { x = 0 y = 0 }
+					Orientation = "UPPER_LEFT"			
+				}
 				iconType = {
 					name = "unplanned_offensive_icon"
 					spriteType = "GFX_modifiers_unplanned_offensive_icon"
 					position = { x = 0 y = 0 }
 					Orientation = "UPPER_LEFT"			
-				}
-				iconType = {
-					name = "gas_province_modifier_icon"
-					spriteType = "GFX_modifiers_gas_province_modifier_icon"
-					position = { x = 0 y= 0 }
-					Orientation = "UPPER_LEFT"
-				}				
+				}	
 			}
 			
 			gridBoxType = {

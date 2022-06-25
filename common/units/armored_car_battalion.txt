@@ -1,41 +1,41 @@
 sub_units = {
 
-	armored_car = {
-		#sprite = light_armor
+    armored_car = {
 		sprite = armoredcar
 		map_icon_category = armored
 		priority = 501
 		ai_priority = 200
 		active = yes
 		
-		type = {
-			motorized
-		}
-		
+        type = {
+            armor
+        }
+        
 		group = mobile
 		
-		categories = {
+        categories = {
 			category_front_line
 			category_army
+			category_all_armor
 		}
-
-
+		
 		combat_width = 2
-
-		need = {
+		
+        need = {
 			armored_car_equipment = 60
-		}
+        }
+		
 		manpower = 500
 		max_organisation = 10
 		default_morale = 0.3
 		training_time = 180
 		max_strength = 2
 		weight = 0.8
-		supply_consumption = 0.04
+		supply_consumption = 0.14
 
 		#WE GOOD AT SUPPRESS 
 		suppression = 2.5
-
+		
 		forest = {
 		    attack = -0.2
 			movement = -0.4
@@ -49,14 +49,14 @@ sub_units = {
 			movement = -0.5
 		}
 		marsh = {
-		    attack = -0.1 
+		    attack = -0.2 #-0.1 
 			movement = -0.2
 		}
 		desert = {
 			movement = 0.15
 		}
 		urban = {
-			attack = -0.3
+			attack = -0.15 #-0.3
 		}
 		river = { 
 			attack = -0.2 
@@ -64,6 +64,6 @@ sub_units = {
 		}
 		amphibious = { 
 			attack = -0.4
-		}	
-	}
+		}
+    }
 }

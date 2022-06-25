@@ -1,0 +1,67 @@
+﻿add_namespace = ww1_siam
+country_event = {
+	title = ww1_siam.1.t	#King Chulalongkorn dies
+	desc = ww1_siam.1.d	#October 23 – Vajiravudh (Rama VI) is crowned King of Siam, after the death of his father, King Chulalongkorn (Rama V).
+	id = ww1_siam.1
+	picture = GFX_report_event_royal_parade
+	fire_only_once = yes
+	trigger = {
+		tag = SIA
+		has_country_leader = {
+			name = Chulalongkorn
+			ruling_only = no
+		}
+		date > 1910.10.1
+	}
+	mean_time_to_happen = {
+		days = 23
+	}
+	option = {
+		name = ww1_siam.1.a
+		retire_character = SIA_chulalongkorn
+		promote_character = SIA_vajiravudh
+	}
+}
+
+country_event = {
+	title = ww1_siam.2.t	#Siamese Expeditionary Army
+	desc = ww1_siam.2.d	#After the resumption of German Submarine attacks Siam joined the war on the side of the Entente and immediately impounded 12 German merchant ships. We should send an Expeditionary Corps to the UK to help and gain favour in the peace talks.
+	id = ww1_siam.2
+	picture = ww1_siam_2
+	fire_only_once = yes
+	trigger = {
+		tag = SIA
+		has_global_flag = zimmermann_telegram
+	}
+	option = {
+		name = ww1_siam.2.a
+		ENG = {
+			add_to_faction = ROOT
+		}
+		SIA = {
+			remove_ideas = neutrality_idea
+		}
+		ENG = {
+			# load_oob = "SIA_1917_exped"
+		}
+		ENG = {
+			country_event = ww1_england.18
+		}
+		add_opinion_modifier = {
+			target = ENG
+			modifier = large_increase
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = large_increase
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = large_decrease
+		}
+		add_opinion_modifier = {
+			target = AUH
+			modifier = large_decrease
+		}
+	}
+}

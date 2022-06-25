@@ -1,4 +1,20 @@
-      on_actions = {
+on_actions = {
+	# country 
+	on_new_term_election = {
+		random_events = {
+			100 = election.2 
+			100 = election.3
+			100 = election.4
+			100 = election.5
+			100 = election.6
+			100 = election.11
+			100 = election.12
+			100 = election.13
+			100 = election.14
+			100 = election.15
+		}
+	}
+	
 	# Ace pilots
 	# country, FROM = ace
 	on_ace_promoted = {
@@ -73,6 +89,15 @@
 			100 = war_justification.301
 		}
 	}
+
+	# country random events
+	#on_bi_yearly_pulse = {
+	#
+	#}
+
+	#on_five_year_pulse = {
+	#
+	#}
 	
 	on_leave_faction = {
 		effect = {
@@ -92,68 +117,187 @@
 		}
 	}
 
+	#FROM is the one that joins the faction
+	on_create_faction = {
+		effect = {
+		}
+	}
+
+	#FROM is country getting invited.
+	on_offer_join_faction = {
+		effect = {
+			#Give achievement to nation joining a faction, but not in one from game start
+			if = {
+				limit = {
+					date > 1936.01.02
+				}
+				FROM = {
+					if = {
+						limit = {
+							is_faction_leader = no
+						}
+						set_country_flag = achievement_has_joined_faction
+					}
+				}
+			}
+			#Remove anti_soviet_pact if joining commie Soviet in faction
+	
+			# Sunset invasion check
+			if = {
+				limit = {
+					is_subject = no
+					OR = {
+						AND = {
+							tag = MEX
+							FROM = {
+								capital_scope = {
+									NOT = { is_on_continent = south_america }
+								}
+							}
+						}
+						AND = {
+							FROM = {
+								tag = MEX
+							}
+							capital_scope = {
+								NOT = { is_on_continent = south_america }
+							}
+						}
+					}
+				}
+				set_country_flag = achievement_failed_sunset_invasion
+			}			
+		}
+	}
+
 	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
 	on_join_faction = {
 		effect = {
 			set_country_flag = achievement_has_joined_faction
 			#Remove anti_soviet_pact if joining commie Soviet in faction
+
+			# Sunset invasion check
 			if = {
 				limit = {
-					has_idea = anti_soviet_pact 
-					FROM = {
-						original_tag = SOV
-						has_government = communism
+					is_subject = no
+					OR = {
+						AND = {
+							tag = MEX
+							FROM = {
+								capital_scope = {
+									NOT = { is_on_continent = south_america }
+								}
+							}
+						}
+						AND = {
+							FROM = {
+								tag = MEX
+							}
+							capital_scope = {
+								NOT = { is_on_continent = south_america }
+							}
+						}
 					}
 				}
-				remove_ideas = anti_soviet_pact
+				set_country_flag = achievement_failed_sunset_invasion
 			}
 		}
 	}
 
 	#FROM is war target
+	on_declare_war = {
+		effect = {
+			
+
+			## Soviet defensive war while having purge penalty
+
+			## Soviet war after purge
+
+
+			# Remove pact opinion modifiers if at war with Germany
+
+			#Germany has started a war - allies should try to contain Germany
+			if = {
+				limit = {
+					ROOT = {
+						TAG = GER
+					}
+					NOT = {
+						has_global_flag = GER_has_started_war
+					}
+				}
+				set_global_flag = GER_has_started_war
+			}
+
+
+
+			#Call Anti-Soviet pact members to war
+
+
+			#Remove MEFO bills if Germany goes to war
+
+
+			#Remove MEFO bills if Germany is declared war on
+
+
+			#Remove previous ideology civil war faction from Democratic Germany faction and add Democratic civil war faction to Germany's faction
+
+
+			#If prepared by siphoning equipment, receive equipment back
+			if = {
+				limit = {
+					FROM = {
+						has_civil_war = yes
+						has_country_flag = siphoned_equipment_stockpiles_for_civil_war
+					}
+					has_civil_war = yes
+				}
+				FROM = {
+					clr_country_flag = siphoned_equipment_stockpiles_for_civil_war
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+					}
+				}
+			}
+
+			#If prepared with surprise attack plan, get bonus
+			if = {
+				limit = {
+					FROM = {
+						has_civil_war = yes
+						has_country_flag = formulated_surprise_attack_plan_for_civil_war
+					}
+					has_civil_war = yes
+				}
+				FROM = {
+					clr_country_flag = formulated_surprise_attack_plan_for_civil_war
+					add_timed_idea = {
+						idea = civil_war_surprise_attack_plan
+						days = 30
+					}
+				}
+			}
+
+		}
+	}
 	
 	# When a new faction is formed
 	on_faction_formed = {
 		effect = {
-			news_event = { id = news.159 }
+			#news_event = { id = news.159 }
 		}
 	}
 	
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
-		effect = {
+	    effect = {
 			if = {
-				limit = {
-					NOT = { original_tag = GER }
-					NOT = { has_government = fascism }
-					NOT = { has_civil_war = yes }
+		  	 	limit = {
+				    has_civil_war = no
+					FROM = { has_civil_war = no }
 				}
-			}
-			news_event = { id = country_capitulated.0 days = 0 }
-			if = {
-				limit = { 
-					original_tag = POL
-					has_government = neutrality
-				}
-				retire_country_leader = yes
-			}
-			if = {
-				limit = {
-					original_tag = HOL
-					has_country_flag = netherlands_refused_return_kaiser
-					FROM = {
-						original_tag = GER
-						has_country_flag = germany_war_return_kaiser
-						has_government = neutrality
-					}
-				}
-				FROM = { country_event = { id = wtt_germany.6 } }
-			}
-			if = {
-				limit = {
-					original_tag = DEN
-				}
-				country_event = { id = wtt_denmark.1 days = 1 }
+				news_event = { id = country_capitulated.0 days = 0 }
 			}
 		}
 	}
@@ -161,27 +305,11 @@
 	# ROOT is previously capitulated country
 	on_uncapitulation = {
 		effect = {
-			if = {
-				limit = {
-					original_tag = FRA
-					has_government = democratic
-					is_puppet = no
-				}
-				drop_cosmetic_tag = yes
-			}
 		}
 	}
 
 	on_government_change = {
 		effect = {			
-			#Make sure Soviet can always create factions
-			if = {
-				limit = {
-					original_tag = SOV
-					NOT = { has_government = communism }
-				}
-				set_rule = { can_create_factions = yes }
-			}
 			if = {
 				limit = { has_government = democratic }
 				if = {
@@ -211,12 +339,6 @@
 					limit = { has_idea = communism_defeated }
 					remove_ideas = communism_defeated
 				}
-
-				#Remove anti_soviet_pact
-				if = {
-					limit = { has_idea = anti_soviet_pact }
-					remove_ideas = anti_soviet_pact
-				}
 			}
 			if = {
 				limit = { has_government = fascism }
@@ -232,24 +354,9 @@
 					limit = { has_idea = fascism_defeated }
 					remove_ideas = fascism_defeated
 				}
-				if = {
-					limit = { has_idea = anti_nazi_coup }
-					remove_ideas = anti_nazi_coup
-				}
+
 			}
-			#Replace the following two with events for SOV if they are not communist.
-			#if = {
-			#	limit = { 
-			#		OR = {
-			#			has_idea = trotskyite_plot 
-			#			has_idea = trotskyite_plot_purged
-			#		}
-			#		NOT = {
-			#			has_civil_war = yes
-			#		}
-			#	}
-			#	country_event = { id = soviet.54 }
-			#}
+
 		}
 	}
 
@@ -262,6 +369,7 @@
 					original_tag = ROOT
 				}
 				set_politics = {
+					ruling_party = democratic
 					elections_allowed = yes
 				}
 			}
@@ -271,7 +379,15 @@
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
 	on_civil_war_end = {
 		effect = {
-
+			if = {
+				limit = {
+					has_government = democratic			
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+			}
 			#End of ideology Civil War
 			if = {
 				limit = {
@@ -281,36 +397,112 @@
 			}
 		}
 	}
-
-	#used when puppeting in a peace conference
-	#ROOT = nation being puppeted, FROM = overlord
-	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
-	#ROOT = nation being released, FROM = overlord
-	
-	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
-	on_annex = {
+	# From is owner country
+	on_army_leader_daily = {
 		effect = {
-			
-		}
-	}
-
-	#Not run on a specific country.
-	on_startup = {
-		effect = {
-			
-		}
-	}
-	
-	on_unit_leader_created = {
-		effect = {
+			if = {
+				limit = {
+					check_variable = { random < 0.02 }
+					NOT = { has_trait = sick }
+					set_temp_variable = { temp = sum_unit_terrain_modifier@sickness_chance }
+					divide_temp_variable = { temp = num_units }
+					check_variable = { temp > 0.75 }
+					NOT = { has_unit_leader_flag = recently_sick }
+				}
+				add_timed_unit_leader_trait = {
+					trait = sick
+					days = 30
+				}
+				unit_leader_event = { id = generic.17 }
+			}
 		}
 	}
 	
-	on_unit_leader_level_up = {
+	# From is owner country
+	on_army_leader_won_combat = {
 		effect = {
-			
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.001 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor } 
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+				unit_leader_event = { id = generic.18 }
+			}
+		}
+	}
+	
+	# From is owner country
+	on_army_leader_lost_combat = {
+		effect = {
+			if = {
+				limit = {
+					set_temp_variable = { chance = 0.005 }
+					set_temp_variable = { factor = 1.0 }
+					add_to_temp_variable = { factor = leader_modifier@wounded_chance_factor } 
+					multiply_temp_variable = { chance = factor }
+					check_variable = { random < chance }
+					NOT = { has_trait = wounded }
+				}
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 90
+				}
+				unit_leader_event = { id = generic.18 }
+			}
 		}
 	}
 	
 	
+	on_army_leader_promoted = {
+		effect = {
+			add_timed_unit_leader_trait = {
+				trait = recently_promoted
+				days = 100
+			}
+		}
+	}
+	
+	# root country that invades
+	# scope state that is invaded
+	# from scope state that the invasion started
+	# on_naval_invasion = {
+	# 	effect = {
+	# 	}
+	# }
+	
+	
+	# root country that paradrops
+	# scope state that is paradroped into
+	# from scope state that the paradrop started
+	on_paradrop = {
+	    effect = {
+		    set_country_flag = has_paradropped_flag
+		}
+	}
+	#on_ruling_party_change = { 
+	#	effect = {
+	#		every_owned_state = {
+	#			limit = {
+	#				is_controlled_by = ROOT
+	#				NOT = {
+	#					is_core_of = ROOT
+	#				}
+	#			}
+	#
+	#			set_temp_variable = { comp_change = random }
+	#			multiply_temp_variable = { comp_change = -15 }
+	#			add_to_temp_variable = { comp_change = -10 }
+	#
+	#			add_compliance = comp_change
+	#		}
+	#	}
+	#}
 }

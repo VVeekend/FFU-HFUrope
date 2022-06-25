@@ -1,102 +1,51 @@
-﻿capital = 257
-
+﻿capital = 10
+oob = "POL_divisions"
+set_fuel_ratio = 0.20
 set_research_slots = 3
 
-1910.1.1 = {
-
-set_technology = {
-
-		# Infantry
+	set_technology = {
+		#infantry
 		infantry_weapons = 1
-		ww1infantry_weapons1 = 1
+		infantry_weapons1 = 1
 		support_weapons = 1
-		infantry_binoculars = 1
-		infantry_grenade = 1
-		machine_gun = 1
-		machine_gun_1 = 1
-		ww1_ambulance1 = 1
-		early_motorised = 1
+		motorised_infantry = 1
+		tech_mountaineers = 1
 		
-
-		# Support
+		#support
 		tech_support = 1
 		tech_engineers = 1
 		tech_recon = 1
-		tech_military_police = 1
-		tech_maintenance_company = 1
-		tech_field_hospital = 1
-		tech_logistics_company = 1
+		
+		#armored
+		early_armored_car = 1
+		
+		#artillery
+		gw_artillery = 1
+		
+		#doctrine
+		bayonet_assault = 1
+		
+		#navy
+		transport = 1
+
+		#air
+		early_fighter = 1
+		airship_bomber = 1
+		
+		#engineering
+		electrical_engineering = 1
+		radio = 1
+		mechanical_engineering = 1
+		aircraft_engine = 1
+		generator_battery = 1
 		basic_train = 1
-
-		# Armor
-		gwtank=1 # 1910 Armored Car
-
-		# Artillery
-		light_field_gun1 = 1
-		heavy_field_gun1 = 1
-		interwar_antiair=1
-
-		# Navy
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		ship_hull_super_heavy = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		basic_heavy_armor_scheme = 1
-		basic_ship_hull_cruiser = 1
-		mtg_transport = 1
-
-
-		# Air
-
-		# Engineering
-		electronic_mechanical_engineering = 1
-		chemical_research = 1
-		tank_unlocker1 = 1
-
-		# Industry
-		
-		# Doctrine
-		ww1_infantry = 1
-		ww1_artillery = 1
-		ww1_battlefield_support = 1
-		mobile_doctrines = 1
-		
 	}
-	
-add_equipment_to_stockpile = {
-	type = infantry_equipment_1
-	amount = 20600
-}
-add_equipment_to_stockpile = {
-	type = support_equipment
-	amount = 200
-}
-add_manpower = 320000
 
+set_stability = 0.75
 set_convoys = 10
 
-set_politics = {
-	ruling_party = neutrality
-	last_election = "1935.9.8"
-	election_frequency = 36
-	elections_allowed = no
-}
-set_popularities = {
-	democratic = 18
-	fascism = 15
-	communism = 2
-	neutrality = 65
-}
 recruit_character = POL_regency_council
+recruit_character = POL_roman_dmowski
 recruit_character = POL_jozef_pilsudski
 
 recruit_character = POL_gabriel_narutowicz
@@ -134,4 +83,17 @@ recruit_character = POL_eustachy_sapiecha
 recruit_character = POL_maciej_rataj
 recruit_character = POL_ignacy_matuszewski
 
-recruit_character = POL_jan_jacyna }
+recruit_character = POL_jan_jacyna
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1910.1.1"
+    election_frequency = 36
+    elections_allowed = no
+}
+set_popularities = {
+    democratic = 45
+    fascism = 0
+    communism = 35
+    neutrality = 20
+}

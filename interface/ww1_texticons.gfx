@@ -1,0 +1,111 @@
+spriteTypes = {	
+
+	#### unit texticons
+	spriteType = {
+		name = "GFX_nato_unit_armored_car_icon_small"
+		texturefile = "gfx/texticons/nato_unit_cavalry_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_armored_car_icon_small"
+		texturefile = "gfx/texticons/unit_armored_car_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_unit_airship_bomber_icon_small"
+		texturefile = "gfx/texticons/unit_airship_bomber_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	#Recon AC
+	spriteType = {
+		name = "GFX_nato_unit_recon_armored_car_icon_small"
+		texturefile = "gfx/texticons/nato_unit_recon_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_recon_armored_car_icon_small"
+		texturefile = "gfx/texticons/unit_recon_armored_car_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	#Heavy Artillery (early howitzer)
+	spriteType = {
+		name = "GFX_unit_heavy_artillery_brigade_icon_small"
+		texturefile = "gfx/texticons/unit_artillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_heavy_artillery_icon_small"
+		texturefile = "gfx/texticons/support_art_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	#howitzer
+	spriteType = {
+		name = "GFX_unit_howitzer_brigade_icon_small"
+		texturefile = "gfx/texticons/unit_artillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+	spriteType = {
+		name = "GFX_unit_howitzer_icon_small"
+		texturefile = "gfx/texticons/support_art_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	#Categories
+	spriteType = {
+		name = "GFX_unit_category_mounted_inf_icon_small"
+		texturefile = "gfx/texticons/unit_cavalry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_all_armor_icon_small"
+		texturefile = "gfx/texticons/unit_category_all_armor_icon_small.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_category_tanks_icon_small"
+		texturefile = "gfx/texticons/unit_medium_armor_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_front_line_icon_small"
+		texturefile = "gfx/texticons/unit_category_front_line_icon_small.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_category_line_artillery_icon_small"
+		texturefile = "gfx/texticons/unit_artillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_artillery_icon_small"
+		texturefile = "gfx/texticons/unit_artillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_support_battalions_icon_small"
+		texturefile = "gfx/texticons/unit_category_support_battalions_icon_small.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_unit_category_army_icon_small"
+		texturefile = "gfx/texticons/unit_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_rifle_texticon"
+		texturefile = "gfx/texticons/infequip_small.dds"
+		legacy_lazy_load = no
+	}
+}
