@@ -1,226 +1,84 @@
-ideas = {
-	naval_manufacturer = {
-		designer = yes
-		constanta_shipyard = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				naval_equipment = 0.1
-			}
-			traits = {
-				naval_manufacturer
-			}
-			picture = generic_naval_manufacturer_2
-		}
-	}
-	aircraft_manufacturer = {
-		designer = yes
-		set = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				air_equipment = 0.1
-			}
-			traits = {
-				light_aircraft_manufacturer
-			}
-			picture = generic_air_manufacturer_2
-		}
-		cerchez_and_co = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				air_equipment = 0.1
-			}
-			traits = {
-				light_aircraft_manufacturer
-			}
-			picture = generic_air_manufacturer_3
-		}
-	}
-	materiel_manufacturer = {
-		designer = yes
-		udr_factories = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				artillery = 0.1
-			}
-			traits = {
-				artillery_manufacturer
-			}
-			picture = generic_artillery_manufacturer_2
-		}
-		bucharest_army_arsenal = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			traits = {
-				infantry_equipment_manufacturer
-			}
-			picture = generic_infantry_equipment_manufacturer_3
-		}
-		caile_ferate_romane = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
-			traits = {
-				infantry_equipment_manufacturer
-			}
-			picture = generic_infantry_equipment_manufacturer_1
-		}
-		targoviste_army_arsenal = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				artillery = 0.1
-			}
-			traits = {
-				artillery_manufacturer
-			}
-			picture = generic_artillery_manufacturer_2
-		}
-	}
-	industrial_concern = {
-		designer = yes
-		steaua_romana_refineries = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
-			}
-			traits = {
-				refinery_concern
-			}
-			picture = generic_tank_manufacturer_2
-		}
-		nicolae_malaxa_factories = {
-			allowed = {
-				original_tag = ROM
-			}
-			research_bonus = {
-				industry = 0.1
-			}
-			traits = {
-				industrial_concern
-			}
-			picture = generic_tank_manufacturer_3
-		}
-	}
-	country = {
-		ROM_revenge_against_soviet = {
-			picture = anti_soviet_pact
-			removal_cost = -1
-			allowed = {
-				original_tag = BUL
-			}
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
+ideas={
+country = {
+		ROM_emergency_war_act = {
+		picture = generic_local_self_management
 			modifier = {
-				fascism_drift = 0.1
-				fascism_acceptance = 100
+				consumer_goods_factor = -0.01
+				conscription = 0.02
 			}
 		}
-		ROM_revenge_against_germany = {
-			picture = generic_communism_drift_bonus
-			removal_cost = -1
-			allowed = {
-				original_tag = BUL
-			}
-			allowed_civil_war = {
-				NOT = {
-					has_government = fascism
-				}
-			}
+		ROM_entente_planning = {
+		picture = prc_low_popular_support3
 			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 100
+				army_defence_factor = 0.05 
+				max_planning_factor = 0.10
 			}
 		}
-		ROM_king_carol_ii_hedonist = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-			cancel = {
-				NOT = {
-					has_country_leader = {
-						name = "Carol II"
-						ruling_only = no
-					}
-				}
-			}
+		ROM_study_foreign_equipment = {
+		picture = chi_wargaming_division
 			modifier = {
-				consumer_goods_factor = 0.03
-				production_factory_efficiency_gain_factor = -0.05
+				license_production_speed = 0.15	
+				
 			}
+			research_bonus = {
+                infantry_weapons = 0.10
+            }
 		}
-		ROM_figurehead_king_michael = {
-			removal_cost = -1
-			allowed = {
-				original_tag = ROM
-			}
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-			cancel = {
-				NOT = {
-					has_country_leader = {
-						name = "Mihai I"
-						ruling_only = no
-					}
-					has_country_leader = {
-						name = "Nicolae"
-						ruling_only = no
-					}
-				}
-			}
+		ROM_lessons_of_balkan_wars = {
+		picture = SPR_international_brigades
 			modifier = {
-				stability_factor = 0.05
+			army_attack_factor = 0.05
+			experience_gain_army = 0.05
 			}
 		}
-		ROM_idea_german_control = {
-			picture = generic_refining_concern_1
-			allowed = { always = no }
-			available = {
-				original_tag = ROM
-				country_exists = GER
-				NOT = {
-					has_war_with = GER
-					has_subject = GER
-					GER = {
-						has_country_flag = great_war_loser
-					}
-				}
-				owns_state = 46
-			}
+		ROM_encourage_foreign_investment = {
+		picture = generic_foreign_capital
 			modifier = {
-				consumer_goods_factor = 0.1
-			}
-			on_remove = {
-				GER = {
-					remove_resource_rights = 46
-				}
+			production_speed_industrial_complex_factor = 0.1
 			}
 		}
+		
+		
+		
+		}
+	political_advisor={
+			ROM_nicolae_titulescu={ allowed={ tag=ROM } traits={ war_industrialist } ai_will_do={ factor=1 } }
+			ROM_istrate_micescu={ allowed={ tag=ROM } traits={ smooth_talking_charmer } ai_will_do={ factor=1 } }
+			ROM_mihail_moruzov={ allowed={ tag=ROM } traits={ quartermaster_general } ai_will_do={ factor=1 } }
+			ROM_alexandru_marghiloman={ allowed={ tag=ROM } traits={ ideological_crusader } ai_will_do={ factor=1 } }
+			ROM_constantin_coanda={ allowed={ tag=ROM } traits={ silent_workhorse } ai_will_do={ factor=1 } }
+			ROM_artur_vaitoianu={ allowed={ tag=ROM } traits={ backroom_backstabber } ai_will_do={ factor=1 } }
+			ROM_aurel_vlad={ allowed={ tag=ROM } traits={ compassionate_gentleman } ai_will_do={ factor=1 } }
+			ROM_ioan_popescu={ allowed={ tag=ROM } traits={ fortification_engineer } ai_will_do={ factor=1 } }
+			ROM_vintila_bratianu={ allowed={ tag=ROM } traits={ captain_of_industry } ai_will_do={ factor=1 } }
+			}
+	naval_manufacturer={
+			designer = yes 
+			constanta_shipyard={ allowed={ TAG=ROM } research_bonus={ naval_equipment=0.10 } traits={ naval_manufacturer } }
+			}
+	aircraft_manufacturer={
+			designer = yes 
+			set={ allowed={ TAG=ROM } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } picture=generic_air_manufacturer_2 }
+			cerchez_and_co={ allowed={ TAG=ROM } research_bonus={ air_equipment=0.10 } traits={ light_aircraft_manufacturer } picture=generic_air_manufacturer_3 }
+			}
+	materiel_manufacturer={
+			designer = yes 
+			udr_factories={ allowed={ TAG=ROM } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_2 }
+			bucharest_army_arsenal={ allowed={ TAG=ROM } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } picture=generic_infantry_equipment_manufacturer_3 }
+			caile_ferate_romane={ allowed={ TAG=ROM } research_bonus={ infantry_weapons=0.10 } traits={ infantry_equipment_manufacturer } picture=generic_infantry_equipment_manufacturer_1 }
+			targoviste_army_arsenal={ allowed={ TAG=ROM } research_bonus={ artillery=0.10 } traits={ artillery_manufacturer } picture=generic_artillery_manufacturer_2 }
+			}
+	industrial_concern={
+			designer = yes 
+			steaua_romana_refineries={ allowed={ TAG=ROM }    research_bonus = {
+							    industry = 0.05
+							    synth_resources = 0.1
+							   } traits={ refinery_concern } picture=generic_tank_manufacturer_2 }
+			nicolae_malaxa_factories={ allowed={ TAG=ROM }    research_bonus = {
+							    industry = 0.10
+							    
+							   } traits={ industrial_concern } picture=generic_tank_manufacturer_3 }
+			}
+	
+	
 	}
-}

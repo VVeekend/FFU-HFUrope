@@ -1,261 +1,275 @@
 characters={
-	NOR_gunnar_knudsen={
-		name="NOR_gunnar_knudsen"
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_gunnar_knudsen
-			allowed  = {
-				original_tag  = NOR
-			}
-			traits  = {
-				democratic_reformer 
-			}
-			available  = {
-				is_country_leader = no	
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
+	NOR_johan_mowinckel={
+		name="Johan Mowinckel"
 		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
-			}
 			civilian={
-				large="gfx/leaders/NOR/NOR_gunnar_knudsen.png"
+				large="gfx/leaders/NOR_johan_mowinckel.dds"
 			}
 		}
 		country_leader={
-			ideology=social_liberalism
+			ideology=liberalism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
 	NOR_jens_bratlie={
-		name="NOR_jens_bratlie"
-		advisor={
-			slot = army_chief
-			idea_token = NOR_jens_bratlie
-			allowed  = {
-				original_tag  = NOR
-			}
-			traits  = {
-				army_chief_defensive_2 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
+		name="Jens Bratlie"
 		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_4"
-			}
 			civilian={
-				large="gfx/leaders/NOR/NOR_jens_bratlie.png"
+				large="gfx/hoi4tgw_portraits/NOR/country_leaders/NOR_jens_bratlie.dds"
 			}
 		}
 		country_leader={
 			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	NOR_karl_friedrich_griffin_dawes={
-		name="NOR_karl_friedrich_griffin_dawes"
-		advisor={
-			slot = navy_chief
-			idea_token = NOR_karl_friedrich_griffin_dawes
-			allowed  = {
-				original_tag  = NOR
-			}
-			traits  = {
-				navy_chief_decisive_battle_1 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
+	NOR_otto_halvorsen={
+		name="Otto Halvorsen"
 		portraits={
-			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
-				small="GFX_idea_generic_navy_europe_1"
+			civilian={
+				large="gfx/leaders/NOR_otto_halvorsen.dds"
 			}
 		}
-		navy_leader={
-			traits={ gentlemanly gunnery_expert navy_media_personality }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
-			
+		country_leader={
+			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
+		}
+	}
+	NOR_otto_blehr={
+		name="Otto Blehr"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR_otto_blehr.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1935.1.1.1"
+			id=-1
+		}
+	}
+	NOR_wollert_konow={
+		name="Wollert Konow"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR_wollert_konow.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
 	NOR_haakon_vii={
 		name="Haakon VII"
 		portraits={
 			civilian={
-				large="gfx/leaders/NOR/NOR_haakon_vii.png"
+				large="gfx/leaders/NOR/NOR_haakon_vii.dds"
 			}
-		}
-		field_marshal={
-			traits={ politically_connected inspirational_leader }
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=1110
 		}
 		country_leader={
-			ideology=autocracy
+			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	NOR_wilhelm_olsson={
-		name="NOR_wilhelm_olsson"
+	NOR_olsson={
+		name="Olssøn"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+				large="gfx/generals/NOR_olsson.dds"
 			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62002
+		}
+	}
+	NOR_hansen={
+		name="Hansen"
+		portraits={
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/generals/NOR_hansen.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62003
+		}
+	}
+	NOR_angell={
+		name="Angell"
+		portraits={
+			army={
+				large="gfx/generals/NOR_angell.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62004
+		}
+	}
+	NOR_sindinglarsen={
+		name="Sinding-Larsen"
+		portraits={
+			army={
+				large="gfx/generals/NOR_sinding_larsen.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62005
+		}
+	}
+	NOR_vogt={
+		name="Vogt"
+		portraits={
+			army={
+				large="gfx/generals/NOR_vogt.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62007
+		}
+	}
+	NOR_raeder={
+		name="Ræder"
+		portraits={
+			army={
+				large="gfx/generals/NOR_raeder.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62010
+		}
+	}
+	NOR_borresen={
+		name="Børresen"
+		portraits={
+			army={
+				large="gfx/generals/NOR_borresen.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=62014
+		}
+	}
+	NOR_von_munthe_af_morgenstierne={
+		name="von Munthe af Morgenstierne"
+		portraits={
+			army={
+				large="gfx/hoi4tgw_portraits/NOR/army_generals/NOR_von_munthe_af_morgenstierne.dds"
 			}
 		}
 		field_marshal={
-			traits={ old_guard politically_connected }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
-		}
-	}
-	NOR_ole_hansen={
-		name="NOR_ole_hansen"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-			}
-		}
-		corps_commander={
-			traits={ old_guard trait_mountaineer }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-		}
-	}
-	NOR_henrik_angell={
-		name="NOR_henrik_angell"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-			}
-		}
-		corps_commander={
-			traits={ winter_specialist }
 			skill=2
 			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-		}
-	}
-	NOR_birger_fredrik_sindinglarsen={
-		name="NOR_birger_fredrik_sindinglarsen"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
-			}
-		}
-		corps_commander={
-			traits={ winter_specialist }
-			skill=2
-			attack_skill=2
 			defense_skill=1
-			planning_skill=2
-			logistics_skill=1
-		}
-	}
-	NOR_johan_christopher_raeder={
-		name="NOR_johan_christopher_raeder"
-		advisor={
-			slot = high_command
-			idea_token = NOR_johan_christopher_raeder
-			allowed  = {
-				original_tag  = NOR
-			}
-			ledger  = army 
-			traits  = {
-				army_regrouping_1 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		portraits={
-			army={
-				small="GFX_idea_NOR_johan_christopher_raeder"
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-			}
-		}
-		corps_commander={
-			traits={ trait_engineer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
 			planning_skill=1
-			logistics_skill=2
+			logistics_skill=1
+			legacy_id=62008
 		}
 	}
-	NOR_alfred_berglund={
-		name="NOR_alfred_berglund"
+	NOR_griffindawes={
+		name="Griffin-Dawes"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_europe_generic_navy_1.dds"
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+				large="gfx/admiral/NOR_griffin_dawes.dds"
 			}
 		}
 		navy_leader={
-			traits={ old_guard_navy craven }
 			skill=2
 			attack_skill=1
-			defense_skill=3
+			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
+			legacy_id=62011
 		}
 	}
-	NOR_christian_sparre={
-		name="NOR_christian_sparre"
+	NOR_berglund={
+		name="Berglund"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_europe_generic_navy_2.dds"
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+				large="gfx/admiral/NOR_berglund.dds"
 			}
 		}
 		navy_leader={
-			traits={ gentlemanly navy_media_personality }
 			skill=2
 			attack_skill=1
-			defense_skill=2
+			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
+			legacy_id=62012
 		}
 	}
+	NOR_sparre={
+		name="Sparre"
+		portraits={
+			army={
+				large="gfx/admiral/NOR_sparre.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=62013
+		}
+	}
+
 	NOR_einar_sem_jacobsen={
 		advisor={
 			slot = high_command
 			idea_token = NOR_einar_sem_jacobsen
-			allowed  = {
-				original_tag  = NOR
-			}
 			ledger  = air 
-			traits  = {
-				air_close_air_support_1 
-			}
-			ai_will_do  = {
-				factor  = 0.500
-			}
+				allowed  = {
+					tag  = NOR
+				}
+				traits  = {
+					air_close_air_support_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
 		}
 		name="NOR_einar_sem_jacobsen"
 		portraits={
@@ -269,7 +283,7 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_trygve_frivold_graff_vang
 			allowed  = {
-					original_tag  = NOR
+					tag  = NOR
 				}
 				traits  = {
 					silent_workhorse 
@@ -281,7 +295,7 @@ characters={
 		name="NOR_trygve_frivold_graff_vang"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+				small="GFX_idea_NOR_trygve_frivold_graff_vang"
 			}
 		}
 	}
@@ -290,13 +304,10 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_christian_theodor_holtfodt
 			allowed  = {
-					original_tag  = NOR
+					tag  = NOR
 				}
 				traits  = {
-					armaments_organizer 
-				}
-				modifier  = {
-					defensive_war_stability_factor  = 0.150
+					quartermaster_general 
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -305,7 +316,50 @@ characters={
 		name="NOR_christian_theodor_holtfodt"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				small="GFX_idea_NOR_christian_theodor_holtfodt"
+			}
+		}
+	}
+	NOR_johan_christopher_raeder={
+		advisor={
+			slot = high_command
+			idea_token = NOR_johan_christopher_raeder
+			ledger  = army 
+				allowed  = {
+					tag  = NOR
+				}
+				traits  = {
+					army_regrouping_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="NOR_johan_christopher_raeder"
+		portraits={
+			army={
+				small="GFX_idea_NOR_johan_christopher_raeder"
+			}
+		}
+	}
+	NOR_kristian_f_petersen={
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_kristian_f_petersen
+			allowed  = {
+					tag  = NOR
+				}
+				traits  = {
+					compassionate_gentleman 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="NOR_kristian_f_petersen"
+		portraits={
+			army={
+				small="GFX_idea_NOR_kristian_f_petersen"
 			}
 		}
 	}
@@ -314,14 +368,10 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_anton_omholt
 			allowed  = {
-					original_tag  = NOR
+					tag  = NOR
 				}
 				traits  = {
-					financial_expert 
-				}
-				modifier  = {
-					industrial_capacity_factory  = 0.025
-					industrial_capacity_dockyard  = 0.025
+					captain_of_industry 
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -330,7 +380,7 @@ characters={
 		name="NOR_anton_omholt"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_idea_NOR_anton_omholt"
 			}
 		}
 	}
@@ -339,13 +389,10 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_christian_michelet
 			allowed  = {
-					original_tag  = NOR
+					tag  = NOR
 				}
 				traits  = {
-					ideological_groupie 
-				}
-				modifier  = {
-					stability_factor  = 0.050
+					ideological_crusader 
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -354,7 +401,7 @@ characters={
 		name="NOR_christian_michelet"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_4"
+				small="GFX_idea_NOR_christian_michelet"
 			}
 		}
 	}
@@ -363,13 +410,10 @@ characters={
 			slot = political_advisor
 			idea_token = NOR_nils_ihlen
 			allowed  = {
-					original_tag  = NOR
+					tag  = NOR
 				}
 				traits  = {
 					smooth_talking_charmer 
-				}
-				modifier  = {
-					opinion_gain_monthly_factor  = 0.050
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -378,7 +422,7 @@ characters={
 		name="NOR_nils_ihlen"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
+				small="GFX_idea_NOR_nils_ihlen"
 			}
 		}
 	}
@@ -386,10 +430,10 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = NOR_einar_wilhelm_anton_martin_krohn
-			allowed  = {
-					original_tag  = NOR
+			ledger  = army 
+				allowed  = {
+					tag  = NOR
 				}
-				ledger  = army 
 				traits  = {
 					army_logistics_1 
 				}
@@ -404,12 +448,75 @@ characters={
 			}
 		}
 	}
+	NOR_gunnar_knudsen={
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_gunnar_knudsen
+			allowed  = {
+					tag  = NOR
+				}
+				traits  = {
+					democratic_reformer 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="NOR_gunnar_knudsen"
+		portraits={
+			army={
+				small="GFX_idea_NOR_gunnar_knudsen"
+			}
+		}
+	}
+	NOR_christian_holtfodt={
+		advisor={
+			slot = army_chief
+			idea_token = NOR_christian_holtfodt
+			allowed  = {
+					tag  = NOR
+				}
+				traits  = {
+					army_chief_morale_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="NOR_christian_holtfodt"
+		portraits={
+			army={
+				small="GFX_idea_NOR_christian_holtfodt"
+			}
+		}
+	}
+	NOR_karl_friedrich_griffin_dawes={
+		advisor={
+			slot = navy_chief
+			idea_token = NOR_karl_friedrich_griffin_dawes
+			allowed  = {
+					tag  = NOR
+				}
+				traits  = {
+					navy_chief_decisive_battle_1 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="NOR_karl_friedrich_griffin_dawes"
+		portraits={
+			army={
+				small="GFX_idea_NOR_karl_friedrich_griffin_dawes"
+			}
+		}
+	}
 	NOR_lars_abrahamsen={
 		advisor={
 			slot = political_advisor
 			idea_token = NOR_lars_abrahamsen
 			allowed  = {
-					original_tag  = NOR
+					tag  = NOR
 				}
 				traits  = {
 					popular_figurehead 
@@ -421,7 +528,7 @@ characters={
 		name="NOR_lars_abrahamsen"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
+				small="GFX_idea_NOR_lars_abrahamsen"
 			}
 		}
 	}

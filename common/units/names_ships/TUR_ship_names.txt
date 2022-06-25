@@ -8,6 +8,7 @@ TUR_DD_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_light destroyer }			
 
+	prefix = "TCG "
 	fallback_name = "%d. Yok Edici"					
 
 	unique = {											
@@ -26,6 +27,7 @@ TUR_CL_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser light_cruiser }
 	
+	prefix = "TCG "
 	fallback_name = "%d. Isik Kruvazör"
 
 	unique = {
@@ -43,6 +45,7 @@ TUR_CA_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser heavy_cruiser }
 	
+	prefix = "TCG "
 	fallback_name = "%d. Agir Kruvazör"
 
 	unique = {
@@ -61,6 +64,7 @@ TUR_BB_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_heavy battleship }
 	
+	prefix = "TCG "
 	fallback_name = "%d. Savas Gemisi"		
 
 	unique = {
@@ -77,6 +81,7 @@ TUR_BC_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_heavy battle_cruiser }
 	
+	prefix = "TCG "
 	fallback_name = "%d. Muharebe Kruvazör"		
 
 	unique = {
@@ -93,6 +98,7 @@ TUR_CV_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_carrier carrier }
 	
+	prefix = "TCG "
 	fallback_name = "%d. Ucak Gemisi"	
 
 	unique = {
@@ -109,6 +115,7 @@ TUR_SS_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_submarine submarine }
 	
+	prefix = "TCG "
 	fallback_name = "%d. Denizalti"
 	
 	unique = {

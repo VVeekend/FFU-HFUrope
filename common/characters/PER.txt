@@ -1,108 +1,72 @@
 characters={
 	PER_ahmad_shah_qajar={
-		name="PER_ahmad_shah_qajar"
+		name="Ahmad Shah Qajar"
 		portraits={
 			civilian={
-				large="gfx/leaders/PER/PER_ahmad_shah_qajar_young.png"
+				large="gfx/leaders/PER/PER_ahmad_shah_qajar.dds" 
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			traits={ underage_monarch  }
-			
-			
+			ideology=despotism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	PER_persian_central_government={
-		name="PER_persian_central_government"
+	PER_malek_mansour_mirza={
+		name="Malek Mansour Mirza"
 		portraits={
-			civilian={
-				large="gfx/leaders/PER/PER_gendarmerie.png"
+			army={
+				small=""
+			}
+			army={
+				large="gfx/hoi4tgw_portraits/PER/army_generals/PER_malek_mansour_mirza.dds"
 			}
 		}
-		country_leader={
-			ideology=stratocracy
-			traits={ standing_alone  }
-			
-			
+		field_marshal={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=68004
 		}
 	}
-	PER_reza_khan={
-		name="PER_reza_khan"
-		portraits={
-			civilian={
-				large="gfx/leaders/PER/Portrait_Iran_Reza_Shah_Pahlavi.png"
-			}
-			army={
-				large="gfx/leaders/PER/Portrait_Iran_Reza_Shah_Pahlavi.png"
-			}
-		}
-		corps_commander={
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			traits = { career_officer }
-		}
-	}
-	PER_salat_eddauleh={
-		name="PER_salat_eddauleh"
+	PER_abdol_majid_mirza={
+		name="Abdol Majid Mirza"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_chief_off"
+				small=""
 			}
 			army={
-				large="gfx/leaders/Arabia/Portrait_Arabia_Generic_land_1.png"
+				large="gfx/hoi4tgw_portraits/PER/army_generals/PER_abdol_majid_mirza.dds"
 			}
 		}
 		corps_commander={
 			skill=2
 			attack_skill=1
-			defense_skill=2
+			defense_skill=1
 			planning_skill=1
-			logistics_skill=2
-			
+			logistics_skill=1
+			legacy_id=68002
 		}
 	}
 	PER_azod_soltan_mirza={
-		name="PER_azod_soltan_mirza"
+		name="Azod Soltan Mirza"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_chief_def"
+				small=""
 			}
 			army={
-				large="gfx/leaders/Arabia/Portrait_Arabia_Generic_land_2.png"
+				large="gfx/hoi4tgw_portraits/PER/army_generals/PER_azod_soltan_mirza.dds"
 			}
 		}
 		corps_commander={
-			traits={ politically_connected }
 			skill=2
-			attack_skill=2
-			defense_skill=2
+			attack_skill=1
+			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			
-		}
-	}
-	PER_malek_mansour_mirza={
-		name="PER_malek_mansour_mirza"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_art"
-			}
-			army={
-				large="gfx/leaders/Arabia/Portrait_Arabia_Generic_land_3.png"
-			}
-		}
-		field_marshal={
-			traits={ politically_connected }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			
+			legacy_id=68003
 		}
 	}
 }

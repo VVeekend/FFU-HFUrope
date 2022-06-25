@@ -1,0 +1,51 @@
+ideas = {
+	country = {
+		peace_training = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+				has_war = yes
+			}
+			removal_cost = -1
+			picture = generic_infantry_bonus
+			modifier = {
+				training_time_army_factor = -0.70
+				air_training_xp_gain_factor = 10
+				experience_gain_navy_unit_factor = 10
+			}
+		}
+		ai_limiter = {
+			cancel = { is_ai = no }
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			modifier = {
+				#consumer_goods_factor = 1
+				industrial_capacity_factory = -1
+				production_factory_max_efficiency_factor = -1
+				conscription = -1.0
+			}
+		}
+		naval_race = {
+			cancel = {
+				has_war = yes
+			}
+
+			removal_cost = -1
+
+			picture = MTG_naval_treaty_adherent
+
+			modifier = {
+				production_speed_dockyard_factor = 3.0
+				industrial_capacity_dockyard = 1.0
+			}
+		}
+		chistmas_truce = {
+			picture = chistmas_truce-102183
+			modifier = {
+				breakthrough_factor = -1.00
+                army_attack_factor = -1.00
+			}
+		}
+	}
+}

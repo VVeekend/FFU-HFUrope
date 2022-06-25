@@ -1,130 +1,56 @@
 characters={
-	GRE_theodoros_pangalos={
-		name="GRE_theodoros_pangalos"
+	GRE_alexandros_i={
+		name="Alexandros I"
 		portraits={
-			army={
-				small="GFX_idea_generic_army_chief_off"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_theodoros_pangalos.png"
-			}
-		}
-		corps_commander={
-			traits={ infantry_officer politically_connected }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			
-		}
-	}
-	GRE_eleftherios_venizelos={
-		name="GRE_eleftherios_venizelos"
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_eleftherios_venizelos
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					ideological_crusader 
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_GRE_eleftherios_venizelos"
-			}
 			civilian={
-				large="gfx/leaders/GRE/GRE_eleftherios_venizelos.png"
+				large="gfx/leaders/GRE/GRE_alexandros_i.dds"
 			}
 		}
 		country_leader={
-			ideology=classical_liberalism
-			
-			
-			
+			#desc="GRE_alexandros_i_DESC"
+			ideology=liberalism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
 	GRE_george_i={
-		name="GRE_george_i"
+		name="George I"
 		portraits={
 			civilian={
-				large="gfx/leaders/GRE/GRE_george_i.png"
+				large="gfx/leaders/GRE/GRE_george_i.dds"
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			
-			
-			
+			#desc="GRE_george_i_DESC"
+			ideology=despotism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	GRE_constantine_i={
-		name="GRE_constantine_of_the_hellenes"
+	GRE_panagiótis_danglís={
+		name="Panagiótis Danglís"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_military_theorist"
-				large="gfx/leaders/GRE/GRE_constantine_i_general.png"
-			}
-			civilian={
-				large="gfx/leaders/GRE/GRE_constantine_i.png"
+				large="gfx/leaders/GRE/GRE_panagiotis_danglis.dds"
 			}
 		}
-		country_leader={
-			ideology=autocracy
-		}
-		field_marshal={
-			traits={ media_personality politically_connected trait_royal offensive_doctrine }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=35002
-			visible = {
-				NOT = { has_government = communism }
-			}
-		}
-	}
-	GRE_panagiotis_danglis={
-		advisor={
-			slot = army_chief
-			idea_token = GRE_panagiotis_danglis
-			allowed = {
-				original_tag  = GRE
-			}
-			traits  = {
-				army_chief_reform_1 
-			}
-		}
-		name="GRE_panagiotis_danglis"
-		portraits={
-			army={
-				small="GFX_idea_GRE_panagiotis_danglis"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_panagiotis_danglis.png"
-			}
-		}
-		field_marshal={
+		corps_commander={
 			traits={ old_guard inflexible_strategist trait_engineer }
 			skill=3
 			attack_skill=2
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
-			
+			legacy_id=35004
 		}
 	}
 	GRE_nikolaos_trikoupis={
-		name="GRE_nikolaos_trikoupis"
+		name="Nikolaos Trikoupis"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_art"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_nikolaos_trikoupis.png"
+				large="gfx/leaders/GRE/GRE_nikolaos_trikoupis.dds"
 			}
 		}
 		corps_commander={
@@ -133,37 +59,33 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
-			
+			legacy_id=35005
 		}
 	}
-	GRE_victor_dousmanis={
+	GRE_víctor_doúsmanis={
 		name="Víctor Doúsmanis"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_art"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_victor_dousmanis.png"
+				large="gfx/leaders/GRE/GRE_victor_dousmanis.dds"
 			}
 		}
 		corps_commander={
-			traits={ media_personality politically_connected ENG_royalist skilled_staffer }
+		    traits={ politically_connected media_personality skilled_staffer }
 			skill=2
 			attack_skill=2
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			
+			legacy_id=35010
 		}
 	}
-	GRE_emmanouil_zymvrakakis={
-		name="GRE_emmanouil_zymvrakakis"
+	GRE_zymvrakakis_e.={
+		name="Emmanouil Zymvrakakis"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_chief_off"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_emmanouil_zymvrakakis.png"
+				large="gfx/leaders/GRE/GRE_emmanouil_zymvrakakis.dds"
 			}
 		}
 		corps_commander={
@@ -172,57 +94,51 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=3
-			
+			legacy_id=35014
 		}
 	}
-	GRE_konstantinos_nider={
-		name="GRE_konstantinos_nider"
+	GRE_nider={
+		name="Konstantinos Nider"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_chief_off"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_nider.png"
+				large="gfx/leaders/GRE/GRE_nider.dds"
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless infantry_officer hill_fighter }
+			traits={ infantry_officer trait_reckless hill_fighter }
 			skill=3
 			attack_skill=3
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=2
-			
+			legacy_id=35016
 		}
 	}
-	GRE_anastasios_papoulas={
-		name="GRE_anastasios_papoulas"
+	GRE_papoulas={
+		name="Anastasios Papoulas"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_chief_def"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_papoulas.png"
+				large="gfx/leaders/GRE/GRE_papoulas.dds"
 			}
 		}
 		corps_commander={
-			traits={ old_guard brilliant_strategist career_officer }
+		    traits={ old_guard brilliant_strategist career_officer }
 			skill=2
 			attack_skill=1
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=1
-			
+			legacy_id=35019
 		}
 	}
-	GRE_leonidas_paraskevopoulos={
-		name="GRE_leonidas_paraskevopoulos"
+	GRE_paraskevopoulos={
+		name="Leonídas Paraskevópoulos"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_chief_def"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_paraskevopoulos.png"
+				large="gfx/leaders/GRE/GRE_paraskevopoulos.dds"
 			}
 		}
 		corps_commander={
@@ -232,17 +148,15 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			
+			legacy_id=35022
 		}
 	}
-	GRE_georgios_hatzianestis={
-		name="GRE_georgios_hatzianestis"
+	GRE_hatzianestis={
+		name="Georgios Hatzianestis"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_art"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_hatzianestis.png"
+				large="gfx/leaders/GRE/GRE_hatzianestis.dds"
 			}
 		}
 		corps_commander={
@@ -252,80 +166,86 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
-			
+			legacy_id=35023
 		}
 	}
-	GRE_konstantinos_sapountzakis={
-		name="GRE_konstantinos_sapountzakis"
+	GRE_sapountzakis={
+		name="Konstantinos Sapountzakis"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_art"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_sapountzakis.png"
+				large="gfx/leaders/GRE/GRE_sapountzakis.dds"
 			}
 		}
 		corps_commander={
-			traits={ old_guard career_officer trait_cautious }
+			traits={ old_guard trait_cautious career_officer } 
 			skill=2
 			attack_skill=1
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
-			
+			legacy_id=35027
 		}
 	}
 	GRE_prince_andreas={
-		name="GRE_prince_andreas"
+		name="Prince Andreas"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_log"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_prince_andreas.png"
+				large="gfx/leaders/GRE/GRE_prince_andreas.dds"
 			}
 		}
 		corps_commander={
-			traits={ media_personality politically_connected trait_royal }
+		    traits={ politically_connected media_personality }
 			skill=2
 			attack_skill=2
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=35028
-			visible = {
-				NOT = { has_government = communism }
-			}
 		}
 	}
-	GRE_konstantinos_mazarakis={
-		name="GRE_konstantinos_mazarakis"
+	GRE_mazarakis={
+		name="Konstantinos Mazarakis"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_army_log"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_mazarakis.png"
+				large="gfx/leaders/GRE/GRE_mazarakis.dds"
 			}
 		}
 		corps_commander={
-			traits={ artillery_officer }
 			skill=2
 			attack_skill=2
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
-			
+			legacy_id=35030
 		}
 	}
-	GRE_georgios_kondylis={
-		name="GRE_georgios_kondylis"
+	GRE_othonaios={
+		name="Alexandros Othonaios"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_air_warfare_theorist"
+				large="gfx/leaders/GRE/GRE_othonaios.dds"
 			}
+		}
+		corps_commander={
+		    traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=35031
+		}
+	}
+	GRE_kondylis={
+		name="Georgios Kondylis"
+		portraits={
+
 			army={
-				large="gfx/leaders/GRE/GRE_kondylis.png"
+				large="gfx/leaders/GRE/GRE_kondylis.dds"
 			}
 		}
 		corps_commander={
@@ -335,190 +255,363 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			
+			legacy_id=35032
 		}
 	}
-	GRE_ioanis_metaxas={
-		name="GRE_ioannis_metaxas"
+	GRE_plastiras={
+		name="Nikólaos Plastíras"
 		portraits={
+
 			army={
-				small="GFX_idea_generic_air_warfare_theorist"
-			}
-			army={
-				large="gfx/leaders/GRE/GRE_Ioannis_Metaxas_general.png"
+				large="gfx/leaders/GRE/GRE_plastiras.dds"
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader politically_connected ENG_royalist }
+		    traits={ politically_connected career_officer infantry_officer }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=1
+			legacy_id=35034
+		}
+	}
+	GRE_constantine={
+		name="Constantine I"
+		portraits={
+
+			army={
+				large="gfx/leaders/GRE/GRE_constantine_i.dds"
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine politically_connected media_personality } 
 			skill=3
 			attack_skill=3
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			
+			legacy_id=35002
 		}
 	}
-	GRE_nikolaos_stratos={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_nikolaos_stratos
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					popular_figurehead 
-				}
-		}
-		name="GRE_nikolaos_stratos"
+	GRE_kountouriotis={
+		name="Kountouriotis"
 		portraits={
+
 			army={
-				small="GFX_idea_GRE_nikolaos_stratos"
+				large="gfx/admiral/GRE_kountouriotis.tga"
 			}
 		}
-	}
-	GRE_emmanouil_repoulis={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_emmanouil_repoulis
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					fortification_engineer 
-				}
+		navy_leader={
+			traits={ superior_tactician gunnery_expert }
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=35006
 		}
-		name="GRE_emmanouil_repoulis"
+	}
+	GRE_hatzikiriakos={
+		name="Hatzikiriakos"
 		portraits={
+
 			army={
-				small="GFX_idea_GRE_emmanouil_repoulis"
+				large="gfx/admiral/GRE_hatzikiriakos.tga"
 			}
 		}
-	}
-	GRE_dimitrios_rallis={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_dimitrios_rallis
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					captain_of_industry 
-				}
+		navy_leader={
+		    traits={ gentlemanly navy_career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=1
+			legacy_id=35033
 		}
-		name="GRE_dimitrios_rallis"
+	}
+	GRE_viktor_tzavelas={
+		name="Viktor Tzavelas"
 		portraits={
-			army={
-				small="GFX_idea_GRE_dimitrios_rallis"
+			civilian={
+				large="GFX_portrait_europe_generic_8"
 			}
 		}
-	}
-	GRE_dimitrios_gounaris={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_dimitrios_gounaris
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					backroom_backstabber 
-				}
+		country_leader={
+			ideology=leninism
+			expire="1920.1.1.1"
+			id=-1
 		}
-		name="GRE_dimitrios_gounaris"
+	}
+	GRE_konstantinos_manos={
+		name="Konstantinos Manos"
 		portraits={
-			army={
-				small="GFX_idea_GRE_dimitrios_gounaris"
+			civilian={
+				large="GFX_portrait_europe_generic_8"
 			}
 		}
-	}
-	GRE_paulos_kountouriotis={
-		advisor={
-			slot = navy_chief
-			idea_token = GRE_paulos_kountouriotis
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					navy_chief_decisive_battle_1 
-				}
-		}
-		name="GRE_paulos_kountouriotis"
-		portraits={
-			army={
-				small="GFX_idea_GRE_paulos_kountouriotis"
-			}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ war_industrialist eager_collaborator }
+			expire="1921.1.1.1"
+			id=-1
 		}
 	}
-	GRE_petros_protopapadakis={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_petros_protopapadakis
-			allowed  = {
-					original_tag  = GRE
-				}
-				traits  = {
-					armaments_organizer 
-				}
-		}
-		name="GRE_petros_protopapadakis"
-		portraits={
-			army={
-				small="GFX_idea_GRE_petros_protopapadakis"
-			}
-		}
-	}
-	GRE_mark_kerr={
-		advisor={
-			slot = high_command
-			idea_token = GRE_mark_kerr
-			ledger  = navy 
+	
+		GRE_nikolaos_stratos={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_nikolaos_stratos
 				allowed  = {
-					original_tag  = GRE
+						tag  = GRE
+					}
+					traits  = {
+						popular_figurehead 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_nikolaos_stratos"
+			portraits={
+				army={
+					small="GFX_idea_GRE_nikolaos_stratos"
 				}
-				traits  = {
-					navy_screen_1 
-				}
-		}
-		name="GRE_mark_kerr"
-		portraits={
-			army={
-				small="GFX_idea_GRE_mark_kerr"
 			}
 		}
-	}
-	GRE_alexandros_zaimis={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_alexandros_zaimis
-			allowed  = {
-					original_tag  = GRE
+		GRE_emmanouil_repoulis={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_emmanouil_repoulis
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						fortification_engineer 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_emmanouil_repoulis"
+			portraits={
+				army={
+					small="GFX_idea_GRE_emmanouil_repoulis"
 				}
-				traits  = {
-					smooth_talking_charmer 
-				}
-		}
-		name="GRE_alexandros_zaimis"
-		portraits={
-			army={
-				small="GFX_idea_GRE_alexandros_zaimis"
 			}
 		}
-	}
-	GRE_spiridon_lambros={
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_spiridon_lambros
-			allowed  = {
-					original_tag  = GRE
+		GRE_constantin_moschopoulos={
+			advisor={
+				slot = theorist
+				idea_token = GRE_constantin_moschopoulos
+				ledger  = army 
+					allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						military_theorist 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_constantin_moschopoulos"
+			portraits={
+				army={
+					small="GFX_idea_GRE_constantin_moschopoulos"
 				}
-				traits  = {
-					compassionate_gentleman 
-				}
-		}
-		name="GRE_spiridon_lambros"
-		portraits={
-			army={
-				small="GFX_idea_GRE_spiridon_lambros"
 			}
 		}
-	}
+		GRE_dimitrios_rallis={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_dimitrios_rallis
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						captain_of_industry 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_dimitrios_rallis"
+			portraits={
+				army={
+					small="GFX_idea_GRE_dimitrios_rallis"
+				}
+			}
+		}
+		GRE_dimitrios_gounaris={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_dimitrios_gounaris
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						backroom_backstabber 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_dimitrios_gounaris"
+			portraits={
+				army={
+					small="GFX_idea_GRE_dimitrios_gounaris"
+				}
+			}
+		}
+		GRE_paulos_kountouriotis={
+			advisor={
+				slot = navy_chief
+				idea_token = GRE_paulos_kountouriotis
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						navy_chief_decisive_battle_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_paulos_kountouriotis"
+			portraits={
+				army={
+					small="GFX_idea_GRE_paulos_kountouriotis"
+				}
+			}
+		}
+		GRE_eleftherios_venizelos={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_eleftherios_venizelos
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						ideological_crusader 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_eleftherios_venizelos"
+			portraits={
+				army={
+					small="GFX_idea_GRE_eleftherios_venizelos"
+				}
+			}
+		}
+		GRE_petros_protopapadakis={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_petros_protopapadakis
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						armaments_organizer 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_petros_protopapadakis"
+			portraits={
+				army={
+					small="GFX_idea_GRE_petros_protopapadakis"
+				}
+			}
+		}
+		GRE_panagiotis_danglis={
+			advisor={
+				slot = army_chief
+				idea_token = GRE_panagiotis_danglis
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						army_chief_defensive_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_panagiotis_danglis"
+			portraits={
+				army={
+					small="GFX_idea_GRE_panagiotis_danglis"
+				}
+			}
+		}
+		GRE_mark_kerr={
+			advisor={
+				slot = high_command
+				idea_token = GRE_mark_kerr
+				ledger  = navy 
+					allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						army_infantry_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_mark_kerr"
+			portraits={
+				army={
+					small="GFX_idea_GRE_mark_kerr"
+				}
+			}
+		}
+		GRE_alexandros_zaimis={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_alexandros_zaimis
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						smooth_talking_charmer 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_alexandros_zaimis"
+			portraits={
+				army={
+					small="GFX_idea_GRE_alexandros_zaimis"
+				}
+			}
+		}
+		GRE_spiridon_lambros={
+			advisor={
+				slot = political_advisor
+				idea_token = GRE_spiridon_lambros
+				allowed  = {
+						tag  = GRE
+					}
+					traits  = {
+						compassionate_gentleman 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="GRE_spiridon_lambros"
+			portraits={
+				army={
+					small="GFX_idea_GRE_spiridon_lambros"
+				}
+			}
+		}
+	
+	
 }

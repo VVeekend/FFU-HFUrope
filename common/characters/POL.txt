@@ -1,24 +1,4 @@
 characters={
-	POL_roman_dmowski={
-		name=POL_roman_dmowski
-		portraits={
-			civilian={
-				large="gfx/leaders/POL/POL_Roman_Dmowski.png"
-			}
-		}
-		country_leader={
-			ideology=conservatism
-			traits={ dislikes_germany }
-		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ father_of_polish_nationalism dislikes_germany }
-		}
-		country_leader={
-			ideology=authoritarian_democracy
-			traits={ dislikes_germany }	
-		}
-	}
 	POL_regency_council={
 		name=POL_regency_council
 		portraits={
@@ -27,10 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=authoritarian_democracy
-			traits = {
-				regency_council
-			}	
+			ideology=autocracy
 		}
 	}
 	POL_jozef_pilsudski={
@@ -68,14 +45,6 @@ characters={
 				}	
 			}
 		}
-		country_leader={
-			ideology=authoritarian_democracy
-			traits={ nationalist_symbol dislikes_russia }	
-		}
-		country_leader={
-			ideology=reformist_socialism
-			traits={ revolutionary_general dislikes_russia  }
-		}
 	}
 	POL_ignacy_daszynski={
 		name=POL_ignacy_daszynski
@@ -85,7 +54,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=reformist_socialism
+			ideology=conservatism
 		}
 	}
 	POL_gabriel_narutowicz={
@@ -96,7 +65,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=agrarianism
+			ideology=conservatism
 		}
 	}
 	POL_maurycy_klemens_zamoyski={
@@ -161,7 +130,7 @@ characters={
 	POL_tadeusz_jordan_rozwadowski={
 		name=POL_tadeusz_jordan_rozwadowski
 		advisor = {
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = POL_tadeusz_jordan_rozwadowski
 			ledger = army
@@ -171,17 +140,6 @@ characters={
 			traits = {
 				grand_battle_plan_expert
 			}
-			available  = {
-				or  = {
-					has_completed_focus  = POL_declare_a_republic 
-				}
-			}
-			visible = {
-				NOT = {
-					is_subject_of = RUS
-					is_subject_of = SOV
-				}
-			}	
 		}
 		advisor={
 			slot = high_command
@@ -192,17 +150,6 @@ characters={
 			ledger  = army 
 			traits  = {
 				army_regrouping_1 
-			}
-			available  = {
-				or  = {
-					has_completed_focus  = POL_declare_a_republic 
-				}
-			}
-			visible = {
-				OR = {
-					is_subject = no
-					is_subject_of = AUH
-				}	
 			}
 			ai_will_do  = {
 				factor  = 1.000
@@ -222,14 +169,14 @@ characters={
 				organizer
 				artillery_officer				
 			}
-			attack_skill=3
+			attack_skill=4
 			defense_skill=3
-			planning_skill=3
+			planning_skill=4
 			logistics_skill=3
 			visible = {
-				OR = {
-					is_subject = no
-					is_subject_of = AUH
+				NOT = {
+					is_subject_of = RUS
+					is_subject_of = SOV
 				}	
 			}
 		}
@@ -245,11 +192,6 @@ characters={
 				ledger  = air 
 				traits  = {
 					army_logistics_3 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -328,13 +270,7 @@ characters={
 			attack_skill=2
 			defense_skill=2
 			planning_skill=2
-			logistics_skill=1
-			visible = {
-				NOT = {
-					is_subject_of = RUS
-					is_subject_of = SOV
-				}	
-			}		
+			logistics_skill=1		
 		}
 	}
 	POL_stanislaw_szeptycki={
@@ -348,11 +284,6 @@ characters={
 				ledger  = air 
 				traits  = {
 					army_infantry_1 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				ai_will_do  = {
 					factor  = 1.000
@@ -423,9 +354,9 @@ characters={
 				politically_connected
 				brilliant_strategist			
 			}
-			attack_skill=2
+			attack_skill=3
 			defense_skill=2
-			planning_skill=2
+			planning_skill=3
 			logistics_skill=3
 			visible = {
 				NOT = {
@@ -468,11 +399,6 @@ characters={
 				traits  = {
 					navy_chief_old_guard 
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -494,11 +420,6 @@ characters={
 				}
 				traits  = {
 					navy_chief_commerce_raiding_3 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				cost  = 50.000
 				ai_will_do  = {
@@ -522,11 +443,6 @@ characters={
 				traits  = {
 					air_chief_ground_support_1 
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -548,11 +464,6 @@ characters={
 				}
 				traits  = {
 					air_air_combat_training_1 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				cost  = 50.000
 				ai_will_do  = {
@@ -580,22 +491,15 @@ characters={
 			attack_skill=1
 			defense_skill=3
 			maneuvering_skill=1
-			coordination_skill=2
-			visible = {
-				NOT = {
-					is_subject_of = GER
-					is_subject_of = AUH
-					is_subject_of = SOV
-				}
-			}	
+			coordination_skill=2	
 		}
 	}
+	
 	POL_felix_dzerzhinsky = {
 		name = SOV_felix_dzerzhinsky
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/POL/POL_felix_dzerzhinsky.png"
-				small="GFX_idea_SOV_felix_dzerzhinsky"
 			}
 		}
 	}
@@ -609,11 +513,6 @@ characters={
 				}
 				traits  = {
 					compassionate_gentleman 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				cost  = 50.000
 				ai_will_do  = {
@@ -637,11 +536,6 @@ characters={
 				traits  = {
 					silent_workhorse 
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -664,11 +558,6 @@ characters={
 				traits  = {
 					smooth_talking_charmer 
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -687,14 +576,6 @@ characters={
 			idea_token = POL_stanislaw_wojciechowski
 			allowed  = {
 					original_tag  = POL 
-				}
-				traits  = {
-					polish_peasant_champion 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				cost  = 50.000
 				ai_will_do  = {
@@ -718,11 +599,6 @@ characters={
 				traits  = {
 					right_industrialist 
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -745,11 +621,6 @@ characters={
 				traits  = {
 					staunch_aristocrat 
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -771,11 +642,6 @@ characters={
 				}
 				traits  = {
 					polish_peasant_champion 
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
 				}
 				cost  = 50.000
 				ai_will_do  = {
@@ -801,12 +667,6 @@ characters={
 				traits  = {
 					head_of_intelligence 
 				}
-				available  = {
-					has_intelligence_agency  = yes 
-					or  = {
-						has_completed_focus  = POL_declare_a_republic 
-					}
-				}
 				cost  = 50.000
 				ai_will_do  = {
 					factor  = 1.000
@@ -831,12 +691,6 @@ characters={
 			}
 			traits  = {
 				military_theorist 
-			}
-			cost = 100
-			available  = {
-				or  = {
-					has_completed_focus  = POL_declare_a_republic 
-				}
 			}
 			ai_will_do  = {
 				factor  = 1.000

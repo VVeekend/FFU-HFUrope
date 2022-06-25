@@ -6,8 +6,6 @@ autonomy_state = {
 	manpower_influence = 0.2
 	
 	rule = {
-	    desc = "RULE_DESC_IS_A_SUBJECT"
-	
 		can_not_declare_war = yes
 		can_decline_call_to_war = no
 		can_be_spymaster = yes
@@ -33,40 +31,18 @@ autonomy_state = {
 
 	allowed = {
 		has_dlc = "Together for Victory"
-		OVERLORD = {
-			NOT = { has_government = communism }
-		}	
-        NOT = { 
-		    has_country_flag = protectorate
-		}
-        if = {
-			limit = {
-				has_dlc = "Waking the Tiger"
-                OVERLORD = { 
-                    OR = {
-                    	original_tag = JAP 
-						original_tag = KOR 
-						original_tag = QIN 
-					}
-				}
-			}
-			has_government = democratic
-		}
-	}
-	
-	can_take_level = {
+
 		if = {
-			limit = {
-				original_tag = POL
-				OR = {
-					is_puppet_of = GER
-					is_puppet_of = RUS
-				}
-			}
-			has_war = yes
+			limit = { has_dlc = "Death or Dishonor" }
+			NOT = { has_government = fascism }
 		}
 	}
 
 	can_lose_level = {
+		if = {
+			limit = {
+
+			}
+		}
 	}
 }

@@ -1,17 +1,17 @@
 characters={
 	DEN_palle_berthelsen={
-		name="DEN_palle_berthelsen"
+		name="Palle Berthelsen"
 		advisor={
 			slot = army_chief
 			idea_token = DEN_palle_berthelsen
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					army_chief_defensive_1 
 				}
 				ai_will_do  = {
-					factor  = 1.000
+					factor  = 1.0
 				}
 		}
 		portraits={
@@ -19,7 +19,7 @@ characters={
 				small="GFX_idea_DEN_palle_berthelsen"
 			}
 			army={
-				large="gfx/leaders/DEN/DEN_Palle_Berthelsen.png"
+				large="gfx/hoi4tgw_portraits/DEN/army_generals/DEN_Palle_Berthelsen.dds"
 			}
 		}
 		field_marshal={
@@ -28,63 +28,137 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			
-		}
-	}
-	DEN_christian_x={
-		name="DEN_christian_x"
-		portraits={
-			civilian={
-				large="gfx/leaders/DEN/DEN_christian_x.png"
-			}
-		}
-		country_leader={
-			ideology=autocracy
-			
-			
-			
+			legacy_id=25008
 		}
 	}
 	DEN_frederick_viii={
-		name="DEN_frederick_viii"
+		name="Frederick VIII"
 		portraits={
 			civilian={
-				large="gfx/leaders/DEN/DEN_frederick_viii.png"
+				large="gfx/leaders/DEN/DEN_frederick_viii.dds"
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			
-			
-			
+			ideology=centrism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	DEN_carl_theodor_zahle={
-		name="DEN_carl_theodor_zahle"
+	DEN_carstensen={
+		name="Carstensen"
 		portraits={
-			civilian={
-				large="gfx/leaders/DEN/DEN_Zahle.png"
+			army={
+				small=""
+			}
+			army={
+				large="gfx/hoi4tgw_portraits/DEN/navy_admirals/DEN_carstensen.dds"
 			}
 		}
-		country_leader={
-			ideology=social_liberalism
-			
-			
-			
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=25001
 		}
 	}
+	DEN_evers={
+		name="Evers"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/hoi4tgw_portraits/DEN/navy_admirals/DEN_evers.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=25002
+		}
+	}
+	DEN_garde={
+		name="Garde"
+		portraits={
+			army={
+				large="gfx/hoi4tgw_portraits/DEN/navy_admirals/DEN_garde.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=25003
+		}
+	}
+	DEN_kofoed_hansen={
+		name="Kofoed-Hansen"
+		portraits={
+			army={
+				large="gfx/hoi4tgw_portraits/DEN/navy_admirals/DEN_kofoed_hansen.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=25005
+		}
+	}
+	DEN_topsoe_jensen={
+		name="Topsøe-Jensen"
+		portraits={
+			army={
+				large="gfx/hoi4tgw_portraits/DEN/navy_admirals/DEN_topsoe_jensen.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=25006
+		}
+	}
+	DEN_juelbrockdorff={
+		name="Juel-Brockdorff"
+		portraits={
+			army={
+				large="gfx/hoi4tgw_portraits/DEN/navy_admirals/DEN_juel_brockdorff.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=25007
+		}
+	}
+
 	DEN_otto_kofoed_hansen={
 		advisor={
 			slot = navy_chief
 			idea_token = DEN_otto_kofoed_hansen
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					navy_chief_decisive_battle_1 
 				}
 				ai_will_do  = {
-					factor  = 1.000
+					factor  = 1.0
 				}
 		}
 		name="DEN_otto_kofoed_hansen"
@@ -99,7 +173,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_niels_nergaard
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					captain_of_industry 
@@ -115,12 +189,33 @@ characters={
 			}
 		}
 	}
+	DEN_henri_konow={
+		advisor={
+			slot = political_advisor
+			idea_token = DEN_henri_konow
+			allowed  = {
+					tag  = DEN
+				}
+				traits  = {
+					silent_workhorse 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="DEN_henri_konow"
+		portraits={
+			army={
+				small="GFX_idea_DEN_henri_konow"
+			}
+		}
+	}
 	DEN_jens_christensen={
 		advisor={
 			slot = political_advisor
 			idea_token = DEN_jens_christensen
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					quartermaster_general 
@@ -141,7 +236,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_johan_deuntzer
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					democratic_reformer 
@@ -162,7 +257,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_svend_hogsbro
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					popular_figurehead 
@@ -182,10 +277,10 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = DEN_henri_wenck
-			allowed  = {
-					original_tag  = DEN
+			ledger  = navy 
+				allowed  = {
+					tag  = DEN
 				}
-				ledger  = navy 
 				traits  = {
 					navy_anti_submarine_1 
 				}
@@ -205,7 +300,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_frederik_schroder
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					compassionate_gentleman 
@@ -226,7 +321,7 @@ characters={
 			slot = political_advisor
 			idea_token = DEN_edvard_brandes
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					armaments_organizer 
@@ -242,33 +337,12 @@ characters={
 			}
 		}
 	}
-	DEN_otto_liebe={
-		advisor={
-			slot = political_advisor
-			idea_token = DEN_otto_liebe
-			allowed  = {
-					original_tag  = DEN
-				}
-				traits  = {
-					prince_of_terror 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="DEN_otto_liebe"
-		portraits={
-			army={
-				small="GFX_idea_DEN_otto_liebe"
-			}
-		}
-	}
 	DEN_tage_reedtz_thott={
 		advisor={
 			slot = political_advisor
 			idea_token = DEN_tage_reedtz_thott
 			allowed  = {
-					original_tag  = DEN
+					tag  = DEN
 				}
 				traits  = {
 					smooth_talking_charmer 
@@ -281,6 +355,27 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_DEN_tage_reedtz_thott"
+			}
+		}
+	}
+	DEN_otto_liebe={
+		advisor={
+			slot = political_advisor
+			idea_token = DEN_otto_liebe
+			allowed  = {
+					tag  = DEN
+				}
+				traits  = {
+					prince_of_terror 
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+		name="DEN_otto_liebe"
+		portraits={
+			army={
+				small="GFX_idea_DEN_otto_liebe"
 			}
 		}
 	}

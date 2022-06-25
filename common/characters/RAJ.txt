@@ -64,7 +64,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=oligarchism
+			ideology=despotism
 			traits={ social_reformer  }
 			
 			
@@ -78,10 +78,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=oligarchism
-			
-			
-			
+			ideology=despotism		
 		}
 	}
 	RAJ_sir_charles_townshend={
@@ -134,17 +131,6 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
-		}
-	}
-	RAJ_manabendra_nath_roy={
-		name="RAJ_manabendra_nath_roy"
-		portraits={
-			civilian={
-				large="gfx/leaders/RAJ/RAJ_Manabendra_Nath_Roy.png"
-			}
-		}
-		country_leader={
-			ideology=religious_communism
 		}
 	}
 	RAJ_mohandas_karamchand_gandhi={
@@ -377,11 +363,6 @@ characters={
 			allowed  = {
 					original_tag  = RAJ
 				}
-				available  = {
-					PAK = {
-						exists  = no 
-					}
-				}
 				traits  = {
 					ideological_crusader 
 				}
@@ -399,11 +380,6 @@ characters={
 			idea_token = RAJ_sir_mohammed_iqbal
 			allowed  = {
 					original_tag  = RAJ
-				}
-				available  = {
-					PAK = {
-						exists  = no 
-					}
 				}
 				traits  = {
 					backroom_backstabber 

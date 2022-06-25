@@ -1,6 +1,3 @@
-# Do not change tags in here without changing every other reference to them.
-# If adding new technology, make sure they are uniquely named.
-
 technology_categories = {
 	light_air
 	medium_air
@@ -11,7 +8,6 @@ technology_categories = {
 	cat_heavy_armor
 	artillery
 	cat_anti_tank
-	cat_anti_air
 	naval_air
 	infantry_weapons
 	motorized_equipment
@@ -36,8 +32,6 @@ technology_categories = {
 	cat_strategic_bomber
 	naval_bomber
 	cas_bomber
-	airship
-	ship_modules_tech
 	dd_tech
 	cl_tech
 	ca_tech
@@ -89,10 +83,10 @@ technology_categories = {
 	naval_minesweeping
 	naval_minelaying
 	cat_scout_plane
-	train_tech
-	cat_production
-	cat_synth_rubber
-	cat_synth_oil
+    stormtrooper_tech
+	sniper_tech
+	flamethrower_tech
+	wardog_tech
 }
 
 technology_folders = {

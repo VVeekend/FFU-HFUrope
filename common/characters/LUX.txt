@@ -1,172 +1,70 @@
 characters={
-	LUX_joseph_bech={
-		name="LUX_joseph_bech"
+	LUX_marieadélaïde={
+		name="Marie-Adélaïde"
 		portraits={
 			civilian={
-				large="GFX_portrait_luxembourg_joseph_bech"
+				large="gfx/leaders/LUX_marie_adelaide.dds"
 			}
 		}
 		country_leader={
-			ideology=conservatism
-			
-			
-			
+			#desc="LUX_marie_adelaide_DESC"
+			ideology=liberalism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	LUX_charlotte={
-		name="LUX_charlotte"
+	LUX_aloys_kaiser={
+		name="Aloys Kaiser"
 		portraits={
 			civilian={
-				large="gfx/leaders/LUX/LUX_Charlotte.png"
+				large="gfx/leaders/LUX_aloys_kaiser.dds"
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			
-			
-			
-		}
-	}
-	LUX_michel_welter={
-		name="LUX_michel_welter"
-		portraits={
-			civilian={
-				large="gfx/leaders/Europe/Portrait_europe_generic_7.png"
-			}
-		}
-		country_leader={
-			ideology=reformist_socialism
-			
-			
-			
+			#desc="LUX_aloys_kaiser_DESC"
+			ideology=stalinism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
 	LUX_william_iv={
-		name="LUX_william_iv"
+		name="William IV"
 		portraits={
 			civilian={
-				large="gfx/leaders/LUX/LUX_william_iv.png"
+				large="gfx/leaders/LUX_william_iv.dds"
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			
-			
-			
-		}
-	}
-	LUX_marieadelaide={
-		name="LUX_marieadelaide"
-		portraits={
-			civilian={
-				large="gfx/leaders/LUX/LUX_marie_adelaide.png"
-			}
-		}
-		country_leader={
-			ideology=autocracy
-			traits={ inexperienced_monarch  }
-			
-			
-		}
-	}
-	LUX_emile_reuter={
-		name="LUX_emile_reuter"
-		portraits={
-			civilian={
-				large="gfx/leaders/LUX/LUX_Emile_Reuter.png"
-			}
-		}
-		country_leader={
+			#desc="LUX_william_iv_DESC"
 			ideology=conservatism
-			
-			
-			
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	LUX_pierre_prum={
-		name="LUX_pierre_prum"
+	LUX_damien_nagelmackers={
+		name="Damien Nagelmackers"
 		portraits={
 			civilian={
-				large="gfx/leaders/LUX/LUX_Pierre_Prum.png"
+				large="GFX_portrait_europe_generic_4"
 			}
 		}
 		country_leader={
-			ideology=social_liberalism
-			
-			
-			
+			ideology=rexism
+			expire="1929.1.1.1"
+			id=-1
 		}
 	}
-	LUX_paul_eyschen={
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_paul_eyschen
-			allowed  = {
-					original_tag  = LUX
-				}
-				traits  = {
-					silent_workhorse 
-				}
-		}
-		name="LUX_paul_eyschen"
+	LUX_florent_pirmez={
+		name="Florent Pirmez"
 		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
+			civilian={
+				large="GFX_portrait_europe_generic_8"
 			}
 		}
-	}
-	LUX_mathias_mongenast={
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_mathias_mongenast
-			allowed  = {
-					original_tag  = LUX
-				}
-				traits  = {
-					economist 
-				}
-		}
-		name="LUX_mathias_mongenast"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_4"
-			}
-		}
-	}
-	LUX_hubert_loutsch={
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_hubert_loutsch
-			allowed  = {
-					original_tag  = LUX
-				}
-				traits  = {
-					war_industrialist 
-				}
-		}
-		name="LUX_hubert_loutsch"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
-			}
-		}
-	}
-	LUX_victor_thorn={
-		advisor={
-			slot = political_advisor
-			idea_token = LUX_victor_thorn
-			allowed  = {
-					original_tag  = LUX
-				}
-				traits  = {
-					captain_of_industry 
-				}
-		}
-		name="LUX_victor_thorn"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
+		country_leader={
+			ideology=despotism
+			expire="1930.1.1.1"
+			id=-1
 		}
 	}
 }

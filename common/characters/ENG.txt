@@ -1,2337 +1,1285 @@
 characters={
-	ENG_winston_churchill={
-		name="ENG_winston_churchill"
-		advisor={
-			slot = high_command
-			idea_token = ENG_churchill_advisor
-			allowed  = {
-					original_tag  = ENG
+	
+		ENG_frederick_roberts={
+			advisor={
+				slot = army_chief
+				idea_token = ENG_frederick_roberts
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_chief_defensive_2 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_frederick_roberts"
+			portraits={
+				army={
+					small="GFX_idea_ENG_frederick_roberts"
 				}
+			}
+		}
+		ENG_frederick_sykes={
+			advisor={
+				slot = high_command
+				idea_token = ENG_frederick_sykes
+				ledger  = air 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						air_close_air_support_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_frederick_sykes"
+			portraits={
+				army={
+					small="GFX_idea_ENG_frederick_sykes"
+				}
+			}
+		}
+		ENG_david_beatty={
+			advisor={
+				slot = navy_chief
+				idea_token = ENG_david_beatty
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						navy_chief_maneuver_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_david_beatty"
+			portraits={
+				army={
+					small="GFX_idea_ENG_david_beatty"
+				}
+			}
+		}
+		ENG_john_jellicoe={
+			advisor={
+				slot = navy_chief
+				idea_token = ENG_john_jellicoe
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						navy_chief_decisive_battle_2 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_john_jellicoe"
+			portraits={
+				army={
+					small="GFX_idea_ENG_john_jellicoe"
+				}
+			}
+		}
+		ENG_frederick_lambart={
+			advisor={
+				slot = high_command
+				idea_token = ENG_frederick_lambart
+				ledger  = army 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_infantry_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_frederick_lambart"
+			portraits={
+				army={
+					small="GFX_idea_ENG_frederick_lambart"
+				}
+			}
+		}
+		ENG_arthur_wilson={
+			advisor={
+				slot = high_command
+				idea_token = ENG_arthur_wilson
 				ledger  = navy 
-				available  = {
-					not  = {
-						has_government  = communism 
+					allowed  = {
+						tag  = ENG
 					}
-					is_country_leader = no	
-				}
-				traits  = {
-					navy_amphibious_assault_1
-				}
-				cost = 20
-				ai_will_do  = {
-					factor  = 2
-				}
-		}
-		portraits={
-			navy={
-				small="GFX_idea_ENG_churchill_advisor"
-			}
-			civilian={
-				large="gfx/leaders/ENG/ENG_Winston_Churchill.png"
-			}
-		}
-		country_leader = {
-			ideology = liberal_conservatism
-			traits = { british_bulldog }
-		}
-	}
-	ENG_stanley_baldwin={
-		name="ENG_stanley_baldwin"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_Stanley_Baldwin.png"
-			}
-		}
-	}
-	ENG_oswald_mosley={
-		name="ENG_oswald_mosley"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_Oswald_Mosley.png"
-				small="GFX_idea_ENG_oswald_mosley"
-			}
-		}
-	}
-	ENG_harry_pollitt={
-		name="ENG_harry_pollitt"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/portrait_eng_harry_pollitt.dds"
-			}
-		}
-	}
-	ENG_david_lloyd_george={
-		name="ENG_david_lloyd_george"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_david_lloyd_george.png"
-				small="gfx/interface/ideas/ENG/idea_eng_david_lloyd_george.png"
-			}
-		}
-		country_leader={
-			ideology=social_liberalism
-			traits={ headstrong dislikes_germany  }
-			
-			
-		}
-	}
-	ENG_edward_grey={
-		name="ENG_edward_grey"
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_edward_grey
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_completed_focus  = ENG_Royal_Prerogative 
+					traits  = {
+						navy_naval_air_defense_1 
 					}
-					has_government  = democratic 
-				}
-				visible  = {
-					not  = {
-						has_completed_focus  = ENG_Arrest_Sir_Grey 
+					ai_will_do  = {
+						factor  = 1.000
 					}
-				}
-				traits  = {
-					smooth_talking_charmer 
-				}
-				ai_will_do  = {
-					factor  = 5.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_ENG_edward_grey"
 			}
-			civilian={
-				large="gfx/leaders/ENG/ENG_edward_grey.png"
+			name="ENG_arthur_wilson"
+			portraits={
+				army={
+					small="GFX_idea_ENG_arthur_wilson"
+				}
 			}
 		}
-		country_leader={
-			ideology=classical_liberalism
-			traits={ statesman_of_europe }
-			
-			
-		}
-	}
-	ENG_douglas_haig={
-		name="ENG_douglas_haig"
-		advisor={
-			slot = army_chief
-			idea_token = ENG_douglas_haig
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					army_chief_maneuver_2
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_ENG_douglas_haig"
-			}
-			civilian={
-				large="gfx/leaders/ENG/ENG_douglas_haig.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist harsh_leader cavalry_officer politically_connected engineer_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=802
-		}
-		country_leader={
-			ideology=stratocracy
-			traits={ ENG_haig_the_butcher }		
-		}
-	}
-	ENG_arthur_connaught={
-		name=CAN_prince_arthur
-		portraits={
-			army={
-				large="gfx/leaders/CAN/CAN_prince_arthur.png"
-				small="gfx/interface/ideas/CAN/idea_CAN_prince_arthur.png"
-			}
-		}
-		field_marshal={
-			traits={ trait_royal engineer_officer media_personality old_guard }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=829
-			visible = {
-				NOT = {
-					has_government = communism
-				}
-				if = {
-					limit = {
-						tag = CAN
-					}
-					OR = {
-						is_subject_of = ENG
-						is_country_leader = yes
-						AND = {
-							has_completed_focus = CAN_const_monarchy
-							is_in_faction_with = ENG
-						}	
-					}	
-				}	
-			}
-		}
-	}
-	ENG_john_french={
-		name="ENG_john_french"
-		advisor={
-			slot = high_command
-			idea_token = ENG_john_french
-			allowed  = {
-					original_tag  = ENG
-				}
+		ENG_garrett_o_moore_creagh={
+			advisor={
+				slot = theorist
+				idea_token = ENG_garrett_o_moore_creagh
 				ledger  = army 
-				available  = {
-					not  = {
-						has_government  = communism 
+					allowed  = {
+						tag  = ENG
 					}
-				}
-				traits  = {
-					army_artillery_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_ENG_john_french"
+					traits  = {
+						grand_battle_plan_expert 
+					}
+					research_bonus  = {
+						land_doctrine  = 0.100
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
 			}
-			army={
-				large="gfx/leaders/ENG/ENG_john_french.png"
+			name="ENG_garrett_o_moore_creagh"
+			portraits={
+				army={
+					small="GFX_idea_ENG_garrett_o_moore_creagh"
+				}
 			}
 		}
-		field_marshal={
-			traits={ old_guard politically_connected ENG_royalist media_personality defensive_doctrine }
-			skill=2
-			attack_skill=1
-			defense_skill=4
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=801
-		}
-	}
-	ENG_herbert_kitchener={
-		name="ENG_herbert_kitchener"
-		advisor={
-			slot = high_command
-			idea_token = ENG_herbert_kitchener
-			allowed  = {
-					original_tag  = ENG
+		ENG_george_macaulay_kirkpatrick={
+			advisor={
+				slot = army_chief
+				idea_token = ENG_george_macaulay_kirkpatrick
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_chief_morale_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_george_macaulay_kirkpatrick"
+			portraits={
+				army={
+					small="GFX_idea_ENG_george_macaulay_kirkpatrick"
 				}
+			}
+		}
+		ENG_st_john_brodrick={
+			advisor={
+				slot = theorist
+				idea_token = ENG_st_john_brodrick
 				ledger  = army 
-				available  = {
-					not  = {
-						has_government  = communism 
-						has_country_flag  = kitchener_dead 
+					allowed  = {
+						tag  = ENG
 					}
+					traits  = {
+						military_theorist 
+					}
+					research_bonus  = {
+						land_doctrine  = 0.100
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_st_john_brodrick"
+			portraits={
+				army={
+					small="GFX_idea_ENG_st_john_brodrick"
 				}
-				traits  = {
-					army_logistics_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_ENG_herbert_kitchener"
-				large="gfx/leaders/ENG/ENG_herbert_kitchener.png"
 			}
 		}
-		field_marshal={
-			traits={ media_personality old_guard war_hero engineer_officer ENG_royalist skilled_staffer expert_delegator }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=899
+		ENG_john_edward_bernard_seely={
+			advisor={
+				slot = theorist
+				idea_token = ENG_john_edward_bernard_seely
+				ledger  = navy 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						naval_theorist 
+					}
+					research_bonus  = {
+						naval_doctrine  = 0.100
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_john_edward_bernard_seely"
+			portraits={
+				army={
+					small="GFX_idea_ENG_john_edward_bernard_seely"
+				}
+			}
 		}
-		country_leader={
-			ideology=stratocracy
+		ENG_hugh_trenchard={
+			advisor={
+				slot = high_command
+				idea_token = ENG_hugh_trenchard
+				ledger  = air 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						air_air_superiority_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_hugh_trenchard"
+			portraits={
+				army={
+					small="GFX_idea_ENG_hugh_trenchard"
+				}
+			}
 		}
-	}
-	ENG_edward_reynolds_pease={
-		name="ENG_edward_reynolds_pease"
+		ENG_edward_james_headlam={
+			advisor={
+				slot = navy_chief
+				idea_token = ENG_edward_james_headlam
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						navy_chief_commerce_raiding_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_edward_james_headlam"
+			portraits={
+				army={
+					small="GFX_idea_ENG_edward_james_headlam"
+				}
+			}
+		}
+		ENG_charles_vaughan_lee={
+			advisor={
+				slot = air_chief
+				idea_token = ENG_charles_vaughan_lee
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						air_chief_reform_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_charles_vaughan_lee"
+			portraits={
+				army={
+					small="GFX_idea_ENG_charles_vaughan_lee"
+				}
+			}
+		}
+		ENG_louis_alexander_mountbatten={
+			advisor={
+				slot = high_command
+				idea_token = ENG_louis_alexander_mountbatten
+				ledger  = navy 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						navy_screen_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_louis_alexander_mountbatten"
+			portraits={
+				army={
+					small="GFX_idea_ENG_louis_alexander_mountbatten"
+				}
+			}
+		}
+		ENG_percy_zachariah_cox={
+			advisor={
+				slot = high_command
+				idea_token = ENG_percy_zachariah_cox
+				ledger  = army 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_commando_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_percy_zachariah_cox"
+			portraits={
+				army={
+					small="GFX_idea_ENG_percy_zachariah_cox"
+				}
+			}
+		}
+		ENG_richard_haldane={
+			advisor={
+				slot = theorist
+				idea_token = ENG_richard_haldane
+				ledger  = army 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						mobile_warfare_expert 
+					}
+					research_bonus  = {
+						land_doctrine  = 0.100
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_richard_haldane"
+			portraits={
+				army={
+					small="GFX_idea_ENG_richard_haldane"
+				}
+			}
+		}
+		ENG_edward_stanley={
+			advisor={
+				slot = theorist
+				idea_token = ENG_edward_stanley
+				ledger  = air 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						air_warfare_theorist 
+					}
+					research_bonus  = {
+						air_doctrine  = 0.100
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_edward_stanley"
+			portraits={
+				army={
+					small="GFX_idea_ENG_edward_stanley"
+				}
+			}
+		}
+		ENG_neville_lyttleton={
+			advisor={
+				slot = army_chief
+				idea_token = ENG_neville_lyttleton
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_chief_organizational_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_neville_lyttleton"
+			portraits={
+				army={
+					small="GFX_idea_ENG_neville_lyttleton"
+				}
+			}
+		}
+		ENG_archibald_murray={
+			advisor={
+				slot = army_chief
+				idea_token = ENG_archibald_murray
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_chief_reform_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_archibald_murray"
+			portraits={
+				army={
+					small="GFX_idea_ENG_archibald_murray"
+				}
+			}
+		}
+		ENG_david_henderson={
+			advisor={
+				slot = air_chief
+				idea_token = ENG_david_henderson
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						air_chief_ground_support_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+			name="ENG_david_henderson"
+			portraits={
+				army={
+					small="GFX_idea_ENG_david_henderson"
+				}
+			}
+		}
+	
+	
+	ENG_tom_mann={
+		name="Tom Mann"
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/ENG_Edward_Pease.png"
+				large="gfx/leaders/ENG_tom_mann.dds"
 			}
 		}
 		country_leader={
-			ideology=market_socialism
-			
-			
-			
+			#desc="ENG_tom_mann_DESC"
+			ideology=stalinism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	ENG_herbert_henry_asquith={
-		name="ENG_herbert_henry_asquith"
+	ENG_gilbert_elliotmurraykynynmound={
+		name="Gilbert Elliot-Murray-Kynynmound"
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/ENG_herbert_henry_asquith.png"
+				large="gfx/leaders/ENG_gilbert_elliot_murray_kynynmound.dds"
 			}
 		}
 		country_leader={
-			ideology=social_liberalism
-			traits={ eng_asquith_trait  }
-			
-			
+			#desc="ENG_gilbert_elliot_murray_kynynmound_DESC"
+			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	ENG_edward_vii={
-		name="ENG_edward_vii"
+	ENG_charles_hardinge={
+		name="Charles Hardinge"
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/ENG_edward_vii.png"
+				large="gfx/leaders/ENG_charles_hardinge.dds"
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			
-			
-			
+			#desc="ENG_charles_hardinge_DESC"
+			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
+		}
+	}
+	ENG_frederic_thesiger={
+		name="Frederic Thesiger"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG_frederic_thesiger.dds"
+			}
+		}
+		country_leader={
+			#desc="ENG_frederic_thesiger_DESC"
+			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
+		}
+	}
+	ENG_rufus_isaacs={
+		name="Rufus Isaacs"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG_rufus_isaacs.dds"
+			}
+		}
+		country_leader={
+			#desc="ENG_rufus_isaacs_DESC"
+			ideology=conservatism
+			expire="1935.1.1.1"
+			id=-1
+		}
+	}
+	ENG_walter_davidson={
+		name="Walter Davidson"
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG_walter_davidson.dds"
+			}
+		}
+		country_leader={
+			#desc="ENG_walter_davidson_DESC"
+			ideology=liberalism
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
 	ENG_george_v={
-		name="ENG_george_v"
+		name="George V"
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/ENG_george_v.png"
+				large="gfx/leaders/ENG/ENG_george_v.dds"
 			}
 		}
 		country_leader={
-			ideology=autocracy
-			
-			
-			
+			#desc="ENG_edward_vii_DESC"
+			ideology=conservatism
+			traits={ imperial_connections }
+			expire="1935.1.1.1"
+			id=-1
 		}
 	}
-	ENG_edward_viii={
-		name="ENG_prince_edward"
+  ##Advisors##
+  
+   ENG_edward_grey={
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/ENG_edward_viii.png"
-			}
-		}
-	}
-	ENG_charles_edward={
-		name="ENG_charles_edward"
-		portraits={
-			civilian={
-				large="gfx/leaders/GER/GER_Carl_Eduard_von_Sachsen_Coburg_und_Gotha.png"
-			}
-		}
-	}
-	ENG_fallen_government={
-		name="ENG_fallen_government"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/portrait_eng_fallen_government.dds"
-			}
-		}
-	}
-	ENG_john_robert_clynes={
-		name="ENG_john_robert_clynes"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_robert_clynes.png"
-			}
-		}
-	}
-	ENG_ramsay_macdonald={
-		name="ENG_ramsay_macdonald"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_ramsay_macdonald.png"
-			}
-		}
-	}
-	ENG_edward_carson={
-		name="ENG_edward_carson"
-		portraits={
-			civilian={
-				large="gfx/leaders/NIR/NIR_Edward_Carson.png"
-			}
-		}
-	}
-	ENG_henry_page_croft={
-		name="ENG_henry_page_croft"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_henry_page_croft.png"
-			}
-		}
-	}
-	ENG_austen_chamberlain={
-		name="ENG_austen_chamberlain"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
-			}
-		}
-	}
-	ENG_victoria_ii={
-		name="ENG_victoria_ii"
-		gender = female
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_princess_victoria.png"
-			}
-		}
-	}
-	ENG_london_commune={
-		name="ENG_london_commune"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_anarkiddies.png"
-			}
-		}
-	}
-	ENG_george_lansbury={
-		name="ENG_george_lansbury"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_george_lansbury.png"
-			}
-		}
-		country_leader={
-			ideology=reformist_socialism
-			traits={ ENG_feminist_cockney_lansbury ENG_pacifist_disarmer_lansbury  }
-			
-			
-		}
-	}
-	ENG_henry_hyndman={
-		name="ENG_henry_hyndman"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_henry_hyndman.png"
-			}
-		}
-		country_leader={
-			ideology=reformist_socialism
-			traits={ ENG_the_first_british_communist  }
-		}
-	}
-	ENG_herbert_george_wells={
-		name="ENG_herbert_george_wells"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_herbert_george_wells.png"
-			}
-		}
-		country_leader={
-			ideology=market_socialism
-			traits={ ENG_socialist_author_h_g_wells ENG_anti_imperialist_in_imperialist_cabinet  }
-			
-			
-		}
-	}
-	ENG_ellen_wilkinson={
-		name="ENG_ellen_wilkinson"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_Ellen_Wilkinson.png"
-			}
-		}
-	}
-	ENG_lewis_pugh_evans={
-		name="ENG_lewis_pugh_evans"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_Lewis_Evans.png"
-				small="GFX_idea_ENG_generic_land_7"
-			}
-		}
-	}
-	ENG_clement_attlee={
-		name=ENG_clement_attlee
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_clement_attlee_general.png"
-				small="GFX_idea_clement_attlee"
-			}
-		}
-	}
-	ENG_william_slim={
-		name=ENG_william_slim
-		portraits={
-			army={
-				large=GFX_portrait_ENG_william_slim
-				small=GFX_portrait_ENG_william_slim_small
-			}
-		}
-	}
-	ENG_rotha_lintornorman={
-		name="ENG_rotha_lintornorman"
-		gender = female
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_Rotha_Lintorn_Orman.png"
-			}
-		}
-	}
-	ENG_james_lowther={
-		name="ENG_james_lowther"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_James_Lowther.png"
-			}
-		}
-	}
-	ENG_ali_kemal={
-		name="ENG_ali_kemal"
-		portraits={
-			civilian={
-				large="gfx/leaders/ENG/ENG_ali_kemal.png"
-			}
-		}
-	}
-	ENG_ian_hamilton={
-		name="ENG_ian_hamilton"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_4"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_ian_hamilton.png"
-			}
-		}
-		corps_commander={
-			traits={ old_guard trait_cautious naval_liason career_officer ENG_royalist }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=803
-		}
-	}
-	ENG_rudolph_lambart={
-		name="ENG_rudolph_lambart"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_4"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_rudolph_lambart.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist inflexible_strategist media_personality trait_mountaineer }
-			skill=3
-			attack_skill=2
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=804
-		}
-	}
-	ENG_edmund_allenby={
-		name="ENG_edmund_allenby"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_edmund_allenby.png"
-			}
-		}
-		corps_commander={
-			traits={ cavalry_officer cavalry_leader media_personality skilled_staffer ENG_royalist }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=805
-			visible = {
-				OR = {
-					original_tag = ENG
-					is_subject_of = ENG
-					is_in_faction_with = ENG
-					has_idea = ENG_british_officers_independent_egypt
-				}
-			}
-		}
-		country_leader={
-			ideology=stratocracy			
-		}
-	}
-	ENG_aylmer_hunterweston={
-		name="ENG_aylmer_hunterweston"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_2"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_aylmer_hunter.png"
-			}
-		}
-		corps_commander={
-			traits={ trait_reckless harsh_leader naval_liason politically_connected ENG_royalist }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=806
-		}
-	}
-	ENG_leslie_rundle={
-		name="ENG_leslie_rundle"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_leslie_rundle.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist old_guard }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=807
-		}
-	}
-	ENG_robert_badenpowell={
-		name="ENG_robert_badenpowell"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_1"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_baden_powell.png"
-			}
-		}
-		corps_commander={
-			traits={ old_guard ENG_royalist media_personality ranger infantry_officer infantry_leader }
-			skill=2
-			attack_skill=1
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=808
-		}
-	}
-	ENG_george_harper={
-		name="ENG_george_harper"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_1"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_george_harper.png"
-			}
-		}
-		corps_commander={
-			traits={ harsh_leader ENG_royalist engineer_officer infantry_officer }
-			skill=1
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-			legacy_id=809
-		}
-	}
-	ENG_hugh_elles={
-		name="ENG_hugh_elles"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_hugh_elles.png"
-			}
-		}
-		corps_commander={
-			traits={ armor_officer ENG_royalist panzer_leader }
-			skill=2
-			attack_skill=4
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=811
-		}
-	}
-	ENG_james_grierson={
-		name="ENG_james_grierson"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_2"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_james_grierson.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist old_guard trait_cautious trickster }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=812
-		}
-	}
-	ENG_henry_horne={
-		name="ENG_henry_horne"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_2"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_henry_horne.png"
-			}
-		}
-		corps_commander={
-			traits={ artillery_officer ENG_royalist artillery_specialist trait_engineer war_hero }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=813
-		}
-	}
-	ENG_herbert_plumer={
-		name="ENG_herbert_plumer"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_1"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_herbert_plumer.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist old_guard war_hero brilliant_strategist }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=814
-		}
-	}
-	ENG_frederick_maude={
-		name="ENG_frederick_maude"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_stanley_maude.png"
-				small="GFX_idea_ENG_generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist brilliant_strategist desert_fox }
-			skill=3
-			attack_skill=1
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=815
-		}
-	}
-	ENG_anthony_ashleycooper={
-		name="ENG_anthony_ashleycooper"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_5"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_anthony_cooper.png"
-			}
-		}
-		corps_commander={
-			traits={ cavalry_officer politically_connected ENG_royalist }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=816
-		}
-	}
-	ENG_ivor_maxse={
-		name="ENG_ivor_maxse"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_5"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_ivor_maxse.png"
-			}
-		}
-		corps_commander={
-			traits={ war_hero infantry_leader engineer_officer ENG_royalist }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=817
-		}
-	}
-	ENG_henry_rawlinson={
-		name="ENG_henry_rawlinson"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_6"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_henry_rawlinson.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist infantry_officer brilliant_strategist trickster }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=4
-			legacy_id=818
-		}
-	}
-	ENG_horace_smith_dorrien={
-		name="ENG_horace_smith_dorrien"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_6"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_Horace_Smith_Dorrien.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist brilliant_strategist organizer skilled_staffer engineer_officer }
-			skill=4
-			attack_skill=1
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=4
-		}
-	}
-	ENG_julian_byng={
-		name="ENG_julian_byng"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_julian_byng.png"
-			}
-		}
-		corps_commander={
-			traits={ war_hero cavalry_officer cavalry_leader brilliant_strategist panzer_leader }
-			skill=4
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3		
-		}
-	}
-	ENG_george_milne={
-		name="ENG_george_milne"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_George_Milne.png"
-				small="GFX_idea_ENG_generic_land_5"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist career_officer armor_officer artillery_specialist }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-		}
-	}
-	ENG_thomas_doyly_snow={
-		name="ENG_thomas_doyly_snow"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_6"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_thomas_snow.png"
-			}
-		}
-		corps_commander={
-			traits={ war_hero trait_reckless cavalry_officer }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=819
-		}
-	}
-	ENG_william_hickie={
-		name="ENG_william_hickie"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_william_hickie.png"
-				small="GFX_idea_ENG_generic_land_1"
-			}
-		}
-		corps_commander={
-			traits={ harsh_leader war_hero career_officer infantry_leader }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=821
-		}
-	}
-	ENG_john_capper={
-		name="ENG_john_capper"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_john_capper.png"
-				small="GFX_idea_ENG_generic_land_2"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist panzer_leader camouflage_expert }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=822
-		}
-	}
-	ENG_lionel_dunsterville={
-		name="ENG_lionel_dunsterville"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_Lionel_Dunsterville.png"
-				small="GFX_idea_ENG_generic_land_3"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist war_hero commando armor_officer engineer_officer }
-			skill=3
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=1
-		}
-	}
-	ENG_oliver_nugent={
-		name="ENG_oliver_nugent"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_2"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_oliver_nugent.png"
-			}
-		}
-		corps_commander={
-			traits={ ENG_royalist career_officer infantry_officer trait_mountaineer winter_specialist }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=823
-		}
-	}
-	ENG_alfred_knox={
-		name="ENG_alfred_knox"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_Alfred_Knox.png"
-			}
-		}
-		corps_commander={
-			traits={ career_officer politically_connected winter_specialist ENG_royalist }
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=3
-			legacy_id=827
-			visible = {
-				NOT = {
-					has_war_with = ENG
-				}			
-			}	
-		}
-	}
-	ENG_hubert_gough={
-		name="ENG_hubert_gough"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_land_1"
-				large="gfx/leaders/ENG/ENG_Hubert_Gough.png"
-			}
-		}
-		corps_commander={
-			traits={ ranger inflexible_strategist war_hero ENG_royalist cavalry_officer eng_o_trait }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=828
-		}
-	}
-#### Admirals ####
-	ENG_john_jellicoe={
-		name="ENG_john_jellicoe"
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
 		advisor={
-			slot = navy_chief
-			idea_token = ENG_john_jellicoe
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_edward_grey
 			traits  = {
-				navy_chief_maneuver_3
+				captain_of_industry 
 			}
 			ai_will_do  = {
 				factor  = 1.000
 			}
-		}
+		} }
+		
+   ENG_henry_petty_fitzmaurice={
 		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_john_jellicoe.png"
-				small="GFX_idea_ENG_john_jellicoe"
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token =  ENG_henry_petty_fitzmaurice
+			traits  = {
+				dealbroker
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+		
+   ENG_frederick_maurice={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_frederick_maurice
+			traits  = {
+				silent_workhorse
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+
+   ENG_arthur_balfour={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_arthur_balfour
+			traits  = {
+				conservative_nationalist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+
+   ENG_george_macdonogh={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_george_macdonogh
+			traits  = {
+				head_of_intelligence
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+   ENG_reginald_mckenna={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_reginald_mckenna
+			traits  = {
+				armaments_organizer 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+   ENG_herbert_samuel={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_herbert_samuel
+			traits  = {
+				compassionate_gentleman
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+   ENG_aretas_akers_douglas={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_aretas_akers_douglas
+			traits  = {
+				economist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+   ENG_arthur_henderson={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_arthur_henderson
+			traits  = {
+				popular_figurehead
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+   ENG_william_peel={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_william_peel
+			traits  = {
+				connected_citizen
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }
+   ENG_herbert_mullaly={
+		portraits={
+			civilian={
+				large="gfx/hoi4tgw_portraits/ENG/advisor/ENG_edward_grey.dds"
+			} }
+		advisor={
+			allowed  = {
+					tag  = ENG
+				}
+			slot = political_advisor
+			idea_token = ENG_herbert_mullaly
+			traits  = {
+				war_industrialist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		} }		
+  ##Army##
+	ENG_sir_douglas_haig={
+		name="Douglas Haig"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_douglas_haig.dds"
+				small="GFX_idea_ENG_douglas_haig"
 			}
 		}
-		navy_leader={
-			traits={ gentlemanly caustic_personality navy_career_officer superior_tactician ironside }
-			skill=5
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=5
-			coordination_skill=5
-			legacy_id=826
+			advisor={
+				slot = army_chief
+				idea_token = ENG_douglas_haig
+				allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_chief_offensive_2
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+		field_marshal={
+			traits={ offensive_doctrine thorough_planner infantry_expert }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
 		}
 	}
-	ENG_william_pakenham={
-		name="ENG_william_pakenham"
+	ENG_hamilton_i.s.m.={
+		name="Ian Hamilton"
 		portraits={
+
 			army={
-				small="GFX_idea_ENG_generic_navy_2"
+				large="gfx/leaders/ENG/ENG_ian_hamilton.dds"
 			}
+		}
+		field_marshal={
+		    traits = { old_guard career_officer inflexible_strategist ENG_royalist } 
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+		ENG_john_french={
+			name="ENG_john_french"
+			portraits={		    
+				army={
+				    large="gfx/leaders/ENG/ENG_john_french.dds"
+					small="GFX_idea_ENG_john_french"					
+				}
+			}		
+			advisor={
+				slot = high_command
+				idea_token = ENG_john_french
+				ledger  = army 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_artillery_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+		corps_commander={
+			traits={ old_guard politically_connected defensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+		
+	ENG_aylmer_hunterweston={
+		name="Aylmer Hunter-Weston"
+		portraits={
+
 			army={
-				large="gfx/leaders/ENG/ENG_william_pakenham.png"
+				large="gfx/leaders/ENG/ENG_aylmer_hunter.dds"
+			}
+		}
+		field_marshal={
+			traits={ naval_invader }
+			skill=2
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ENG_sir_leslie_rundle={
+		name="Leslie Rundle"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_leslie_rundle.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ENG_kitchener_h.h.={
+		name="Herbert Kitchener"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_herbert_kitchener.dds"
+				small="GFX_idea_ENG_herbert_kitchener"
+			}
+		}
+			advisor={
+				slot = high_command
+				idea_token = ENG_herbert_kitchener
+				ledger  = army 
+					allowed  = {
+						tag  = ENG
+					}
+					traits  = {
+						army_logistics_1 
+					}
+					ai_will_do  = {
+						factor  = 1.000
+					}
+			}
+		field_marshal={
+			traits={ logistics_wizard fast_planner organisational_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=6
+			legacy_id=-1
+		}
+	}
+	ENG_badenpowell={
+		name="Robert Baden-Powell"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_baden_powell.dds"
+			}
+		}
+		corps_commander={
+		    traits = { old_guard ranger trickster }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ENG_elles={
+		name="Hugh Elles"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_hugh_elles.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer panzer_leader brilliant_strategist }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	ENG_grierson={
+		name="James Grierson"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_james_grierson.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ENG_horne_sir_h.={
+		name="Henry Horne"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_henry_horne.dds"
+			}
+		}
+		corps_commander={
+			traits={ fortress_buster }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ENG_maude={
+		name="Frederick Maude"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_frederick_maude.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ENG_maxse_sir_i.={
+		name="Ivor Maxse"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_ivor_maxse.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			traits = { armor_officer }
+			attack_skill=3
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	ENG_plumer_h.={
+		name="Herbert Plumer"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_herbert_plumer.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer fortress_buster infantry_leader }
+			skill=6
+			attack_skill=4
+			defense_skill=5
+			planning_skill=1
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	ENG_rawlinson_sir_h.={
+		name="Henry Rawlinson"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_henry_rawlinson.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ENG_snow={
+		name="Thomas Snow"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_thomas_snow.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ENG_hickie_w.b.={
+		name="William Hickie"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_william_hickie.dds"
+			}
+		}
+		corps_commander={
+			traits={ aggressive_assaulter harsh_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ENG_capper_j.e.={
+		name="John Capper"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_john_capper.dds"
+			}
+		}
+			advisor={
+				slot = high_command
+				idea_token = ENG_ernest_swinton
+				ledger  = army 
+					traits  = {
+						army_armored_3 
+					}
+					allowed  = {
+						tag  = ENG
+					}
+			}
+		corps_commander={
+			traits={ camouflage_expert panzer_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	ENG_nugent_o.s.w.={
+		name="Oliver Nugent"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_oliver_nugent.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ENG_bridgeman={
+		name="Francis Bridgeman"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_francis_bridgeman.dds"
 			}
 		}
 		navy_leader={
-			traits={ bold battleship_adherent ironside }
+			traits={ ironside gentlemanly old_guard_navy }
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=3
+			coordination_skill=4
+			legacy_id=28329
+		}
+	}
+	ENG_beatty={
+		name="David Beatty"
+		portraits={
+
+			army={
+				large="gfx/leaders/ENG/ENG_david_beatty.dds"
+			}
+		}
+		navy_leader={
+			traits = { navy_media_personality superior_tactician gentlemanly }
 			skill=4
 			attack_skill=4
 			defense_skill=3
 			maneuvering_skill=3
 			coordination_skill=4
-			
+			legacy_id=28374
 		}
 	}
-	ENG_reginald_tyrwhitt={
-		name="ENG_reginald_tyrwhitt"
+	ENG_jellicoe={
+		name="John Jellicoe"
 		portraits={
+
 			army={
-				small="GFX_idea_ENG_generic_navy_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_reginald_tyrwhitt.png"
+				large="gfx/leaders/ENG/ENG_john_jellicoe.dds"
 			}
 		}
 		navy_leader={
-			traits={ navy_career_officer aviation_enthusiast fleet_protector destroyer_leader }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			maneuvering_skill=3
-			coordination_skill=3		
-		}
-	}
-	ENG_david_beatty={
-		name="ENG_david_beatty"
-		advisor={
-			slot = navy_chief
-			idea_token = ENG_david_beatty
-			traits  = {
-				navy_chief_decisive_battle_2
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_david_beatty.png"
-				small="GFX_idea_ENG_david_beatty"
-			}
-		}
-		navy_leader={
-			traits={ bold naval_lineage navy_media_personality blockade_runner ironside }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			maneuvering_skill=3
-			coordination_skill=2
-		}
-	}
-	ENG_lionel_halsey={
-		name="ENG_lionel_halsey"
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_Lionel_Halsey.png"
-				small="GFX_idea_ENG_generic_navy_1"
-			}
-		}
-		navy_leader={
-			traits={ bold chief_engineer navy_media_personality blockade_runner ironside }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			maneuvering_skill=4
-			coordination_skill=2
-		}
-	}
-	ENG_john_fisher={
-		name=ENG_john_fisher
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_John_Fisher.png"
-				small="GFX_idea_ENG_generic_navy_2"
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy bold battleship_adherent naval_lineage navy_media_personality ironside superior_tactician }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=4
-			coordination_skill=3
-		}
-	}
-	ENG_percy_scott={
-		name="ENG_percy_scott"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_navy_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_percy_scott.png"
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy cuts_corners gunnery_expert big_guns_expert }
+			traits={ superior_tactician gentlemanly }
 			skill=3
 			attack_skill=4
-			defense_skill=4
-			maneuvering_skill=2
-			coordination_skill=1	
-		}
-	}
-	ENG_roger_keyes={
-		name="ENG_roger_keyes"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_navy_2"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_roger_keyes.png"
-			}
-		}
-		navy_leader={
-			traits={ naval_lineage navy_career_officer seawolf spotter }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=2
-			
-		}
-	}
-	ENG_dudley_de_chair={
-		name="ENG_dudley_de_chair"
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_Dudley_de_Chair.png"
-				small="GFX_idea_ENG_generic_navy_2"
-			}
-		}
-		navy_leader={
-			traits={ gentlemanly navy_career_officer superior_tactician }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=3
-		}
-	}
-	ENG_christopher_cradock={
-		name="ENG_christopher_cradock"
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_Christopher_Cradock.png"
-				small="GFX_idea_ENG_generic_navy_3"
-			}
-		}
-		navy_leader={
-			traits={ naval_lineage aviation_enthusiast fly_swatter cruiser_captain }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			maneuvering_skill=3
-			coordination_skill=3
-		}
-	}
-	ENG_louis_alexander_mountbatten={
-		name="ENG_prince_louis_of_battenberg"
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_louis_alexander_mountbatten.png"
-				small="GFX_idea_ENG_louis_alexander_mountbatten"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = ENG_louis_alexander_mountbatten
-			ledger  = navy 
-			traits  = {
-				navy_screen_2 
-			}
-			visible = {
-				NOT = {
-					has_government = communism
-				}
-			}	
-			ai_will_do  = {
-				factor  = 1
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy navy_media_personality gentlemanly superior_tactician trait_royal }
-			skill=2
-			attack_skill=2
 			defense_skill=2
 			maneuvering_skill=4
-			coordination_skill=2
-			visible = {
-				NOT = {
-					has_government = communism
-				}
-				date < 1921.9.11
-			}	
-		}
-	}
-	ENG_william_may={
-		name="ENG_william_may"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_navy_1"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_william_may.png"
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy battleship_adherent navy_career_officer navy_media_personality  }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=4			
-		}
-	}
-	ENG_george_callaghan={
-		name="ENG_george_callaghan"
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_George_Callaghan.png"
-				small="GFX_idea_ENG_generic_navy_2"
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy battleship_adherent ironside  }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			maneuvering_skill=2
 			coordination_skill=3
+			legacy_id=28376
 		}
 	}
-	ENG_william_goodenough={
-		name="ENG_william_goodenough"
+	ENG_pakenham={
+		name="William Pakenham"
 		portraits={
+
 			army={
-				small="GFX_idea_ENG_generic_navy_1"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_william_goodenough.png"
+				large="gfx/leaders/ENG/ENG_william_pakenham.dds"
 			}
 		}
 		navy_leader={
-			traits={ old_guard_navy concealment_expert }
-			skill=2
+			traits={ gunnery_expert fleet_protector superior_tactician }
+			skill=3
 			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=2			
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=3
+			legacy_id=28394
 		}
 	}
-	ENG_horace_hood={
-		name="ENG_horace_hood"
+	ENG_goodenough={
+		name="William Goodenough"
 		portraits={
+
 			army={
-				small="GFX_idea_ENG_generic_navy_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_horace_hood.png"
+				large="gfx/leaders/ENG/ENG_william_goodenough.dds"
 			}
 		}
 		navy_leader={
-			traits={ bold craven blockade_runner }
+			traits={ superior_tactician }
 			skill=2
 			attack_skill=2
 			defense_skill=3
 			maneuvering_skill=3
-			coordination_skill=1			
-		}
-	}
-	ENG_reginald_bacon={
-		name="ENG_reginald_bacon"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_navy_3"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_Reginald_Bacon.png"
-			}
-		}
-		navy_leader={
-			traits={ gunnery_expert ironside ground_pounder }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=2
 			coordination_skill=1
-			
+			legacy_id=28447
 		}
 	}
-	ENG_francis_bridgeman={
-		name="ENG_francis_bridgeman"
+	ENG_keyes={
+		name="Roger Keyes"
 		portraits={
+
 			army={
-				small="GFX_idea_ENG_generic_navy_2"
-			}
-			army={
-				large="gfx/leaders/ENG/ENG_francis_bridgeman.png"
+				large="gfx/leaders/ENG/ENG_roger_keyes.dds"
 			}
 		}
 		navy_leader={
-			traits={ old_guard_navy chief_engineer navy_media_personality }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			maneuvering_skill=2
-			coordination_skill=3			
-		}
-	}
-	ENG_archibald_berkeley_milne={
-		name="ENG_archibald_berkeley_milne"
-		portraits={
-			navy={
-				large="gfx/leaders/ENG/ENG_Archibald_Berkeley_Milne.png"
-				small="GFX_idea_ENG_generic_navy_3"
-			}
-		}
-		navy_leader={
-			traits={ old_guard_navy navy_media_personality caustic_personality blue_water_expert }
+			traits={ gunnery_expert }
 			skill=2
 			attack_skill=2
 			defense_skill=2
 			maneuvering_skill=2
 			coordination_skill=2
+			legacy_id=28461
 		}
 	}
-	ENG_g_k_chesterton={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_g_k_chesterton
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					or  = {
-						has_government  = neutrality 
-						has_government  = fascism 
-					}
-				}
-				traits  = {
-					prince_of_paradox 
-				}
-				ai_will_do  = {
-					factor  = 50.000
-				}
-		}
-		name="ENG_g_k_chesterton"
+	ENG_tyrwhitt={
+		name="Reginald Tyrwhitt"
 		portraits={
+
 			army={
-				small="GFX_idea_ENG_g_k_chesterton"
+				large="gfx/leaders/ENG/ENG_reginald_tyrwhitt.dds"
 			}
 		}
-	}
-	ENG_henry_petty_fitzmaurice={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_henry_petty_fitzmaurice
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					has_completed_focus  = ENG_Liberal_Government 
-				}
-				traits  = {
-					democratic_reformer 
-				}
-				do_effect  = {
-					not  = {
-						has_government  = democratic 
-					}
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_henry_petty_fitzmaurice"
-		portraits={
-			army={
-				small="GFX_idea_ENG_henry_petty_fitzmaurice"
-			}
-		}
-	}
-	ENG_herbert_mullaly={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_herbert_mullaly
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					war_industrialist 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_herbert_mullaly"
-		portraits={
-			army={
-				small="GFX_idea_ENG_herbert_mullaly"
-			}
-		}
-	}
-	ENG_frederick_lambart={
-		advisor={
-			slot = high_command
-			idea_token = ENG_frederick_lambart
-			allowed  = {
-					original_tag  = ENG
-				}
-				ledger  = army 
-				traits  = {
-					army_entrenchment_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_frederick_lambart"
-		portraits={
-			army={
-				small="GFX_idea_ENG_frederick_lambart"
-			}
-		}
-	}
-	ENG_frederic_natusch_maude={
-		advisor={
-			slot = theorist
-			idea_token = ENG_frederic_natusch_maude
-			ledger  = army 
-			traits  = {
-				military_theorist 
-			}
-			cost = 100
-			ai_will_do  = {
-				factor  = 10.000
-			}
-		}
-		name="ENG_frederic_natusch_maude"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_3"
-			}
-		}
-	}
-	ENG_garrett_o_moore_creagh={
-		advisor={
-			slot = theorist
-			idea_token = ENG_garrett_o_moore_creagh
-			ledger  = army 
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
-			}
-			cost  = 150
-			traits  = {
-				grand_battle_plan_expert 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		name="ENG_garrett_o_moore_creagh"
-		portraits={
-			army={
-				small="GFX_idea_ENG_garrett_o_moore_creagh"
-			}
-		}
-	}
-	ENG_rudyard_kipling={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_rudyard_kipling
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					or  = {
-						has_government  = neutrality 
-						has_government  = fascism 
-					}
-				}
-				traits  = {
-					eng_imperialist_author 
-				}
-				ai_will_do  = {
-					factor  = 50.000
-				}
-		}
-		name="ENG_rudyard_kipling"
-		portraits={
-			army={
-				small="GFX_idea_ENG_rudyard_kipling"
-			}
-		}
-	}
-	ENG_arthur_balfour={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_arthur_balfour
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					silent_workhorse 
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_arthur_balfour"
-		portraits={
-			army={
-				small="GFX_idea_ENG_arthur_balfour"
-			}
-		}
-	}
-	ENG_george_macdonogh={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_george_macdonogh
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					quartermaster_general 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_george_macdonogh"
-		portraits={
-			army={
-				small="GFX_idea_ENG_george_macdonogh"
-			}
-		}
-	}
-	ENG_reginald_mckenna={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_reginald_mckenna
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					finance_graduate 
-				}
-				available  = {
-					has_government  = democratic 
-				}
-				ai_will_do  = {
-					factor  = 10.000
-				}
-		}
-		name="ENG_reginald_mckenna"
-		portraits={
-			army={
-				small="GFX_idea_ENG_reginald_mckenna"
-			}
-		}
-	}
-	ENG_hugh_trenchard={
-		advisor={
-			slot = high_command
-			idea_token = ENG_hugh_trenchard
-			ledger  = air 
-				allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					air_air_superiority_2 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_hugh_trenchard"
-		portraits={
-			army={
-				small="GFX_idea_ENG_hugh_trenchard"
-			}
-		}
-	}
-	ENG_richard_haldane={
-		advisor={
-			slot = theorist
-			idea_token = ENG_richard_haldane
-			ledger  = army 
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
-			}
-			traits  = {
-				mobile_warfare_expert 
-			}
-			cost  = 150
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
-		name="ENG_richard_haldane"
-		portraits={
-			army={
-				small="GFX_idea_ENG_richard_haldane"
-			}
-		}
-	}
-	ENG_j_f_c_fuller={
-		name="ENG_j_f_c_fuller"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/ENG_J_F_C_Fuller.png"
-				small="gfx/interface/ideas/ENG/idea_ENG_J_F_C_Fuller.png"
-			}
-		}
-		advisor={
-			slot = theorist
-			idea_token = ENG_j_f_c_fuller
-			ledger  = army 
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
-				has_completed_focus = ENG_Project_Tank
-			}
-			traits  = {
-				armoured_warfare_theorist 
-			}
-			cost  = 150
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		corps_commander={
-			traits={ career_officer brilliant_strategist panzer_leader ENG_royalist }
+		navy_leader={
+			traits={ gentlemanly green_water_expert }
 			skill=2
 			attack_skill=2
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=1
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=28485
 		}
 	}
-	ENG_walter_long={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_walter_long
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					is_major  = yes 
-					not  = {
-						has_government  = communism 
-					}
-					num_subjects > 0.000
-				}
-				visible  = {
-					num_subjects > 0.000
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					colonial_governor 
-				}
-				ai_will_do  = {
-					factor  = 0.000
-				}
-		}
-		name="ENG_walter_long"
+	ENG_henrey_plummer={
+		name="Henrey Plummer"
 		portraits={
-			army={
-				small="GFX_idea_ENG_walter_long"
-			}
-		}
-	}
-	ENG_andrew_bonar_law={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_andrew_bonar_law
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					captain_of_industry 
-				}
-				ai_will_do  = {
-					factor  = 2.000
-				}
-		}
-		name="ENG_andrew_bonar_law"
-		portraits={
-			army={
-				small="GFX_idea_ENG_andrew_bonar_law"
-			}
 			civilian={
-				large="gfx/leaders/ENG/ENG_bonar_law.png"
+				large="GFX_portrait_europe_generic_6"
 			}
 		}
 		country_leader={
-			ideology=conservatism
-			traits={ one_nation_tory }
+			ideology=nazism
+			expire="1929.1.1.1"
+			id=-1
 		}
 	}
-	ENG_neville_lyttleton={
-		advisor={
-			slot = army_chief
-			idea_token = ENG_neville_lyttleton
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					army_chief_organizational_2 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_neville_lyttleton"
-		portraits={
-			army={
-				small="GFX_idea_ENG_neville_lyttleton"
-			}
-		}
-	}
-	ENG_william_peel={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_william_peel
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-						has_government  = fascism 
-					}
-				}
-				traits  = {
-					backroom_backstabber 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_william_peel"
-		portraits={
-			army={
-				small="GFX_idea_ENG_william_peel"
-			}
-		}
-	}
-	ENG_frederick_roberts={
-		advisor={
-			slot = army_chief
-			idea_token = ENG_frederick_roberts
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					army_chief_drill_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_frederick_roberts"
-		portraits={
-			army={
-				small="GFX_idea_ENG_frederick_roberts"
-			}
-		}
-	}
-	ENG_frederick_sykes={
-		advisor={
-			slot = high_command
-			idea_token = ENG_frederick_sykes
-			ledger  = air 
-				allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					air_close_air_support_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_frederick_sykes"
-		portraits={
-			army={
-				small="GFX_idea_ENG_frederick_sykes"
-			}
-		}
-	}
-	ENG_john_maclean={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_john_maclean
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					OR = {
-						has_completed_focus  = ENG_Fabian_Ascendancy 
-						has_government  = communism 
-					}
-					NOT  = {
-						has_government  = neutrality 
-						has_government  = fascism 
-					}
-					is_subject  = no 
-				}
-				visible  = {
-					OR = {
-						has_completed_focus  = ENG_Fabian_Ascendancy 
-						has_government  = communism 
-					}	
-				}
-				traits  = {
-					communist_revolutionary 
-				}
-				do_effect  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				cost  = 75.000
-				ai_will_do  = {
-					factor  = 100.000
-					modifier  = {
-						factor  = 0.000
-						or  = {
-							has_government  = neutrality 
-							has_government  = fascism 
-							is_subject  = yes 
-							has_country_flag  = british_white_civil_war 
-						}
-					}
-				}
-		}
-		name="ENG_john_maclean"
-		portraits={
-			army={
-				small="GFX_idea_FRA_generic_1"
-			}
-		}
-	}
-	ENG_albert_inkpin={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_albert_inkpin
-			allowed  = {
-					original_tag  = ENG
-				}
-				visible  = {
-					has_government  = communism 
-				}
-				available  = {
-					has_government  = communism 
-				}
-				traits  = {
-					proletariat_internationalist 
-				}
-		}
-		name="ENG_albert_inkpin"
-		portraits={
-			army={
-				small="GFX_idea_generic_communist_revolutionary_western_european_2d"
-			}
-		}
-	}
-	ENG_alf_watts={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_alf_watts
-			allowed  = {
-					original_tag  = ENG
-				}
-				visible  = {
-					has_government  = communism 
-				}
-				available  = {
-					has_government  = communism 
-				}
-				cost  = 75.000
-				traits  = {
-					lieutenant_of_industry 
-				}
-		}
-		name="ENG_alf_watts"
-		portraits={
-			army={
-				small="GFX_idea_USA_generic_1"
-			}
-		}
-	}
-	ENG_ernest_bax={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_ernest_bax
-			allowed  = {
-					original_tag  = ENG
-			}
-			visible  = {
-				has_government  = communism 
-			}
-			available  = {
-				has_government  = communism 
-			}
-			traits  = {
-				smooth_talking_con_man 
-			}
-			cost  = 75.000
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		name="ENG_ernest_bax"
-		portraits={
-			army={
-				small="GFX_idea_ENG_generic_1"
-			}
-		}
-	}
-	ENG_arthur_henderson={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_arthur_henderson
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					or  = {
-						has_government  = democratic 
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					popular_figurehead 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_arthur_henderson"
-		portraits={
-			army={
-				small="GFX_idea_ENG_arthur_henderson"
-			}
-		}
-	}
-	ENG_arthur_wilson={
-		advisor={
-			slot = high_command
-			idea_token = ENG_arthur_wilson
-			allowed  = {
-					original_tag  = ENG
-				}
-				ledger  = navy 
-				traits  = {
-					navy_naval_air_defense_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_arthur_wilson"
-		portraits={
-			army={
-				small="GFX_idea_ENG_arthur_wilson"
-			}
-		}
-	}
-	ENG_george_macaulay_kirkpatrick={
-		advisor={
-			slot = army_chief
-			idea_token = ENG_george_macaulay_kirkpatrick
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					army_chief_morale_2 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_george_macaulay_kirkpatrick"
-		portraits={
-			army={
-				small="GFX_idea_ENG_george_macaulay_kirkpatrick"
-			}
-		}
-	}
-	ENG_ormonde_winter={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_ormonde_winter
-			allowed  = {
-					original_tag  = ENG
-				}
-				visible  = {
-					or  = {
-						date > 1920.8.01
-						has_government  = fascism 
-						has_government  = neutrality 
-					}
-				}
-				available  = {
-					or  = {
-						date > 1923.8.01
-						and  = {
-							has_government  = fascism 
-							date > 1917.8.01
-						}
-						and  = {
-							has_government  = neutrality 
-							date > 1917.8.01
-						}
-					}
-				}
-				cost  = 25.000
-				traits  = {
-					eng_o_trait 
-				}
-				ai_will_do  = {
-					factor  = 100.000
-				}
-		}
-		name="ENG_ormonde_winter"
-		portraits={
-			army={
-				small="GFX_idea_ENG_ormonde_winter"
-			}
-		}
-	}
-	ENG_edward_james_headlam={
-		advisor={
-			slot = navy_chief
-			idea_token = ENG_edward_james_headlam
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					navy_chief_commerce_raiding_2 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_edward_james_headlam"
-		portraits={
-			army={
-				small="GFX_idea_ENG_edward_james_headlam"
-			}
-		}
-	}
-	ENG_charles_vaughan_lee={
-		advisor={
-			slot = air_chief
-			idea_token = ENG_charles_vaughan_lee
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					air_chief_reform_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_charles_vaughan_lee"
-		portraits={
-			army={
-				small="GFX_idea_ENG_charles_vaughan_lee"
-			}
-		}
-	}
-	ENG_percy_zachariah_cox={
-		advisor={
-			slot = high_command
-			idea_token = ENG_percy_zachariah_cox
-			allowed  = {
-					original_tag  = ENG
-				}
-				ledger  = army 
-				traits  = {
-					army_commando_1 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_percy_zachariah_cox"
-		portraits={
-			army={
-				small="GFX_idea_ENG_percy_zachariah_cox"
-			}
-		}
-	}
-	ENG_julian_corbett={
-		advisor={
-			slot = theorist
-			idea_token = ENG_julian_corbett
-			ledger  = navy 
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
-			}
-			traits  = {
-				naval_theorist 
-			}
-			cost = 100
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		name="ENG_julian_corbett"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-	}
-	ENG_geoffrey_de_havilland={
-		advisor={
-			slot = theorist
-			idea_token = ENG_geoffrey_de_havilland
-			ledger  = air 
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
-			}
-			traits  = {
-				air_warfare_theorist 
-			}
-			cost = 100
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-		name="ENG_geoffrey_de_havilland"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_2"
-			}
-		}
-	}
-	ENG_herbert_samuel={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_herbert_samuel
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					compassionate_gentleman 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_herbert_samuel"
-		portraits={
-			army={
-				small="GFX_idea_ENG_herbert_samuel"
-			}
-		}
-	}
-	ENG_aretas_akers_douglas={
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_aretas_akers_douglas
-			allowed  = {
-					original_tag  = ENG
-				}
-				available  = {
-					not  = {
-						has_government  = communism 
-					}
-				}
-				traits  = {
-					baron_of_terror 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_aretas_akers_douglas"
-		portraits={
-			army={
-				small="GFX_idea_ENG_aretas_akers_douglas"
-			}
-		}
-	}
-	ENG_archibald_murray={
-		advisor={
-			slot = army_chief
-			idea_token = ENG_archibald_murray
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					army_chief_reform_2 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		name="ENG_archibald_murray"
-		portraits={
-			army={
-				small="GFX_idea_ENG_archibald_murray"
-			}
-		}
-	}
-	ENG_david_henderson={
-		advisor={
-			slot = air_chief
-			idea_token = ENG_david_henderson
-			allowed  = {
-					original_tag  = ENG
-				}
-				traits  = {
-					air_chief_ground_support_2 
-				}
-				ai_will_do  = {
-					factor  = 5.000
-				}
-		}
-		name="ENG_david_henderson"
-		portraits={
-			army={
-				small="GFX_idea_ENG_david_henderson"
-			}
-		}
-	}
-	ENG_archie_wavell = {
-		name="ENG_archie_wavell"
+	ENG_graham_tyron={
+		name="Graham Tyron"
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/Portrait_Britain_Archibald_Wavell.dds"
+				large="GFX_portrait_europe_generic_5"
 			}
+		}
+		country_leader={
+			ideology=oligarchism
+			traits={ economist smooth_talking_charmer }
+			expire="1919.1.1.1"
+			id=-1
 		}
 	}
 }

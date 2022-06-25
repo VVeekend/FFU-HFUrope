@@ -27,7 +27,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 300
+		manpower = 100
 		training_time = 120
 
 		#Misc Abilities
@@ -64,11 +64,11 @@ sub_units = {
 		}
 
 		jungle = {
-			defence = 0.25
+			defence = 0.15
 		}
 
 		marsh = {
-			defence = 0.25
+			defence = 0.15
 			movement = 0.2
 		}
 
@@ -78,7 +78,7 @@ sub_units = {
 		}
 
 		river = {
-			defence = 0.25
+			defence = 0.15
 			movement = 0.25
 		}
 

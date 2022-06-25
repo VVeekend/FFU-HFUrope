@@ -28,29 +28,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = {
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			}
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		NOT = {
 			OR = {
@@ -67,24 +46,14 @@ country_event = {
 	}
 
 	option = {
-		ai_chance = { 
-			base = 1
-		}
 		name = election.2.a
 		add_ideas = low_economic_mobilisation
 	}
 
 	option = {
 		name = election.2.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_unity = yes
-			}
-		}
+		ai_chance = { factor = 0 }
 		add_stability = -0.05
-		add_war_support = -0.05
 	}
 }
 
@@ -99,29 +68,8 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_war = no
 		OR = {
@@ -168,14 +116,11 @@ country_event = {
 			limit = { has_idea = disarmed_nation }
 			add_ideas = volunteer_only
 		}
-		add_war_support = 0.05
 	}
 
 	option = {
 		name = election.3.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { factor = 0 }
 		add_stability = -0.05
 	}
 }
@@ -190,48 +135,15 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
-		check_has_focus_tree_to_switch_to_fascism = yes
 		NOT = { has_idea = fascism_defeated }
 		fascism > 0.15
 	}
 	
 	option = {
 		name = election.4.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 2
-				can_lose_democracy_support = yes
-			}
-			modifier = {
-				add = 1
-				can_lose_unity = no
-			}
-		}
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.1
@@ -241,18 +153,7 @@ country_event = {
 
 	option = {
 		name = election.4.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_unity = yes
-			}
-		}
 		add_stability = -0.05
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
 		set_country_flag = government_declined_fascists
 	}
 }
@@ -267,59 +168,15 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
-		check_has_focus_tree_to_switch_to_communism = yes
 		NOT = { has_idea = communism_defeated }
 		communism > 0.15
 	}
 	
 	option = {
 		name = election.5.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 2
-				can_lose_democracy_support = yes
-			}
-			modifier = {
-				add = 1
-				can_lose_unity = no
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						tag = FRA
-						is_historical_focus_on = yes
-						date < 1911.1.1
-					}
-					communism > 0.38
-				}
-			}
-		}
 		add_popularity = {
 			ideology = communism
 			popularity = 0.1
@@ -329,22 +186,7 @@ country_event = {
 
 	option = {
 		name = election.5.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_unity = yes
-			}
-			modifier = {
-				add = 1
-				communism > 0.38
-			}
-		}
 		add_stability = -0.05
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
 		set_country_flag = government_declined_communists
 	}
 }
@@ -359,29 +201,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		democratic < 0.5
 		fascism < 0.5
@@ -390,55 +211,24 @@ country_event = {
 	
 	option = {
 		name = election.6.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_democracy_support = yes
-			}
-		}
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.1
 		}
 		set_country_flag = coalition_with_fascists
-		trigger = {
-			check_has_focus_tree_to_switch_to_fascism = yes
-		}	
 	}
 
 	option = {
 		name = election.6.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_democracy_support = yes
-			}
-		}
 		add_popularity = {
 			ideology = communism
 			popularity = 0.1
 		}
 		set_country_flag = coalition_with_communists
-		trigger = {		
-			check_has_focus_tree_to_switch_to_communism = yes
-		}	
 	}
 
 	option = {
 		name = election.6.c
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 1
-				can_lose_democracy_support = no
-			}
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}
 		add_political_power = -80
 	}
 }
@@ -455,33 +245,11 @@ country_event = {
 	}
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			}  
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_country_flag = coalition_with_fascists
-		check_has_focus_tree_to_switch_to_fascism = yes
-		any_other_country = {
+		any_country = {
 			has_government = fascism
 			is_faction_leader = yes
 		}
@@ -489,18 +257,7 @@ country_event = {
 	
 	option = {
 		name = election.7.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 2
-				can_lose_democracy_support = yes
-			}
-			modifier = {
-				add = 1
-				can_lose_unity = no
-			}
-		}
-		random_other_country = {
+		random_country = {
 			limit = {
 				has_government = fascism
 				is_faction_leader = yes
@@ -508,28 +265,13 @@ country_event = {
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = fascists_in_government
-			}			
-		}
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.05
+			}
 		}
 	}
 
 	option = {
 		name = election.7.b
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				can_lose_unity = no
-			}
-		}
 		add_stability = -0.05
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
 	}
 }
 
@@ -545,33 +287,11 @@ country_event = {
 	}
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_country_flag = coalition_with_communists
-		check_has_focus_tree_to_switch_to_communism = yes
-		any_other_country = {
+		any_country = {
 			has_government = communism
 			is_faction_leader = yes
 		}
@@ -579,48 +299,21 @@ country_event = {
 	
 	option = {
 		name = election.8.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 2
-				can_lose_democracy_support = yes
-			}
-			modifier = {
-				add = 1
-				can_lose_unity = no
-			}
-		}
-		random_other_country = {
+		random_country = {
 			limit = {
 				has_government = communism
 				is_faction_leader = yes
-				NOT = { has_war_with = ROOT }
 			}
 			add_opinion_modifier = {
 				target = ROOT
 				modifier = communists_in_government
 			}
 		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.05
-		}
 	}
 
 	option = {
 		name = election.8.b
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				can_lose_unity = no
-			}
-		}
 		add_stability = -0.05
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.03
-		}
 	}
 }
 
@@ -635,16 +328,12 @@ country_event = {
 
 	trigger = {
 		has_government = democratic
-		check_has_focus_tree_to_switch_to_fascism = yes
 		fascism > 0.5
 		is_puppet = no
 	}
 	
 	option = {	
 		name = election.11.a
-		ai_chance = {
-			base = 75			
-		}
 		set_politics = {
 			ruling_party = fascism
 			elections_allowed = no
@@ -653,9 +342,6 @@ country_event = {
 
 	option = {
 		name = election.11.b
-		ai_chance = {
-			base = 35
-		}
 		start_civil_war = {
 			ideology = fascism
 			size = 0.5
@@ -673,18 +359,13 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-
 		has_government = democratic
-		check_has_focus_tree_to_switch_to_communism = yes
 		communism > 0.5
 		is_puppet = no
 	}
 	
 	option = {
 		name = election.12.a
-		ai_chance = {
-			base = 75
-		}
 		set_politics = {
 			ruling_party = communism
 			elections_allowed = no
@@ -693,9 +374,6 @@ country_event = {
 
 	option = {
 		name = election.12.b
-		ai_chance = {
-			base = 35			
-		}
 		start_civil_war = {
 			ideology = communism
 			size = 0.5
@@ -713,61 +391,20 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = {
-				Tag = USA
-				date < 1935.1.1
-			}
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
 		has_government = democratic
-		check_has_focus_tree_to_switch_to_fascism = yes
 		has_idea_with_trait = motorized_equipment_manufacturer
 	}
 	
 	option = {
 		name = election.13.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 1
-				can_lose_democracy_support = yes
-			}
-		}
 		add_popularity = {
 			ideology = fascism
-			popularity = 0.10
+			popularity = 0.15
 		}
 	}
 
 	option = {
 		name = election.13.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 1
-				can_lose_democracy_support = no
-			}
-		}
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}
 		remove_ideas_with_trait = motorized_equipment_manufacturer
 	}
 }
@@ -782,60 +419,21 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_war = yes
 	}
 	
 	option = {
 		name = election.14.a
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_unity = yes
-			}
-		}
-		add_stability = -0.05
+		add_stability = 0.05
 	}
 
 	option = {
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 3
-				can_lose_democracy_support = yes
-			}			
-			modifier = {
-				add = 1
-				can_lose_unity = no
-			}
-		}
 		name = election.14.b
 		add_political_power = 20
-		add_stability = 0.05
+		add_stability = -0.05
 		add_popularity = {
 			ideology = communism
 			popularity = 0.05
@@ -857,42 +455,14 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = democratic
 		has_war = yes
 		any_war_score < 20
 	}
 	
 	option = {
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 3
-				can_lose_democracy_support = no
-			}			
-		}
 		name = election.15.a
 		add_political_power = -50
 		add_stability = -0.05
@@ -900,17 +470,6 @@ country_event = {
 
 	option = {
 		name = election.15.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				can_lose_democracy_support = yes
-			}			
-			modifier = {
-				add = 1
-				can_lose_unity = no
-			}
-		}
 		add_political_power = 25
 		add_stability = 0.05
 		add_popularity = {
@@ -934,29 +493,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			} 
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = fascism
 		fascism > 0.5
 	}
@@ -977,29 +515,8 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
-			AND = { 
-				tag = USA 
-				date < 1935.1.1
-			}
-			AND = { 
-				tag = BRA 
-				date < 1926.1.1
-			}
-			AND = { 
-				tag = ECU
-				date < 1920.7.1
-			}
-			AND = { 
-				tag = CHL 
-				date < 1925.12.31
-			}
-			AND = { 
-				tag = TUR
-				date < 1913.1.1
-			}
-		}
-		NOT = { date < 1911.1.1 }
+		
+		OR = { NOT = { tag = SPR } NOT = { date < 1937.1.1 } }
 		has_government = fascism
 		NOT = { fascism > 0.5 }
 	}

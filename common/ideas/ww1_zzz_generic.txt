@@ -1,0 +1,83 @@
+ideas={
+	country={
+	
+		kis_auh_unifyrealm_focus = {
+
+			modifier = {
+				conscription = 0.02
+				army_morale_factor = 0.05
+				army_core_attack_factor = 0.04
+				army_core_defence_factor = 0.04
+			}
+
+		}
+
+		ww1_Scramble_for_Africa = {
+
+			allowed={ always=no } removal_cost=-1
+
+			modifier = {
+				justify_war_goal_time = -0.02
+				conscription = 0.001
+			}
+		}
+
+		ww1_Faith_Allah = {
+
+			allowed={ always=no } allowed_civil_war={ NOT={ has_government=communism } } removal_cost=-1
+
+			modifier = {
+				army_org_factor = 0.05
+				communism_drift = -0.05
+				conscription = 0.020
+			}
+		}
+
+		authoritarianism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+		
+		market_dynamism = {
+		   picture = FRA_market_dynamism
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			research_bonus = { industry = 0.1 }
+		}
+		
+		arms_factory_expansion = {
+			ledger = army
+			picture = man_five_year_plan_tank
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		industrialization_effort = {
+			ledger = army
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+                production_speed_infrastructure_factor = 0.05
+			}
+		}
+	}
+}

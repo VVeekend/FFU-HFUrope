@@ -1,6 +1,0 @@
-form_redania_category = {
-	icon = saf_anti_colonialist_crusade
-	allowed = {
-		original_tag = POL
-	}
-}

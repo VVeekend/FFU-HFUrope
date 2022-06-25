@@ -1,0 +1,414 @@
+on_actions = {
+	on_unit_leader_created = {
+		effect = {
+			set_variable = { indexed_id = global.army_leader_ids^num }
+			add_to_array = { global.army_leader_ids = THIS.id }
+		}
+	}
+	on_startup = {
+		effect = {
+			FRA = {
+			    country_event = { id = ffufrance.5 days = 243 }
+				country_event = { id = ffufrance.3 days = 779 }
+				country_event = { id = ffufrance.6 days = 1309 }
+				country_event = { id = ffufrance.7 days = 1345 }
+				country_event = { id = ffufrance.8 days = 1430 }
+				country_event = { id = ffufrance.4 days = 2497 } }
+				
+			if = { 
+			    limit = { SER = { exists = yes } }		
+			SER = {
+				country_event = { id = ww1_franzferdinand.2 days = 1304 }
+				country_event = { id = ww1_firstbalkan.2 days = 578 }
+				country_event = { id = ww1_firstbalkan.4 days = 609 }
+			} }
+			
+			if = { 
+			    limit = { SER = { exists = no } }		
+			GER = {
+				country_event = { id = ww1_franzferdinand.2 days = 1304 }
+			} }
+			
+			SWI = {
+				country_event = { id = ww1_firstbalkan.40 days = 851 }
+				country_event = { id = ffu.3 days = 1453 }
+			}
+
+			TUR = {
+				country_event = { id = ffuottoman.8 days = 1383 }
+			}
+
+			every_country={
+            			country_event = { id = ffu.2 days = 0 }
+						set_rule = { can_send_volunteers = no }
+			}
+
+			every_country={
+				limit={
+					is_playable_country=yes
+				}
+				add_ideas = peace_training
+				set_variable = { super_events_enabled = 2 }
+			}
+			every_country={
+				limit={
+					is_playable_country=no
+				}
+				add_ideas = ai_limiter
+			}
+			every_country = {
+				every_army_leader = {
+					set_variable = { indexed_id = global.army_leader_ids^num }
+					add_to_array = { global.army_leader_ids = THIS.id }
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = FFU_navy_race
+						option = RACE
+					}
+				}
+				every_country = {
+					limit={
+						is_playable_country=yes
+					}
+					transfer_navy = {
+						target = SWI
+					}
+					add_ideas = naval_race
+				}
+				194 = {
+					add_extra_state_shared_building_slots = 7
+					add_building_construction = {
+						type = dockyard
+						level = 7
+						instant_build = yes
+					}
+
+				}
+				194 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { BEL = { is_ai = yes } }
+				FRA = {
+			         	add_equipment_to_stockpile= {
+                        			type = infantry_equipment_1
+                        			amount = 50000
+                        			producer = FRA
+					}
+            			}
+				113 = {
+					add_extra_state_shared_building_slots = 5
+			     		add_building_construction = {
+		            			type = industrial_complex level = 5
+                				instant_build = yes
+					}
+				}
+			
+				ENG = {
+			         	add_equipment_to_stockpile= {
+                        			type = infantry_equipment_1
+                        			amount = 50000
+                        			producer = ENG
+            				}
+				}
+				FRA = {
+			         	add_equipment_to_stockpile= {
+                        			type = support_equipment
+                        			amount = 1000
+                        			producer = FRA
+            				}
+				}
+				ENG = {
+			         	add_equipment_to_stockpile= {
+                        			type = support_equipment
+                        			amount = 1000
+                        			producer = ENG
+            				}
+				} }
+
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = FFU_navy_race
+							option = RACE
+						}
+					}
+				}
+				AUS = {
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "AUS" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.96  amount = 1 } #SMS Erzherzog Franz Ferdinand LD:12-Sep-1907 Comp:05-Jun-1910
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "AUS" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.77  amount = 1 } #SMS Radetzky LD:26-Nov-1907 Comp:15-Jan-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "AUS" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.48  amount = 1 } #SMS Zristi LD:20-Jan-1909 Comp:15-Sep-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "AUS" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.78  amount = 1 } #SMS Admiral Spaun LD:30-May-1908 Comp:15-Nov-1910
+				}
+				ENG = {
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.46  amount = 1 } #HMS Neptune LD:19-Jan-1909 Comp:01-Nov-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.83  amount = 1 } #HMS Colossus LD:08-Jul-1909 Comp:01-Jul-1910
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.47  amount = 1 } #HMS Hercules LD:30-Jul-1909 Comp:01-Mar-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.03  amount = 1 } #HMS Conqueror LD:05-Apr-1910 Comp:01-Nov-1912
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.04  amount = 1 } #HMS Monarch LD:01-Apr-1910 Comp:01-Mar-1912
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.2  amount = 1 } #HMS Orion LD:29-Nov-1909 Comp:01-Jan-1912
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.02  amount = 1 } #HMS Thunderer LD:13-Apr-1910 Comp:01-Jun-1912
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Battlecrusier"  }  requested_factories = 1  progress = 0.56  amount = 1 } #HMS Indefatigable LD:23-Feb-1909 Comp:01-Apr-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "ENG" version_name = "Battlecrusier"  }  requested_factories = 1  progress = 0.23  amount = 1 } #HMS Lion LD:29-Sep-1909 Comp:01-May-1912
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.29  amount = 1 } #HMS Blonde LD:06-Dec-1909 Comp:01-May-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.68  amount = 1 } #HMS Blanche LD:12-Apr-1909 Comp:01-Nov-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.65  amount = 1 } #HMS Bristol LD:23-Mar-1909 Comp:01-Dec-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.77  amount = 1 } #HMS Glasgow LD:25-Mar-1909 Comp:01-Sep-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.71  amount = 1 } #HMS Gloucester LD:15-Apr-1909 Comp:01-Oct-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.74  amount = 1 } #HMS Liverpool LD:17-Feb-1909 Comp:01-Oct-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.76  amount = 1 } #HMS Newcastle LD:14-Apr-1909 Comp:01-Sep-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.12  amount = 1 } #HMS Dartmouth LD:19-Feb-1910 Comp:01-Oct-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.12  amount = 1 } #HMS Falmouth LD:21-Feb-1910 Comp:01-Sep-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.16  amount = 1 } #HMS Weymouth LD:19-Jan-1910 Comp:01-Oct-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "ENG" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.12  amount = 1 } #HMS Yarmouth LD:27-Jan-1910 Comp:01-Apr-1912
+				}
+				FRA = {
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "FRA" version_name = "Semi-Dreadnought" } requested_factories = 1 progress = 0.85 amount = 1 } #Condorcet Comp:25-Jul-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "FRA" version_name = "Semi-Dreadnought" } requested_factories = 1 progress = 0.85 amount = 1 } #Danton Comp:01-Jun-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "FRA" version_name = "Semi-Dreadnought" } requested_factories = 1 progress = 0.85 amount = 1 } #Diderot Comp:01-Aug-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "FRA" version_name = "Semi-Dreadnought" } requested_factories = 1 progress = 0.85 amount = 1 } #Mirabeau Comp:01-Aug-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "FRA" version_name = "Semi-Dreadnought" } requested_factories = 1 progress = 0.85 amount = 1 } #Vergniaud Comp:22-Sep-1911
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "FRA" version_name = "Semi-Dreadnought" } requested_factories = 1 progress = 0.85 amount = 1 } #Voltaire Comp:01-Aug-1911
+				}
+				GER = {
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.88  amount = 1 } #SMS Rheinland LD:01-Jun-1907 Comp:21-Sep-1910
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.88  amount = 1 } #SMS Posen LD:11-Jun-1907 Comp:21-Sep-1910
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.45  amount = 1 } #SMS Helgoland LD:24-Dec-1908 Comp:19-Dec-1911
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.53  amount = 1 } #SMS Ostfriesland LD:19-Oct-1908 Comp:15-Sep-1911
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.52  amount = 1 } #SMS Thüringen LD:07-Nov-1908 Comp:10-Sep-1911
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.35  amount = 1 } #SMS Oldenburg LD:01-Mar-1909 Comp:01-Jul-1912
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.14  amount = 1 } #SMS Kaiser LD:01-Dec-1909 Comp:07-Dec-1912
+					add_equipment_production = { equipment = { type = ship_hull_super_heavy_1 creator = "GER" version_name = "Dreadnought"  }  requested_factories = 1  progress = 0.09  amount = 1 } #SMS Friedrich der Grosse LD:26-Jan-1910 Comp:22-Jan-1913
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.72  amount = 1 } #SMS Von der Tann LD:25-Mar-1908 Comp:20-Feb-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.42  amount = 1 } #SMS Moltke LD:07-Dec-1908 Comp:31-Mar-1912
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.22  amount = 1 } #SMS Goeben LD:28-Aug-1909 Comp:28-Aug-1912
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.94  amount = 1 } #SMS Kolberg LD:01-Jan-1908 Comp:21-Jun-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.67  amount = 1 } #SMS Cöln LD:01-Jan-1908 Comp:16-Jun-1911
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.82  amount = 1 } #SMS Augsburg LD:01-Jan-1908 Comp:01-Nov-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.12  amount = 1 } #SMS Magdeburg LD:01-Jan-1910 Comp:20-Aug-1912
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.14  amount = 1 } #SMS Breslau LD:01-Jan-1910 Comp:10-May-1912
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.12  amount = 1 } #SMS Strassburg LD:01-Jan-1910 Comp:09-Oct-1912
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_2 creator = "GER" version_name = "Light Cruiser 1900"  }  requested_factories = 1  progress = 0.11  amount = 1 } #SMS Stralsund LD:01-Jan-1910 Comp:10-Dec-1912
+				}
+				ITA = {
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_1 creator = "ITA" version_name = "Heavy Cruiser 1890"  }  requested_factories = 1  progress = 0.97  amount = 1 } #RN San Giorgio LD:04-Jul-1905 Comp:01-Jul-1910
+					add_equipment_production = { equipment = { type = ship_hull_cruiser_1 creator = "ITA" version_name = "Heavy Cruiser 1890"  }  requested_factories = 1  progress = 0.81  amount = 1 } #RN San Marco LD:02-Jan-1907 Comp:07-Feb-1911
+				}
+				SOV = {
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.96  amount = 1 } #Evstafi LD:01-Dec-1903 Comp:05-Aug-1910
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.96  amount = 1 } #Ioann Zlatoust LD:01-Nov-1903 Comp:11-Aug-1910
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.97  amount = 1 } #Andrei Pervozvanny LD:01-Apr-1903 Comp:27-Jul-1910
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.95  amount = 1 } #Imperator Pavel I LD:01-Apr-1904 Comp:07-Sep-1910
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.16  amount = 1 } #Gangut LD:16-Jun-1909 Comp:01-Dec-1914
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.16  amount = 1 } #Petropavlovsk LD:16-Jun-1909 Comp:01-Dec-1914
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.16  amount = 1 } #Poltava LD:16-Jun-1909 Comp:17-Dec-1914
+					add_equipment_production = { equipment = { type = ship_hull_heavy_2 creator = "SOV" version_name = "Semi-Dreadnought"  }  requested_factories = 1  progress = 0.16  amount = 1 } #Sevastapol LD:16-Jun-1909 Comp:17-Dec-1914
+				}
+			}
+
+		}
+	}
+	on_monthly = {
+		effect = {
+			SWI = { country_event = { id = ffu.1 } }
+			every_country={
+				limit = {
+					is_playable_country=yes
+					NOT = {
+						OR = {
+							has_war = yes
+							has_idea = peace_training
+						}
+					}
+				}
+				add_ideas = peace_training
+			}
+			every_country={
+				limit = {
+					is_playable_country=yes
+					has_game_rule = {
+						rule = FFU_navy_race
+						option = RACE
+					}
+					NOT = {
+						OR = {
+							has_war = yes
+							has_idea = naval_race
+						}
+					}
+				}
+				add_ideas = naval_race
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = TUR
+					FROM.FROM = { state = 460 }
+					FROM = { original_tag = SER }
+					NOT = { has_global_flag = balkan_war_over }
+				}
+				set_global_flag = balkan_war_over
+				TUR = {
+					country_event = { id = ww1_firstbalkan.200 }
+					TUR = { white_peace = SER }
+					SER = { white_peace = TUR }
+					BUL = { white_peace = TUR }
+					GRE = { white_peace = TUR }
+					MNT = { white_peace = TUR }
+				}
+			}
+			if = {
+				limit = {
+					tag = BUL
+					NOT = { has_global_flag = ffu_ww1_starts }
+					FROM.FROM = { state = 460 }
+					FROM = {  OR = { tag = SER tag = GRE tag = ROM } }
+					NOT = { has_global_flag = second_balkan_war_over }
+				}
+				set_global_flag = second_balkan_war_over
+				BUL = {
+					transfer_state = 495
+					transfer_state = 496
+					white_peace = SER
+					white_peace = GRE
+					white_peace = MNT
+					if = {
+						limit = {
+							BUL = {
+								has_war_with = ROM
+							}
+						}
+						white_peace = ROM
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = SER
+						tag = GRE
+						tag = ROM
+					}
+					FROM.FROM = { state = 13 }
+					FROM = { original_tag = BUL }
+					NOT = { has_global_flag = second_balkan_war_over }
+					NOT = { has_global_flag = ffu_ww1_starts }
+				}
+				set_global_flag = second_balkan_war_over
+				GRE = {
+					white_peace = BUL
+					transfer_state = 186
+				}
+				SER = {
+					white_peace = BUL
+					transfer_state = 463
+				}
+				TUR = {
+					white_peace = BUL
+					transfer_state = 512
+				}
+				if = {
+					limit = {
+						has_global_flag = kis_secondbalkanwar_romanian_intervention
+					}
+					ROM = {
+						white_peace = BUL
+						transfer_state = 294
+					}
+				}
+			}
+			if = {
+					limit = {
+						FROM = { tag = BEL }
+						FROM.FROM = { is_core_of = BEL }
+						BEL = { surrender_progress	> 0.60 }
+						NOT = { BEL = { has_country_flag = belgium_is_kill }}
+						BEL = { is_ai = no }}
+
+	         		BEL = {
+						set_country_flag = belgium_is_kill
+						add_state_core = 35
+						transfer_state = 35
+						add_ideas = we_fight_on
+					  }
+					}
+			if = {
+					limit = {
+						FROM = { tag = BEL }
+						FROM.FROM = { is_core_of = BEL }
+						BEL = { surrender_progress	> 0.60 }
+						NOT = { BEL = { has_country_flag = belgium_is_kill }}
+						BEL = { is_ai = yes }}
+
+	         		BEL = {
+						set_country_flag = belgium_is_kill
+						add_ideas = we_fight_on
+					  }
+				11 = {
+					add_extra_state_shared_building_slots = 16
+			     	    	add_building_construction = {
+		                		type = industrial_complex level = 10
+                        			instant_build = yes
+					}
+			     	    	add_building_construction = {
+		                		type = arms_factory level = 6
+                        			instant_build = yes
+					}
+				}
+					}
+	        	}
+	        }
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = RUS
+					SOV = { has_war_with = RUS }
+				}
+				SOV = {
+					annex_country = {
+						target = RUS
+						transfer_troops = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = FIN
+					SOV = { has_war_with = FIN }
+				}
+				SOV = {
+					annex_country = {
+						target = FIN
+						transfer_troops = no
+					}
+					every_state = {
+						limit = {
+							# SOV will get the same core as RUS
+							#is_claimed_by = RUS
+							is_core_of = FIN
+						}
+						SOV = {
+							add_state_core = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "ffu_war_begins_sound" #name you're using for the sound
+	file = "ffu_custom/ffu_war_begins.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_russian_civil_war_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_russian_civil_war.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_franz_joseph_dead_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_franz_joseph_dead.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_first_balkan_war_begins_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_first_balkan_war_begins.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_jihad_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_jihad.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_black_sea_raid_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_black_sea_raid.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_schlieffen_plan_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_schlieffen_plan.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_gas_attack_sound" #name you're using for the sound
+	file = "ffu_custom/ffu_gas_attack.wav" ## location of the sound file
+	always_load = no
+}
+sound = { ### DO NOT MISTAKE SOUND (HERE) FOR SOUNDEFFECTS (ANOTHER FILE)
+	name = "FFU_christmas_truce_sound" #name you're using for the sound
+	file = "ffu_custom/FFU_christmas_truce.wav" ## location of the sound file
+	always_load = no
+}
